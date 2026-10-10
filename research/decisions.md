@@ -44,3 +44,10 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 |---|---|---|---|---|
 | D9b | Visual direction | **Minimal fintech, dark ("Noc" family):** near-black, one accent, one statement + one action per screen, 1-tap chips, one big number, bottom-sheet form. The neon lime accent is "maybe too much", so the accent is still being tuned (v3 previews). | v1 previews (all 5: data journalism, receipt, terminal, twins, Swiss grid) for being too data-heavy and cluttered for a 2-second attention span; v2 light/colour-field variants | Human design judgement: the visitor decides in ~2 seconds; less text beats more data on the first screen. Consistent with evidence that pages at a simple reading level convert better [log C2] and that only ~20–28% of words get read [03]. |
 | D12 | Brand name | **Veenos**: a play on Czech "výnos" (return/yield). | "Dvojče" / "ETF dvojčata" placeholders | Short, memorable, ties to the investor's goal. |
+
+## Round 6 — 2026-10-10 (accent, hero)
+
+| # | Decision | Chosen | Rejected | Why / implications |
+|---|---|---|---|---|
+| D9c | Accent colour | **Muted lime `#cfe68a`** on near-black `#0c0c0d` | Mint, champagne, ice blue, mono white; original neon lime `#c8f53b` (too loud) | Human design choice from the v3 previews; keeps the energy of the liked neon at a calmer level. |
+| D13 | Hero pattern | **Open:** the human wants to see a CTA-in-hero version (v4 previews: 5 variants) before locking the flow. | — | Chips-in-hero (v3) vs CTA-in-hero is a natural A/B hypothesis (one extra tap vs a clearer first screen). |
