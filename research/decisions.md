@@ -61,3 +61,13 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D15 | CTA label | **A/B test: "Začít investovat" (A) vs "Spočítat poplatky" (B).** | Lead agent flagged the risk that "Začít investovat" promises account opening while the tap opens a calculator; the human chose to test it. → One of the README A/B hypotheses. |
 | D5c | Phone field (revises D5) | **Phone optional and opt-in:** name + e-mail required; a "Chci zavolat" switch reveals the phone field, which is required only when the switch is on. | Human request. Only visitors who want a call give a number, which also gives explicit consent for the one call (Act 127/2005 §96, see D5b). Lowers friction vs three mandatory fields. |
 | D9d | Visual refinements | Background lifted from pure black to a soft dark grey; website header with a menu (mock); a footer; horizontal cost bars in the result; more generous spacing. | Human feedback: v5 "looks like an app". |
+
+## Round 8 — 2026-10-10 (v6 feedback; design iterations continue)
+
+| # | Decision | Change | Why / implications |
+|---|---|---|---|
+| D12b | Logo | Rework the mark so it reflects the name and "výnos" (return/growth). Options in v7. | Human request. |
+| D13b | Hero | Trust checks smaller; **remove "Zdarma · bez registrace"**. | Human: it "will not be true" (contact details are requested). Avoids a misleading claim. |
+| D2b/D6b | The deal (revises D2/D6) | **On-page result simplified** (one number + two bars + CTA, minimal text). **The detailed breakdown goes in the e-mail.** The page confirms the submission. | Human: "calculator results should be simpler with less text". The e-mail becomes the main deliverable, so a real address is needed to get the value. |
+| D5d | Phone toggle copy | Switch label changes from "Chci zavolat" to a **help-oriented first-person label** ("Chci pomoct"), with a sub-line in the sense of "call me and help me with the next step". | Human request. **Lead-agent caveat:** the call must stay on process help (broker/route setup, how the calculation works). Recommending specific instruments to an individual is investment advice requiring a licence (ČNB, see log D3). Wording avoids "poradit/poradce". |
+| D16 | Hero visuals | Explore heroes with a background image, motion or other dynamic elements (v7). | Human request. Motion must respect `prefers-reduced-motion` and keep LCP ≤ 2.5 s [log C4]. |

@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veenos — logo, dynamic heroes, simpler flow (v7)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e8e5; color: #1b1b1d; font: 15px/1.5 "Manrope", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .head, .block { max-width: 1280px; margin: 0 auto; }
+  .head { margin-bottom: 28px; }
+  .head h1 { font-weight: 800; font-size: 28px; letter-spacing: -0.03em; }
+  .head p { max-width: 880px; margin-top: 8px; color: #55555b; }
+  .block { margin-bottom: 56px; }
+  .block h2 { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+  .block .desc { color: #55555b; font-size: 14px; margin: 4px 0 18px; max-width: 880px; }
+  .phones { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .cap { font-size: 12px; color: #4d4d52; text-align: center; margin-top: 8px; font-weight: 700; max-width: 320px; }
+  .cap span { display: block; font-weight: 500; color: #7d7d82; }
+  .ab { display: flex; gap: 8px; margin: 0 0 18px; flex-wrap: wrap; }
+  .ab button { font: 700 13px "Manrope"; border: 1px solid #c9c8c4; background: #fff; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+  .ab button.on { background: #18191c; color: #fff; border-color: #18191c; }
+  .live { outline: 3px solid #cfe68a; outline-offset: 4px; border-radius: 44px; }
+
+  /* ===== tokens ===== */
+  .ui { --bg:#18191c; --fg:#f3f3ef; --muted:#9a9b97; --line:#2f3035; --card:#202125; --chip:#26272c; --field:#2c2d32; --accent:#cfe68a; --on-accent:#18191c; font-family: "Manrope", sans-serif; }
+  .tab { font-variant-numeric: tabular-nums; }
+
+  /* ===== A: logos ===== */
+  .logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+  .lcard { border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  .lcard .dark { background: #18191c; color: #f3f3ef; height: 150px; display: grid; place-items: center; }
+  .lcard .light { background: #f6f5f1; color: #18191c; height: 70px; display: flex; align-items: center; justify-content: center; gap: 22px; border-top: 1px solid #e5e3de; }
+  .lcard .meta { padding: 14px 18px 18px; }
+  .lcard .meta b { font-size: 15px; display: block; }
+  .lcard .meta span { font-size: 13px; color: #66666b; }
+  .fav { width: 34px; height: 34px; border-radius: 9px; background: #18191c; display: grid; place-items: center; }
+  .wm { display: flex; align-items: center; gap: 9px; font-weight: 800; letter-spacing: -0.045em; }
+  .wm.xl { font-size: 38px; gap: 12px; } .wm.md { font-size: 20px; }
+  .wm svg { flex: none; }
+  .acc { color: #cfe68a; } .light .acc { color: #5f7d14; }
+  .carka { position: relative; display: inline-block; }
+  .carka::after { content: ""; position: absolute; left: 47%; top: -0.1em; width: .16em; height: .3em; background: currentColor; border-radius: 2px; transform: skewX(-28deg); }
+
+  /* ===== phone shell ===== */
+  .phone { width: 320px; height: 664px; border-radius: 40px; background: #050505; padding: 9px; box-shadow: 0 16px 36px rgba(0,0,0,.18); flex: none; }
+  .frame { position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: var(--bg); color: var(--fg); }
+  .scr { height: 100%; overflow-y: auto; scrollbar-width: none; }
+  .scr::-webkit-scrollbar { display: none; }
+  .bar { position: sticky; top: 0; z-index: 5; height: 60px; padding: 18px 24px 0; display: flex; align-items: center; justify-content: space-between; }
+  .bar.blur { background: rgba(24,25,28,.86); backdrop-filter: blur(10px); }
+  .nav { display: flex; align-items: center; gap: 14px; font-size: 13px; font-weight: 600; color: var(--muted); }
+  .burger { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: grid; place-items: center; background: none; }
+  .burger i, .burger i::before, .burger i::after { display: block; width: 14px; height: 1.6px; background: var(--fg); border-radius: 2px; position: relative; }
+  .burger i::before, .burger i::after { content: ""; position: absolute; left: 0; }
+  .burger i::before { top: -5px; } .burger i::after { top: 5px; }
+
+  /* hero shared */
+  .hero { position: relative; height: 646px; display: flex; flex-direction: column; padding: 0 24px 34px; overflow: hidden; }
+  .hero > .content { position: relative; z-index: 2; margin-top: auto; }
+  .h { font-weight: 800; font-size: 44px; line-height: .98; letter-spacing: -0.05em; }
+  .h em { font-style: normal; color: var(--accent); }
+  .sub { font-size: 15.5px; color: var(--muted); margin-top: 14px; line-height: 1.4; }
+  .checks { margin-top: 20px; display: grid; gap: 8px; }
+  .checks div { display: flex; gap: 9px; align-items: center; font-size: 12.5px; font-weight: 600; color: #d6d7d2; }
+  .checks i { width: 17px; height: 17px; border-radius: 50%; background: rgba(207,230,138,.15); color: var(--accent); display: grid; place-items: center; font-style: normal; font-size: 9.5px; font-weight: 800; flex: none; }
+  .cta { height: 58px; border-radius: 999px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 16.5px; letter-spacing: -0.01em; border: 0; width: 100%; cursor: pointer; font-family: inherit; }
+  .cta .arr { width: 30px; height: 30px; border-radius: 50%; background: rgba(24,25,28,.12); display: grid; place-items: center; font-size: 15px; }
+  .hero .cta { margin-top: 26px; }
+
+  /* H1 growth curve */
+  .curve { position: absolute; left: -10px; right: -10px; top: 70px; height: 300px; z-index: 1; }
+  .curve .grid line { stroke: rgba(255,255,255,.05); }
+  .curve .ln { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw 6s cubic-bezier(.5,0,.2,1) infinite; filter: drop-shadow(0 0 8px rgba(207,230,138,.55)); }
+  .curve .ln2 { fill: none; stroke: #5a5b60; stroke-width: 2; stroke-dasharray: 4 6; }
+  .curve .dot { fill: var(--accent); opacity: 0; animation: dot 6s infinite; }
+  .curve .area { fill: url(#gfill); opacity: 0; animation: area 6s infinite; }
+  @keyframes draw { 0% { stroke-dashoffset: 420; } 45%, 85% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+  @keyframes dot { 0%, 40% { opacity: 0; } 48%, 85% { opacity: 1; } 100% { opacity: 0; } }
+  @keyframes area { 0%, 30% { opacity: 0; } 55%, 85% { opacity: 1; } 100% { opacity: 0; } }
+
+  /* H2 photo */
+  .photo { position: absolute; inset: 0; z-index: 0; background: #222 center/cover no-repeat; animation: ken 22s ease-in-out infinite alternate; }
+  .scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(24,25,28,.25) 0%, rgba(24,25,28,.35) 30%, rgba(24,25,28,.9) 62%, #18191c 100%); }
+  @keyframes ken { from { transform: scale(1); } to { transform: scale(1.12) translate(-8px, 6px); } }
+  .credit { position: absolute; right: 12px; top: 64px; z-index: 2; font-size: 9px; color: rgba(255,255,255,.5); }
+
+  /* H3 product animation */
+  .demo { position: absolute; left: 24px; right: 24px; top: 84px; z-index: 1; background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 18px; box-shadow: 0 20px 50px rgba(0,0,0,.35); transform: rotate(-2deg); animation: float 6s ease-in-out infinite; }
+  .demo .lbl { font-size: 11px; color: var(--muted); }
+  .demo .n { font-weight: 800; font-size: 34px; letter-spacing: -0.05em; color: var(--accent); line-height: 1.05; margin: 4px 0 12px; }
+  .demo .r { display: flex; justify-content: space-between; font-size: 11.5px; margin-top: 10px; }
+  .demo .r span { color: var(--muted); } .demo .r b { font-weight: 800; }
+  .demo .tr { height: 7px; border-radius: 9px; background: #2a2b30; margin-top: 6px; overflow: hidden; }
+  .demo .fl { height: 100%; border-radius: 9px; width: 0; }
+  .demo .fa { background: #8a8b88; } .demo .fb { background: var(--accent); }
+  @keyframes float { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(-1deg) translateY(-8px); } }
+
+  /* H4 aurora + rotating word */
+  .aurora { position: absolute; inset: -30%; z-index: 0; filter: blur(46px); opacity: .55; }
+  .aurora i { position: absolute; border-radius: 50%; }
+  .aurora .a1 { width: 260px; height: 260px; background: #cfe68a; left: 15%; top: 18%; animation: drift1 14s ease-in-out infinite alternate; opacity: .45; }
+  .aurora .a2 { width: 300px; height: 300px; background: #2f6f6a; left: 45%; top: 30%; animation: drift2 18s ease-in-out infinite alternate; opacity: .7; }
+  .aurora .a3 { width: 200px; height: 200px; background: #5b5fb0; left: 30%; top: 5%; animation: drift1 16s ease-in-out infinite alternate-reverse; opacity: .35; }
+  @keyframes drift1 { to { transform: translate(60px, 50px) scale(1.15); } }
+  @keyframes drift2 { to { transform: translate(-70px, -30px) scale(.9); } }
+  .rot { height: 26px; overflow: hidden; margin-bottom: 14px; }
+  .rot ul { list-style: none; animation: rot 9s cubic-bezier(.7,0,.3,1) infinite; }
+  .rot li { height: 26px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--fg); }
+  .rot li b { font-weight: 800; padding: 3px 9px; border-radius: 99px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); }
+  .rot li b.e { background: rgba(207,230,138,.16); border-color: rgba(207,230,138,.4); color: var(--accent); }
+  @keyframes rot { 0%, 28% { transform: translateY(0); } 33%, 61% { transform: translateY(-26px); } 66%, 94% { transform: translateY(-52px); } 100% { transform: translateY(-78px); } }
+
+  /* H5 kinetic marquee */
+  .kin { position: absolute; inset: 70px 0 auto 0; z-index: 0; display: grid; gap: 4px; transform: rotate(-6deg) scale(1.15); opacity: .9; }
+  .kin div { white-space: nowrap; font-weight: 800; font-size: 46px; letter-spacing: -0.05em; color: rgba(255,255,255,.06); animation: mq 22s linear infinite; }
+  .kin div:nth-child(2) { animation-direction: reverse; animation-duration: 26s; color: rgba(207,230,138,.13); }
+  .kin div:nth-child(4) { animation-direction: reverse; animation-duration: 30s; }
+  @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .curve .ln { stroke-dashoffset: 0; } .curve .dot, .curve .area { opacity: 1; } }
+
+  /* ===== C: flow ===== */
+  .hero.static { height: auto; min-height: 586px; padding-top: 0; }
+  .calc { padding: 24px 16px 48px; }
+  .sec-t { font-size: 12px; font-weight: 700; color: var(--muted); padding: 0 8px 12px; display: flex; justify-content: space-between; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 22px; margin-bottom: 12px; overflow: hidden; transition: opacity .35s, transform .35s; }
+  .step.hidden, .result.hidden { display: none; }
+  .step.enter, .result.enter { opacity: 0; transform: translateY(16px); }
+  .ask { padding: 22px 18px 18px; }
+  .ask h4 { font-weight: 800; font-size: 24px; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 16px; }
+  .ask h4 small { display: block; font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0; margin-bottom: 8px; }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .chips.one { grid-template-columns: 1fr; }
+  .chip { min-height: 54px; border-radius: 16px; background: var(--chip); border: 1px solid var(--line); color: var(--fg); display: flex; align-items: center; justify-content: center; font: 700 16.5px "Manrope"; cursor: pointer; padding: 0 16px; }
+  .chips.one .chip { justify-content: space-between; }
+  .chip small { font-weight: 600; font-size: 12px; color: var(--muted); }
+  .chip.on { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  .chip.on small { color: inherit; opacity: .7; }
+  .chip[disabled] { opacity: .45; cursor: default; }
+  .soon { font-size: 10px; font-weight: 700; border: 1px solid var(--line); border-radius: 99px; padding: 2px 7px; color: var(--muted); }
+  .sum { display: none; align-items: center; justify-content: space-between; padding: 16px 18px; cursor: pointer; }
+  .step.done .sum { display: flex; } .step.done .ask { display: none; }
+  .sum .k { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .sum .k i { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 800; }
+  .sum .v { font-weight: 800; font-size: 15px; }
+
+  .result { padding: 26px 20px 22px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; margin-top: 12px; transition: opacity .35s, transform .35s; }
+  .rlbl { font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .rlbl i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #55565b; display: grid; place-items: center; font-style: normal; font-size: 10px; font-weight: 800; color: var(--muted); }
+  .num { font-weight: 800; font-size: 54px; letter-spacing: -0.055em; line-height: 1; margin: 8px 0 26px; color: var(--accent); }
+  .num small { font-size: 24px; margin-left: 4px; letter-spacing: -0.02em; }
+  .hb { display: grid; gap: 16px; margin-bottom: 26px; }
+  .hb .top { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; margin-bottom: 7px; }
+  .hb .top span { color: var(--muted); font-weight: 600; }
+  .hb .track { height: 10px; border-radius: 99px; background: #2a2b30; overflow: hidden; }
+  .hb .fill { height: 100%; border-radius: 99px; transition: width .6s cubic-bezier(.2,.8,.2,1); width: 0; }
+  .hb .a .fill { background: #8a8b88; } .hb .b .fill { background: var(--accent); } .hb .b .top b { color: var(--accent); }
+  .sent { text-align: center; padding: 6px 0 2px; }
+  .sent .ok { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: 22px; margin: 0 auto 12px; }
+  .sent b { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; display: block; }
+  .sent p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 24px; background: #141518; }
+  footer .tag { font-size: 13px; color: var(--muted); margin: 10px 0 20px; }
+  footer .links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+  footer .disc { font-size: 11px; line-height: 1.55; color: #7f807c; }
+
+  .dim { position: absolute; inset: 0; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; z-index: 9; }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; z-index: 10; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 24px 24px; transform: translateY(105%); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .frame.sheet-open .dim { opacity: 1; pointer-events: auto; } .frame.sheet-open .sheet { transform: none; }
+  .grab { width: 38px; height: 4px; border-radius: 4px; background: #45464b; margin: 0 auto 16px; }
+  .sheet h4 { font-weight: 800; font-size: 24px; letter-spacing: -0.035em; }
+  .sheet .s { font-size: 13px; color: var(--muted); margin: 4px 0 16px; }
+  .sheet input[type=text], .sheet input[type=email], .sheet input[type=tel] { width: 100%; height: 50px; border-radius: 14px; background: var(--field); border: 1px solid transparent; padding: 0 14px; font: 500 15px "Manrope"; color: var(--fg); margin-bottom: 10px; outline: none; }
+  .sheet input:focus { border-color: var(--accent); } .sheet input::placeholder { color: #9a9b97; }
+  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); margin: 2px 0 10px; cursor: pointer; }
+  .toggle b { font-size: 14.5px; display: block; } .toggle small { font-size: 12px; color: var(--muted); line-height: 1.35; display: block; }
+  .sw { width: 44px; height: 26px; border-radius: 99px; background: #3a3b40; position: relative; flex: none; transition: background .2s; }
+  .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #f3f3ef; transition: transform .2s; }
+  .toggle.on .sw { background: var(--accent); } .toggle.on .sw::after { transform: translateX(18px); background: var(--on-accent); }
+  .phonef { display: none; } .phonef.show { display: block; }
+  .mk { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); margin: 4px 2px 14px; }
+  .mk i { width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid #5a5b60; flex: none; }
+  .priv { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+  /* ===== D: email ===== */
+  .mail { background: #f4f3ef; color: #18191c; height: 100%; overflow-y: auto; scrollbar-width: none; font-family: "Manrope", sans-serif; }
+  .mail::-webkit-scrollbar { display: none; }
+  .mtop { background: #fff; padding: 46px 18px 12px; border-bottom: 1px solid #e3e1db; }
+  .mtop .from { display: flex; gap: 10px; align-items: center; }
+  .mtop .av { width: 34px; height: 34px; border-radius: 50%; background: #18191c; display: grid; place-items: center; }
+  .mtop b { font-size: 13.5px; } .mtop span { font-size: 11.5px; color: #77786f; display: block; }
+  .mtop h6 { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; margin-top: 10px; }
+  .mbody { padding: 16px 14px 30px; }
+  .mcard { background: #fff; border-radius: 18px; padding: 18px 16px; margin-bottom: 12px; }
+  .mcard .k { font-size: 11.5px; color: #77786f; }
+  .mcard .big { font-weight: 800; font-size: 34px; letter-spacing: -0.05em; color: #18191c; margin: 4px 0 2px; }
+  .mcard .big span { background: linear-gradient(transparent 62%, #cfe68a 62%); }
+  .mrow { display: grid; grid-template-columns: 1fr 64px 64px; gap: 6px; font-size: 12px; padding: 8px 0; border-bottom: 1px solid #eceae4; }
+  .mrow span:not(:first-child) { text-align: right; } .mrow span:first-child { color: #66675f; }
+  .mrow.h { font-size: 10.5px; font-weight: 700; color: #77786f; padding-top: 0; } .mrow.h span:first-child { color: #77786f; }
+  .mrow.t { border: 0; font-weight: 800; font-size: 13.5px; } .mrow.t span:first-child { color: #18191c; }
+  .mcard h6 { font-size: 14px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .mcard ul { padding-left: 16px; font-size: 12.5px; color: #3d3e38; display: grid; gap: 5px; }
+  .mbtn { display: block; text-align: center; background: #18191c; color: #fff; border-radius: 999px; padding: 12px; font-weight: 800; font-size: 13.5px; margin-top: 12px; }
+  .mfine { font-size: 10.5px; color: #8a8b82; line-height: 1.5; padding: 4px 4px 0; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Veenos v7: logo, dynamic heroes, simpler flow, e-mail</h1>
+  <p>From v6 feedback: the logo now plays on <b>výnos</b> (return/growth); the trust checks are smaller; "Zdarma · bez registrace" is gone; the result is just one number, two bars and a button; <b>the detailed breakdown moved to the e-mail</b> (part D); the phone switch is now "Chci pomoct". Part B adds five heroes with an image or motion (all honour "reduce motion").</p>
+</div>
+
+<!-- ============ A: LOGO ============ -->
+<section class="block">
+  <h2>A · Logo</h2>
+  <p class="desc">"Veenos" reads as <i>výnos</i>, the return on an investment. Each option shows the logo on dark (site), on light (e-mail) and as a favicon.</p>
+  <div class="logos" id="logos"></div>
+</section>
+
+<!-- ============ B: HEROES ============ -->
+<section class="block">
+  <h2>B · Hero with image or motion</h2>
+  <p class="desc">Same copy and CTA in all five (header uses logo option 1). Motion is slow and decorative; the text stays readable at all times. The A/B toggle switches the CTA label everywhere on this page.</p>
+  <div class="ab" id="ab"><button class="on" data-l="Začít investovat">A · Začít investovat</button><button data-l="Spočítat poplatky">B · Spočítat poplatky</button></div>
+  <div class="phones" id="heroes"></div>
+</section>
+
+<!-- ============ C: FLOW ============ -->
+<section class="block">
+  <h2>C · Simpler flow</h2>
+  <p class="desc">Result = one number + two bars + one button. The form promises the detailed breakdown by e-mail; after sending, the page only confirms. The outlined phone is clickable.</p>
+  <div class="phones" id="flow"></div>
+</section>
+
+<!-- ============ D: EMAIL ============ -->
+<section class="block">
+  <h2>D · The e-mail with the detailed breakdown</h2>
+  <p class="desc">This is the actual lead magnet now: the full breakdown, the assumptions and the sources, readable on a phone.</p>
+  <div class="phones">
+    <div><div class="phone"><div class="frame ui" style="background:#f4f3ef">
+      <div class="mail">
+        <div class="mtop">
+          <div class="from"><div class="av" data-logo="1" data-size="18"></div><div><b>Veenos</b><span>rozpis@veenos.cz · před 1 min</span></div></div>
+          <h6>Váš rozpis: rozdíl 152 100 Kč za 20 let</h6>
+        </div>
+        <div class="mbody">
+          <div class="mcard">
+            <p class="k">S&amp;P 500 · 3 000 Kč měsíčně · 20 let</p>
+            <p class="big tab"><span>152 100 Kč</span></p>
+            <p class="k">rozdíl v nákladech mezi dvěma cestami ke stejnému indexu</p>
+          </div>
+          <div class="mcard tab">
+            <div class="mrow h"><span>Náklady</span><span>VOO · Fio</span><span>CSPX · XTB</span></div>
+            <div class="mrow"><span>Poplatek fondu (TER)</span><span>5 400</span><span>12 800</span></div>
+            <div class="mrow"><span>Směna CZK → USD</span><span>88 400</span><span>15 100</span></div>
+            <div class="mrow"><span>Provize za nákup</span><span>86 200</span><span>0</span></div>
+            <div class="mrow t"><span>Celkem</span><span>180 000</span><span>27 900</span></div>
+          </div>
+          <div class="mcard">
+            <h6>Co z toho plyne</h6>
+            <ul><li>VOO i CSPX sledují stejný index S&amp;P 500.</li><li>Rozdíl dělá hlavně směna měn a provize za nákup.</li><li>VOO (NYSE) většina brokerů v EU retailu nenabízí.</li></ul>
+            <a class="mbtn">Jak koupit evropské dvojče</a>
+          </div>
+          <div class="mcard">
+            <h6>Předpoklady a zdroje</h6>
+            <ul><li>Výnos 7 % ročně před náklady, nákup každý měsíc.</li><li>TER: emitenti fondů. Provize a směna: ceníky Fio (1. 7. 2026) a XTB (29. 4. 2026). Kurz ČNB k 9. 10. 2026.</li></ul>
+          </div>
+          <p class="mfine">Ilustrativní výpočet, nejde o investiční doporučení. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Tento e-mail jste dostali, protože jste si rozpis vyžádali na veenos.cz. Odhlásit.</p>
+        </div>
+      </div>
+    </div></div><div class="cap">E-mail: detailed breakdown<span>scroll inside the phone</span></div></div>
+  </div>
+</section>
+
+<!-- =================== TEMPLATES =================== -->
+<template id="t-bar"><header class="bar"><div class="wm md" data-logo="1"></div><div class="nav"><span>Jak počítáme</span><span class="burger"><i></i></span></div></header></template>
+<template id="t-copy">
+  <div class="content">
+    <h3 class="h">Stejný index.<br><em>Jiná cena.</em></h3>
+    <p class="sub">Zjistěte, kolik vám ETF ukusuje na poplatcích.</p>
+    <div class="checks"><div><i>✓</i>Americký fond vs. evropské dvojče</div><div><i>✓</i>Poplatky, směna i broker v korunách</div><div><i>✓</i>Data od emitentů a ČNB</div></div>
+    <button class="cta"><span class="js-label">Začít investovat</span> <span class="arr">↓</span></button>
+  </div>
+</template>
+
+<template id="t-flow">
+  <div class="phone"><div class="frame ui">
+    <div class="scr">
+      <header class="bar blur"><div class="wm md" data-logo="1"></div><div class="nav"><span>Jak počítáme</span><span class="burger"><i></i></span></div></header>
+      <section class="hero static">
+        <div class="content">
+          <h3 class="h">Stejný index.<br><em>Jiná cena.</em></h3>
+          <p class="sub">Zjistěte, kolik vám ETF ukusuje na poplatcích.</p>
+          <div class="checks"><div><i>✓</i>Americký fond vs. evropské dvojče</div><div><i>✓</i>Poplatky, směna i broker v korunách</div><div><i>✓</i>Data od emitentů a ČNB</div></div>
+          <button class="cta js-start"><span class="js-label">Začít investovat</span> <span class="arr">↓</span></button>
+        </div>
+      </section>
+      <section class="calc">
+        <div class="sec-t"><span>Vaše srovnání</span><span class="js-count">0/3</span></div>
+        <div class="step" data-step="0"><div class="sum"><span class="k"><i>✓</i>Měsíčně</span><span class="v js-v"></span></div>
+          <div class="ask"><h4><small>1/3</small>Kolik měsíčně investujete?</h4><div class="chips tab"><button class="chip" data-val="1000">1 000 Kč</button><button class="chip" data-val="3000">3 000 Kč</button><button class="chip" data-val="5000">5 000 Kč</button><button class="chip" data-val="10000">10 000 Kč</button></div></div></div>
+        <div class="step hidden" data-step="1"><div class="sum"><span class="k"><i>✓</i>Doba</span><span class="v js-v"></span></div>
+          <div class="ask"><h4><small>2/3</small>Na jak dlouho?</h4><div class="chips tab"><button class="chip" data-val="5">5 let</button><button class="chip" data-val="10">10 let</button><button class="chip" data-val="20">20 let</button><button class="chip" data-val="30">30 let</button></div></div></div>
+        <div class="step hidden" data-step="2"><div class="sum"><span class="k"><i>✓</i>Index</span><span class="v js-v"></span></div>
+          <div class="ask"><h4><small>3/3</small>Který index?</h4><div class="chips one"><button class="chip" data-val="sp500" data-label="S&amp;P 500">S&amp;P 500 <small>VOO ↔ CSPX</small></button><button class="chip" disabled>Celý svět <span class="soon">brzy</span></button><button class="chip" disabled>Celý trh USA <span class="soon">brzy</span></button></div></div></div>
+        <div class="result hidden">
+          <div class="js-pre">
+            <p class="rlbl"><span class="js-rlbl">Rozdíl za 20 let</span><i>i</i></p>
+            <p class="num tab js-num">0<small>Kč</small></p>
+            <div class="hb tab">
+              <div class="r a"><div class="top"><span>VOO</span><b class="js-ea"></b></div><div class="track"><div class="fill js-ba"></div></div></div>
+              <div class="r b"><div class="top"><span>CSPX</span><b class="js-eb"></b></div><div class="track"><div class="fill js-bb"></div></div></div>
+            </div>
+            <button class="cta js-open">Poslat rozpis e-mailem</button>
+          </div>
+          <div class="sent js-post" hidden><div class="ok">✓</div><b>Rozpis je na cestě</b><p class="js-sentp">Detailní rozpis najdete v e-mailu.</p></div>
+        </div>
+      </section>
+      <footer>
+        <div class="wm md" data-logo="1"></div>
+        <p class="tag">Srovnání nákladů ETF z NYSE a jejich evropských dvojčat.</p>
+        <div class="links"><span>Jak počítáme</span><span>Zdroje dat</span><span>Ochrana údajů</span><span>Cookies</span><span>Kontakt</span><span>O nás</span></div>
+        <p class="disc">Veenos není investiční poradce ani obchodník s cennými papíry. Obsah slouží k informaci a není investičním doporučením. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Výpočty jsou ilustrativní.</p>
+      </footer>
+    </div>
+    <div class="dim js-close"></div>
+    <form class="sheet js-form" onsubmit="return false">
+      <div class="grab"></div>
+      <h4>Kam poslat rozpis?</h4>
+      <p class="s">Detailní rozpis s předpoklady vám pošleme e-mailem.</p>
+      <input type="text" name="name" autocomplete="name" placeholder="Jméno" required>
+      <input type="email" name="email" autocomplete="email" placeholder="E-mail" required>
+      <div class="toggle js-tg"><div><b>Chci pomoct</b><small>Zavolejte mi a pomozte mi s dalším krokem.</small></div><span class="sw"></span></div>
+      <div class="phonef js-pf"><input type="tel" name="tel" autocomplete="tel" placeholder="Telefon"></div>
+      <label class="mk"><i></i>Občas mi pošlete tipy e-mailem</label>
+      <button class="cta" type="submit">Poslat rozpis</button>
+      <p class="priv">Zásady ochrany osobních údajů</p>
+    </form>
+  </div></div>
+</template>
+
+<script>
+/* ---------- logos ---------- */
+const LOGOS = {
+  1: { name: 'V-šipka', note: 'The "V" of Veenos whose right arm rises into an arrow: return going up. Also reads as a check mark.',
+       svg: (s, c, f) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="${c}" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="${c}" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>` },
+  2: { name: 'Složený výnos', note: 'Lime tile with a compound-growth curve: the money-over-time idea behind the calculator.',
+       svg: (s, c, f) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24"><rect width="24" height="24" rx="7" fill="${c}"/><path d="M5.5 18.5 H18.5" stroke="${f}" stroke-width="1.6" stroke-linecap="round" opacity=".45"/><path d="M5.5 15.5 L9.5 14.2 L13 11.8 L16 8.6 L18.5 5.5" stroke="${f}" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18.5" cy="5.5" r="1.9" fill="${f}"/></svg>` },
+  3: { name: 'Rostoucí tečky', note: 'Evolution of the twin dots: three dots growing and rising, compound growth from small regular amounts.',
+       svg: (s, c, f) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24"><circle cx="4" cy="19.5" r="2.4" fill="${c}" opacity=".45"/><circle cx="10" cy="14" r="3.4" fill="${c}" opacity=".72"/><circle cx="18" cy="7" r="5" fill="${c}"/></svg>` },
+  4: { name: 'Čárka nad ee', note: 'Pure wordmark: the "ee" carries the Czech čárka, because "Veenos" is how you say "výnos". No symbol needed.',
+       svg: null },
+};
+function logoHTML(id, size, color, onFill, textColor, cls) {
+  const L = LOGOS[id];
+  if (!L.svg) return `<span class="wm ${cls}" style="color:${textColor};gap:0">v<span class="carka" style="color:${color}">ee</span>nos</span>`;
+  return `<span class="wm ${cls}" style="color:${textColor}">${L.svg(size, color, onFill)}veenos</span>`;
+}
+const lg = document.getElementById('logos');
+Object.entries(LOGOS).forEach(([id, L]) => {
+  const fav = L.svg ? L.svg(22, '#cfe68a', '#18191c') : `<span class="wm" style="font-size:15px;color:#f3f3ef;gap:0">v<span class="carka" style="color:#cfe68a">ee</span></span>`;
+  lg.insertAdjacentHTML('beforeend', `<div class="lcard"><div class="dark">${logoHTML(id, 40, '#cfe68a', '#18191c', '#f3f3ef', 'xl')}</div>
+    <div class="light">${logoHTML(id, 22, id == 2 ? '#cfe68a' : '#5f7d14', '#18191c', '#18191c', 'md')}<span class="fav">${fav}</span></div>
+    <div class="meta"><b>${id} · ${L.name}</b><span>${L.note}</span></div></div>`);
+});
+function fillLogos(root) {
+  root.querySelectorAll('[data-logo]').forEach(el => {
+    const id = el.dataset.logo;
+    if (el.classList.contains('av')) { el.innerHTML = LOGOS[id].svg(18, '#cfe68a', '#18191c'); return; }
+    el.outerHTML = logoHTML(id, 22, '#cfe68a', '#18191c', 'var(--fg)', 'md');
+  });
+}
+fillLogos(document);
+
+/* ---------- heroes ---------- */
+const PHOTO = 'https://images.unsplash.com/photo-1637750452992-87153c4b3f65?w=900&q=70&auto=format&fit=crop';
+const HEROES = [
+  { cap: '1 · Růstová křivka', sub: 'A compound-growth line draws itself behind the headline (výnos).',
+    bg: `<svg class="curve" viewBox="0 0 320 300" preserveAspectRatio="none"><defs><linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe68a" stop-opacity=".22"/><stop offset="1" stop-color="#cfe68a" stop-opacity="0"/></linearGradient></defs>
+      <g class="grid">${[60,120,180,240].map(y=>`<line x1="0" x2="320" y1="${y}" y2="${y}"/>`).join('')}</g>
+      <path class="ln2" d="M0 270 C 120 262, 220 236, 320 196"/>
+      <path class="area" d="M0 270 C 130 262, 230 200, 320 40 L320 300 L0 300 Z"/>
+      <path class="ln" d="M0 270 C 130 262, 230 200, 320 40"/><circle class="dot" cx="312" cy="54" r="5"/></svg>` },
+  { cap: '2 · Fotka: Praha večer', sub: 'Real photo with a dark scrim and a slow zoom. Local, human, warm.',
+    bg: `<div class="photo" style="background-image:url('${PHOTO}')"></div><div class="scrim"></div><span class="credit">Foto: Unsplash</span>` },
+  { cap: '3 · Živá ukázka výsledku', sub: 'A floating result card animates: bars fill, the number counts up. Shows the value before any tap.',
+    bg: `<div class="demo tab"><p class="lbl">Rozdíl za 20 let · příklad</p><p class="n js-cnt">0 Kč</p>
+      <div class="r"><span>VOO</span><b>180 000 Kč</b></div><div class="tr"><div class="fl fa"></div></div>
+      <div class="r"><span>CSPX</span><b style="color:#cfe68a">27 900 Kč</b></div><div class="tr"><div class="fl fb"></div></div></div>` },
+  { cap: '4 · Aurora + rotující dvojice', sub: 'Slow blurred glow in the background; the fund pair above the headline rotates.',
+    bg: `<div class="aurora"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>`,
+    pre: `<div class="rot"><ul><li><b>VOO</b>↔<b class="e">CSPX</b> S&amp;P 500</li><li><b>VT</b>↔<b class="e">VWCE</b> celý svět</li><li><b>VTI</b>↔<b class="e">UCITS</b> trh USA</li><li><b>VOO</b>↔<b class="e">CSPX</b> S&amp;P 500</li></ul></div>` },
+  { cap: '5 · Kinetická typografie', sub: 'Big fee words drift across the background in slow marquee rows.',
+    bg: `<div class="kin">${['TER 0,03 % · SMĚNA 3 % · PROVIZE · ', 'VOO · CSPX · VWCE · VT · ', 'POPLATKY · VÝNOS · ČAS · ', 'KČ · USD · EUR · '].map(t=>`<div>${(t+t+t+t)}</div>`).join('')}</div>` },
+];
+const hh = document.getElementById('heroes');
+const barT = document.getElementById('t-bar'), copyT = document.getElementById('t-copy');
+HEROES.forEach(H => {
+  const wrap = document.createElement('div');
+  wrap.innerHTML = `<div class="phone"><div class="frame ui"><div class="scr"></div></div></div><div class="cap">${H.cap}<span>${H.sub}</span></div>`;
+  const scr = wrap.querySelector('.scr');
+  scr.appendChild(barT.content.cloneNode(true));
+  const hero = document.createElement('section'); hero.className = 'hero'; hero.style.marginTop = '-60px'; hero.style.paddingTop = '60px';
+  hero.innerHTML = H.bg;
+  const copy = copyT.content.cloneNode(true);
+  if (H.pre) copy.querySelector('.content').insertAdjacentHTML('afterbegin', H.pre);
+  hero.appendChild(copy);
+  scr.appendChild(hero);
+  hh.appendChild(wrap);
+});
+fillLogos(hh);
+// hero 3 animation loop
+function demoLoop() {
+  document.querySelectorAll('.demo').forEach(d => {
+    const n = d.querySelector('.js-cnt'), fa = d.querySelector('.fa'), fb = d.querySelector('.fb');
+    fa.style.transition = fb.style.transition = 'none'; fa.style.width = fb.style.width = '0'; n.textContent = '0 Kč';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      fa.style.transition = fb.style.transition = 'width 1.4s cubic-bezier(.2,.8,.2,1)'; fa.style.width = '100%'; fb.style.width = '15.5%';
+      const t0 = performance.now(), T = 1600, target = 152100;
+      const tick = t => { const k = Math.min(1, (t - t0) / T), e = 1 - Math.pow(1 - k, 3); n.textContent = (Math.round(target * e / 100) * 100).toLocaleString('cs-CZ') + ' Kč'; if (k < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }));
+  });
+}
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { demoLoop(); setInterval(demoLoop, 5200); }
+else document.querySelectorAll('.demo').forEach(d => { d.querySelector('.js-cnt').textContent = '152 100 Kč'; d.querySelector('.fa').style.width = '100%'; d.querySelector('.fb').style.width = '15.5%'; });
+
+/* ---------- flow ---------- */
+const USDCZK = 21.745;
+const ROUTES = { nyse: { ter: 0.0003, fx: 0.03, comm: 7.95 * USDCZK }, ucits: { ter: 0.0007, fx: 0.005, comm: 0 } };
+const R = Math.pow(1.07, 1/12) - 1;
+function fv(m, y, o) { let v = 0; for (let i = 0; i < y * 12; i++) v = v * (1 + R) * (1 - (o.ter||0) / 12) + m * (1 - (o.fx||0)) - (o.comm||0); return v * (1 - (o.fx||0)); }
+const cost = (m, y, r) => fv(m, y, {}) - fv(m, y, r);
+const fmt = n => (Math.round(n / 100) * 100).toLocaleString('cs-CZ');
+
+function mount(root, preset = {}, live = false) {
+  const scr = root.querySelector('.scr'), frame = root.querySelector('.frame');
+  const steps = [...root.querySelectorAll('.step')], result = root.querySelector('.result');
+  const ans = {};
+  const go = (el, smooth = true) => { const top = el.getBoundingClientRect().top - scr.getBoundingClientRect().top + scr.scrollTop - 76; scr.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' }); };
+  const reveal = (el, anim) => { el.classList.remove('hidden'); if (anim) { el.classList.add('enter'); requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('enter'))); } };
+  const compute = () => {
+    const m = ans[0], y = ans[1], a = cost(m, y, ROUTES.nyse), b = cost(m, y, ROUTES.ucits);
+    root.querySelector('.js-rlbl').textContent = 'Rozdíl za ' + y + ' let';
+    root.querySelector('.js-num').innerHTML = fmt(a - b) + '<small>Kč</small>';
+    root.querySelector('.js-ea').textContent = fmt(a) + ' Kč'; root.querySelector('.js-eb').textContent = fmt(b) + ' Kč';
+    requestAnimationFrame(() => { root.querySelector('.js-ba').style.width = '100%'; root.querySelector('.js-bb').style.width = Math.max(3, 100 * b / a) + '%'; });
+  };
+  const answer = (i, chip, anim = true) => {
+    steps[i].querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === chip));
+    ans[i] = chip.dataset.val === 'sp500' ? 'sp500' : Number(chip.dataset.val);
+    steps[i].querySelector('.js-v').innerHTML = chip.dataset.label || chip.firstChild.textContent.trim();
+    steps[i].classList.add('done'); root.querySelector('.js-count').textContent = Object.keys(ans).length + '/3';
+    const next = steps.find(s => !s.classList.contains('done'));
+    if (next) { reveal(next, anim); if (anim) setTimeout(() => go(next), 60); }
+    else { compute(); const h = result.classList.contains('hidden'); reveal(result, anim && h); if (anim) setTimeout(() => go(result), 60); }
+  };
+  steps.forEach((s, i) => {
+    s.querySelectorAll('.chip:not([disabled])').forEach(c => c.addEventListener('click', () => live && answer(i, c)));
+    s.querySelector('.sum').addEventListener('click', () => { if (!live) return; s.classList.remove('done'); go(s); });
+  });
+  root.querySelector('.js-start').addEventListener('click', () => live && go(steps[0]));
+  root.querySelector('.js-open').addEventListener('click', () => live && frame.classList.add('sheet-open'));
+  root.querySelector('.js-close').addEventListener('click', () => frame.classList.remove('sheet-open'));
+  const tg = root.querySelector('.js-tg'), pf = root.querySelector('.js-pf'), tel = pf.querySelector('input');
+  const setHelp = on => { tg.classList.toggle('on', on); pf.classList.toggle('show', on); tel.required = on; };
+  tg.addEventListener('click', () => { if (!live) return; setHelp(!tg.classList.contains('on')); if (tg.classList.contains('on')) tel.focus(); });
+  const finish = (help) => { root.querySelector('.js-pre').hidden = true; root.querySelector('.js-post').hidden = false; root.querySelector('.js-sentp').textContent = help ? 'Detailní rozpis najdete v e-mailu. Brzy se vám ozveme.' : 'Detailní rozpis najdete v e-mailu.'; };
+  root.querySelector('.js-form').addEventListener('submit', () => { if (!live) return; frame.classList.remove('sheet-open'); finish(tg.classList.contains('on')); setTimeout(() => go(result), 300); });
+  (preset.answers || []).forEach((v, i) => answer(i, steps[i].querySelector('.chip[data-val="' + v + '"]'), false));
+  if (preset.help) setHelp(true);
+  if (preset.done) finish(true);
+  if (preset.sheet) frame.classList.add('sheet-open');
+  setTimeout(() => { if (preset.scroll === 'result') go(result, false); else if (preset.scroll === 'last') go(steps.find(s => !s.classList.contains('done') && !s.classList.contains('hidden')), false); }, 80);
+}
+const FLOW = [
+  { cap: 'Live prototype', sub: 'tap through it', live: true },
+  { cap: '1 · Arrival', sub: 'smaller checks, no "zdarma"', p: {} },
+  { cap: '2 · Result', sub: 'one number, two bars, one button', p: { answers: [3000, 20, 'sp500'], scroll: 'result' } },
+  { cap: '3 · Form', sub: '"Chci pomoct" off', p: { answers: [3000, 20, 'sp500'], scroll: 'result', sheet: true } },
+  { cap: '4 · Form, "Chci pomoct" on', sub: 'phone appears, required', p: { answers: [3000, 20, 'sp500'], scroll: 'result', sheet: true, help: true } },
+  { cap: '5 · Sent', sub: 'page only confirms; detail is in the e-mail', p: { answers: [3000, 20, 'sp500'], scroll: 'result', done: true } },
+];
+const fl = document.getElementById('flow'), ftpl = document.getElementById('t-flow');
+document.fonts.ready.then(() => {
+  FLOW.forEach(f => {
+    const wrap = document.createElement('div');
+    const node = ftpl.content.firstElementChild.cloneNode(true);
+    if (f.live) node.classList.add('live');
+    wrap.appendChild(node);
+    wrap.insertAdjacentHTML('beforeend', `<div class="cap">${f.cap}<span>${f.sub}</span></div>`);
+    fl.appendChild(wrap);
+    fillLogos(node);
+    mount(node, f.p || {}, !!f.live);
+  });
+});
+document.getElementById('ab').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('#ab button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.js-label').forEach(l => l.textContent = b.dataset.l);
+});
+</script>
+</body>
+</html>
