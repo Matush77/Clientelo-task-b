@@ -71,3 +71,12 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D2b/D6b | The deal (revises D2/D6) | **On-page result simplified** (one number + two bars + CTA, minimal text). **The detailed breakdown goes in the e-mail.** The page confirms the submission. | Human: "calculator results should be simpler with less text". The e-mail becomes the main deliverable, so a real address is needed to get the value. |
 | D5d | Phone toggle copy | Switch label changes from "Chci zavolat" to a **help-oriented first-person label** ("Chci pomoct"), with a sub-line in the sense of "call me and help me with the next step". | Human request. **Lead-agent caveat:** the call must stay on process help (broker/route setup, how the calculation works). Recommending specific instruments to an individual is investment advice requiring a licence (ČNB, see log D3). Wording avoids "poradit/poradce". |
 | D16 | Hero visuals | Explore heroes with a background image, motion or other dynamic elements (v7). | Human request. Motion must respect `prefers-reduced-motion` and keep LCP ≤ 2.5 s [log C4]. |
+
+## Round 9 — 2026-10-10 (v7 feedback)
+
+| # | Decision | Chosen / change | Why / implications |
+|---|---|---|---|
+| D12c | Logo | **Option 1 "V-šipka"**: a V whose right arm rises into an arrow (return going up / check mark). | Human choice from v7. |
+| D16b | Hero | **Photo hero** (v7 #2). More photo options shown in v8. **No photo credit on the page**: production will use a commercially licensed photo (free or paid). | Human choice. Note: the Unsplash Licence already allows commercial use without attribution, but licences must be checked per image before launch. |
+| D13c | Hero copy | H1 line-height fixed (the "á" in "Jiná" collided with the line above); **"ukusuje" replaced** in the sub-line; trust checks in regular (not bold) weight. | Human feedback. |
+| D17 | Cookie consent | Design requested (v8). Constraints from research: "reject" in the first layer with the same prominence as "accept", no pre-ticked categories, a settings layer, easy to change later [log D4]; GA4 + Meta Pixel load only after consent, the cookie-free funnel log runs regardless (D11). | Human request; legal constraints from [04]. |

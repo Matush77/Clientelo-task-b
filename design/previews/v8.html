@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veenos — photo heroes + cookie consent (v8)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e8e5; color: #1b1b1d; font: 15px/1.5 "Manrope", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .head, .block { max-width: 1300px; margin: 0 auto; }
+  .head { margin-bottom: 26px; }
+  .head h1 { font-weight: 800; font-size: 28px; letter-spacing: -0.03em; }
+  .head p { max-width: 900px; margin-top: 8px; color: #55555b; }
+  .block { margin-bottom: 56px; }
+  .block h2 { font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+  .block .desc { color: #55555b; font-size: 14px; margin: 4px 0 16px; max-width: 900px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 20px; }
+  .ctl { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .ctl > span { font-size: 12px; font-weight: 700; color: #6b6b70; margin-right: 4px; }
+  .ctl button { font: 600 12.5px "Manrope"; border: 1px solid #c9c8c4; background: #fff; border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+  .ctl button.on { background: #18191c; color: #fff; border-color: #18191c; }
+  .phones { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .cap { font-size: 12px; color: #4d4d52; text-align: center; margin-top: 8px; font-weight: 700; max-width: 320px; }
+  .cap span { display: block; font-weight: 500; color: #7d7d82; }
+  .live { outline: 3px solid #cfe68a; outline-offset: 4px; border-radius: 44px; }
+
+  /* tokens + shell */
+  .ui { --bg:#18191c; --fg:#f3f3ef; --muted:#a3a49f; --line:#2f3035; --card:#202125; --chip:#26272c; --field:#2c2d32; --accent:#cfe68a; --on-accent:#18191c; font-family: "Manrope", sans-serif; }
+  .phone { width: 320px; height: 664px; border-radius: 40px; background: #050505; padding: 9px; box-shadow: 0 16px 36px rgba(0,0,0,.18); flex: none; }
+  .frame { position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: var(--bg); color: var(--fg); }
+
+  .bar { position: absolute; top: 0; left: 0; right: 0; z-index: 5; height: 60px; padding: 18px 24px 0; display: flex; align-items: center; justify-content: space-between; }
+  .wm { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 20px; letter-spacing: -0.045em; }
+  .nav { display: flex; align-items: center; gap: 14px; font-size: 13px; font-weight: 600; color: rgba(243,243,239,.8); }
+  .burger { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); display: grid; place-items: center; }
+  .burger i, .burger i::before, .burger i::after { display: block; width: 14px; height: 1.6px; background: var(--fg); border-radius: 2px; position: relative; }
+  .burger i::before, .burger i::after { content: ""; position: absolute; left: 0; }
+  .burger i::before { top: -5px; } .burger i::after { top: 5px; }
+
+  .hero { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 60px 24px 34px; transition: padding .35s cubic-bezier(.2,.8,.2,1); }
+  .photo { position: absolute; inset: 0; background: #222 center/cover no-repeat; animation: ken 22s ease-in-out infinite alternate; }
+  .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.30) 0%, rgba(24,25,28,.30) 28%, rgba(24,25,28,.88) 58%, #18191c 100%); }
+  @keyframes ken { from { transform: scale(1); } to { transform: scale(1.1) translate(-6px, 6px); } }
+  @media (prefers-reduced-motion: reduce) { .photo { animation: none; } }
+  .content { position: relative; z-index: 2; margin-top: auto; }
+
+  /* H1: fixed line-height so "á" no longer touches the line above */
+  .h { font-weight: 800; font-size: 42px; line-height: 1.12; letter-spacing: -0.05em; }
+  .h em { font-style: normal; color: var(--accent); }
+  .sub { font-size: 15.5px; color: var(--muted); margin-top: 14px; line-height: 1.4; }
+  .checks { margin-top: 20px; display: grid; gap: 8px; }
+  .checks div { display: flex; gap: 9px; align-items: center; font-size: 13px; font-weight: 400; color: #d4d5d0; }
+  .checks i { width: 17px; height: 17px; border-radius: 50%; background: rgba(207,230,138,.15); color: var(--accent); display: grid; place-items: center; font-style: normal; font-size: 9.5px; font-weight: 800; flex: none; }
+  .cta { height: 58px; border-radius: 999px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 16.5px; letter-spacing: -0.01em; border: 0; width: 100%; cursor: pointer; font-family: inherit; margin-top: 26px; }
+  .cta .arr { width: 30px; height: 30px; border-radius: 50%; background: rgba(24,25,28,.12); display: grid; place-items: center; font-size: 15px; }
+
+  /* ===== cookie consent ===== */
+  .frame.has-banner .hero { padding-bottom: 214px; }
+  .scrim2 { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.35) 0%, rgba(24,25,28,.82) 14%, rgba(24,25,28,.92) 40%, #18191c 100%); opacity: 0; transition: opacity .35s; }
+  .frame.has-banner .scrim2 { opacity: 1; }
+  .ck { position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 20; background: rgba(34,35,39,.97); backdrop-filter: blur(12px); border: 1px solid #34353a; border-radius: 22px; padding: 16px 16px 14px; box-shadow: 0 -10px 40px rgba(0,0,0,.35); transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; }
+  .ck.gone { transform: translateY(130%); opacity: 0; pointer-events: none; }
+  .ck p { font-size: 12.5px; line-height: 1.45; color: #d4d5d0; }
+  .ck p b { color: var(--fg); font-weight: 700; }
+  .ck .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .ck .b { height: 44px; border-radius: 999px; border: 1px solid #45464b; background: #2c2d32; color: var(--fg); font: 700 14px "Manrope"; cursor: pointer; }
+  .ck .set { display: block; text-align: center; font-size: 12px; color: var(--muted); margin-top: 10px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; background: none; border: 0; width: 100%; font-family: inherit; }
+
+  .cdim { position: absolute; inset: 0; z-index: 21; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .cs { position: absolute; left: 0; right: 0; bottom: 0; z-index: 22; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 22px; transform: translateY(105%); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .frame.cs-open .cdim { opacity: 1; pointer-events: auto; } .frame.cs-open .cs { transform: none; }
+  .grab { width: 38px; height: 4px; border-radius: 4px; background: #45464b; margin: 0 auto 14px; }
+  .cs h4 { font-weight: 800; font-size: 22px; letter-spacing: -0.035em; }
+  .cs .s { font-size: 12.5px; color: var(--muted); margin: 4px 0 12px; line-height: 1.4; }
+  .cat { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+  .cat b { font-size: 14px; display: block; } .cat small { font-size: 11.5px; color: var(--muted); line-height: 1.35; display: block; }
+  .always { font-size: 11px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .sw { width: 44px; height: 26px; border-radius: 99px; background: #3a3b40; position: relative; flex: none; cursor: pointer; transition: background .2s; }
+  .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #f3f3ef; transition: transform .2s; }
+  .sw.on { background: var(--accent); } .sw.on::after { transform: translateX(18px); background: var(--on-accent); }
+  .cs .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+  .cs .b { height: 46px; border-radius: 999px; border: 1px solid #45464b; background: #2c2d32; color: var(--fg); font: 700 14px "Manrope"; cursor: pointer; }
+  .cs .save { grid-column: 1 / -1; background: none; border-color: #45464b; }
+  .cs .pol { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; }
+  .reopen { position: absolute; left: 14px; bottom: 14px; z-index: 19; width: 40px; height: 40px; border-radius: 50%; background: rgba(34,35,39,.92); border: 1px solid #3a3b40; display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity .3s; cursor: pointer; }
+  .frame.consented .reopen { opacity: 1; pointer-events: auto; }
+  .reopen svg { width: 20px; height: 20px; }
+  .toast { position: absolute; left: 50%; top: 74px; transform: translateX(-50%); z-index: 23; background: #2c2d32; border: 1px solid #3a3b40; color: var(--fg); font-size: 12px; font-weight: 600; padding: 7px 12px; border-radius: 99px; opacity: 0; transition: opacity .3s; white-space: nowrap; }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Veenos v8: photo heroes + cookie consent</h1>
+  <p>Logo 1 (V-šipka) is in the header. The H1 line-height is fixed so "á" no longer hits the line above. The checks are now regular weight. The photo credit is gone. "ukusuje" is replaced; pick a sub-line with the toggle. <b>The photos are candidates</b> from the Unsplash free licence. Before launch we confirm each licence or buy one.</p>
+</div>
+
+<section class="block">
+  <h2>A · Photo hero: 7 pictures</h2>
+  <p class="desc">Identical layout, only the photo changes. The scrim (dark gradient) keeps the text readable on every photo.</p>
+  <div class="controls">
+    <div class="ctl" id="subCtl"><span>Sub-line</span></div>
+    <div class="ctl" id="ctaCtl"><span>CTA</span></div>
+  </div>
+  <div class="phones" id="heroes"></div>
+</section>
+
+<section class="block">
+  <h2>B · Cookie consent</h2>
+  <p class="desc">First layer: a compact card at the bottom. <b>"Odmítnout" and "Přijmout" have the same size and style</b> (the ÚOOÚ wants rejecting to be as easy as accepting), and "Nastavení" opens the categories. While the card is visible, the hero shifts up so the headline and CTA stay on the first screen. After a choice, a small cookie button lets the visitor change it later. Before consent only necessary cookies run, plus our cookie-free funnel count. GA4 and the Meta Pixel load only after "Přijmout" or the matching category. <b>The outlined phone is clickable.</b></p>
+  <div class="phones" id="cookies"></div>
+</section>
+
+<template id="t-hero">
+  <div class="phone"><div class="frame ui">
+    <div class="hero">
+      <div class="photo"></div><div class="scrim"></div><div class="scrim2"></div>
+      <div class="content">
+        <h3 class="h">Stejný index.<br><em>Jiná cena.</em></h3>
+        <p class="sub js-sub"></p>
+        <div class="checks"><div><i>✓</i>Americký fond vs. evropské dvojče</div><div><i>✓</i>Poplatky, směna i broker v korunách</div><div><i>✓</i>Data od emitentů a ČNB</div></div>
+        <button class="cta"><span class="js-cta"></span> <span class="arr">↓</span></button>
+      </div>
+    </div>
+    <header class="bar"><span class="wm js-logo"></span><div class="nav"><span>Jak počítáme</span><span class="burger"><i></i></span></div></header>
+
+    <div class="ck js-ck">
+      <p><b>Cookies.</b> Nezbytné používáme vždy. S vaším souhlasem i analytické a marketingové, abychom věděli, co na webu funguje.</p>
+      <div class="btns"><button class="b js-rej">Odmítnout</button><button class="b js-acc">Přijmout</button></div>
+      <button class="set js-set">Nastavení</button>
+    </div>
+    <button class="reopen js-reopen" aria-label="Nastavení cookies"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 1 0 9 9 3 3 0 0 1-3-3 3 3 0 0 1-3-3 3 3 0 0 1-3-3Z" stroke="#cfe68a" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="11" r="1.2" fill="#cfe68a"/><circle cx="14" cy="15" r="1.2" fill="#cfe68a"/><circle cx="9.5" cy="16" r="1" fill="#cfe68a"/></svg></button>
+    <div class="cdim js-cclose"></div>
+    <div class="cs">
+      <div class="grab"></div>
+      <h4>Nastavení cookies</h4>
+      <p class="s">Vyberte, co smíme používat. Volbu můžete kdykoli změnit ikonou vlevo dole.</p>
+      <div class="cat"><div><b>Nezbytné</b><small>Aby web a formulář fungovaly.</small></div><span class="always">Vždy zapnuto</span></div>
+      <div class="cat"><div><b>Analytické</b><small>Google Analytics: kolik lidí stránku používá.</small></div><span class="sw js-an"></span></div>
+      <div class="cat"><div><b>Marketingové</b><small>Meta Pixel: měření reklam na Facebooku a Instagramu.</small></div><span class="sw js-mk"></span></div>
+      <div class="btns"><button class="b js-rej2">Odmítnout vše</button><button class="b js-acc2">Přijmout vše</button><button class="b save js-save">Uložit výběr</button></div>
+      <p class="pol">Zásady cookies · Ochrana osobních údajů</p>
+    </div>
+    <div class="toast js-toast"></div>
+  </div></div>
+</template>
+
+<script>
+const LOGO = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos`;
+const PH = id => `https://images.unsplash.com/photo-${id}?w=800&q=70&auto=format&fit=crop`;
+const PHOTOS = [
+  { id: '1637750452992-87153c4b3f65', name: '1 · Hrad nad řekou', note: 'Prague Castle at dusk over the Vltava (current pick).', pos: 'center 30%' },
+  { id: '1788955296399-314bc8a8eed0', name: '2 · Lampa a Hrad', note: 'Street lamp, warm wall, castle in the distance. Moody, intimate.', pos: 'center 20%' },
+  { id: '1691425791089-fc00f4994b6b', name: '3 · Podzimní rám', note: 'Castle lit at night, framed by autumn leaves. Seasonal and local.', pos: 'center 35%' },
+  { id: '1778221657685-f5fc43c6bbe5', name: '4 · Svatý Mikuláš', note: 'Green dome against a pink sunset sky. Softer, less touristic.', pos: 'center 30%' },
+  { id: '1627399706718-20da6ac83768', name: '5 · Světla města', note: 'Abstract bokeh city lights. No landmark, pure mood, never dates.', pos: 'center 40%' },
+  { id: '1644895985299-245dddecef9a', name: '6 · Muž s telefonem', note: 'A young man checking his phone in a café, mirroring the DIY segment.', pos: 'center 25%' },
+  { id: '1567925034354-b1d753b4ba24', name: '7 · Žena s telefonem', note: 'A woman with her phone (the fastest-growing investor group).', pos: 'center 20%' },
+];
+const SUBS = [
+  'Zjistěte, kolik vás stojí poplatky za vaše ETF.',
+  'Zjistěte, kolik vám z výnosu vezmou poplatky.',
+  'Spočítejte, kolik zaplatíte za své ETF na poplatcích.',
+];
+const CTAS = ['Začít investovat', 'Spočítat poplatky'];
+let sub = 0, cta = 0;
+const render = () => { document.querySelectorAll('.js-sub').forEach(e => e.textContent = SUBS[sub]); document.querySelectorAll('.js-cta').forEach(e => e.textContent = CTAS[cta]); };
+const mkCtl = (host, items, get, set) => items.forEach((t, i) => { const b = document.createElement('button'); b.textContent = t.length > 34 ? t.slice(0, 32) + '…' : t; b.title = t; if (i === get()) b.classList.add('on'); b.onclick = () => { set(i); host.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); render(); }; host.appendChild(b); });
+mkCtl(document.getElementById('subCtl'), SUBS, () => sub, v => sub = v);
+mkCtl(document.getElementById('ctaCtl'), CTAS, () => cta, v => cta = v);
+
+const tpl = document.getElementById('t-hero');
+function phone(photo, opts = {}) {
+  const wrap = document.createElement('div');
+  const node = tpl.content.firstElementChild.cloneNode(true);
+  node.querySelector('.js-logo').innerHTML = LOGO;
+  const p = node.querySelector('.photo'); p.style.backgroundImage = `url('${PH(photo.id)}')`; p.style.backgroundPosition = photo.pos;
+  const frame = node.querySelector('.frame');
+  if (!opts.cookie) node.querySelector('.js-ck').classList.add('gone');
+  else frame.classList.add('has-banner');
+  if (opts.settings) frame.classList.add('cs-open');
+  if (opts.consented) { frame.classList.add('consented'); frame.classList.remove('has-banner'); node.querySelector('.js-ck').classList.add('gone'); }
+  if (opts.live) { node.classList.add('live'); wireCookies(node); }
+  wrap.appendChild(node);
+  wrap.insertAdjacentHTML('beforeend', `<div class="cap">${opts.cap}<span>${opts.sub}</span></div>`);
+  return wrap;
+}
+function wireCookies(root) {
+  const frame = root.querySelector('.frame'), ck = root.querySelector('.js-ck'), an = root.querySelector('.js-an'), mk = root.querySelector('.js-mk'), toast = root.querySelector('.js-toast');
+  const say = t => { toast.textContent = t; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1800); };
+  const done = (a, m) => { an.classList.toggle('on', a); mk.classList.toggle('on', m); ck.classList.add('gone'); frame.classList.remove('has-banner', 'cs-open'); frame.classList.add('consented');
+    say(a || m ? (a && m ? 'Uloženo: vše povoleno' : 'Uloženo: ' + (a ? 'analytické' : 'marketingové')) : 'Uloženo: jen nezbytné'); };
+  root.querySelector('.js-rej').onclick = () => done(false, false);
+  root.querySelector('.js-acc').onclick = () => done(true, true);
+  root.querySelector('.js-set').onclick = () => frame.classList.add('cs-open');
+  root.querySelector('.js-cclose').onclick = () => frame.classList.remove('cs-open');
+  root.querySelector('.js-rej2').onclick = () => done(false, false);
+  root.querySelector('.js-acc2').onclick = () => done(true, true);
+  root.querySelector('.js-save').onclick = () => done(an.classList.contains('on'), mk.classList.contains('on'));
+  an.onclick = () => an.classList.toggle('on'); mk.onclick = () => mk.classList.toggle('on');
+  root.querySelector('.js-reopen').onclick = () => frame.classList.add('cs-open');
+}
+const heroes = document.getElementById('heroes');
+PHOTOS.forEach(ph => heroes.appendChild(phone(ph, { cap: ph.name, sub: ph.note })));
+const ck = document.getElementById('cookies');
+ck.appendChild(phone(PHOTOS[0], { cookie: true, live: true, cap: 'Live: first visit', sub: 'tap Odmítnout / Přijmout / Nastavení' }));
+ck.appendChild(phone(PHOTOS[0], { cookie: true, cap: '1 · First layer', sub: 'compact card; hero moves up, CTA stays visible' }));
+ck.appendChild(phone(PHOTOS[0], { cookie: true, settings: true, cap: '2 · Nastavení', sub: 'categories off by default; reject / accept equal' }));
+ck.appendChild(phone(PHOTOS[0], { consented: true, cap: '3 · After a choice', sub: 'small cookie button to change it later' }));
+render();
+</script>
+</body>
+</html>
