@@ -1,0 +1,13 @@
+# Agent A — Audience: the Czech retail ETF investor
+
+Output file: `C:\Users\matus\Desktop\B_project\research\01-audience.md`
+
+## Research questions
+1. **Size and demographics.** How many Czechs invest, and how many in ETFs specifically? Age, gender, income, education, region, investing experience. Look for: ČNB (Czech National Bank) statistics and surveys, AKAT ČR data, Česká bankovní asociace surveys, STEM / Ipsos / Median / NMS polls, data published by brokers and robo-advisors (XTB, Trading 212, Portu, Fondee, Revolut, Fio), ECB Household Finance and Consumption Survey, adoption data for the Czech DIP (dlouhodobý investiční produkt, available since 2024).
+2. **Motivations.** Why do they start investing (inflation, money losing value in a bank account, pension worries, DIP tax benefit, FIRE, social media influence…)?
+3. **Fears and objections.** Losing money, fees, complexity, taxes, currency risk (CZK vs USD), choosing the "right" ETF, scams, distrust of banks and advisors.
+4. **Platforms.** Which brokers/apps Czech retail investors use (XTB, Trading 212, Portu, Fondee, Fio e-Broker, Revolut, Interactive Brokers, Degiro, others) and why. Market shares or client numbers if published.
+5. **Comparison triggers.** What makes them look for an ETF comparison or "which ETF to buy"? Which decisions are they stuck on (S&P 500 vs. world, accumulating vs. distributing, TER, broker choice, CZK vs. USD, US vs. European-domiciled ETFs)?
+6. **Voice of customer.** The exact words and phrases Czechs use when talking about ETFs, fees, S&P 500, taxes, "časový test", brokers, beginners' doubts. Sources: Czech-language subreddits (find which exist and are active), public Facebook group posts, forums (mesec.cz, finance.cz, kurzy.cz discussions), comments under popular Czech finance YouTube videos, Q&A sections of Czech finance media. Collect 20–40 short phrases (each under 15 words) with source, grouped by theme: fear, desire, confusion, jargon. Note in particular whether they talk about US tickers (VOO, SPY, QQQ…) or European UCITS tickers (CSPX, VWCE, SXR8…), since the page is about NYSE-listed ETFs.
+7. **Mobile & paid-social behaviour.** How this audience uses Instagram, Facebook, TikTok, YouTube; device split; any Czech or EU data on attention/behaviour on landing pages reached from ads.
+8. **Plausible sub-segments** (e.g. beginner with savings sitting in a bank account; DIY investor already on XTB/Trading 212 who wants to optimise; parent saving for children; 40+ worried about pension). For each: evidence on size, reachability via ads, and what they would value. Present as options only.
