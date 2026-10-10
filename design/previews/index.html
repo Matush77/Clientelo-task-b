@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual directions — 5 previews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@500;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --sheet:#e7e6e3; --ink:#1b1b1d; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--sheet); color: var(--ink); font: 15px/1.5 "IBM Plex Sans", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .sheet-head { max-width: 1180px; margin: 0 auto 32px; }
+  .sheet-head h1 { font: 600 28px/1.2 "IBM Plex Sans", sans-serif; letter-spacing: -0.01em; }
+  .sheet-head p { max-width: 760px; margin-top: 8px; color: #4a4a50; }
+  .direction { max-width: 1180px; margin: 0 auto 56px; display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start; }
+  .direction .meta .num { font: 600 13px "IBM Plex Mono", monospace; color: #7a7a80; }
+  .direction .meta h2 { font: 600 24px/1.2 "IBM Plex Sans", sans-serif; margin: 4px 0 10px; }
+  .direction .meta p { font-size: 14px; color: #3d3d42; margin-bottom: 8px; }
+  .direction .meta .risk { font-size: 13px; color: #8a2b2b; }
+  .phones { display: flex; gap: 24px; flex-wrap: wrap; }
+  .phone { width: 360px; height: 740px; border-radius: 36px; background: #111; padding: 10px; box-shadow: 0 18px 40px rgba(0,0,0,.18); flex: none; }
+  .screen { width: 100%; height: 100%; border-radius: 28px; overflow: hidden; position: relative; }
+  .cap { font: 500 12px "IBM Plex Mono", monospace; color: #6b6b70; margin-top: 8px; text-align: center; }
+  @media (max-width: 900px) { .direction { grid-template-columns: 1fr; } }
+  @media (max-width: 400px) { .phone { width: 100%; } }
+  .tab { font-variant-numeric: tabular-nums; }
+  .blur { filter: blur(3.5px); user-select: none; }
+  input { font: inherit; color: inherit; width: 100%; }
+
+  /* ---------- 1  DENÍK (data journalism) ---------- */
+  .d1 { background: #f5f0e6; color: #1c1a17; font-family: "IBM Plex Sans", sans-serif; padding: 22px 20px; }
+  .d1 .mast { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #1c1a17; padding-bottom: 8px; }
+  .d1 .mast b { font: 600 19px "Newsreader", serif; letter-spacing: -0.01em; }
+  .d1 .mast span { font: 500 10px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: #6d665c; }
+  .d1 .kicker { font: 600 11px "IBM Plex Sans", sans-serif; text-transform: uppercase; letter-spacing: .08em; color: #9b2226; margin: 16px 0 6px; }
+  .d1 h3 { font: 600 30px/1.08 "Newsreader", serif; letter-spacing: -0.015em; }
+  .d1 h3 i { font-weight: 500; color: #9b2226; }
+  .d1 .dek { font: 400 16px/1.4 "Newsreader", serif; color: #3e3a34; margin: 10px 0 16px; }
+  .d1 .rule { border-top: 1px solid #cfc6b6; }
+  .d1 .field { display: grid; grid-template-columns: 1fr auto; padding: 9px 0; border-bottom: 1px solid #cfc6b6; font-size: 14px; }
+  .d1 .field span { color: #6d665c; }
+  .d1 .field b { font: 600 15px "IBM Plex Mono", monospace; }
+  .d1 .idx { display: flex; gap: 14px; padding: 9px 0; border-bottom: 1px solid #cfc6b6; font-size: 14px; }
+  .d1 .idx .on { font-weight: 600; text-decoration: underline 2px #9b2226; text-underline-offset: 4px; }
+  .d1 .idx .off { color: #8a8378; }
+  .d1 .btn { margin-top: 16px; background: #1c1a17; color: #f5f0e6; text-align: center; padding: 14px; font-weight: 600; font-size: 15px; }
+  .d1 .src { font: 400 11px/1.4 "IBM Plex Sans", sans-serif; color: #7d766b; margin-top: 10px; }
+  .d1 .big { font: 500 italic 42px/1 "Newsreader", serif; color: #9b2226; margin: 6px 0 2px; }
+  .d1 table { width: 100%; border-collapse: collapse; margin: 12px 0 6px; font-size: 13px; }
+  .d1 th { text-align: left; font: 600 10px "IBM Plex Sans"; text-transform: uppercase; letter-spacing: .06em; color: #6d665c; border-bottom: 1px solid #1c1a17; padding: 4px 0; }
+  .d1 td { padding: 7px 0; border-bottom: 1px solid #cfc6b6; }
+  .d1 td.n { text-align: right; font-family: "IBM Plex Mono", monospace; }
+  .d1 .form label { display: block; font-size: 11px; color: #6d665c; margin-top: 8px; }
+  .d1 .form input { border: 0; border-bottom: 1px solid #1c1a17; background: transparent; padding: 4px 0 5px; font-size: 15px; }
+  .d1 .consent { font-size: 11px; color: #4f4a42; margin-top: 10px; line-height: 1.4; }
+
+  /* ---------- 2  ÚČTENKA (receipt) ---------- */
+  .d2 { background: #ecebe7; color: #161616; font-family: "Archivo", sans-serif; padding: 20px 18px; }
+  .d2 .top { display: flex; justify-content: space-between; align-items: center; font: 700 15px "Archivo"; }
+  .d2 .top small { font: 500 10px "IBM Plex Mono", monospace; color: #6b6b6b; }
+  .d2 h3 { font: 800 31px/1.04 "Archivo", sans-serif; letter-spacing: -0.025em; margin: 18px 0 10px; }
+  .d2 h3 mark { background: linear-gradient(transparent 55%, #ffe14d 55%); color: inherit; }
+  .d2 .dek { font: 500 15px/1.4 "Archivo"; color: #444; margin-bottom: 16px; }
+  .d2 .card { background: #fff; border-radius: 4px; padding: 14px; }
+  .d2 .seg { display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; background: #ecebe7; padding: 3px; border-radius: 4px; font: 600 12px "Archivo"; text-align: center; }
+  .d2 .seg div { padding: 8px 2px; border-radius: 3px; color: #666; }
+  .d2 .seg .on { background: #161616; color: #fff; }
+  .d2 .row { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed #c9c9c9; font-size: 14px; color: #555; }
+  .d2 .row b { font: 600 15px "IBM Plex Mono", monospace; color: #161616; }
+  .d2 .btn { margin-top: 14px; background: #161616; color: #fff; border-radius: 4px; text-align: center; padding: 14px; font-weight: 700; }
+  .d2 .src { font: 400 10.5px "IBM Plex Mono", monospace; color: #7a7a7a; margin-top: 10px; }
+  .d2 .receipt { background: #fff; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; padding: 16px 16px 22px; position: relative;
+    -webkit-mask: radial-gradient(circle 6px at 50% 100%, transparent 98%, #000) 0 0 / 14px 100% repeat-x; mask: radial-gradient(circle 6px at 50% 100%, transparent 98%, #000) 0 0 / 14px 100% repeat-x; }
+  .d2 .receipt .c { text-align: center; }
+  .d2 .receipt .dash { border-top: 1px dashed #999; margin: 8px 0; }
+  .d2 .receipt .l { display: flex; justify-content: space-between; padding: 2px 0; }
+  .d2 .receipt .tot { font-weight: 600; font-size: 14px; }
+  .d2 .receipt .hl { background: #ffe14d; padding: 0 3px; }
+  .d2 .form { margin-top: 12px; }
+  .d2 .form input { background: #fff; border: 1.5px solid #161616; border-radius: 4px; padding: 10px 11px; font: 500 14px "Archivo"; margin-bottom: 7px; }
+  .d2 .consent { font: 400 10.5px/1.4 "Archivo"; color: #555; }
+
+  /* ---------- 3  TERMINÁL (ticker) ---------- */
+  .d3 { background: #0c1117; color: #d5dce4; font-family: "IBM Plex Sans", sans-serif; }
+  .d3 .tape { background: #151c25; border-bottom: 1px solid #253141; font: 500 11px "IBM Plex Mono", monospace; white-space: nowrap; overflow: hidden; padding: 7px 0; color: #8fa1b5; }
+  .d3 .tape span { margin: 0 10px; } .d3 .tape b { color: #ffb000; font-weight: 600; }
+  .d3 .in { padding: 18px 18px; }
+  .d3 .brand { font: 600 13px "IBM Plex Mono", monospace; color: #ffb000; letter-spacing: .04em; }
+  .d3 h3 { font: 600 27px/1.12 "IBM Plex Sans", sans-serif; letter-spacing: -0.015em; color: #f3f6f9; margin: 14px 0 10px; }
+  .d3 h3 em { font-style: normal; color: #3ddc84; }
+  .d3 .dek { font-size: 14.5px; color: #9fb0c2; margin-bottom: 16px; }
+  .d3 .panel { border: 1px solid #253141; border-radius: 6px; padding: 12px; background: #111821; }
+  .d3 .lbl { font: 500 10px "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: #6c7f94; }
+  .d3 .tabs { display: flex; gap: 6px; margin: 6px 0 12px; }
+  .d3 .tabs div { font: 500 12px "IBM Plex Mono"; border: 1px solid #2c3a4c; border-radius: 4px; padding: 6px 8px; color: #8fa1b5; }
+  .d3 .tabs .on { border-color: #ffb000; color: #ffb000; }
+  .d3 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .d3 .val { font: 600 17px "IBM Plex Mono", monospace; color: #f3f6f9; margin-top: 2px; }
+  .d3 .btn { margin-top: 14px; background: #ffb000; color: #0c1117; border-radius: 4px; text-align: center; padding: 13px; font-weight: 600; }
+  .d3 .src { font: 400 10.5px "IBM Plex Mono"; color: #5f7287; margin-top: 10px; }
+  .d3 .cmp { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font: 500 13px "IBM Plex Mono"; margin: 10px 0; }
+  .d3 .cmp .r { color: #ff6b6b; } .d3 .cmp .g { color: #3ddc84; }
+  .d3 .diff { font: 600 34px "IBM Plex Mono", monospace; color: #3ddc84; letter-spacing: -0.02em; }
+  .d3 .form input { background: #0c1117; border: 1px solid #2c3a4c; border-radius: 4px; padding: 10px; font: 500 14px "IBM Plex Sans"; color: #d5dce4; margin-top: 7px; }
+  .d3 .consent { font-size: 10.5px; color: #7d8fa3; margin-top: 8px; line-height: 1.4; }
+
+  /* ---------- 4  DVOJČATA (split twins) ---------- */
+  .d4 { background: #fbf8f3; color: #1d2433; font-family: "DM Sans", sans-serif; }
+  .d4 .bar { display: flex; justify-content: space-between; padding: 16px 18px 0; font: 700 15px "Bricolage Grotesque"; }
+  .d4 .bar small { font: 500 11px "DM Sans"; color: #6c7383; }
+  .d4 .hero { padding: 12px 18px 0; }
+  .d4 .twins { display: flex; justify-content: center; margin: 6px 0 8px; height: 104px; position: relative; }
+  .d4 .c { width: 104px; height: 104px; border-radius: 50%; display: grid; place-content: center; text-align: center; font: 800 20px/1 "Bricolage Grotesque"; }
+  .d4 .c small { display: block; font: 500 10px "DM Sans"; margin-top: 4px; opacity: .85; }
+  .d4 .c.us { background: #24407a; color: #fff; margin-right: -26px; }
+  .d4 .c.eu { background: #f2a541; color: #1d2433; mix-blend-mode: multiply; }
+  .d4 .mid { text-align: center; font: 500 11px "DM Sans"; color: #6c7383; margin: -2px 0 10px; }
+  .d4 h3 { font: 800 28px/1.05 "Bricolage Grotesque"; letter-spacing: -0.02em; text-align: center; }
+  .d4 .dek { text-align: center; font-size: 14.5px; color: #4f5768; margin: 8px 6px 14px; }
+  .d4 .calc { background: #fff; border-radius: 18px 18px 0 0; padding: 16px 18px 20px; box-shadow: 0 -4px 20px rgba(29,36,51,.06); }
+  .d4 .pills { display: flex; gap: 6px; margin-bottom: 12px; }
+  .d4 .pills div { font: 500 12.5px "DM Sans"; padding: 7px 11px; border-radius: 99px; background: #f1ede6; color: #4f5768; }
+  .d4 .pills .on { background: #1d2433; color: #fff; }
+  .d4 .f3 { display: grid; grid-template-columns: 1.2fr 1fr .8fr; gap: 8px; }
+  .d4 .f3 div { background: #f6f3ee; border-radius: 10px; padding: 8px 10px; }
+  .d4 .f3 span { font-size: 10.5px; color: #6c7383; display: block; }
+  .d4 .f3 b { font: 700 15px "Bricolage Grotesque"; }
+  .d4 .btn { margin-top: 12px; background: #24407a; color: #fff; border-radius: 12px; text-align: center; padding: 14px; font-weight: 700; }
+  .d4 .src { font-size: 10.5px; color: #8a90a0; margin-top: 8px; text-align: center; }
+  .d4 .res { padding: 18px; }
+  .d4 .bars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: end; height: 150px; margin: 12px 0 6px; }
+  .d4 .bars div { border-radius: 10px 10px 4px 4px; display: flex; flex-direction: column; justify-content: flex-start; padding: 8px; font: 700 15px "Bricolage Grotesque"; }
+  .d4 .bars .us { background: #24407a; color: #fff; height: 100%; }
+  .d4 .bars .eu { background: #f2a541; height: 18%; }
+  .d4 .bars small { font: 500 10.5px "DM Sans"; opacity: .9; }
+  .d4 .form input { background: #fff; border: 1.5px solid #e3ddd3; border-radius: 10px; padding: 10px 12px; font: 500 14px "DM Sans"; margin-top: 7px; }
+  .d4 .consent { font-size: 10.5px; color: #6c7383; margin-top: 8px; line-height: 1.4; }
+
+  /* ---------- 5  MŘÍŽKA (Swiss grid) ---------- */
+  .d5 { background: #ffffff; color: #0d0d0d; font-family: "Instrument Sans", sans-serif; padding: 20px 20px; }
+  .d5 .top { display: grid; grid-template-columns: 1fr auto; border-bottom: 1px solid #0d0d0d; padding-bottom: 10px; font: 700 14px "Instrument Sans"; }
+  .d5 .top span { font: 500 11px "Instrument Sans"; color: #0047bb; }
+  .d5 h3 { font: 600 33px/1.0 "Instrument Sans"; letter-spacing: -0.035em; margin: 22px 0 12px; }
+  .d5 h3 span { color: #0047bb; }
+  .d5 .dek { font-size: 15px; color: #3a3a3a; margin-bottom: 18px; max-width: 290px; }
+  .d5 .step { display: grid; grid-template-columns: 34px 1fr auto; align-items: baseline; border-top: 1px solid #0d0d0d; padding: 10px 0; }
+  .d5 .step .no { font: 600 11px "Instrument Sans"; color: #0047bb; }
+  .d5 .step .k { font-size: 13px; color: #555; }
+  .d5 .step .v { font: 600 17px "Instrument Sans"; font-variant-numeric: tabular-nums; }
+  .d5 .btn { margin-top: 6px; background: #0047bb; color: #fff; padding: 15px 16px; font-weight: 600; display: flex; justify-content: space-between; }
+  .d5 .src { font-size: 10.5px; color: #777; margin-top: 10px; }
+  .d5 .huge { font: 600 50px/0.95 "Instrument Sans"; letter-spacing: -0.04em; color: #0047bb; font-variant-numeric: tabular-nums; margin: 6px 0 4px; }
+  .d5 .two { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #0d0d0d; margin-top: 14px; }
+  .d5 .two div { padding: 8px 0; }
+  .d5 .two div + div { border-left: 1px solid #0d0d0d; padding-left: 10px; }
+  .d5 .two span { font-size: 11px; color: #555; display: block; }
+  .d5 .two b { font: 600 18px "Instrument Sans"; font-variant-numeric: tabular-nums; }
+  .d5 .form input { border: 0; border-bottom: 1px solid #0d0d0d; padding: 9px 0; font: 500 15px "Instrument Sans"; border-radius: 0; }
+  .d5 .consent { font-size: 10.5px; color: #555; margin-top: 10px; line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<header class="sheet-head">
+  <h1>Five visual directions, same content</h1>
+  <p>Screen 1 = what a visitor sees on arrival from the ad ("same index, cheaper twin" angle). Screen 2 = after "Porovnat": headline result visible, details locked behind the 3-field form. Copy, numbers and structure are identical across directions; only the visual language changes. <b>Numbers are an illustrative scenario</b> (100 000 Kč + 3 000 Kč/month, 20 years, 7 % p.a. before costs; Fio FX spread ≈ 3 % indicative), computed from the verified fee data. Brand name "ETF dvojčata" is a placeholder.</p>
+</header>
+
+<!-- ================= 1 DENÍK ================= -->
+<section class="direction">
+  <div class="meta">
+    <div class="num">01</div>
+    <h2>Deník — data journalism</h2>
+    <p>Reads like a trusted financial newspaper: serif headlines, tabular figures, thin rules, numbered source footnotes. Credibility through sources, not decoration.</p>
+    <p>Fits a sceptical DIY investor who distrusts ads (73 % say ads exaggerate).</p>
+    <p class="risk">Risk: may feel slow or editorial for a 3-second ad visit; needs a strong first-screen CTA.</p>
+  </div>
+  <div class="phones">
+    <div><div class="phone"><div class="screen d1">
+      <div class="mast"><b>ETF dvojčata</b><span>Srovnání · 9. 10. 2026</span></div>
+      <div class="kicker">S&amp;P 500 z NYSE vs. Evropa</div>
+      <h3>VOO a CSPX drží stejných 500 firem. <i>Která cesta vás vyjde levněji?</i></h3>
+      <p class="dek">Za 20 vteřin uvidíte v korunách, kolik vás stojí poplatek fondu, směna na dolary a broker.</p>
+      <div class="rule"></div>
+      <div class="idx"><span class="on">S&amp;P 500</span><span class="off">Celý svět</span><span class="off">Celý trh USA</span></div>
+      <div class="field"><span>Jednorázově</span><b class="tab">100 000 Kč</b></div>
+      <div class="field"><span>Měsíčně</span><b class="tab">3 000 Kč</b></div>
+      <div class="field"><span>Doba</span><b class="tab">20 let</b></div>
+      <div class="btn">Porovnat obě cesty →</div>
+      <p class="src">Data: emitenti fondů¹, ceníky brokerů², kurz ČNB³. Nejde o investiční doporučení.</p>
+    </div></div><div class="cap">1 · first screen</div></div>
+    <div><div class="phone"><div class="screen d1">
+      <div class="mast"><b>ETF dvojčata</b><span>Váš výpočet</span></div>
+      <div class="kicker">Za 20 let vložíte 820 000 Kč</div>
+      <p style="font:400 14px 'Newsreader',serif">Rozdíl v nákladech mezi oběma cestami:</p>
+      <div class="big tab">≈ 168 600 Kč</div>
+      <table class="tab">
+        <tr><th>Cesta</th><th style="text-align:right">Náklady celkem</th></tr>
+        <tr><td>VOO · NYSE Arca · přes Fio</td><td class="n">205 700 Kč</td></tr>
+        <tr><td>CSPX · Evropa · přes XTB</td><td class="n">37 100 Kč</td></tr>
+        <tr class="blur"><td>z toho poplatek fondu</td><td class="n">00 000 Kč</td></tr>
+        <tr class="blur"><td>z toho směna CZK→USD</td><td class="n">00 000 Kč</td></tr>
+      </table>
+      <div class="form">
+        <label>Jméno</label><input autocomplete="name" value="" placeholder="Jan Novák" readonly>
+        <label>E-mail</label><input autocomplete="email" placeholder="jan@email.cz" readonly>
+        <label>Telefon</label><input autocomplete="tel" placeholder="+420 …" readonly>
+      </div>
+      <div class="btn" style="margin-top:12px">Zobrazit celý rozpis</div>
+      <p class="consent">Rozpis pošleme i e-mailem. Jednou vám zavoláme, abychom výpočet prošli s vámi. ☐ Občas chci tipy e-mailem.</p>
+    </div></div><div class="cap">2 · result + form</div></div>
+  </div>
+</section>
+
+<!-- ================= 2 ÚČTENKA ================= -->
+<section class="direction">
+  <div class="meta">
+    <div class="num">02</div>
+    <h2>Účtenka — itemised receipt</h2>
+    <p>The result is literally a bill: every cost (fund fee, FX, commission) itemised, the total highlighted. Makes abstract percentages tangible in crowns.</p>
+    <p>Fee salience in CZK is the best-evidenced lever in the research.</p>
+    <p class="risk">Risk: the metaphor carries the page; the first screen must still look credible, not gimmicky.</p>
+  </div>
+  <div class="phones">
+    <div><div class="phone"><div class="screen d2">
+      <div class="top">ETF dvojčata <small>NYSE ↔ EU</small></div>
+      <h3>VOO a CSPX drží stejných 500 firem. <mark>Kolik zaplatíte za tu svou?</mark></h3>
+      <p class="dek">Spočítejte si v korunách poplatek fondu, směnu na dolary a brokera. Za 20 vteřin.</p>
+      <div class="card">
+        <div class="seg"><div class="on">S&amp;P 500</div><div>Celý svět</div><div>Trh USA</div></div>
+        <div class="row">Jednorázově <b class="tab">100 000 Kč</b></div>
+        <div class="row">Měsíčně <b class="tab">3 000 Kč</b></div>
+        <div class="row" style="border:0">Doba <b class="tab">20 let</b></div>
+        <div class="btn">Vytisknout účet →</div>
+      </div>
+      <p class="src">Zdroje: emitenti, ceníky brokerů, ČNB · k 9. 10. 2026</p>
+    </div></div><div class="cap">1 · first screen</div></div>
+    <div><div class="phone"><div class="screen d2">
+      <div class="receipt tab">
+        <div class="c"><b>ÚČET ZA 20 LET</b><br>S&amp;P 500 · vloženo 820 000 Kč</div>
+        <div class="dash"></div>
+        <div class="l"><span>VOO · NYSE · Fio</span><span>205 700</span></div>
+        <div class="l"><span>CSPX · EU · XTB</span><span>37 100</span></div>
+        <div class="dash"></div>
+        <div class="l blur"><span>poplatek fondu</span><span>00 000</span></div>
+        <div class="l blur"><span>směna CZK→USD</span><span>00 000</span></div>
+        <div class="l blur"><span>provize brokera</span><span>00 000</span></div>
+        <div class="dash"></div>
+        <div class="l tot"><span>ROZDÍL</span><span class="hl">≈ 168 600 Kč</span></div>
+      </div>
+      <div class="form">
+        <input autocomplete="name" placeholder="Jméno" readonly>
+        <input autocomplete="email" placeholder="E-mail" readonly>
+        <input autocomplete="tel" placeholder="Telefon" readonly>
+        <div class="btn" style="background:#161616;color:#fff;border-radius:4px;text-align:center;padding:13px;font-weight:700">Odemknout celý účet</div>
+        <p class="consent" style="margin-top:8px">Účet pošleme i e-mailem. Jednou vám zavoláme k výpočtu. ☐ Občas chci tipy e-mailem.</p>
+      </div>
+    </div></div><div class="cap">2 · result + form</div></div>
+  </div>
+</section>
+
+<!-- ================= 3 TERMINÁL ================= -->
+<section class="direction">
+  <div class="meta">
+    <div class="num">03</div>
+    <h2>Terminál — market data</h2>
+    <p>Dark, monospace, a ticker tape with real TERs. Speaks the language of the DIY investor who follows tickers on YouTube and in the forum.</p>
+    <p>Strongest "insider tool" feel; very distinct from Portu/Fondee.</p>
+    <p class="risk">Risk: looks like a trading app — close to the CFD/XTB world, which can hurt trust with cautious investors.</p>
+  </div>
+  <div class="phones">
+    <div><div class="phone"><div class="screen d3">
+      <div class="tape"><span><b>VOO</b> TER 0,03 % · NYSE Arca</span><span><b>CSPX</b> TER 0,07 % · EU</span><span><b>SPY</b> 0,0945 %</span><span><b>VWCE</b> 0,14 %</span></div>
+      <div class="in">
+        <div class="brand">ETF_DVOJČATA</div>
+        <h3>VOO a CSPX: stejných 500 firem. <em>Jiná cena cesty.</em></h3>
+        <p class="dek">Porovnejte v korunách TER, směnu CZK→USD a brokera. 20 vteřin.</p>
+        <div class="panel">
+          <div class="lbl">Index</div>
+          <div class="tabs"><div class="on">S&amp;P 500</div><div>Svět</div><div>Trh USA</div></div>
+          <div class="grid2">
+            <div><div class="lbl">Jednorázově</div><div class="val tab">100 000 Kč</div></div>
+            <div><div class="lbl">Měsíčně</div><div class="val tab">3 000 Kč</div></div>
+          </div>
+          <div style="margin-top:10px"><div class="lbl">Doba</div><div class="val tab">20 let</div></div>
+          <div class="btn">Spustit srovnání</div>
+        </div>
+        <p class="src">Zdroje: emitenti · ceníky brokerů · ČNB API · 9. 10. 2026</p>
+      </div>
+    </div></div><div class="cap">1 · first screen</div></div>
+    <div><div class="phone"><div class="screen d3">
+      <div class="in">
+        <div class="brand">VÝSLEDEK · S&amp;P 500 · 20 LET</div>
+        <div class="cmp tab" style="margin-top:14px">
+          <span>VOO via Fio</span><span class="r">−205 700 Kč</span>
+          <span>CSPX via XTB</span><span class="g">−37 100 Kč</span>
+        </div>
+        <div class="lbl">Rozdíl</div>
+        <div class="diff tab">168 600 Kč</div>
+        <div class="panel blur" style="margin:12px 0">
+          <div class="cmp"><span>TER</span><span>0 000</span><span>FX</span><span>00 000</span><span>Provize</span><span>00 000</span></div>
+        </div>
+        <div class="form">
+          <input autocomplete="name" placeholder="Jméno" readonly>
+          <input autocomplete="email" placeholder="E-mail" readonly>
+          <input autocomplete="tel" placeholder="Telefon" readonly>
+        </div>
+        <div class="btn">Zobrazit rozpis</div>
+        <p class="consent">Rozpis přijde i e-mailem. Jednou zavoláme k výpočtu. ☐ Tipy e-mailem.</p>
+      </div>
+    </div></div><div class="cap">2 · result + form</div></div>
+  </div>
+</section>
+
+<!-- ================= 4 DVOJČATA ================= -->
+<section class="direction">
+  <div class="meta">
+    <div class="num">04</div>
+    <h2>Dvojčata — the twin concept</h2>
+    <p>The page's idea made visual: two overlapping circles (NYSE fund, European twin) sharing the same 500 companies; the result as two cost bars of very different height.</p>
+    <p>Warm, friendly, approachable; the concept is graspable in one glance.</p>
+    <p class="risk">Risk: the playful tone is closest to the Portu/Fondee fintech look; weaker "expert" signal.</p>
+  </div>
+  <div class="phones">
+    <div><div class="phone"><div class="screen d4">
+      <div class="bar">ETF dvojčata <small>NYSE ↔ Evropa</small></div>
+      <div class="hero">
+        <div class="twins"><div class="c us">VOO<small>NYSE Arca</small></div><div class="c eu">CSPX<small>Evropa</small></div></div>
+        <p class="mid">průnik = stejných 500 firem</p>
+        <h3>Stejný index. Jiná cena.</h3>
+        <p class="dek">Spočítejte si v korunách, kolik vás stojí fond, směna na dolary a broker.</p>
+      </div>
+      <div class="calc">
+        <div class="pills"><div class="on">S&amp;P 500</div><div>Celý svět</div><div>Trh USA</div></div>
+        <div class="f3"><div><span>Jednorázově</span><b class="tab">100 000 Kč</b></div><div><span>Měsíčně</span><b class="tab">3 000 Kč</b></div><div><span>Let</span><b class="tab">20</b></div></div>
+        <div class="btn">Porovnat dvojčata</div>
+        <p class="src">Data k 9. 10. 2026 · emitenti, brokeři, ČNB</p>
+      </div>
+    </div></div><div class="cap">1 · first screen</div></div>
+    <div><div class="phone"><div class="screen d4">
+      <div class="res">
+        <div class="bar" style="padding:0">Za 20 let · vloženo 820 000 Kč</div>
+        <div class="bars tab"><div class="us">205 700 Kč<small>VOO přes Fio</small></div><div class="eu">37 100 Kč<small>CSPX přes XTB</small></div></div>
+        <p style="font:800 22px 'Bricolage Grotesque';text-align:center;margin:8px 0">Rozdíl ≈ 168 600 Kč</p>
+        <p class="blur" style="text-align:center;font-size:13px;color:#6c7383">fond 0 000 Kč · směna 00 000 Kč · provize 00 000 Kč</p>
+        <div class="form">
+          <input autocomplete="name" placeholder="Jméno" readonly>
+          <input autocomplete="email" placeholder="E-mail" readonly>
+          <input autocomplete="tel" placeholder="Telefon" readonly>
+        </div>
+        <div class="btn">Ukázat celý rozpis</div>
+        <p class="consent">Rozpis pošleme i e-mailem. Jednou vám zavoláme k výpočtu. ☐ Občas chci tipy e-mailem.</p>
+      </div>
+    </div></div><div class="cap">2 · result + form</div></div>
+  </div>
+</section>
+
+<!-- ================= 5 MŘÍŽKA ================= -->
+<section class="direction">
+  <div class="meta">
+    <div class="num">05</div>
+    <h2>Mřížka — Swiss grid</h2>
+    <p>Strict grid, one colour, huge numerals, numbered steps. Calm and precise; the number is the hero. No illustrations, no rounded cards.</p>
+    <p>Most "premium/independent" feel; very fast to load.</p>
+    <p class="risk">Risk: can feel cold; relies entirely on typography being done well.</p>
+  </div>
+  <div class="phones">
+    <div><div class="phone"><div class="screen d5">
+      <div class="top">ETF dvojčata <span>NYSE ↔ EU</span></div>
+      <h3>VOO a CSPX. Stejných 500 firem. <span>Jiné náklady.</span></h3>
+      <p class="dek">Kolik vás stojí fond, směna na dolary a broker — v korunách, za 20 vteřin.</p>
+      <div class="step"><span class="no">01</span><span class="k">Index</span><span class="v">S&amp;P 500 ▾</span></div>
+      <div class="step"><span class="no">02</span><span class="k">Jednorázově</span><span class="v">100 000 Kč</span></div>
+      <div class="step"><span class="no">03</span><span class="k">Měsíčně</span><span class="v">3 000 Kč</span></div>
+      <div class="step"><span class="no">04</span><span class="k">Doba</span><span class="v">20 let</span></div>
+      <div class="btn"><span>Porovnat</span><span>→</span></div>
+      <p class="src">Zdroje: emitenti, ceníky brokerů, ČNB · 9. 10. 2026 · Není investiční doporučení.</p>
+    </div></div><div class="cap">1 · first screen</div></div>
+    <div><div class="phone"><div class="screen d5">
+      <div class="top">Výsledek <span>S&amp;P 500 · 20 let</span></div>
+      <p style="margin-top:18px;font-size:13px;color:#555">Rozdíl v nákladech</p>
+      <div class="huge">168 600 Kč</div>
+      <p style="font-size:13px;color:#555">při vkladu 820 000 Kč</p>
+      <div class="two tab"><div><span>VOO · Fio</span><b>205 700</b></div><div><span>CSPX · XTB</span><b>37 100</b></div></div>
+      <div class="two blur"><div><span>Fond</span><b>0 000</b></div><div><span>Směna</span><b>00 000</b></div></div>
+      <div class="form" style="margin-top:6px">
+        <input autocomplete="name" placeholder="Jméno" readonly>
+        <input autocomplete="email" placeholder="E-mail" readonly>
+        <input autocomplete="tel" placeholder="Telefon" readonly>
+      </div>
+      <div class="btn" style="margin-top:12px"><span>Celý rozpis</span><span>→</span></div>
+      <p class="consent">Rozpis pošleme i e-mailem. Jednou vám zavoláme k výpočtu. ☐ Občas chci tipy e-mailem.</p>
+    </div></div><div class="cap">2 · result + form</div></div>
+  </div>
+</section>
+
+</body>
+</html>
