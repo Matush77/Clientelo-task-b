@@ -2906,3 +2906,89 @@ item response rates:                        Mutual funds                        
 You've hit your session limit · resets 6:40pm (Europe/Prague)
 
 *[context injected: The coordinator sent a message while you were working:]*
+
+**→ Write** `C:\Users\matus\Desktop\B_project\research\01-audience.md`
+
+```
+# Audience: the Czech retail ETF investor
+
+Research agent A (Claude Sonnet 5.5). All sources accessed 2026-10-10. Tags: `[VERIFIED]` = page or file opened and states it; `[INFERRED]` = my reasoning, or only a search snippet / headline / secondary summary was available.
+
+Method notes: Reddit, Facebook groups and YouTube comments could not be accessed (Reddit is blocked for the fetch tool and search crawler; the others are not fetchable). The web search budget ran out mid-task, so some gaps stay open. Voice-of-customer therefore comes mainly from the FinExpert.cz (e15) public forum and Czech App Store reviews. Quotes were returned through the fetch tool's text-extraction layer, so check spelling against the original before using any of them in copy.
+
+## Summary
+
+- Surveys disagree on "how many Czechs invest" because definitions differ: 39% (Raiffeisenbank/NMS, Feb 2026), 41% (AKAT, Feb 2025), 55% (Česká spořitelna/Ipsos, Mar 2026), 57% "have experience" (Generali/Ipsos, Apr 2025). The only ETF-specific population figure found is about 14% (Generali, 2025). No official count of Czech ETF holders exists in what I found.
+- Typical investor profile across surveys: male, younger, higher income, university-educated. Women are about 38–40% of Portu clients and the fastest-growing group there. No regional data found.
+- Top motivation is retirement (50% to 78% depending on survey). Inflation protection is a secondary driver (39%). The DIP tax deduction (up to 48,000 CZK a year) is a large new driver: 244,217 DIP contracts on 31 Mar 2026.
+- Top barriers among non-investors are fear of losing money (73%) and a feeling of lacking money or know-how (71%) (Raiffeisenbank). Fear of fraud (43%, AKAT 2024) and distrust of brokers also appear.
+- Platforms: Česká spořitelna (more than 780k investing clients), Portu (more than 280k clients), Trading 212, XTB, Revolut, Degiro, Fio, Patria. No Czech client counts are published for XTB or Trading 212.
+- Czech investors discuss European UCITS ETFs (VWCE, IWDA, SWRD, SPYL, CSPX/SXR8, VUAA), not US tickers. The largest NYSE-listed ETFs (SPY, VOO, IVV) are unavailable to most EU retail clients under PRIIPs/KID rules. Fio and Patria are named exceptions. This matters for a page about NYSE ETFs.
+- The questions people get stuck on: S&P 500 vs world index, accumulating vs distributing, TER (0.03% to 0.22% in the forum), broker choice, CZK/USD conversion cost, and tax (3-year time test, 15% vs 35% dividend withholding).
+- Reach: Facebook ad reach 5.0M, Instagram 3.95M, TikTok 2.13M (18+), YouTube 8.08M (DataReportal, Oct 2025). Mobile is only 49.3% of all Czech web traffic (StatCounter, Sep 2026). No Czech data on landing-page behaviour after ad clicks was found.
+- Sub-segments with evidence: bank-savings beginners, DIY optimisers, DIP/pension savers 40+, parents saving for children, under-30 social-media-led, women. Each is listed as an option below.
+
+## Findings
+
+### 1. Size and demographics
+
+**Share who invest (all definitions differ):**
+- 55% "invest" (stocks, bonds, funds), up from 41% two years earlier. 82% "let money work", which includes savings accounts. Česká spořitelna, Evropa v datech and Ipsos, published 11 Mar 2026. [VERIFIED] https://www.seznamzpravy.cz/clanek/ekonomika-b2b-investuji-uz-ctyri-z-peti-cechu-inflacni-sok-pusobil-jako-budicek-301142 Sample size reported as 1,003 aged 18–65 only in a search snippet of a page that returned 403. [INFERRED] https://www.businessinfo.cz/clanky/index-prosperity-pres-8-z-10-cechu-zhodnocuje-sve-uspory-a-vice-nez-polovina-populace-aktivne-investuje/
+- 41% self-identified investors, up from 39%; 29% considering. AKAT/Perfect Crowd, n=1,114, 3 Feb 2025. [VERIFIED] https://www.newstream.cz/money/ctyri-z-deseti-cechu-se-povazuji-za-investory
+- 39% invest, up from 32%. Raiffeisenbank/NMS, about 1,000 aged 18–64, Feb 2026. [VERIFIED] https://www.newstream.cz/money/investovani-je-novy-standard-zajem-cechu-vyrazne-roste. Raiffeisenbank figures in July 2026: 39% act
+… [truncated, 31217 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+File created successfully at: C:\Users\matus\Desktop\B_project\research\01-audience.md (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ Edit** `C:\Users\matus\Desktop\B_project\research\01-audience.md`
+
+```
+- Instagram/Facebook, women skew 52% of ad reach (DataReportal)
++ Instagram reaches 52.5% of women vs 43.8% of men (DataReportal)
+```
+
+**→ Edit** `C:\Users\matus\Desktop\B_project\research\01-audience.md`
+
+```
+- TER (0.03% to 0.22% in the forum)
++ TER (0.03% to 0.14% in the sources above)
+```
+
+<details><summary>result</summary>
+
+```
+The file C:\Users\matus\Desktop\B_project\research\01-audience.md has been updated successfully. (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The file C:\Users\matus\Desktop\B_project\research\01-audience.md has been updated successfully. (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ SubagentHandback**
+
+```
+{
+ "message": "File: C:\\Users\\matus\\Desktop\\B_project\\research\\01-audience.md\n\nSummary (5 bullets):\n- \"How many Czechs invest\" ranges from 39% to 57% depending on the survey's definition (Raiffeisenbank 39%, AKAT 41%, Česká spořitelna 55%, Generali 57% \"experience\"). The only ETF-specific population figure found is about 14% (Generali 2025). Investors skew male, younger, higher income and university-educated; women are 38–40% of Portu clients and the fastest-growing group there. There is no regional data.\n- Motivations are retirement (50–78%), inflation (39%) and the DIP tax deduction (48,000 CZK a year; 244,217 contracts on 31 Mar 2026). Non-investors fear losing money (73%) and feel they lack money or know-how (71%). AKAT found fear of fraud at 43% in 2024.\n- Platforms: Česká spořitelna has more than 780k investing clients and Portu more than 280k. XTB, Trading 212 and Revolut publish no Czech client counts, so I used Czech iOS rating counts and FinExpert forum thread sizes as proxies, both flagged INFERRED. Patria's retail trades are 72% on US markets (stocks and ETFs not split).\n- Czech investors talk about UCITS tickers (forum posts mentioning each: VWCE 185, IWDA 141, SPYL 106, SXR8 78, CSPX 25). Finex (Sep 2026) says SPY, VOO and IVV are unavailable to most EU retail clients because of PRIIPs. It names Fio and Patria as exceptions. This is a direct tension with an \"NYSE ETFs\" page. The file has 33 voice-of-customer phrases grouped by fear, desire, con
+… [truncated, 1583 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+{"success":true,"message":"Report delivered to your caller."}
+```
+
+</details>

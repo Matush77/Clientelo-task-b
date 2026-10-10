@@ -3982,3 +3982,16 @@ No preview is open. Use `preview_start` or `navigate` with {"url": "https://…"
 ```
 
 </details>
+
+**→ WebSearch** `cookie consent acceptance rate by country Czech Republic opt-in rate analytics consent rate Europe 2024 2025 study`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "cookie consent acceptance rate by country Czech Republic opt-in rate analytics consent rate Europe 2024 2025 study"
+
+Links: [{"title":"We Value Your Privacy ... Now Take Some Cookies: Measuring the GDPR's Impact on Web Privacy","url":"https://arxiv.org/pdf/1808.05096"},{"title":"taux consentement cookies","url":"https://www.donneespersonnelles.fr/taux-consentement-cookies"},{"title":"Seuls 5,4% des internautes paramètrent leurs cookies selon une étude","url":"https://fr.themedialeader.com/?p=211030"},{"title":"Digital Compliance","url":"https://www.advance-metrics.com/en/blog/cookie-behaviour-study/"},{"title":"Seuls 5,4% des internautes paramètrent leurs cookies selon une étude","url":"https://fr.themedialeader.com/seuls-54-des-internautes-parametrent-leurs-cookies-selon-une-etude"},{"title":"france consent to cookies usage and data protection","url":"https://www.statista.com/statistics/1396748/france-consent-to-cookies-usage-and-data-protection"},{"title":"Back to Blog","url":"https://wideangle.co/blog/cookie-banner-reject-accept-stats"},{"title":"France frequency of consenting cookies usage on websites 2022","url":"https://www.statista.com/statisti
+… [truncated, 3231 more chars]
+```
+
+</details>

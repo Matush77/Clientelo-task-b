@@ -4454,3 +4454,249 @@ The entities referred to above are considered to be professionals. They must how
 **→ WebFetch** https://www.invesco.com/qqq-etf/en/home.html
 
 > prompt: Extract: listing exchange (Nasdaq), expense ratio, inception date, net assets, index, holdings count, distribution frequency, any downloadable files, as-of date.
+
+<details><summary>result</summary>
+
+```
+**Extracted fields (Invesco QQQ ETF page):**
+
+- **Listing exchange:** Not explicitly stated. The page notes that NASDAQ and Nasdaq-100 are trademarks licensed to the fund's sponsor, but it doesn't name the exchange where QQQ is listed.
+- **Expense ratio:** 0.18% (total expense ratio)
+- **Inception date:** March 10, 1999
+- **Net assets:** Not stated
+- **Index:** Nasdaq-100 Index
+- **Holdings count:** Not stated directly. The page refers to "100 innovative companies" and describes the index as comprising the 100 largest non-financial companies on the Nasdaq.
+- **Distribution frequency:** Not stated
+- **Downloadable files:**
+  - Prospectus (hosted by Broadridge, opens in a new tab)
+  - Online privacy notice (PDF, opens in a new tab)
+- **As-of date:** June 30, 2026
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Contents:** Text and numeric information extracted from the risk/return summary section of mutual fund prospectuses, taken from XBRL-tagged exhibits. The data is presented as filed, without change.
+
+**Coverage:** December 2010 through June 2026.
+
+**Update frequency:** Quarterly. Documents filed after 5:30 PM Eastern on the last business day of a quarter appear in the next quarterly posting. The latest listed quarter is 2026 Q2 (ZIP, 77.88 MB), and the page was last updated June 30, 2026.
+
+**Format:** Downloads are ZIP files containing a "flattened format" designed for comparing disclosures over time and across registrants. The linked PDF documentation (207 KB) describes scope, organization, file formats, and table definitions.
+
+**Use restrictions:** The page states no formal license or usage terms. It includes a disclaimer that the SEC cannot guarantee accuracy, that errors may have been introduced during extraction, and that the data is not a substitute for the filings. Investors are told to review the full Commission filings before making investment decisions.
+
+**Fee table / expense ratio:** The page does not say whether fee table or expense ratio data is included. It only desc
+… [truncated, 144 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+- **Contents:** Monthly portfolio holdings from Form N-PORT. It covers registered management investment companies and ETFs organized as unit investment trusts, but excludes money market funds and SBICs. The page says funds report "each of their portfolio holdings" as of month-end. It doesn't explicitly say whether ETFs organized as open-end funds are included.
+- **Update frequency:** Quarterly. Filings made "after 5:30 PM Eastern on the last business day of a quarter" roll into the next posting.
+- **Coverage and latest period:** October 2019 through September 2026. The latest file is 2026 Q3, and the page was last updated Sept. 30, 2026.
+- **Format:** ZIP archives of structured data, roughly 229 MB to 691 MB per quarter. A readme PDF documents scope, file formats, and table definitions.
+- **Reporting lag:** The page doesn't state a lag such as 60 days. It only gives the quarterly posting cutoff described above.
+- **Restrictions:** The data includes only publicly available filings disseminated by the Commission. The page offers no accuracy guarantee and says the data "are not a substitute for such filings." It advises investors to "review the full Commission filings" before deciding
+… [truncated, 43 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://etf.pionline.com/fund/SCHD
+
+> prompt: Extract: expense ratio, inception date, AUM, index, exchange, dividend yield, distribution frequency, as-of date.
+
+**→ WebFetch** https://www.ssga.com/us/en/intermediary/etfs/spdr-sp-500-etf-trust-spy
+
+> prompt: List all download/data links on the page (holdings xlsx/csv, fact sheet PDF, prospectus) with URLs, and 1y/3y/5y/10y total return figures with as-of date, and 12-month trailing yield/dividend yield.
+
+<details><summary>result</summary>
+
+```
+- **Expense ratio:** 0.06%
+- **Inception date:** Not listed on the page.
+- **AUM:** $108,746.36M
+- **Index:** Dow Jones U.S. Dividend 100 Index. The benchmark is the Dow Jones U.S. Dividend 100 Total Return Index - USD.
+- **Exchange:** Not listed on the page.
+- **Dividend yield:** Not listed on the page.
+- **Distribution frequency:** Not listed. The page only gives the dividend policy as "Distributing."
+- **As-of date:** 5 October 2026
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Download and data links** (relative paths resolved against https://www.ssga.com, the domain used in the page's own links)
+
+- **Daily holdings (xlsx):** https://www.ssga.com/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spy.xlsx
+- **Factsheet (PDF):** https://www.ssga.com/library-content/products/factsheets/etfs/us/factsheet-us-en-spy.pdf
+- **Prospectus (PDF viewer):** https://www.ssga.com/us/en/intermediary/resources/doc-viewer#spy&prospectus
+- **Annual Report (PDF viewer):** https://www.ssga.com/us/en/intermediary/resources/doc-viewer#spy&annual-report
+- **Semi-Annual Report (PDF viewer):** https://www.ssga.com/us/en/intermediary/resources/doc-viewer#spy&semi-annual-report
+- **Historical Distributions:** https://www.ssga.com/us/en/intermediary/resources/documents/etf-dividend-distributions
+- **Dividend Distribution Schedule (PDF):** https://www.ssga.com/library-content/products/fund-data/etfs/us/distribution/SPDR_Dividend_Distribution_Schedule.pdf
+- **Fund NAV history (xlsx):** https://www.ssga.com/library-content/products/fund-data/etfs/us/navhist-us-en-spy.xlsx
+- **Premium/discount data (xlsx):** https://www.ssga.com/library-content/products/fund-data/etfs/us
+… [truncated, 1894 more chars]
+```
+
+</details>
+
+**→ Bash** — Check ETF coverage in EDGAR mutual fund ticker file
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && python - <<'EOF'
+import json
+d=json.load(open('edgar_tickers.json'))
+print(d['fields'],len(d['data']))
+s={r[3]:r for r in d['data']}
+for t in ['SPY','VOO','IVV','VTI','QQQ','SCHD','VT','SPYM']:
+    print(t, s.get(t))
+EOF
+ls -la edgar_tickers.json
+```
+
+<details><summary>result</summary>
+
+```
+['cik', 'seriesId', 'classId', 'symbol'] 28612
+SPY None
+VOO [36405, 'S000002839', 'C000092055', 'VOO']
+IVV [1100663, 'S000004310', 'C000012040', 'IVV']
+VTI [36405, 'S000002848', 'C000007808', 'VTI']
+QQQ [1067839, 'S000101292', 'C000271435', 'QQQ']
+SCHD [1454889, 'S000034163', 'C000105320', 'SCHD']
+VT [857489, 'S000022482', 'C000065038', 'VT']
+SPYM [1064642, 'S000006983', 'C000019036', 'SPYM']
+-rw-r--r-- 1 matus 197609 1236275 Oct 10 15:06 edgar_tickers.json
+```
+
+</details>
+
+**→ Bash** — Check §36 scope and §8 text
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && grep -n "^ § 36$" zdp.txt; awk 'NR>=2262 && NR<=2268' zdp.txt | cut -c1-600; grep -n "^ § 8$" zdp.txt; sed -n 535,545p zdp.txt | cut -c1-500; grep -n "ze zdrojů na území České republiky, jsou" zdp.txt | head -3
+```
+
+<details><summary>result</summary>
+
+```
+2246: § 36
+ (2) Zvláštní sazba daně z příjmů pro poplatníky uvedené v § 2 a 17, pokud není v odstavci 1 nebo 5 stanoveno jinak, činí 15 %, a to
+ a) z podílu na zisku z účasti na obchodní společnosti nebo v podílovém fondu, je-li podíl v nich představován cenným papírem, a z plnění ze zisku svěřenského fondu nebo rodinné fundace; u poplatníků podle § 2 z výnosu dluhopisu podle zákona upravujícího dluhopisy s výjimkou výnosu určeného rozdílem mezi jmenovitou hodnotou dluhopisu a jeho emisním kurzem, z výnosu ze směnky vystavené bankou k zajištění pohledávky vzniklé z vkladu věřitele a úrokového příjmu z vkladního listu vydaného jako cenný papír a cenného papíru mu na roveň postaveného
+ b) z podílu na zisku z účasti na společnosti s ručením omezeným, z účasti komanditisty na komanditní společnosti,
+ c) z podílu na zisku a obdobného plnění z členství v družstvu,
+ d) z podílu na zisku tichého společníka nebo jiného poplatníka, než je člen obchodní korporace,
+ e) z vypořádacího podílu při zániku účasti společníka ve společnosti s ručením omezeným, komanditisty v komanditní společnosti a při zániku členství v družstvu, z vrácení emisního ážia, příplatku mimo základní kapitál nebo těmto pl
+… [truncated, 3538 more chars]
+```
+
+</details>
+
+**→ Bash** — Read §8(8)-(9) and §16a
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && sed -n 546,553p zdp.txt | cut -c1-900; grep -n "^ § 16a$" zdp.txt; sed -n '/^ § 16a$/,/^ § 16b$/p' zdp.txt | head -12 | cut -c1-600
+```
+
+<details><summary>result</summary>
+
+```
+(6) Plnění z penzijního připojištění se státním příspěvkem podle zákona upravujícího penzijní připojištění se státním příspěvkem, z doplňkového penzijního spoření podle zákona upravujícího doplňkové penzijní spoření a z penzijního pojištění jsou základem daně po snížení o zaplacené příspěvky a státní příspěvky hrazené Českou republikou, pokud tyto státní příspěvky nebyly vráceny; v případě těchto plnění ve formě penze se zaplacené příspěvky a státní příspěvky rozloží na vymezené období pobírání penze. Plnění z pojištění pro případ dožití, z pojištění pro případ dožití se stanoveného věku nebo dřívější smrti a z pojištění důchodu a plnění z jiného pojištění osob, které není pojistným plněním, jsou základem daně po snížení o zaplacené pojistné; v případě t
+ (7) Jedná-li se o příjem podle odstavce 1 nebo odstavce 2 plynoucí do společného jmění manželů ze zdroje, který je vložen do obchodního majetku jednoho z manželů, zdaňuje se jen u tohoto manžela. Jedná-li se o příjem podle odstavce 1 nebo 2 plynoucí do společného jmění manželů ze zdroje, který není vložen do obchodního majetku žádného z manželů, zdaňuje se jen u jednoho z nich.
+ (8) Příjem podle odstavce 4 nebo úrok nebo jiný výno
+… [truncated, 1386 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.fio.cz/zpravodajstvi/odborne-clanky/262831-uvod-do-sveta-dluhopisu-predstaveni-nejvetsich-dluhopisovych-etf
+
+> prompt: Find any statement about PRIIPs, KID, US ETFs, ČNB stance, availability for Fio clients. Give date of article and quote under 15 words.
+
+**→ WebSearch** `Fio banka americká ETF PRIIPs ČNB vstřícné stanovisko obchodníci nesmějí nabízet ani doporučovat klienti mohou investovat bez omezení`
+
+<details><summary>result</summary>
+
+```
+**Article date:** 10 January 2022 (10.1.2022)
+
+**PRIIPs and KID:** The article says EU PRIIPs rules led some brokers to stop offering US ETFs, because US issuers did not publish the KID document. It describes the KID as the key investor information document.
+- "k nim američtí emitenti nevydali dokument s klíčovými informacemi pro investora, tzv. KIID"
+
+**ČNB stance:** The Czech National Bank, which supervises Fio banka, took a lenient position toward brokers. Investors can still trade US ETFs, but brokers cannot advise on them or actively offer them.
+- "Česká národní banka, která v tomto směru vydala pro obchodníky vstřícné stanovisko"
+- "nemůžou klientům poskytovat poradenství či tato ETF klientům aktivně nabízet"
+
+**Availability for Fio clients:** The article states that Fio clients may continue to invest in US ETFs without restrictions.
+- "Klienti Fio banky tak i nadále mohou investovat do amerických ETF bez omezení."
+
+The article is from January 2022, so the regulatory position may have changed since then.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Fio banka americká ETF PRIIPs ČNB vstřícné stanovisko obchodníci nesmějí nabízet ani doporučovat klienti mohou investovat bez omezení"
+
+Links: [{"title":"Úvod do světa dluhopisů: Představení největších dluhopisových ETF","url":"https://www.fio.cz/zpravodajstvi/odborne-clanky/262831-uvod-do-sveta-dluhopisu-predstaveni-nejvetsich-dluhopisovych-etf"},{"title":"Americká burza: Jak investovat do indexu S&P 500?","url":"https://www.fio.cz/zpravodajstvi/odborne-clanky/238722-americka-burza-jak-investovat-do-indexu-s-p-500"},{"title":"Otázky a odpovědi k nařízení o sdělení klíčových informací (PRIIPs) - Česká národní banka","url":"https://www.cnb.cz/cs/dohled-financni-trh/legislativni-zakladna/stanoviska-k-regulaci-financniho-trhu/RS2018-12/"},{"title":"Seznam ETF, Exchange Traded Fund","url":"https://www.fio.cz/akcie-investice/etf/vypis-etf"},{"title":"Chci ETF, Exchange Traded Funds, indexové akcie","url":"https://www.fio.cz/akcie-investice/etf"},{"title":"Často kladené otázky, FAQ","url":"https://www.fio.cz/o-nas/faq/investicni-sluzby/8-cenne-papiry"},{"title":"Správa majetku srovnatelná s obhospodařováním (§ 15 ZISIF) - Česká národní banka","url":"https:/
+… [truncated, 2927 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.cnb.cz/cs/dohled-financni-trh/legislativni-zakladna/stanoviska-k-regulaci-financniho-trhu/RS2018-12/
+
+> prompt: Summarize ČNB's position on PRIIPs KID: any statement on products without KID (e.g. US ETFs), execution-only trading, whether sale to retail clients is allowed without KID, date of the position and any updates. Quote under 15 words.
+
+**→ WebFetch** https://www.fio.cz/zpravodajstvi/odborne-clanky/238722-americka-burza-jak-investovat-do-indexu-s-p-500
+
+> prompt: Does the article mention buying SPY/VOO/IVV via Fio, PRIIPs, KID, fees? Date of article. Quote under 15 words.
+
+<details><summary>result</summary>
+
+```
+**Buying SPY/VOO/IVV via Fio:** Yes. The article says Fio clients can invest in US ETFs and lists SPY, IVV, and VOO as major S&P 500 ETFs. It also states that Fio margin loans can finance up to 90% of an SPY position. It says "Klienti Fio banky tak i nadále mohou investovat do amerických ETF bez omezení." Trading is done through e-Broker.
+
+**PRIIPs:** Yes. The article links a change in some brokers' offerings to the EU regulation: "V důsledku nařízení Evropské unie (tzv. PRIIPs)". It says the regulation caused some brokers to stop offering US ETFs, because US issuers did not publish the required key information document. The Czech National Bank allows Fio clients to keep trading them, though brokers cannot advise on or actively offer them.
+
+**KID:** The article does not use "KID." It uses "KIID" and describes it as a document with key information for investors: "dokument s klíčovými informacemi pro investora, tzv. KIID". This is the document that US issuers did not provide.
+
+**Fees:** Partly. The article gives fund expense ratios, not Fio's trading commissions. SPY's expense ratio is 0.0945% per year, and IVV, VOO, and SPLG are 0.03%. Fio's brokerage fees are not listed and are ref
+… [truncated, 210 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Summary of ČNB's position on PRIIPs KID** (from the Q&A page, based on Stanovisko RS2018-12)
+
+- **Products without a KID (e.g., US ETFs):** The page does not mention US ETFs. Its general position is that offering a PRIIP without a KID breaches the regulation. The quote is "bez odpovídajícího KID je porušením nařízení PRIIPs" (offering without an adequate KID is a breach of the PRIIPs Regulation).
+- **Execution-only trading:** A securities dealer that only executes client orders or provides access to a foreign exchange, without actively offering the products or giving advice, is not required to provide a KID under Art. 13(1). The product creator remains responsible for preparing the KID. The dealer must still provide enough information about risks to meet its duty of care under § 15d ZPKT.
+- **Sale to retail clients without a KID:** The page implies this is not allowed. The KID must be prepared before a product is offered to retail investors and provided in good time before any binding contract. The page also says retail investors must receive a Czech KID if the product is marketed with Czech-language materials.
+- **Date:** Published and effective 22 October 2018, with no end date
+… [truncated, 346 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.irs.gov/individuals/international-taxpayers/federal-income-tax-withholding-and-reporting-on-other-kinds-of-us-source-income-paid-to-nonresident-aliens
+
+> prompt: Find the text on dividends: statutory 30% withholding rate, treaty reduced rate, Form W-8BEN requirement and consequence of not providing it. Quote under 15 words. Page review date.
+
+**→ WebFetch** https://www.irs.gov/instructions/iw8ben
+
+> prompt: How long is a W-8BEN valid (three calendar years)? Who must provide it; what happens without it (30% withholding / backup withholding). Revision date of instructions.
