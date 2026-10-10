@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veenos — hero A+D, flowing calculator (v5)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e8e5; color: #1b1b1d; font: 15px/1.5 "Manrope", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .head, .block { max-width: 1260px; margin: 0 auto; }
+  .head { margin-bottom: 28px; }
+  .head h1 { font-weight: 800; font-size: 28px; letter-spacing: -0.03em; }
+  .head p { max-width: 840px; margin-top: 8px; color: #55555b; }
+  .block { margin-bottom: 44px; }
+  .block h2 { font-weight: 700; font-size: 19px; letter-spacing: -0.02em; }
+  .block .desc { color: #55555b; font-size: 14px; margin: 4px 0 16px; max-width: 840px; }
+  .phones { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .cap { font-size: 12px; color: #4d4d52; text-align: center; margin-top: 8px; font-weight: 700; max-width: 320px; }
+  .cap span { display: block; font-weight: 500; color: #7d7d82; }
+  .live { outline: 3px solid #cfe68a; outline-offset: 4px; border-radius: 44px; }
+
+  /* ===== phone ===== */
+  .phone { width: 320px; height: 664px; border-radius: 40px; background: #050505; padding: 9px; box-shadow: 0 16px 36px rgba(0,0,0,.18); flex: none; }
+  .frame { --bg:#0c0c0d; --fg:#f2f2ef; --muted:#8f8f8c; --line:#232325; --chip:#161618; --card:#131315; --accent:#cfe68a; --on-accent:#0c0c0d;
+    position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: var(--bg); color: var(--fg); font-family: "Manrope", sans-serif; }
+  .scr { height: 100%; overflow-y: auto; scrollbar-width: none; scroll-behavior: smooth; }
+  .scr::-webkit-scrollbar { display: none; }
+  .tab { font-variant-numeric: tabular-nums; }
+
+  .hero { height: 646px; display: flex; flex-direction: column; padding: 46px 22px 24px; }
+  .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 17px; letter-spacing: -0.04em; }
+  .mark { position: relative; width: 26px; height: 16px; }
+  .mark::before, .mark::after { content: ""; position: absolute; top: 0; width: 16px; height: 16px; border-radius: 50%; }
+  .mark::before { left: 0; background: var(--accent); }
+  .mark::after { left: 10px; border: 2px solid var(--fg); }
+  .h { font-weight: 800; font-size: 44px; line-height: .98; letter-spacing: -0.05em; margin-top: auto; }
+  .h em { font-style: normal; color: var(--accent); }
+  .sub { font-size: 16px; color: var(--muted); margin-top: 12px; line-height: 1.35; }
+  .checks { margin-top: 20px; display: grid; gap: 9px; }
+  .checks div { display: flex; gap: 10px; align-items: center; font-size: 14px; font-weight: 600; }
+  .checks i { width: 22px; height: 22px; border-radius: 50%; background: rgba(207,230,138,.14); color: var(--accent); display: grid; place-items: center; font-style: normal; font-size: 12px; font-weight: 800; flex: none; }
+  .cta { height: 58px; border-radius: 999px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 16.5px; letter-spacing: -0.01em; border: 0; width: 100%; cursor: pointer; font-family: inherit; }
+  .cta .arr { width: 30px; height: 30px; border-radius: 50%; background: rgba(12,12,13,.12); display: grid; place-items: center; font-size: 15px; }
+  .hero .cta { margin-top: 24px; }
+  .fine { font-size: 11.5px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+  .calc { padding: 22px 16px 140px; }
+  .calc-title { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: .02em; padding: 0 6px 10px; display: flex; justify-content: space-between; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 22px; margin-bottom: 10px; overflow: hidden; transition: opacity .35s, transform .35s; }
+  .step.hidden { display: none; }
+  .step.enter { opacity: 0; transform: translateY(16px); }
+  .ask { padding: 18px 16px 16px; }
+  .ask h4 { font-weight: 800; font-size: 24px; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 14px; }
+  .ask h4 small { display: block; font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0; margin-bottom: 6px; }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .chips.one { grid-template-columns: 1fr; }
+  .chip { min-height: 52px; border-radius: 16px; background: var(--chip); border: 1px solid var(--line); color: var(--fg); display: flex; align-items: center; justify-content: center; font: 700 16.5px "Manrope"; cursor: pointer; padding: 0 14px; }
+  .chips.one .chip { justify-content: space-between; }
+  .chip small { font-weight: 600; font-size: 12px; color: var(--muted); }
+  .chip.on { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  .chip.on small { color: inherit; opacity: .7; }
+  .chip[disabled] { opacity: .45; cursor: default; }
+  .chip .soon { font-size: 10px; font-weight: 700; border: 1px solid var(--line); border-radius: 99px; padding: 2px 7px; color: var(--muted); }
+  .sum { display: none; align-items: center; justify-content: space-between; padding: 14px 16px; cursor: pointer; }
+  .step.done .sum { display: flex; }
+  .step.done .ask { display: none; }
+  .sum .k { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .sum .k i { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 800; }
+  .sum .v { font-weight: 800; font-size: 15px; }
+  .sum .v small { font-weight: 600; font-size: 12px; color: var(--muted); margin-left: 8px; }
+
+  .result { padding: 22px 18px 18px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; transition: opacity .35s, transform .35s; }
+  .result.hidden { display: none; }
+  .result.enter { opacity: 0; transform: translateY(16px); }
+  .lbl { font-size: 14px; color: var(--muted); }
+  .num { font-weight: 800; font-size: 52px; letter-spacing: -0.055em; line-height: 1; margin: 6px 0 8px; color: var(--accent); }
+  .num small { font-size: 24px; margin-left: 4px; letter-spacing: -0.02em; }
+  .vs { font-size: 13px; color: var(--muted); }
+  .bars { display: flex; gap: 10px; align-items: flex-end; height: 100px; margin: 22px 0 30px; }
+  .bars div { flex: 1; border-radius: 12px; position: relative; transition: height .5s; }
+  .bars .a { background: #2a2a2d; }
+  .bars .b { background: var(--accent); }
+  .bars span { position: absolute; bottom: -20px; left: 0; font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .bars em { position: absolute; top: 8px; left: 10px; font-style: normal; font-size: 12px; font-weight: 800; }
+  .bars .a em { color: var(--fg); } .bars .b em { color: var(--accent); top: -20px; left: 2px; }
+  .ghost { text-align: center; font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+  .breakdown { margin-top: 6px; }
+  .rowh, .rowv { display: grid; grid-template-columns: 1fr 70px 70px; gap: 6px; font-size: 13px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .rowh { font-size: 11px; color: var(--muted); font-weight: 700; padding-top: 0; }
+  .rowh span:not(:first-child), .rowv span:not(:first-child) { text-align: right; }
+  .rowv span:first-child { color: var(--muted); }
+  .rowv.tot { border: 0; font-weight: 800; font-size: 15px; }
+  .rowv.tot span:first-child { color: var(--fg); }
+  .rowv .g { color: var(--accent); }
+  .thanks { font-size: 12.5px; color: var(--muted); margin-top: 14px; line-height: 1.45; }
+  .thanks b { color: var(--fg); }
+
+  .dim { position: absolute; inset: 0; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #161618; border-radius: 26px 26px 0 0; padding: 12px 20px 22px; transform: translateY(105%); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .frame.sheet-open .dim { opacity: 1; pointer-events: auto; }
+  .frame.sheet-open .sheet { transform: none; }
+  .grab { width: 38px; height: 4px; border-radius: 4px; background: #3a3a3d; margin: 0 auto 16px; }
+  .sheet h4 { font-weight: 800; font-size: 24px; letter-spacing: -0.035em; }
+  .sheet .s { font-size: 13px; color: var(--muted); margin: 4px 0 14px; }
+  .sheet input { width: 100%; height: 50px; border-radius: 14px; background: #232326; border: 1px solid transparent; padding: 0 14px; font: 500 15px "Manrope"; color: var(--fg); margin-bottom: 8px; outline: none; }
+  .sheet input:focus { border-color: var(--accent); }
+  .sheet input::placeholder { color: #8f8f8c; }
+  .sheet .cta { margin-top: 4px; }
+  .sheet .fine { margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Veenos: hero A + D checks, calculator flowing down (v5)</h1>
+  <p><b>Try the outlined phone:</b> it's clickable. Tap "Začít investovat", answer the 3 questions, open the form and submit. Each answered step folds into a one-line summary and the page moves down to the next one. The result is computed live from the verified fee data (illustrative: 7 % p.a. before costs, monthly purchases, Fio FX ≈ 3 % indicative). Only S&amp;P 500 is wired up; the other two index families need their TER data first.</p>
+</div>
+
+<section class="block">
+  <h2>Interactive prototype + the states it goes through</h2>
+  <p class="desc">Frames 2–6 are the same component frozen at each state.</p>
+  <div class="phones" id="phones"></div>
+</section>
+
+<template id="proto">
+  <div class="phone"><div class="frame">
+    <div class="scr">
+      <section class="hero">
+        <div class="logo"><span class="mark"></span>veenos</div>
+        <h3 class="h">Stejný index.<br><em>Jiná cena.</em></h3>
+        <p class="sub">Zjistěte za 10 vteřin, kolik vám ETF ukusuje na poplatcích.</p>
+        <div class="checks">
+          <div><i>✓</i>Americký fond vs. evropské dvojče</div>
+          <div><i>✓</i>Poplatky, směna i broker v korunách</div>
+          <div><i>✓</i>Data od emitentů a ČNB</div>
+        </div>
+        <button class="cta js-start">Začít investovat <span class="arr">↓</span></button>
+        <p class="fine">Zdarma · bez registrace</p>
+      </section>
+
+      <section class="calc">
+        <div class="calc-title"><span>Vaše srovnání</span><span class="js-count">0/3</span></div>
+
+        <div class="step" data-step="0">
+          <div class="sum"><span class="k"><i>✓</i>Měsíčně</span><span class="v js-v"></span></div>
+          <div class="ask"><h4><small>1/3</small>Kolik měsíčně investujete?</h4>
+            <div class="chips tab">
+              <button class="chip" data-val="1000">1 000 Kč</button><button class="chip" data-val="3000">3 000 Kč</button>
+              <button class="chip" data-val="5000">5 000 Kč</button><button class="chip" data-val="10000">10 000 Kč</button>
+            </div></div>
+        </div>
+
+        <div class="step hidden" data-step="1">
+          <div class="sum"><span class="k"><i>✓</i>Doba</span><span class="v js-v"></span></div>
+          <div class="ask"><h4><small>2/3</small>Na jak dlouho?</h4>
+            <div class="chips tab">
+              <button class="chip" data-val="5">5 let</button><button class="chip" data-val="10">10 let</button>
+              <button class="chip" data-val="20">20 let</button><button class="chip" data-val="30">30 let</button>
+            </div></div>
+        </div>
+
+        <div class="step hidden" data-step="2">
+          <div class="sum"><span class="k"><i>✓</i>Index</span><span class="v js-v"></span></div>
+          <div class="ask"><h4><small>3/3</small>Který index?</h4>
+            <div class="chips one">
+              <button class="chip" data-val="sp500" data-label="S&amp;P 500">S&amp;P 500 <small>VOO ↔ CSPX</small></button>
+              <button class="chip" disabled>Celý svět <span class="soon">brzy</span></button>
+              <button class="chip" disabled>Celý trh USA <span class="soon">brzy</span></button>
+            </div></div>
+        </div>
+
+        <div class="result hidden">
+          <p class="lbl js-rlbl">Rozdíl za 20 let</p>
+          <p class="num tab js-num">0<small>Kč</small></p>
+          <p class="vs">CSPX přes XTB vs. VOO přes Fio · stejný S&amp;P 500</p>
+          <div class="bars tab"><div class="a js-ba"><em class="js-ea"></em><span>VOO · Fio</span></div><div class="b js-bb"><em class="js-eb"></em><span>CSPX · XTB</span></div></div>
+          <div class="js-pre">
+            <button class="cta js-open">Ukázat celý rozpis</button>
+            <p class="ghost">Ilustrativní výpočet · Jak počítáme</p>
+          </div>
+          <div class="breakdown js-post" hidden>
+            <div class="rowh"><span>Náklady</span><span>VOO · Fio</span><span>CSPX · XTB</span></div>
+            <div class="rowv tab"><span>Poplatek fondu</span><span class="js-t1"></span><span class="js-t2"></span></div>
+            <div class="rowv tab"><span>Směna CZK → USD</span><span class="js-f1"></span><span class="js-f2"></span></div>
+            <div class="rowv tab"><span>Provize brokera</span><span class="js-c1"></span><span class="js-c2"></span></div>
+            <div class="rowv tot tab"><span>Celkem</span><span class="js-s1"></span><span class="g js-s2"></span></div>
+            <p class="thanks">Hotovo. Rozpis máte i v e-mailu. <b>Zavoláme vám jednou</b>, pokud chcete výpočet probrat. · Nejde o investiční doporučení.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="dim js-close"></div>
+    <form class="sheet js-form" onsubmit="return false">
+      <div class="grab"></div>
+      <h4>Kam poslat rozpis?</h4>
+      <p class="s">Ukážeme ho hned a pošleme i e-mailem.</p>
+      <input name="name" autocomplete="name" placeholder="Jméno" required>
+      <input name="email" type="email" autocomplete="email" placeholder="E-mail" required>
+      <input name="tel" type="tel" autocomplete="tel" placeholder="Telefon" required>
+      <button class="cta" type="submit">Zobrazit rozpis</button>
+      <p class="fine">Jednou vám zavoláme k výpočtu. Žádný spam.</p>
+    </form>
+  </div></div>
+</template>
+
+<script>
+/* ---- cost model (illustrative; data from research/05 verified) ---- */
+const USDCZK = 21.745;                 // ČNB 9 Oct 2026
+const ROUTES = {
+  nyse:  { ter: 0.0003, fx: 0.03,  comm: 7.95 * USDCZK }, // VOO via Fio: USD 7.95/order (≤100 pcs), FX ≈ 3 % indicative
+  ucits: { ter: 0.0007, fx: 0.005, comm: 0 },             // CSPX via XTB: 0 % commission, 0.5 % FX
+};
+const R = Math.pow(1.07, 1/12) - 1;
+function fv(monthly, years, o) {
+  let v = 0;
+  for (let m = 0; m < years * 12; m++) { v = v * (1 + R) * (1 - (o.ter||0) / 12) + monthly * (1 - (o.fx||0)) - (o.comm||0); }
+  return v * (1 - (o.fx||0));
+}
+function costs(monthly, years, route) {
+  const base = fv(monthly, years, {});
+  const parts = { ter: base - fv(monthly, years, { ter: route.ter }), fx: base - fv(monthly, years, { fx: route.fx }), comm: base - fv(monthly, years, { comm: route.comm }) };
+  const total = base - fv(monthly, years, route);
+  const sum = parts.ter + parts.fx + parts.comm;
+  for (const k in parts) parts[k] = parts[k] * total / sum;  // scale parts to the joint total
+  return { ...parts, total };
+}
+const fmt = n => (Math.round(n / 100) * 100).toLocaleString('cs-CZ');
+
+/* ---- component ---- */
+function mount(root, preset = {}, interactive = true) {
+  const scr = root.querySelector('.scr');
+  const frame = root.querySelector('.frame');
+  const steps = [...root.querySelectorAll('.step')];
+  const result = root.querySelector('.result');
+  const ans = {};
+  const go = (el, smooth = true) => { const top = el.offsetTop - 70; smooth ? scr.scrollTo({ top, behavior: 'smooth' }) : (scr.style.scrollBehavior = 'auto', scr.scrollTop = top, scr.style.scrollBehavior = ''); };
+  const reveal = (el, anim) => { el.classList.remove('hidden'); if (anim) { el.classList.add('enter'); requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('enter'))); } };
+  const count = () => root.querySelector('.js-count').textContent = Object.keys(ans).length + '/3';
+
+  function compute() {
+    const m = ans[0], y = ans[1];
+    const a = costs(m, y, ROUTES.nyse), b = costs(m, y, ROUTES.ucits);
+    root.querySelector('.js-rlbl').textContent = 'Rozdíl za ' + y + ' let';
+    root.querySelector('.js-num').innerHTML = fmt(a.total - b.total) + '<small>Kč</small>';
+    root.querySelector('.js-ba').style.height = '100%';
+    root.querySelector('.js-bb').style.height = Math.max(8, 100 * b.total / a.total) + '%';
+    root.querySelector('.js-ea').textContent = fmt(a.total);
+    root.querySelector('.js-eb').textContent = fmt(b.total);
+    [['t', 'ter'], ['f', 'fx'], ['c', 'comm']].forEach(([p, k]) => { root.querySelector('.js-' + p + '1').textContent = fmt(a[k]); root.querySelector('.js-' + p + '2').textContent = fmt(b[k]); });
+    root.querySelector('.js-s1').textContent = fmt(a.total); root.querySelector('.js-s2').textContent = fmt(b.total);
+  }
+
+  function answer(i, chip, anim = true) {
+    steps[i].querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === chip));
+    ans[i] = chip.dataset.val === 'sp500' ? 'sp500' : Number(chip.dataset.val);
+    const label = chip.dataset.label ? chip.dataset.label : chip.firstChild.textContent.trim();
+    steps[i].querySelector('.js-v').innerHTML = label;
+    steps[i].classList.add('done'); count();
+    const next = steps[i + 1];
+    if (next && !next.classList.contains('done')) { reveal(next, anim); if (anim) setTimeout(() => go(next), 60); }
+    else if (Object.keys(ans).length === 3) { compute(); const wasHidden = result.classList.contains('hidden'); reveal(result, anim && wasHidden); if (anim) setTimeout(() => go(result), 60); }
+  }
+
+  steps.forEach((s, i) => {
+    s.querySelectorAll('.chip:not([disabled])').forEach(c => c.addEventListener('click', () => interactive && answer(i, c)));
+    s.querySelector('.sum').addEventListener('click', () => { if (!interactive) return; s.classList.remove('done'); go(s); });
+  });
+  root.querySelector('.js-start').addEventListener('click', () => interactive && go(steps[0]));
+  root.querySelector('.js-open').addEventListener('click', () => interactive && frame.classList.add('sheet-open'));
+  root.querySelector('.js-close').addEventListener('click', () => frame.classList.remove('sheet-open'));
+  root.querySelector('.js-form').addEventListener('submit', e => {
+    if (!interactive) return;
+    frame.classList.remove('sheet-open');
+    root.querySelector('.js-pre').hidden = true; root.querySelector('.js-post').hidden = false;
+    setTimeout(() => go(result), 300);
+  });
+
+  // presets for frozen frames
+  (preset.answers || []).forEach((v, i) => { const chip = steps[i].querySelector('.chip[data-val="' + v + '"]'); answer(i, chip, false); });
+  if (preset.done) { root.querySelector('.js-pre').hidden = true; root.querySelector('.js-post').hidden = false; }
+  if (preset.sheet) { frame.classList.add('sheet-open'); root.querySelector('.js-form [name=name]').value = ''; }
+  requestAnimationFrame(() => {
+    if (preset.scrollTo === 'calc') go(steps[0], false);
+    else if (preset.scrollTo === 'last') { const open = steps.find(s => !s.classList.contains('done') && !s.classList.contains('hidden')); go(open || result, false); }
+    else if (preset.scrollTo === 'result') go(result, false);
+  });
+}
+
+const frames = [
+  { cap: 'Live prototype', sub: 'tap through it', interactive: true, live: true },
+  { cap: '1 · Arrival', sub: 'hero A + D checks, CTA', preset: {} },
+  { cap: '2 · After the tap', sub: 'page moves down to step 1', preset: { scrollTo: 'calc' } },
+  { cap: '3 · Step 1 done', sub: 'folds into a summary; step 2 below', preset: { answers: [3000], scrollTo: 'last' } },
+  { cap: '4 · Steps 1–3 done', sub: 'result appears below the summaries', preset: { answers: [3000, 20, 'sp500'], scrollTo: 'result' } },
+  { cap: '5 · Form sheet', sub: '3 fields, autofill', preset: { answers: [3000, 20, 'sp500'], scrollTo: 'result', sheet: true } },
+  { cap: '6 · After submit', sub: 'full breakdown in place', preset: { answers: [3000, 20, 'sp500'], scrollTo: 'result', done: true } },
+];
+const host = document.getElementById('phones');
+const tpl = document.getElementById('proto');
+document.fonts.ready.then(() => {
+  frames.forEach(f => {
+    const wrap = document.createElement('div');
+    const node = tpl.content.firstElementChild.cloneNode(true);
+    if (f.live) node.classList.add('live');
+    wrap.appendChild(node);
+    const cap = document.createElement('div'); cap.className = 'cap'; cap.innerHTML = f.cap + '<span>' + f.sub + '</span>';
+    wrap.appendChild(cap); host.appendChild(wrap);
+    mount(node, f.preset || {}, !!f.interactive);
+  });
+});
+</script>
+</body>
+</html>
