@@ -89,3 +89,12 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D13d | Sub-line | **"Zjistěte, kolik vás stojí poplatky za vaše ETF."** | Human choice. |
 | D17b | Cookie consent | v8 design approved, with **"Přijmout" highlighted** (accent). "Odmítnout" stays in the first layer, the same size and clearly readable. | Human choice. Lead-agent note: the ÚOOÚ treats equal prominence as good practice, not a hard rule [log D4]. A highlighted accept with an equal-size, visible reject is common; small residual risk. |
 | D0b | Scope check | **Human flagged that the concept drifted away from the brief's core: "porovnání ETF obchodovaných na NYSE".** The current page compares two *routes* to one index (VOO via Fio vs CSPX via XTB); it shows no side-by-side comparison of NYSE ETFs. → Concept revisit below. | The brief is the evaluation criterion. The PRIIPs finding (F1) stays, as a layer of the comparison ("can you buy it from CZ / its UCITS twin"), not as its replacement. |
+
+## Round 11 — 2026-10-10 (comparison concept)
+
+| # | Decision | Chosen / change | Why / implications |
+|---|---|---|---|
+| D4b | Page concept (revises D4 "calculator only") | **Concept A: hero → amount + years (one screen) → ranked comparison of the four S&P 500 funds** (SPY, IVV, VOO from NYSE Arca + the CSPX UCITS twin), ranked by what they really cost a Czech investor, including buying from Czechia. | Human choice from v9 (over: duel, calculator + table, comparison in the hero). Restores the brief's core ("porovnání ETF obchodovaných na NYSE"). |
+| D10b | ETF scope (revises D10) | **S&P 500 only.** | Human choice. Cleanest "same index, different price" story; all TERs already verified (SPY 0.0945 %, IVV 0.03 %, VOO 0.03 %, CSPX 0.07 %). |
+| D18 | Cost assumption | NYSE funds bought **via Fio once a quarter** (USD 7.95/order + ≈3 % FX spread, indicative); CSPX via XTB (0 % commission, 0.5 % FX); 7 % p.a. before costs. | Fairness: monthly USD 7.95 orders on 3 000 Kč overstate the NYSE route (MiFID Art. 44 "fair and balanced" as the benchmark). The conclusion holds either way. |
+| D19 | Ranked result execution | v9 version **rejected as cluttered** (cards, badges, sub-labels, TER lines). Needs a quick-glance, readable version → v10. | Human feedback; consistent with [[minimal-fintech-design]]. |

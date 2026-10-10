@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veenos — quick-glance comparison (v10)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e8e5; color: #1b1b1d; font: 15px/1.5 "Manrope", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .head, .block { max-width: 1240px; margin: 0 auto; }
+  .head { margin-bottom: 28px; }
+  .head h1 { font-weight: 800; font-size: 28px; letter-spacing: -0.03em; }
+  .head p { max-width: 900px; margin-top: 8px; color: #55555b; }
+  .phones { display: flex; gap: 22px; flex-wrap: wrap; align-items: flex-start; }
+  .cap { font-size: 12.5px; color: #3d3d42; text-align: center; margin-top: 10px; font-weight: 800; max-width: 320px; }
+  .cap span { display: block; font-weight: 500; color: #7d7d82; font-size: 12px; }
+
+  .ui { --bg:#18191c; --fg:#f3f3ef; --muted:#a3a49f; --dim:#76776f; --line:#2c2d32; --accent:#cfe68a; --on-accent:#18191c; font-family: "Manrope", sans-serif; }
+  .tab { font-variant-numeric: tabular-nums; }
+  .phone { width: 320px; height: 664px; border-radius: 40px; background: #050505; padding: 9px; box-shadow: 0 16px 36px rgba(0,0,0,.18); flex: none; }
+  .frame { position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: var(--bg); color: var(--fg); display: flex; flex-direction: column; }
+  .bar { height: 60px; flex: none; padding: 18px 24px 0; display: flex; align-items: center; justify-content: space-between; }
+  .wm { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 20px; letter-spacing: -0.045em; }
+  .burger { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,.16); display: grid; place-items: center; }
+  .burger i, .burger i::before, .burger i::after { display: block; width: 14px; height: 1.6px; background: var(--fg); border-radius: 2px; position: relative; }
+  .burger i::before, .burger i::after { content: ""; position: absolute; left: 0; }
+  .burger i::before { top: -5px; } .burger i::after { top: 5px; }
+  .body { flex: 1; display: flex; flex-direction: column; padding: 18px 24px 26px; }
+  .ctx { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .ctx i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #55565b; display: grid; place-items: center; font-style: normal; font-size: 10px; font-weight: 800; }
+  .ttl { font-size: 26px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-top: 6px; }
+  .cta { margin-top: auto; height: 56px; border-radius: 999px; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: 16px; letter-spacing: -0.01em; }
+
+  /* R1 winner + list */
+  .win { margin-top: 28px; }
+  .win .tk { font-size: 15px; color: var(--muted); }
+  .win .name { font-size: 52px; font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin-top: 4px; }
+  .win .amt { font-size: 22px; font-weight: 800; color: var(--accent); margin-top: 8px; letter-spacing: -0.02em; }
+  .win .amt span { font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 6px; letter-spacing: 0; }
+  .list { margin-top: 30px; }
+  .list .lh { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  .li { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--line); font-size: 18px; }
+  .li b { font-weight: 800; letter-spacing: -0.02em; }
+  .li span { font-weight: 700; color: #cfd0cb; }
+
+  /* R2 bars */
+  .bars { margin-top: 30px; display: grid; gap: 24px; }
+  .br .top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; }
+  .br .top b { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; }
+  .br .top span { font-size: 18px; font-weight: 800; }
+  .br .track { height: 12px; border-radius: 99px; background: #26272c; overflow: hidden; }
+  .br .fill { height: 100%; border-radius: 99px; background: #6e6f6a; }
+  .br.w .fill { background: var(--accent); } .br.w .top span { color: var(--accent); }
+
+  /* R3 two groups */
+  .grp { margin-top: 30px; display: grid; gap: 14px; }
+  .g { border-radius: 22px; padding: 20px; background: #202125; }
+  .g.w { background: rgba(207,230,138,.1); outline: 1px solid rgba(207,230,138,.35); }
+  .g .who { font-size: 14px; color: var(--muted); }
+  .g .who b { color: var(--fg); font-weight: 800; font-size: 18px; letter-spacing: -0.02em; margin-right: 6px; }
+  .g .v { font-size: 30px; font-weight: 800; letter-spacing: -0.045em; margin-top: 6px; line-height: 1; white-space: nowrap; }
+  .g.w .v { color: var(--accent); }
+  .more { font-size: 13px; color: var(--muted); text-align: center; margin-top: 16px; }
+
+  /* R4 difference first */
+  .diff { margin-top: 26px; }
+  .diff .n { font-size: 54px; font-weight: 800; letter-spacing: -0.055em; color: var(--accent); line-height: 1; }
+  .diff .n small { font-size: 24px; margin-left: 3px; }
+  .diff p { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  .rank { margin-top: 26px; }
+  .rk { display: grid; grid-template-columns: 22px 1fr auto; align-items: center; gap: 10px; padding: 13px 0; border-top: 1px solid var(--line); font-size: 17px; }
+  .rk .d { width: 10px; height: 10px; border-radius: 50%; background: #55565b; }
+  .rk.w .d { background: var(--accent); box-shadow: 0 0 0 4px rgba(207,230,138,.16); }
+  .rk b { font-weight: 800; letter-spacing: -0.02em; }
+  .rk span { font-weight: 700; color: #cfd0cb; }
+  .rk.w span { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>v10: ranked comparison as a quick glance</h1>
+  <p>Only the result screen of concept A, in four simpler versions. Removed: cards, badges, sub-labels, TER lines and the chip row. What's left is <b>one heading, four funds, one amount each, one highlight, one button</b>, with bigger type and more air. The details (TER, exchange, broker, assumptions) go to the e-mail; the ⓘ next to the context line opens "Jak počítáme". Same illustration as v9: 3 000 Kč a month, 20 years.</p>
+</div>
+
+<div class="phones" id="out"></div>
+
+<script>
+const LOGO = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos`;
+const phone = inner => `<div class="phone"><div class="frame ui"><header class="bar"><span class="wm">${LOGO}</span><span class="burger"><i></i></span></header><div class="body">${inner}<div class="cta">Poslat celé srovnání e-mailem</div></div></div></div>`;
+const CTX = `<p class="ctx">3 000 Kč měsíčně · 20 let <i>i</i></p>`;
+const F = [['CSPX', 27900], ['VOO', 131300], ['IVV', 131300], ['SPY', 142100]];
+const fmt = n => n.toLocaleString('cs-CZ') + ' Kč';
+const add = (html, cap, sub) => document.getElementById('out').insertAdjacentHTML('beforeend', `<div>${phone(html)}<div class="cap">${cap}<span>${sub}</span></div></div>`);
+
+add(`${CTX}<h3 class="ttl">Nejlevněji vyjde</h3>
+  <div class="win tab"><p class="name">CSPX</p><p class="amt">${fmt(27900)}<span>nákladů za 20 let</span></p></div>
+  <div class="list tab"><p class="lh">Fondy z NYSE</p>${F.slice(1).map(([t, v]) => `<div class="li"><b>${t}</b><span>${fmt(v)}</span></div>`).join('')}</div>`,
+  '1 · Vítěz + seznam', 'the answer first, the rest as a plain list');
+
+add(`${CTX}<h3 class="ttl">Náklady za 20 let</h3>
+  <div class="bars tab">${F.map(([t, v], i) => `<div class="br ${i === 0 ? 'w' : ''}"><div class="top"><b>${t}</b><span>${fmt(v)}</span></div><div class="track"><div class="fill" style="width:${Math.max(5, 100 * v / 142100)}%"></div></div></div>`).join('')}</div>`,
+  '2 · Sloupce', 'four bars, one scale; the length tells the story');
+
+add(`${CTX}<h3 class="ttl">Za 20 let zaplatíte</h3>
+  <div class="grp tab"><div class="g w"><p class="who"><b>CSPX</b>evropská verze</p><p class="v">${fmt(27900)}</p></div>
+  <div class="g"><p class="who"><b>SPY · IVV · VOO</b>z NYSE</p><p class="v">131–142 tis. Kč</p></div></div>
+  <p class="more">Rozpis všech čtyř fondů pošleme e-mailem.</p>`,
+  '3 · Dvě skupiny', 'Europe vs NYSE; the simplest possible read');
+
+add(`${CTX}<div class="diff tab"><p class="n">114 200<small>Kč</small></p><p>rozdíl mezi nejlevnějším a nejdražším fondem</p></div>
+  <div class="rank tab">${F.map(([t, v], i) => `<div class="rk ${i === 0 ? 'w' : ''}"><span class="d"></span><b>${t}</b><span>${fmt(v)}</span></div>`).join('')}</div>`,
+  '4 · Rozdíl nahoře', 'the big number, then a calm ranked list');
+</script>
+</body>
+</html>
