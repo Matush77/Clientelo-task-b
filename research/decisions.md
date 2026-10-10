@@ -37,3 +37,10 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D9b | Visual direction | **Open.** The human asked for 5 visual previews before deciding → `design/previews/`. | — | Design choice, not settleable by research. |
 | D10 | ETF scope | **3 index families, all NYSE Arca:** S&P 500 (VOO/SPY/IVV ↔ CSPX/VUAA), total world (VT ↔ VWCE), US total market (VTI ↔ closest UCITS). | + QQQ (Nasdaq), S&P 500 only, broad 8–12 | Keeps the "NYSE" label accurate [log E3]; small enough to hand-curate with a source per data point [05]. |
 | D11 | Measurement | **Hybrid.** A first-party, cookie-free event log covers the whole single-page funnel (an in-memory page-load ID, nothing stored on the device). GA4 + Meta Pixel load only after consent (ad optimisation). Banner with "reject" in the first layer. | Consent-gated only; cookieless tool without banner | Full funnel counts without consent loss; ÚOOÚ guidance covers storage/access on the device [log D4], and this log stores nothing there. **Legal reading to confirm** (Matomo's vendor view differs [04]). |
+
+## Round 5 — 2026-10-10 (visual direction)
+
+| # | Decision | Chosen | Rejected | Why / implications |
+|---|---|---|---|---|
+| D9b | Visual direction | **Minimal fintech, dark ("Noc" family):** near-black, one accent, one statement + one action per screen, 1-tap chips, one big number, bottom-sheet form. The neon lime accent is "maybe too much", so the accent is still being tuned (v3 previews). | v1 previews (all 5: data journalism, receipt, terminal, twins, Swiss grid) for being too data-heavy and cluttered for a 2-second attention span; v2 light/colour-field variants | Human design judgement: the visitor decides in ~2 seconds; less text beats more data on the first screen. Consistent with evidence that pages at a simple reading level convert better [log C2] and that only ~20–28% of words get read [03]. |
+| D12 | Brand name | **Veenos**: a play on Czech "výnos" (return/yield). | "Dvojče" / "ETF dvojčata" placeholders | Short, memorable, ties to the investor's goal. |
