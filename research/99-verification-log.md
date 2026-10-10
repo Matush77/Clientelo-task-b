@@ -18,3 +18,11 @@ The lead agent (Claude Opus 5.5) re-checked claims from each Sonnet 5.5 research
 | C8 | 03 | (agent's least-confident) Scheibehenne 2010 choice overload: 63 conditions, N=5,036, mean effect ≈ 0 | search: IDEAS/RePEc, unibas, ScienceDaily | CONFIRMED (via several secondary sources; paper itself not opened) | Agent was right to tag it INFERRED; consistent across sources. |
 | C9 | 03 | ConvertFlow quiz funnels: 7.85% / 11.28% / 10.45% lead capture, 1,063 campaigns, means | convertflow.com benchmark, 23 Sep 2026 | CONFIRMED | — |
 | C10 | 03 | Message match (DTS): 0.49% → 0.73% (+47.6%), n=239,607, 2016 | nextafter.com/?p=13009 | CONFIRMED | — |
+| B1 | 02 | XTB e-book form: first name, surname, e-mail, phone all required + required bundled consent checkbox; "about 25" hidden attribution fields | HubSpot public form JSON (fetched with curl, parsed) | CONFIRMED | 26 hidden fields, not ~25: trivial. |
+| B2 | 02 | Finax end-2025: 102,600 clients, > €1.4 bn AUM (report 27 Mar 2026) | finax.eu blog | CONFIRMED | Note: €270 m of the AUM is a B2B partnership (UnitPlus), not Finax retail. |
+| B3 | 02 | Fondee 2022: revenue ~4.5 M CZK, loss 21 M CZK (CzechCrunch 2023) | cc.cz, 15 Sep 2023 | CONFIRMED | — |
+| B4 | 02 | Finex ranks Fondee 5th, 87%, 25,000+ clients, updated 14 Sep 2026 (vs "test winner" badge on Fondee's site) | finex.cz/recenze/fondee | CONFIRMED | The Finex review never calls Fondee a test winner; the contradiction the agent flagged is real. |
+| B5 | 02 | Finanzfluss newsletter: 135,000+ readers, weekly on Fridays | finanzfluss.de/newsletter | CONFIRMED | — |
+| B6 | 02 | XTB thank-you page: "Děkujeme Vám za přihlášení", e-book by e-mail within minutes, zero-fee upsell button | cz.xtb.com/nejoblibenejsi-etf-v-xtb-typ | CONFIRMED | — |
+| B7 | 02 | Finex screener: 71 ETFs incl. VTI, SPY, QQQ in USD, no listing/domicile/availability note | finex.cz/etf-screener | CONFIRMED | Extra: the currency display is inconsistent (EUR in list, USD in detail). |
+| B8 | 02 | (agent's least-confident) Similarweb traffic estimates | — | NOT CHECKED | Free-tier Similarweb needs JS/login. Already tagged INFERRED; treat only as an order-of-magnitude signal. |

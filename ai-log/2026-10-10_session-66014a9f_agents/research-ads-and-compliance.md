@@ -3563,3 +3563,422 @@ Tab Context:
 ### 🤖 Claude · 2026-10-10 13:13:19
 
 Right, navigating inside the script kills it. I'll do each domain via navigate calls.
+
+**→ mcp__Claude_Browser__browser_batch**
+
+```
+{
+ "actions": [
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://adstransparency.google.com/?region=CZ&domain=fondee.cz",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 5,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "javascript_tool",
+   "input": {
+    "action": "javascript_exec",
+    "tabId": "tab-1",
+    "text": "document.body.innerText.split('\\n').filter(x=>/reklam|Ověřeno|a\\.s\\.|s\\.r\\.o|Ltd|S\\.A|XTB|Fondee|Portu|Trading|Finax/i.test(x) && x.length<120).slice(0,14).join(' | ')"
+   }
+  },
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://adstransparency.google.com/?region=CZ&domain=portu.cz",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 5,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "javascript_tool",
+   "input": {
+    "action": "javascript_exec",
+    "tabId": "tab-1",
+    "text": "document.body.innerText.split('\\n').filter(x=>/reklam|Ověřeno|a\\.s\\.|s\\.r\\.o|Ltd|S\\.A|XTB|Fondee|Portu|Trading|Finax/i.test(x) && x.length<120).slice(0,14).join(' | ')"
+   }
+  },
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://adstransparency.google.com/?region=CZ&domain=xtb.com",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 5,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "javascript_tool",
+   "input": {
+    "action": "javascript_exec",
+    "tabId": "tab-
+… [truncated, 205 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+[navigate] navigated to https://adstransparency.google.com/?region=CZ&domain=fondee.cz
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "https://adstransparency.google.com/?region=CZ&domain=fondee.cz" ("https://adstransparency.google.com/?region=CZ&domain=fondee.cz")
+[computer:wait] waited 5s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Centrum transparentnosti reklam" ("https://adstransparency.google.com/?region=CZ&domain=fondee.cz")
+[javascript_tool:javascript_exec] "Centrum transparentnosti reklam | Politické reklamy | Vyhledávání zobrazených reklam podle názvu inzerenta nebo webové stránky | Reklamy v oblasti Česko | Reklamy zobrazované v Evropě | fondee.cz | přibližně 200 reklam | Direct Fondee a.s. | Ověřeno | Direct Fondee a.s. | Ověřeno | Direct Fondee a.s. | Ověřeno | Direct Fondee a.s."
+
+(captured at origin https://adstransparency.google.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Centrum transparentnosti reklam" ("https://adstransparency.google.com/?region=CZ&domain=fondee.cz")
+[navigate] navigated to https://adstransparency.google.com/?region=CZ&domain=portu.cz
+
+
+Tab Cont
+… [truncated, 2099 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.xtb.com/cz/tvorba-akciove-portfolia
+
+> prompt: Describe the landing page: headline, form fields requested (observe only), consent checkboxes wording (marketing/GDPR), risk disclaimers, "marketing communication" label, CTAs. Quote short fragments (<15 words).
+
+**→ WebFetch** https://vzdelavani.investovanipropholky.cz
+
+> prompt: Describe the landing page: headline, form fields requested (observe only), consent wording (GDPR/marketing), risk disclaimers, CTAs. Short quotes (<15 words).
+
+**→ WebFetch** https://www.fondee.cz/kalkulacka
+
+> prompt: Describe the page the Fondee ads lead to: headline, calculator, form fields, consent wording, risk disclaimers. Short quotes (<15 words).
+
+<details><summary>result</summary>
+
+```
+getaddrinfo ENOTFOUND vzdelavani.investovanipropholky.cz
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+**→ WebFetch** https://xtb.cz/tvorba-akciove-portfolia
+
+> prompt: Describe the landing page: headline, form fields requested (observe only), consent checkbox wording (marketing/GDPR), risk disclaimers, CTAs. Short quotes (<15 words).
+
+**→ WebFetch** https://www.investovanipropholky.cz
+
+> prompt: Describe: headline, free webinar/lead magnet, form fields, consent wording, risk disclaimers. Short quotes (<15 words).
+
+<details><summary>result</summary>
+
+```
+getaddrinfo ENOTFOUND www.investovanipropholky.cz
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Hostname/IP does not match certificate's altnames: Host: xtb.cz. is not in the cert's altnames: DNS:*.xtb.com, DNS:xtb.com
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:13:55
+
+You've hit your session limit · resets 6:40pm (Europe/Prague)
+
+*[context injected: The coordinator sent a message while you were working:]*
+
+**→ WebSearch** `financial services Meta ads creative benchmark UGC vs static carousel hook rate click-through rate finance fintech study 2025 2026`
+
+**→ WebSearch** `Meta for Business financial services ads creative best practices video first 3 seconds mobile-first vertical 9:16 performance study`
+
+**→ WebSearch** `TikTok finance fintech ads creative best practices hook first seconds native UGC investing apps case study TikTok for Business`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Meta for Business financial services ads creative best practices video first 3 seconds mobile-first vertical 9:16 performance study"
+
+Links: [{"title":"Meta Ads Creative: Best Practices That Convert","url":"https://www.straightnorth.com/blog/meta-ads-creative-best-practices-that-convert/"},{"title":"Your Guide to Meta Creative Best Practices","url":"https://nogood.io/blog/meta-creative-best-practices/"},{"title":"Your Guide to Meta Creative Best Practices","url":"https://nogood.io/?p=44256"},{"title":"> ## Documentation Index","url":"https://adadvisor.ai/docs/learn/ad-creative.md"},{"title":"ad creative","url":"https://adadvisor.ai/docs/learn/ad-creative"},{"title":"NEW:Agent is hereTry free →","url":"https://www.adstellar.ai/blog/vertical-video-ad-best-practices"},{"title":"Creating Winning Ad Creative in Meta Ads","url":"https://www.gomarble.ai/blog/ad-creative-meta-winning-strategies"},{"title":"video ads guide","url":"https://benly.ai/learn/meta-ads/video-ads-guide"},{"title":"NEW:Agent is hereTry free →","url":"https://www.adstellar.ai/blog/video-ad-length-best-practices"}]
+
+The search didn't turn up Meta's own guidance, anything specific to fina
+… [truncated, 2575 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "TikTok finance fintech ads creative best practices hook first seconds native UGC investing apps case study TikTok for Business"
+
+Links: [{"title":"ads.tiktok.com","url":"https://ads.tiktok.com/business/creativecenter/quicktok/online/Finance_SEA/pc/en"},{"title":"www.rocketshiphq.com","url":"https://www.rocketshiphq.com/?p=5627"},{"title":"10 TikTok Creative Best Practices for Ads in 2025","url":"https://sovran.ai/blog/tiktok-creative-best-practices"},{"title":"3 bankable ways to elevate your finance ads on TikTok","url":"https://ads.tiktok.com/business/th/blog/elevate-your-finance-ads"},{"title":"3 bankable ways to elevate your finance ads on TikTok","url":"https://ads.tiktok.com/business/ko/blog/elevate-your-finance-ads"},{"title":"3 bankable ways to elevate your finance ads on TikTok","url":"https://ads.tiktok.com/business/pl-PL/blog/elevate-your-finance-ads"},{"title":"finance creative tips","url":"https://ads.tiktok.com/business/de/blog/finance-creative-tips"},{"title":"finance creative tips","url":"https://ads.tiktok.com/business/ar/blog/finance-creative-tips"},{"title":"finance creative tips","url":"https://ads.tiktok.com/business/es/blog/financ
+… [truncated, 3951 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "financial services Meta ads creative benchmark UGC vs static carousel hook rate click-through rate finance fintech study 2025 2026"
+
+Links: [{"title":"ad creative benchmarks 2026","url":"https://benly.ai/learn/ad-creative/ad-creative-benchmarks-2026"},{"title":"Meta Creative Strategy for Ecommerce: The 2026 Playbook","url":"https://segwise.ai/blog/meta-creative-strategy-ecommerce-2026"},{"title":"Fintech Ad Creative Stats 2026","url":"https://www.webtonic.io/blog/fintech-ad-creative-statistics"},{"title":"Finance & Fintech — Creative DNA Benchmarks Q1 2026","url":"https://benly.ai/benchmarks/q1-2026/finance-fintech"},{"title":"# Meta Creative Strategy for Ecommerce: The 2026 Playbook","url":"https://segwise.ai/blog/meta-creative-strategy-ecommerce-2026.md"},{"title":"Finance & Fintech — Creative DNA Benchmarks Q1 2026","url":"https://benly.ai/benchmarks/finance-fintech"},{"title":"Mortgage Facebook & Meta Ads Statistics: 60+ Performance Benchmarks (2026)","url":"https://www.webtonic.io/blog/mortgage-facebook-ads-statistics"},{"title":"NEW:Agent is hereTry free →","url":"https://www.adstellar.ai/blog/ad-creative-benchmarks-2026"},{"title":"Top 7 Meta A
+… [truncated, 3089 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://ads.tiktok.com/business/pl-PL/blog/elevate-your-finance-ads
+
+> prompt: Extract: research method (sample size, markets), key stats (57%, 71%, trust/transparency), the three principles, publication date.
+
+**→ WebFetch** https://benly.ai/benchmarks/finance-fintech
+
+> prompt: Extract: sample size, period, format mix (video/static/carousel), median CTR or hook rate for finance/fintech on Meta, common hooks/CTAs, and methodology notes.
+
+<details><summary>result</summary>
+
+```
+**Finance & Fintech Meta Ads, Q1 2026 (Benly)**
+
+- **Sample size:** 8,557 unique creatives from 70 brands across 7 sub-verticals. The summary says the data covers an estimated 31K impressions, but a later takeaway calls the 31K "ads." The page doesn't clarify which is correct.
+- **Period:** Q1 2026 (January to March 2026)
+- **Format mix:** Video 48.6% (4,155 creatives); image 51.4% (4,402). No carousel category is reported.
+- **Median CTR or hook rate:** Not reported. The page has no CTR or hook-rate figures. Its "hook" data is hook-type classification (share of video creatives and average lifespan), not hook performance.
+- **Common hooks:** "Bold Statement" is most common at 36.4%, followed by Pattern Interrupt (19.5%), Visual Intrigue (19.4%), and Pain Point (10.9%). Pain Point hooks are noted for longer lifespans, but the page gives no exact figure.
+- **CTAs:** Not reported. The closest data is landing destinations: App Store (29%), Other (24%), Product Page (19%), Homepage (19%). Promotional intent is led by Discount (41.3%), Free Offer (21.9%), and Cashback (20.9%).
+- **Other benchmarks:** Median creative lifespan is 28 days, and 47.9% of creatives survive past 30 days.
+
+**Met
+… [truncated, 349 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Publication date:** October 7, 2024
+
+**Research method:**
+- Analysed 200 best-in-class TikTok videos
+- Surveyed 7,500 TikTok users across 5 markets
+- Sourced to TikTok Marketing Science's "Elevating your TikTok ads: Finance 2024" study, conducted by OI (Semiotics) and PA Consulting (quantitative test)
+
+**Key stats:**
+- 57% want finance content to focus on vital information about the product or brand.
+- 71% want a straightforward and candid tone.
+- Trust and transparency were among the most important creative elements, which the article describes as elements that "convey a sense of trust and transparency."
+
+**The three principles:**
+1. **Emphasise the human touch:** Build trust through simple, candid, transparent content, and have people in the video speak directly to viewers about calls to action.
+2. **Be grounded in reality:** Feature real people and everyday settings, such as customers or micro-influencers at home rather than bank branches. The article notes that authenticity matters more than big visuals or sounds.
+3. **Convey ease and empathy:** Use a calm, supportive, non-judgemental tone, add light humour where appropriate, and convey a "got you covered" attitude.
+```
+
+</details>
+
+**→ WebSearch** `Meta Business Help Center instant forms privacy policy link required custom disclaimer consent checkbox lead ads requirements`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Meta Business Help Center instant forms privacy policy link required custom disclaimer consent checkbox lead ads requirements"
+
+Links: [{"title":"A Guide to Instant Forms","url":"https://www.jonloomer.com/instant-forms/"},{"title":"privacy policy for facebook ads","url":"https://www.cookieyes.com/blog/privacy-policy-for-facebook-ads/"},{"title":"lead ads","url":"https://ppc.land/lead-ads/"},{"title":"www.ppchero.com","url":"https://www.ppchero.com/?p=22122"},{"title":"A walkthrough guide to Meta instant form ads","url":"https://www.ppchero.com/a-walkthrough-guide-to-meta-instant-form-ads"},{"title":"21 min read","url":"https://leadsync.me/blog/build-email-list-meta-lead-ads/"},{"title":"Configuração e Rastreamento","url":"https://adsuploader.com/pt/blog/facebook-lead-ads-privacy-policy"},{"title":"Setup & Tracking","url":"https://adsuploader.com/blog/facebook-lead-ads-privacy-policy"},{"title":"Configuration et tracking","url":"https://adsuploader.com/fr/blog/facebook-lead-ads-privacy-policy"}]
+
+Most of these sources are third-party guides rather than Meta's own Help Center pages, so check Meta's Lead Ad Terms before relying on them.
+
+**Privacy policy
+… [truncated, 2689 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-24-general-principles-and-information-clients
+
+> prompt: Quote/paraphrase Article 24(1) and 24(3): all information including marketing communications addressed to clients or potential clients fair, clear, not misleading; marketing communications clearly identifiable. Who it applies to (investment firms).
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+**→ Bash** — Fetch MiFID II text and find Article 24(3)
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && curl -sL -m 90 -A "Mozilla/5.0" "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0065" -o mifid.html; ls -la mifid.html; python -I -X utf8 - <<'EOF'
+import re,html
+t=open('mifid.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t); t=html.unescape(t); t=re.sub(r'\s+',' ',t)
+print(len(t))
+i=t.find('Article 24 General principles and information to clients')
+print(i)
+for m in re.finditer(r'fair, clear and not misleading',t):
+    print(m.start(), t[max(0,m.start()-300):m.start()+300]); print('---')
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+-rw-r--r-- 1 matus 197609 1327528 Oct 10 21:40 mifid.html
+491976
+220226
+69091 professional and counterparties). However, in order to enhance the regulatory framework applicable to the provision of services irrespective of the categories of clients concerned, it is appropriate to make it clear that principles to act honestly, fairly and professionally and the obligation to be fair, clear and not misleading apply to the relationship with any clients. (87) Investments that involve contracts of insurance are often made available to customers as potential alternatives or substitutes to financial instruments subject to this Directive. To deliver consistent protection for reta
+---
+221654  market of end clients as referred to in Article 16(3), and ensure that financial instruments are offered or recommended only when this is in the interest of the client. 3. All information, including marketing communications, addressed by the investment firm to clients or potential clients shall be fair, clear and not misleading. Marketing communications shall be clearly identifiable as such. 4. Appropriate information shall be provided in good time to clients or potential clients with regard to the i
+… [truncated, 1941 more chars]
+```
+
+</details>
+
+**→ Bash** — Find investment advice definition in MiFID II
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && python -I -X utf8 - <<'EOF'
+import re,html
+t=open('mifid.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t); t=html.unescape(t); t=re.sub(r'\s+',' ',t)
+for m in re.finditer(r'investment advice\’? means|‘investment advice’ means',t):
+    print(m.start(), t[m.start():m.start()+400]); print('---')
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+140405 ‘investment advice’ means the provision of personal recommendations to a client, either upon its request or at the initiative of the investment firm, in respect of one or more transactions relating to financial instruments; (5) ‘execution of orders on behalf of clients’ means acting to conclude agreements to buy or sell one or more financial instruments on behalf of clients and includes the conclu
+---
+```
+
+</details>
+
+**→ Bash** — Find MAR definitions 34/35 and Article 20
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && curl -sL -m 90 -A "Mozilla/5.0" "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014R0596" -o mar.html; python -I -X utf8 - <<'EOF'
+import re,html
+t=open('mar.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t); t=html.unescape(t); t=re.sub(r'\s+',' ',t)
+for m in re.finditer(r'\(3[45]\) ‘',t):
+    print(m.start(), t[m.start():m.start()+900]); print('---')
+i=t.find('Article 20 Investment recommendations and statistics')
+print(t[i:i+900])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+84762 (34) ‘information recommending or suggesting an investment strategy’ means information: (i) produced by an independent analyst, an investment firm, a credit institution, any other person whose main business is to produce investment recommendations or a natural person working for them under a contract of employment or otherwise, which, directly or indirectly, expresses a particular investment proposal in respect of a financial instrument or an issuer; or (ii) produced by persons other than those referred to in point (i), which directly proposes a particular investment decision in respect of a financial instrument; (35) ‘investment recommendations’ means information recommending or suggesting an investment strategy, explicitly or implicitly, concerning one or several financial instruments or the issuers, including any opinion as to the present or future value or price of such instruments, 
+---
+85383 (35) ‘investment recommendations’ means information recommending or suggesting an investment strategy, explicitly or implicitly, concerning one or several financial instruments or the issuers, including any opinion as to the present or future value or price of such instruments, in
+… [truncated, 1526 more chars]
+```
+
+</details>
+
+**→ Bash** — Read Article 44 of Delegated Regulation 2017/565
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && curl -sL -m 90 -A "Mozilla/5.0" "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017R0565" -o dr565.html; python -I -X utf8 - <<'EOF'
+import re,html
+t=open('dr565.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t); t=html.unescape(t); t=re.sub(r'\s+',' ',t)
+i=t.find('Article 44 Fair, clear and not misleading')
+print(i)
+print(t[i:i+7000])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+168410
+Article 44 Fair, clear and not misleading information requirements (Article 24(3) of Directive 2014/65/EU) 1. Investment firms shall ensure that all information they address to, or disseminate in such a way that it is likely to be received by, retail or professional clients or potential retail or professional clients, including marketing communications, satisfies the conditions laid down in paragraphs 2 to 8. 2. Investment firm shall ensure that the information referred to in paragraph 1 complies with the following conditions: (a) the information includes the name of the investment firm, (b) the information is accurate and always gives a fair and prominent indication of any relevant risks when referencing any potential benefits of an investment service or financial instrument, (c) the information uses a font size in the indication of relevant risks that is at least equal to the predominant font size used throughout the information provided, as well as a layout ensuring such indication is prominent, (d) the information is sufficient for, and presented in a way that is likely to be understood by, the average member of the group to whom it is directed, or by whom it is likely 
+… [truncated, 5808 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__tabs_close**
+
+```
+{
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+No preview is open. Use `preview_start` or `navigate` with {"url": "https://…"} to open a browser tab at a URL, or `preview_start` with {"name": "…"} to start a dev server from .claude/launch.json.
+```
+
+</details>

@@ -4873,3 +4873,104 @@ Tab Context:
 ```
 
 </details>
+
+**→ mcp__Claude_Browser__resize_window**
+
+```
+{
+ "preset": "desktop"
+}
+```
+
+<details><summary>result</summary>
+
+```
+Viewport emulation cleared; the tab is back to the pane's responsive size (desktop).
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Získejte 1 000 Kč na investice | Bonus pro klienty Directu | Direct Fondee" ("https://www.fondee.cz/kampane/direct-1000-bonus")
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:13:59
+
+You've hit your session limit · resets 6:40pm (Europe/Prague)
+
+*[context injected: The coordinator sent a message while you were working:]*
+
+**→ Write** `C:\Users\matus\Desktop\B_project\research\02-competitors.md`
+
+```
+# Competitor teardown: Czech/Slovak retail-investing sites and 3 international references
+
+Research date and access date for every source: 2026-10-10. Research only; no recommendation is given.
+
+**Method (read first).** Static HTML via WebFetch/curl, plus the built-in browser pane emulating a 375x812 phone for the first screens (so "first screen" below is mostly observed, not inferred). I declined optional cookies everywhere. I opened registration pages and read public form definitions, but never typed into or submitted anything. Ads were read from the public Meta Ad Library (country filter CZ, "active"). Similarweb numbers are free-tier estimates and are ambiguous in places, so I tag them [INFERRED]. The shared web-search budget ran out part-way through, so the US/NYSE gap check (section 5) is not exhaustive.
+
+## Summary
+
+- Three competitors (Portu, Fondee, Finax) ask for almost nothing at first contact. Portu: e-mail plus password. Fondee: e-mail only, or Apple/Google sign-in. Finax: no contact at all in step 1; it asks for the investing goal first. All three put a calculator before the ask, and the ask is "open an account", not "get a guide". [VERIFIED]
+- XTB runs the only true lead-magnet funnel I found: a free ETF e-book, with 4 required fields (first name, surname, e-mail, phone) plus a consent checkbox group. On a 375x812 viewport the form starts about 849 px down, below the first screen. [VERIFIED]
+- XTB's ads use informal "ty" ("Získej", "Tvoje"); its landing pages use formal "vy". Portu ads and hero mix "ty" and "vy". Fondee and Finax use "vy". [VERIFIED]
+- Ad hooks seen live on Meta in CZ: "calculate what your investment could be in 10/20/30 years", "no hidden fees", "100 CZK is enough / start for the kids", a 1,000 CZK bonus, "5% interest for 90 days", and e-book downloads. [VERIFIED]
+- Attribution is built into the forms: XTB's HubSpot form carries about 25 hidden source/medium/campaign fields; Finex tags its own links with `subid`. [VERIFIED]
+- International references split the job: justETF and NerdWallet monetise comparisons through partner links, not e-mail gates; Finanzfluss collects e-mail through a newsletter with a visible reader count. [VERIFIED]
+- Nobody I found speaks to Czech investors about NYSE-listed (US-domiciled) ETFs. Finax says its ETFs trade on European exchanges, and Portu's brokerage list shows UCITS ETFs on London/Xetra. Only Finex's screener lists SPY, VTI and QQQ, with no note on whether a Czech retail investor can buy them. [VERIFIED; absence claim is INFERRED]
+- Trust and numbers are inconsistent across the market: Portu 340,000+ vs 280,000+ clients, Fondee's "test winner" badge vs rank 5, minimum deposits of 100 / 500 / 1,000 CZK for the same product. See the Contradictions section.
+- None of these sites publishes conversion rates or ad spend. Meta's library shows no spend for these ads. "Success" below is therefore based on size, awards and visible ad activity only.
+
+## Findings
+
+### 1. Selection and why each counts as successful
+
+| Site | Type | Evidence of success | Tag |
+|---|---|---|---|
+| Portu (portu.cz) | CZ robo-advisor + brokerage | Homepage claims 340,000+ clients and 76 bn CZK; about 27 active Meta ads for its slogan; TV campaigns since 2021. Finex lists it #1 (98%, own ranking). | [VERIFIED] |
+| Finax (finax.eu/cs) | SK robo-advisor, CZ-localised | 102,600 clients and above 1.4 bn EUR at end-2025 (own report, 27 Mar 2026); homepage now says 115,000+ and 1.8 bn EUR; award "Zlatá mince 2025"; Google 4.9 from 399 reviews (own page). | [VERIFIED] |
+| Fondee (Direct Fondee) | CZ robo-advisor | 27,000+ clients claimed; part of Direct group; about 10 distinct active Meta creatives. Loss-making in 2022 (21 M CZK loss on 4.5 M revenue, per CzechCrunch 2023). | [VERIFIED] |
+| XTB CZ (cz.xtb.com / vzdelavani.xtb.com) | Broker with ETF e-book funnel | 2.9 M investors worldwide, "Broker roku 2025" (own site); about 50 active CZ Meta ads for "XTB ETF", most with e-book or promo offers. |
+… [truncated, 25650 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+File created successfully at: C:\Users\matus\Desktop\B_project\research\02-competitors.md (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ Edit** `C:\Users\matus\Desktop\B_project\research\02-competitors.md`
+
+```
+- about 10 distinct active Meta creatives.
++ roughly 8 distinct active Meta creatives (several duplicated across 3-5 ad sets).
+```
+
+<details><summary>result</summary>
+
+```
+The file C:\Users\matus\Desktop\B_project\research\02-competitors.md has been updated successfully. (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ SubagentHandback**
+
+```
+{
+ "message": "File: C:\\Users\\matus\\Desktop\\B_project\\research\\02-competitors.md\n\n5-bullet summary\n- The report covers 8 sites: Portu, Finax, Fondee, XTB CZ (ETF e-book landing pages), Finex.cz, and justETF, Finanzfluss and NerdWallet as international references. Per-site teardowns, a comparison matrix, patterns and gaps are all in the file. First screens were mostly observed in the built-in browser at 375x812 (not only read as HTML), and live Meta Ad Library ads (country CZ) are included.\n- Portu, Fondee and Finax all put a calculator before the ask, and the first ask is cheap. Portu asks for e-mail plus password. Fondee asks for e-mail only, or Apple/Google sign-in. Finax asks for the investing goal first and no contact. XTB is the only real lead-magnet funnel: an ETF e-book with 4 required fields (first name, surname, e-mail, phone) and a bundled consent checkbox. The form starts about 849 px down on a 375x812 viewport, below the first screen, and a CFD risk banner fills the top third. XTB's HubSpot form carries about 25 hidden attribution fields, and the same form is reused across its e-book pages.\n- Live ad hooks: Fondee runs \"calculate what you could have in 10/20/30 years\" and \"no hidden fees\", plus a 1,000 CZK bonus page. Portu runs 6-second videos with \"ty\" copy (hero mixes \"ty\" and \"vy\"). XTB runs e-book carousels, a free course, and \"5% for 90 days\". XTB ads use \"ty\" while its landing pages use \"vy\". No Czech-language Finax ads turned up.
+… [truncated, 1629 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+{"success":true,"message":"Report delivered to your caller."}
+```
+
+</details>

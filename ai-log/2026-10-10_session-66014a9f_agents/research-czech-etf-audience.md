@@ -2794,3 +2794,115 @@ na konci prvn�ho ctvrtlet� vlnu impulzivn�ch v�prodej. N�sledn� odkl
 **→ WebFetch** https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/
 
 > prompt: Extract the statistic about mobile site visits abandoned if loading takes longer than 3 seconds, the sample/year of the study, and the relationship between load time and bounce probability.
+
+**→ WebFetch** https://web.dev/case-studies/milliseconds-make-millions
+
+> prompt: Extract the key findings: 0.1 second improvement effect on conversions in retail and travel, and lead-gen/finance results; year.
+
+<details><summary>result</summary>
+
+```
+REDIRECT DETECTED: The URL redirects to a location that was not fetched automatically.
+
+    Original URL: https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/
+    Redirect URL (from the server's Location header — server-supplied, not verified): https://business.google.com/en-all/think/
+    Status: 301 Moved Permanently
+
+    To complete your request, I need to fetch content from the redirected URL. Please use WebFetch again with these parameters:
+    - url: "https://business.google.com/en-all/think/"
+    - prompt: "Extract the statistic about mobile site visits abandoned if loading takes longer than 3 seconds, the sample/year of the study, and the relationship between load time and bounce probability."
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Key findings (0.1-second mobile speed improvement):**
+
+- **Retail:** Progression rates rose at nearly every step of the mobile journey. Product Detail to Add to Basket rose 9.1%, and retail consumers spent 9.2% more. The image summary cites an 8.4% rise in conversion rates.
+- **Travel:** Check-out completion rose 2.2%, and booking rates improved 10%. The image summary cites a 10.1% rise in conversion rates.
+- **Lead generation:** Users progressing to the Form Submission page rose 21.6%, and page views rose 7%.
+- **Finance:** The page doesn't include finance-specific results.
+
+**Year:** The study monitored mobile load times for 30 days at the end of 2019. The page was last updated June 24, 2020.
+```
+
+</details>
+
+**→ WebFetch** http://www.cnb.cz/export/sites/cnb/en/economic-research/.galleries/seminars_workshops/2021/20210913_rod_2021_presentation_bruha.pdf
+
+> prompt: Find participation rates (% of households) for mutual funds, shares, bonds with the HFCS wave year. Report values with labels.
+
+<details><summary>result</summary>
+
+```
+I couldn't find the participation rates for mutual funds, shares, or bonds, or the HFCS wave year, in the content you provided. The text is a raw PDF file dump: most of the page streams are compressed or embedded image data, and the content is truncated before any readable tables or prose appear. The only readable metadata is that the document is tagged as Czech (`cs-CZ`) and has 15 pages.
+
+If you paste the text of the relevant pages, or the specific tables, I can extract the mutual fund, shares, and bonds figures and the survey wave they come from.
+
+[Binary content (application/pdf, 817.7KB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791638012154-acdwsp.pdf]
+```
+
+</details>
+
+**→ Bash** — Extract CNB presentation text and grep for participation rates
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && pdftotext -layout webfetch-1791638012154-acdwsp.pdf /tmp/cnb.txt 2>/dev/null; wc -c /tmp/cnb.txt; grep -n -i -E "mutual|shares|bonds|participation|HFCS|wave|2017|2020|2021" /tmp/cnb.txt | head -50
+```
+
+<details><summary>result</summary>
+
+```
+29162 /tmp/cnb.txt
+1:                CNB Research Open Day 2021
+9:                Prague, 13 September 2021
+19:          � Assets, liabilities � participation rates and conditional amounts
+30:� Project: Czech National Bank and Czech Statistical Office in cooperation with the ESCB HFCS Network
+35:          � Yearly (2020, 2021, 2022)
+39:� Fieldwork for HFCS CZ 2020
+41:          � February-December 2020. Completed.
+69:item response rates:                        Mutual funds                              7.0 169,158 1,000 40,000 66,000 200,000 650,000 1,900,000 1
+71:� < 0.3% missing (1-5 obs out of 1,555) Bonds                                         1.2 340,526 10,000 100,000 200,000 500,000 1,100,000 1,100,000 0
+73:� < 4.3 % missing for pensions (67 obs) Shares (publicly traded)                      3.6 278,346 900 22,500 90,000 235,000 1,200,000 3,250,000 0
+273:                                                       Sources: HFCS Czech Republic 2020 (preliminary), HFCS ECB 2017 (May 2021 update), Fessler and Sch�rz (2020).
+306:                                                    Sources: HFCS Czech Republic 2020 (preliminary), HFCS ECB 2017 (May 2021 update), Fessler and Sch�rz (2020)
+… [truncated, 545 more chars]
+```
+
+</details>
+
+**→ Bash** — Context lines for HFCS participation table
+
+```
+sed -n 60,80p /tmp/cnb.txt
+```
+
+<details><summary>result</summary>
+
+```
+� Asset distributions skewed to the right   Self-employment business wealth           8.2 1,776,697 0                        20,000 253,000 1,000,000 7,000,000 45,000,000 4
+                                            Financial assets                          97.2 395,323 0                         70,000 190,000 460,000 1,490,000 11,605,000 2
+
+                                            Deposits                                  92.6 263,850 0                         40,000 100,100 280,000 1,000,000 10,105,000 2
+
+                                               Sight accounts                         91.6 206,602 0                         30,000 80,000 200,000 750,000 10,000,000 2
+
+� On the data collection side, pretty good     Savings accounts                       33.1 167,494 1,700 47,000 100,000 200,000 519,320 2,000,000 4
+
+item response rates:                        Mutual funds                              7.0 169,158 1,000 40,000 66,000 200,000 650,000 1,900,000 1
+
+� < 0.3% missing (1-5 obs out of 1,555) Bonds                                         1.2 340,526 10,000 100,000 200,000 500,000 1,100,000 1,100,000 0
+
+� < 4.3 % missing for pensions (67 obs) Shares (publicly traded)  
+… [truncated, 525 more chars]
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:13:44
+
+You've hit your session limit · resets 6:40pm (Europe/Prague)
+
+*[context injected: The coordinator sent a message while you were working:]*

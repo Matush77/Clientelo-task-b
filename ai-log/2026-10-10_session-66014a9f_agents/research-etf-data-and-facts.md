@@ -4003,3 +4003,454 @@ The response body was not retrieved. If this URL requires authentication, use an
 ```
 
 </details>
+
+**→ Bash** — List XTB CZ help-center links
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && curl -sL -A "Mozilla/5.0" "https://www.xtb.com/cz/help-center" -o xtbhc.html; PYTHONIOENCODING=utf-8 python - <<'EOF'
+import re,html
+t=open('xtbhc.html',encoding='utf-8',errors='ignore').read()
+seen=set()
+for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>',t,re.I|re.S):
+    txt=re.sub(r'<[^>]+>','',html.unescape(m.group(2))).strip()
+    h=m.group(1)
+    if 'help-center' in h and h not in seen:
+        seen.add(h); print(h,'|',txt[:80])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+/cz/help-center/frakcni-prava | Frakční práva
+                                                        Články: 6
+/cz/help-center/investicni-plany | Inveštiční plány
+                                                        Články:
+/cz/help-center/akcie-a-etf | Akcie a ETF
+                                                        Články: 21
+/cz/help-center/realizace-objednavek | Realizace objednávek
+                                                        Člá
+/cz/help-center/partnersky-program | Partnerský program 
+                                                            
+/cz/help-center/obchodni-platformy | Obchodní platformy
+                                                            O
+/cz/help-center/danove-priznani | Daňové přiznání
+                                                        Články: 
+/cz/help-center/platby-a-poplatky | Platby a poplatky
+                                                            Vk
+/cz/help-center/instrumenty | Instrumenty
+                                                            Vše o ob
+/cz/help-center/nastaveni-uctu-a-aktualizace-osobnich-udaju | Nastavení účtu a aktualizace osobních údajů
+                                    
+/
+… [truncated, 477 more chars]
+```
+
+</details>
+
+**→ Bash** — List XTB CZ Stocks and ETF help articles
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && curl -sL -A "Mozilla/5.0" "https://www.xtb.com/cz/help-center/akcie-a-etf" -o xtbetf.html; PYTHONIOENCODING=utf-8 python - <<'EOF'
+import re,html
+t=open('xtbetf.html',encoding='utf-8',errors='ignore').read()
+seen=set()
+for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>',t,re.I|re.S):
+    txt=re.sub(r'<[^>]+>','',html.unescape(m.group(2))).strip()
+    h=m.group(1)
+    if 'akcie-a-etf/' in h and h not in seen:
+        seen.add(h); print(h,'|',txt[:110])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+/cz/help-center/akcie-a-etf/akcie | Akcie
+                        Definice, otevření pozice, nastavení SL/TP, FIFO
+/cz/help-center/akcie-a-etf/jak-prevest-sve-cenne-papiry-akcie-etfy-do-xtb | Jak převést své cenné papíry (Akcie / ETFy) do XTB?
+                        Převod Akcií od jiného brokera k X
+/cz/help-center/akcie-a-etf/co-je-etf-a-jak-funguje | Co je ETF a jak funguje?
+                        ETF, Fond obchodovaný na burze, devizový fond / devízový fond
+/cz/help-center/akcie-a-etf/pristup-k-polskym-akciim-na-varsavske-burze | Přístup k polským Akciím na Varšavské burze
+                        polské akcie, polská burza, Varšavská burz
+/cz/help-center/akcie-a-etf/kde-zjistit-datum-vyplaty-dividend | Kde zjistit datum výplaty dividend
+                        Dividenda, Ex Date, Pay Date
+/cz/help-center/akcie-a-etf/jak-prevadet-akcie-mezi-obchodnimi-ucty-v-xtb | Jak převádět Akcie mezi obchodními účty v XTB
+```
+
+</details>
+
+**→ Bash** — Search XTB help for US ETF statements
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && python gt.py "https://www.xtb.com/cz/help-center/akcie-a-etf/co-je-etf-a-jak-funguje" xtb_etf.txt; grep -n -i -E "USA|americk|NYSE|PRIIP|KID|UCITS|Irsk|evrop|domicil|CFD" xtb_etf.txt | head -20 | cut -c1-400; for u in "https://www.xtb.com/cz/help-center/instrumenty" ; do python gt.py "$u" xtb_instr.txt; grep -n -i -E "americk|PRIIP|KID|USA" xtb_instr.txt | head | cut -c1-300; done
+```
+
+<details><summary>result</summary>
+
+```
+245200 12141
+5: 77 % retailových účtů CFD je ztrátových. Investování je rizikové. Investujte zodpovědně. 
+12: CFD: Zlato, Zemní plyn, Káva, Kukuřice 
+14: CFD: Bitcoin, Uniswap, Ripple, Dogecoin 
+16: CFD: US100, WIG20, S&P500, DAX, NIKKEI 225 
+18: CFD: EUR/CZK, AUD/USD, EUR/GBP, CHF/JPY 
+242582 10215
+```
+
+</details>
+
+**→ Bash** — Probe XTB ETF product pages for US ETF availability
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && for u in "https://www.xtb.com/int/etfs" "https://www.xtb.com/cz/etf" "https://www.xtb.com/cz/akcie-a-etf"; do echo "== $u"; python gt.py "$u" xtb_e.txt; grep -n -i -E "US ETF|americk|PRIIP|KID|UCITS|NYSE|USA|Irsk|Ireland|domicil|available to" xtb_e.txt | head -12 | cut -c1-350; done
+```
+
+<details><summary>result</summary>
+
+```
+== https://www.xtb.com/int/etfs
+420640 12864
+128: This article is only available to logged in users
+129: Some articles are only available to logged in users. If you do not have an XTB account, you can create one without unnecessary formalities.
+228: By clicking “Accept All”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+276: We use tools that let us analyze the usage of our page. Such data lets us improve the user experience of our web service.
+== https://www.xtb.com/cz/etf
+434124 15214
+== https://www.xtb.com/cz/akcie-a-etf
+654473 1783
+```
+
+</details>
+
+**→ Bash** — Read XTB CFD stock/ETF fee section
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && sed -n 160,260p xtb_cz.txt | cut -c1-230
+```
+
+<details><summary>result</summary>
+
+```
+Ostatní trhy: 25 EUR/ 25 USD/ 650 CZK za ISIN 2)
+
+Převod OMI mezi obchodními účty vedenými Zákazníkem v xStation5)                                      0.5% z hodnoty Transakce za ISIN (minimálně 25 EUR/ 25 USD/ 650 CZK) 2)
+
+Certifikát o vlastnictví cenného papíru6)                                                                                     250 EUR
+
+Registrace na valnou hromadu akcionářů6)                                                                                      250 EUR
+
+Odesílání hlasů během valné hromady7)                                                                                         10 EUR/ 10 USD/ 260 CZK
+
+Služba hlasovacích práv pro Frakční práva7)                                                                                   50 EUR/ 50 USD/ 1300 CZK
+
+Poplatek za každou přípravu potvrzení o vyplácení dividendy6)                                                                 10 EUR/ 10 USD/ 260 CZK
+
+Registrace účasti na nabídce odkupu akcií (mimo polský trh)9)                                                                 25 EUR/ 25 USD/ 650 CZK
+
+Poplatek za úschovu8)                                                                               
+… [truncated, 5932 more chars]
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:13:56
+
+You've hit your session limit · resets 6:40pm (Europe/Prague)
+
+*[context injected: The coordinator sent a message while you were working:]*
+
+**→ WebSearch** `US-domiciled ETFs that publish PRIIPs KID available to EU retail investors list issuer KID for US-listed ETF`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "US-domiciled ETFs that publish PRIIPs KID available to EU retail investors list issuer KID for US-listed ETF"
+
+Links: [{"title":"US domiciled ETFs - without the KIIDs?","url":"https://community.freetrade.io/t/us-domiciled-etfs-without-the-kiids/1281"},{"title":"ETF Insight: European investors set to be impacted by KID requirements","url":"https://www.etfstream.com/articles/etf-insight-european-investors-set-to-be-impacted-by-kid-requirements"},{"title":"investingintheweb.com","url":"https://investingintheweb.com/?p=59253"},{"title":"us domiciled etfs","url":"https://www.justetf.com/news/etf/us-domiciled-etfs.html"},{"title":"U.S. ETFs Abroad: A Tax Advisor’s Guide for Americans Living in Europe","url":"https://www.bnctax.com/?p=2888"},{"title":"ucits etf","url":"https://www.eupersonalfinance.eu/articles/ucits-etf"},{"title":"What Is a KIID/KID? (PRIIPs for EU Investors)","url":"https://quantroutine.com/?p=3254"},{"title":"How to invest in US ETFs from Europe","url":"https://quantroutine.com/?p=3019"},{"title":"European ETFs vs. US ETFs — Which Should You Buy as a European Investor?","url":"https://freenance.io/comparisons/european-etf-vs-us-etf/"}]
+
+L
+… [truncated, 3736 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.finhacker.cz/jak-obejit-znemozneni-obchodovani-americkych-etfek-3-cast/
+
+> prompt: Describe the options-based routes to get exposure to US ETFs under PRIIPs (e.g. buying and exercising call options), which brokers, risks, tax notes, publication date. Quote under 15 words.
+
+**→ WebFetch** https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065
+
+> prompt: Find Annex II Section II.1 criteria for elective professional clients: the quantitative criteria (at least two of three: transactions frequency, portfolio size EUR 500 000, professional position in financial sector). State them.
+
+**→ WebSearch** `Revolut Czech Republic US stocks ETFs available EEA customers Revolut Securities Europe UAB US-listed ETF KID`
+
+**→ WebSearch** `Portu Fondee investiční platforma ETF poplatky Česko UCITS portfolio roční poplatek`
+
+<details><summary>result</summary>
+
+```
+The page content doesn't include Annex II. The excerpt ends partway through the recitals (around recital 97), before the annexes, so I can't state the Section II.1 criteria from it.
+
+To find them, open the full text of Directive 2014/65/EU on EUR-Lex (the "Text" view, or the HTML version) and go to Annex II, Section II.1.
+
+[WebFetch note: this page's text is 396326 characters long and the answer above covers only characters 0 to 100000; the final 296326 were not read — to read on, call WebFetch again with the same url and offset: 100000.]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Options-based routes (variant B and C, article "Jak obejít znemožnění obchodování amerických ETFek – 3. část", 3 Sep 2020)**
+
+- **Variant B: buying CALL options.** You buy a CALL on the ETF, and it must finish in-the-money at expiry so the underlying is delivered to your account.
+- **Variant C: buying CALLs and exercising early.** Since US-style options can be exercised any time before expiry, you can exercise to get the ETF sooner. The author suggests the shortest expiry, a slightly in-the-money strike, and the lowest time value and tightest spread.
+
+**Brokers:** The article names Interactive Brokers. For early exercise, it advises changing the TWS setting for option exercise requests from "editable until cutoff time" to "final and cannot be cancelled."
+
+**Costs:** Broker commission on the purchase, remaining time value (premium), and the bid/ask spread. Exercise itself carries no fee.
+
+**Risks:**
+- Options are sophisticated, and the author recommends practicing on a demo account first.
+- The option must finish in-the-money, or the route fails.
+- Contracts cover 100 shares, so you cannot buy fewer.
+- Options are not traded on illiquid ETFs, and spreads can be wide.
+- The author 
+… [truncated, 394 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Revolut Czech Republic US stocks ETFs available EEA customers Revolut Securities Europe UAB US-listed ETF KID"
+
+Links: [{"title":"Revolut adds European listed stocks to its trading platform across the EEA","url":"https://www.revolut.com/en-IT/news/revolut_adds_european_listed_stocks_to_its_trading_platform_across_the_eea/"},{"title":"Products available to trade","url":"https://help.revolut.com/en-US/help/wealth/stocks/getting-started-with-trading/what-s-available-to-trade/whats-available-to-trade/"},{"title":"Revolut unlocks bonds investing market to customers in EEA","url":"https://www.revolut.com/en-NL/news/revolut_unlocks_bonds_investing_market_to_customers_in_eea/"},{"title":"Revolut Invest","url":"https://www.revolut.com/en-CZ/revolut-invest/"},{"title":"Revolut launches Robo-Advisor in EEA to automate investing","url":"https://www.revolut.com/en-CZ/news/revolut_launches_robo_advisor_in_eea_to_automate_investing/"},{"title":"Revolut empowers retail investors with institutional grade private markets access","url":"https://www.revolut.com/en-RO/news/revolut_empowers_retail_investors_with_institutional_grade_private_markets_access/"},{"title":"Revol
+… [truncated, 3147 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Portu Fondee investiční platforma ETF poplatky Česko UCITS portfolio roční poplatek"
+
+Links: [{"title":"Poplatky za investice: Srovnání brokerů a investičních platforem","url":"https://www.e15.cz/finexpert/investujeme/poplatky-za-investicni-platformy-prehledne-srovnani-1399874"},{"title":"portu hlasi pres 40 tisic uzivatelu a dve a pul miliardy korun ve sprave do konce roku prekoname 5 miliard veri jeho sef","url":"https://cc.cz/portu-hlasi-pres-40-tisic-uzivatelu-a-dve-a-pul-miliardy-korun-ve-sprave-do-konce-roku-prekoname-5-miliard-veri-jeho-sef/"},{"title":"Banky.cz Magazín Banky.cz Fintech Portu: Recenze fintech investiční platformy","url":"https://www.banky.cz/clanky/portu-recenze-fintech-investicni-platformy/"},{"title":"665912 velke porovnanie slovaci sem sa oplati investovat","url":"https://www.noviny.sk/ekonomika/665912-velke-porovnanie-slovaci-sem-sa-oplati-investovat"},{"title":"recenze portu","url":"https://www.testado.cz/recenze-portu/"},{"title":"velke porovnanie slovaci sem sa oplati investovat","url":"https://sita.sk/vofinanciach/velke-porovnanie-slovaci-sem-sa-oplati-investovat/"},{"title":"finex.cz","url":"https://finex.cz/recenze/po
+… [truncated, 2604 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.revolut.com/en-IT/news/revolut_adds_european_listed_stocks_to_its_trading_platform_across_the_eea/
+
+> prompt: What does it say about US-listed stocks and ETFs in the EEA, PRIIPs/KID, the date, and fees? Quote under 15 words.
+
+**→ WebFetch** https://www.revolut.com/en-CZ/revolut-invest/
+
+> prompt: What does it say about US stocks and ETFs availability for Czech customers, trading fees (execution fee, commission by plan), FX fees, number of free trades? Any date. Quote under 15 words.
+
+**→ WebFetch** https://help.revolut.com/en-CZ/help/wealth/stocks/trading-stocks/trading-fees/what-fees-will-i-be-charged-for-my-trading/
+
+> prompt: Extract commission-free order allowance per plan (Standard, Plus, Premium, Metal, Ultra), the commission for additional orders (percent / min / CZK amount), custody fee, FX fee, regulatory fees, and any date.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+**→ WebSearch** `Revolut EEA customers US-listed ETFs available 2023 expansion "US-listed" ETFs KID PRIIPs Revolut Securities Europe`
+
+**→ WebSearch** `Revolut Standard plan Česko poplatky investování akcie ETF 25 Kč za obchod zdarma obchody měsíčně americké ETF dostupné`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Revolut EEA customers US-listed ETFs available 2023 expansion "US-listed" ETFs KID PRIIPs Revolut Securities Europe"
+
+Links: [{"title":"PRIIPs Overview","url":"https://ibkb.interactivebrokers.com/de/node/3324"},{"title":"PRIIPs Regulation","url":"https://ibkb.interactivebrokers.com/es/node/2993"},{"title":"PRIIPs Regulation","url":"https://ibkb.interactivebrokers.com/de/node/2993"},{"title":"Search PRIIPs","url":"https://inter-il.com/wp-content/uploads/2024/08/Search-PRIIPs.pdf"},{"title":"PRIIPs Overview","url":"https://ibkb.interactivebrokers.com/tag/rejection-messages"},{"title":"PRIIPs KID  The New Disclosure Document for Manufacturers and Distributors of Funds Structured Securities and Other Packaged Investment Products 10 11 2017","url":"https://klgates.com/PRIIPs-KID--The-New-Disclosure-Document-for-Manufacturers-and-Distributors-of-Funds-Structured-Securities-and-Other-Packaged-Investment-Products-10-11-2017"},{"title":"PRIIPs KID  The New Disclosure Document for Manufacturers and Distributors of Funds Structured Securities and Other Packaged Investment Products 10 11 2017","url":"https://www.klgates.com/thought-leadership/PRIIPs-KID--The-New-
+… [truncated, 1941 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Revolut Standard plan Česko poplatky investování akcie ETF 25 Kč za obchod zdarma obchody měsíčně americké ETF dostupné"
+
+Links: [{"title":"Revolut usiluje o pasivní investory, spouští pro ně nákupy stovek ETF zdarma. Dočkají se i Češi","url":"https://cc.cz/revolut-usiluje-o-pasivni-investory-spousti-pro-ne-nakupy-stovek-etf-zdarma-dockaji-se-i-cesi/"},{"title":"revolut.com","url":"https://revolut.com/cs-CZ/etfs"},{"title":"Pondělí 21. září 2026 05:31","url":"https://www.fxstreet.cz/klicova-slova+ehp.html"},{"title":"revolut.com","url":"https://revolut.com/sk-SK/etfs"},{"title":"Úterý 04. srpna 2026 04:32","url":"https://www.fxstreet.cz/klicova-slova+revolut-securities.html"},{"title":"Revolut oznámil spuštění ETF investičních plánů bez poplatků","url":"https://www.e15.cz/tiskove-zpravy/revolut-oznamil-spusteni-etf-investicnich-planu-bez-poplatku-1421634"},{"title":"nova investicni aplikace revolut invest je nyni dostupna v cesku recku a dansku","url":"https://finex.cz/nova-investicni-aplikace-revolut-invest-je-nyni-dostupna-v-cesku-recku-a-dansku/"},{"title":"etf revolut","url":"https://brokerchooser.com/cs/invest-long-term/diversification/etf-revolu
+… [truncated, 3641 more chars]
+```
+
+</details>
+
+**→ Bash** — Fetch Revolut CZ ETF page and grep
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && python gt.py "https://www.revolut.com/cs-CZ/etfs" rev_etf.txt; PYTHONIOENCODING=utf-8 python - <<'EOF'
+t=open('rev_etf.txt',encoding='utf-8').read()
+import re
+print(len(t))
+for k in ['provize','Standard','Kč','EU','USA','kotovan','poplat','PRIIP','KID']:
+    for m in list(re.finditer(k,t))[:3]:
+        print(k,'=>',t[max(0,m.start()-100):m.end()+160].replace('\n',' '))
+    print('--')
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+247624 8903
+8903
+provize => to ETF a investovali menší částky a zároveň využívali výhod diverzifikovaných portfolií.  Účtuje se provize a platí se poplatek Revolutu za provedení.¹ Mohou se účtovat i další poplatky, například za směnu měn nebo regulatorní poplatky. Přečtěte si Nejčastější dotazy
+provize => ETF (včetně jejich zlomků) bez provizí v rámci měsíčního limitu vašeho plánu.  Získáte 5 pokynů bez provize s plánem Premium a 10 s plány Ultra a Metal.  Mohou se účtovat další náklady, jako je poměr celkových nákladů (TER) nebo regulatorní poplatky. Provizí se rozum
+provize => strace u jiných subjektů skupiny Revolut (pokud již nejste zaregistrováni).  ¹Limit pro obchody bez provize zahrnuje provedené transakce a zadané pokyny, které nebyly provedeny během zúčtovacího období vašeho plánu.  Další informace naleznete v nejčastějších dotazech
+--
+Standard => fice 5, 3075, Limassol, Kypr). Komoditní služby poskytuje společnost Revolut Ltd.  Vyberte si plán  Standard  Zdarma  Pro finanční základy – vše, co potřebujete pro lepší správu peněz, je na jednom místě. Posílání prostředků do zahraničí nebo dodržování rozpočtu ještě
+Standard => ečnosti   Mobilní zařízení a připojení  Mob
+… [truncated, 2451 more chars]
+```
+
+</details>
+
+**→ Bash** — Read Revolut CZ ETF fees section
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && PYTHONIOENCODING=utf-8 python - <<'EOF'
+t=open('rev_etf.txt',encoding='utf-8').read()
+i=t.find('Jednoduché a jasné poplatky')
+print(t[i-1500:i+1600])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+(Bash completed with no output)
+```
+
+</details>
+
+**→ Bash** — Read Revolut CZ ETF fees section
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && PYTHONIOENCODING=utf-8 python - <<'EOF'
+t=open('rev_etf.txt',encoding='utf-8').read()
+i=t.find('Vybrat ETF')
+print(t[max(0,i-700):i+1500])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+jící se trendy jediným nákupem. Investiční riziko. Hodnota vašich investic může klesat i stoupat. 
+ Zlomkové akcie s sebou nesou dodatečná rizika a nejsou s nimi spojena hlasovací práva. Přečtěte si Nejčastější dotazy ke zlomkovým akciím .
+ Začněte investovat 
+ Velké nápady začínají malými kroky
+ Začněte již od 1 € se zlomkovými akciemi, abyste vlastnili část těchto ETF a investovali menší částky a zároveň využívali výhod diverzifikovaných portfolií.
+ Účtuje se provize a platí se poplatek Revolutu za provedení.¹ Mohou se účtovat i další poplatky, například za směnu měn nebo regulatorní poplatky. Přečtěte si Nejčastější dotazy k poplatkům za obchodování a Nejčastější dotazy k nákladům ETF .
+ Vybrat ETF 
+ Jednoduché a jasné poplatky
+ S plánem Premium, Metal a Ultra můžete investovat do akcií a ETF (včetně jejich zlomků) bez provizí v rámci měsíčního limitu vašeho plánu.
+ Získáte 5 pokynů bez provize s plánem Premium a 10 s plány Ultra a Metal.
+ Mohou se účtovat další náklady, jako je poměr celkových nákladů (TER) nebo regulatorní poplatky. Provizí se rozumí poplatek Revolutu za provedení.¹ Přečtěte si Nejčastější dotazy k poplatkům za obchodování , Zveřejnění nákladů a popl
+… [truncated, 1019 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065
+
+> prompt: Find ANNEX II section II.1 "Identification criteria" for elective professional clients: the three criteria and the 'at least two' rule. State them precisely.
+
+<details><summary>result</summary>
+
+```
+The provided content doesn't include Annex II, so I can't state the identification criteria for elective professional clients. The excerpt covers Articles 48 through 64 of the directive and ends partway through Article 64.
+
+To find section II.1, you'd need the part of the document that contains the annexes, or the full text of the directive.
+```
+
+</details>
+
+**→ Bash** — Fetch MiFID II full text for Annex II
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && curl -sL -A "Mozilla/5.0" -o mifid.html -w "%{http_code} %{size_download}\n" "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0065"; python gt.py "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014L0065" mifid.txt; grep -n -i "ANNEX II" mifid.txt | head; grep -n -i "500 000\|EUR 500\|at least two of" mifid.txt | head
+```
+
+<details><summary>result</summary>
+
+```
+200 1327528
+1324986 495481
+370: This Directive should be without prejudice to the obligations of the Member States relating to the time-limits for the transposition into national law and the dates of application of the Directives set out in Annex III, Part B,
+560: ‘professional client’ means a client meeting the criteria laid down in Annex II;
+1370: 1. A Member State may require that a third-country firm intending to provide investment services or perform investment activities with or without any ancillary services to retail clients or to professional clients within the meaning of Section II of Annex II in its territory establish a branch in that Member State.
+1408: Member States shall ensure that where a retail client or professional client within the meaning of Section II of Annex II established or situated in the Union initiates at its own exclusive initiative the provision of an investment service or activity by a third-country firm, the requirement for authorisation under Article 39 shall not apply to the provision of that service or activity by the third country firm to that person including a relationship specifically relating to the provision of that service or activity. 
+… [truncated, 819 more chars]
+```
+
+</details>
+
+**→ Bash** — Read MiFID II Annex II criteria
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && sed -n 2760,2787p mifid.txt | cut -c1-500
+```
+
+<details><summary>result</summary>
+
+```
+The entities referred to above are considered to be professionals. They must however be allowed to request non-professional treatment and investment firms may agree to provide a higher level of protection. Where the client of an investment firm is an undertaking referred to above, the investment firm must inform it prior to any provision of services that, on the basis of the information available to the investment firm, the client is deemed to be a professional client, and will be treated as su
+ It is the responsibility of the client, considered to be a professional client, to ask for a higher level of protection when it deems it is unable to properly assess or manage the risks involved.
+ This higher level of protection will be provided when a client who is considered to be a professional enters into a written agreement with the investment firm to the effect that it shall not be treated as a professional for the purposes of the applicable conduct of business regime. Such agreement shall specify whether this applies to one or more particular services or transactions, or to one or more types of product or transaction.
+ II. CLIENTS WHO MAY BE TREATED AS PROFESSIONALS ON REQUEST
+ II.1.
+… [truncated, 3830 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.sec.gov/data-research/sec-markets-data/mutual-fund-prospectus-riskreturn-summary-data-sets
+
+> prompt: What does this data set contain, how often updated (latest quarter listed), format, any use restrictions? Mention whether fee table / expense ratio is included.
+
+**→ WebFetch** https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets
+
+> prompt: What does this data set contain (holdings of registered funds incl. ETFs?), how often updated, latest period listed, format, any lag (60 days?) and restrictions.
+
+**→ WebFetch** https://www.invesco.com/qqq-etf/en/home.html
+
+> prompt: Extract: listing exchange (Nasdaq), expense ratio, inception date, net assets, index, holdings count, distribution frequency, any downloadable files, as-of date.
