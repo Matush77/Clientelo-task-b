@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimal fintech — 5 previews (v2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Figtree:wght@500;700;800;900&family=Geist:wght@400;500;600;700&family=Sora:wght@400;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e8e5; color: #1b1b1d; font: 15px/1.5 "Geist", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .head { max-width: 1180px; margin: 0 auto 36px; }
+  .head h1 { font: 600 26px/1.2 "Geist"; letter-spacing: -0.02em; }
+  .head p { max-width: 780px; margin-top: 8px; color: #55555b; }
+  .row { max-width: 1180px; margin: 0 auto 60px; }
+  .row h2 { font: 600 20px "Geist"; letter-spacing: -0.01em; }
+  .row h2 span { font: 500 13px "Geist"; color: #7a7a80; margin-right: 8px; }
+  .row .desc { color: #55555b; font-size: 14px; margin: 4px 0 18px; max-width: 760px; }
+  .phones { display: flex; gap: 22px; flex-wrap: wrap; }
+  .cap { font: 500 12px "Geist"; color: #77777d; text-align: center; margin-top: 8px; }
+  .phone { width: 320px; height: 664px; border-radius: 40px; background: #0f0f10; padding: 9px; box-shadow: 0 16px 36px rgba(0,0,0,.16); }
+  .scr { position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: var(--bg); color: var(--fg); font-family: var(--font); display: flex; flex-direction: column; padding: 46px 22px 26px; }
+  .tab { font-variant-numeric: tabular-nums; }
+
+  /* shared structure */
+  .logo { font-weight: 700; font-size: 15px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 7px; }
+  .logo i { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); display: inline-block; position: relative; }
+  .logo i::after { content: ""; position: absolute; left: 9px; top: 0; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--fg); box-sizing: border-box; opacity: .9; }
+  .logo b { margin-left: 8px; }
+  .h { font-weight: var(--hw, 800); font-size: 44px; line-height: .98; letter-spacing: -0.045em; margin-top: auto; }
+  .h em { font-style: normal; color: var(--accent-text, var(--accent)); }
+  .sub { font-size: 16px; color: var(--muted); margin-top: 12px; line-height: 1.35; }
+  .q { font-size: 13px; font-weight: 600; color: var(--muted); margin: 28px 0 10px; display: flex; justify-content: space-between; }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .chip { height: 54px; border-radius: var(--r); background: var(--chip); border: var(--chip-border, 0); display: grid; place-items: center; font-weight: 700; font-size: 17px; }
+  .chip.on { background: var(--accent); color: var(--accent-fg); border-color: transparent; }
+  .fine { font-size: 11px; color: var(--muted); margin-top: 14px; text-align: center; opacity: .8; }
+
+  .lbl { font-size: 14px; color: var(--muted); margin-top: auto; }
+  .res { margin-top: auto; }
+  .res .lbl { margin-top: 0; }
+  .num { font-weight: var(--hw, 800); font-size: 58px; letter-spacing: -0.05em; line-height: 1; margin: 6px 0 8px; color: var(--num, var(--fg)); }
+  .num small { font-size: 26px; letter-spacing: -0.02em; margin-left: 4px; }
+  .vs { font-size: 13.5px; color: var(--muted); }
+  .bars { display: flex; gap: 10px; align-items: flex-end; height: 120px; margin: 26px 0 0; }
+  .bars div { flex: 1; border-radius: calc(var(--r) * .6); position: relative; }
+  .bars .a { height: 100%; background: var(--bar-a); }
+  .bars .b { height: 18%; background: var(--accent); }
+  .bars span { position: absolute; bottom: -20px; left: 0; font-size: 11px; color: var(--muted); }
+  .cta { margin-top: auto; height: 56px; border-radius: var(--btn-r, 999px); background: var(--accent); color: var(--accent-fg); display: grid; place-items: center; font-weight: 700; font-size: 16px; }
+  .cta.dark { background: var(--fg); color: var(--bg); }
+
+  .dim { position: absolute; inset: 0; background: rgba(0,0,0,.42); }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; background: var(--sheet, #fff); color: var(--sheet-fg, #111); border-radius: 26px 26px 0 0; padding: 12px 20px 22px; }
+  .grab { width: 38px; height: 4px; border-radius: 4px; background: rgba(127,127,127,.35); margin: 0 auto 16px; }
+  .sheet h4 { font-family: var(--font); font-weight: 800; font-size: 24px; letter-spacing: -0.03em; }
+  .sheet p.s { font-size: 13px; color: var(--sheet-muted, #6b6b70); margin: 4px 0 14px; }
+  .in { height: 50px; border-radius: 14px; background: var(--in-bg, #f2f2f4); display: flex; align-items: center; padding: 0 14px; font-size: 15px; color: var(--sheet-muted, #8a8a90); margin-bottom: 8px; font-family: var(--font); }
+  .auto { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--in-bg, #f2f2f4); border-radius: 14px; padding: 9px 12px; font-size: 12px; margin: 2px 0 12px; font-family: var(--font); }
+  .auto b { font-weight: 700; } .auto span { color: var(--sheet-muted, #6b6b70); }
+  .auto em { font-style: normal; font-weight: 700; color: var(--sheet-accent, var(--accent-text, var(--accent))); white-space: nowrap; }
+  .sheet .cta { margin-top: 2px; }
+  .sheet .fine { margin-top: 10px; color: var(--sheet-muted, #6b6b70); }
+
+  /* ---------- V1 NOC ---------- */
+  .v1 { --bg:#0b0b0c; --fg:#f4f4f2; --muted:#9a9a98; --accent:#c8f53b; --accent-fg:#0b0b0c; --chip:#1a1a1c; --chip-border:1px solid #2a2a2d; --r:16px; --font:"Manrope",sans-serif; --bar-a:#2a2a2d; --sheet:#161618; --sheet-fg:#f4f4f2; --sheet-muted:#9a9a98; --in-bg:#232326; }
+  /* ---------- V2 SVĚŽÍ (fresh green) ---------- */
+  .v2 { --bg:#f4f7ef; --fg:#14290a; --muted:#56664c; --accent:#a3e86b; --accent-fg:#14290a; --accent-text:#2f7a12; --chip:#ffffff; --r:18px; --font:"Figtree",sans-serif; --hw:900; --bar-a:#d7e2cc; --num:#14290a; }
+  /* ---------- V3 ČISTÁ (clean white + cobalt) ---------- */
+  .v3 { --bg:#ffffff; --fg:#0e1015; --muted:#6a6f7b; --accent:#2b59ff; --accent-fg:#ffffff; --chip:#f3f4f7; --r:14px; --font:"Geist",sans-serif; --hw:600; --bar-a:#e6e8ee; --num:#2b59ff; --btn-r:14px; }
+  /* ---------- V4 BARVA (colour field) ---------- */
+  .v4 { --bg:#123c3a; --fg:#f6efe2; --muted:#a9c2bb; --accent:#ff8a5b; --accent-fg:#1a1a1a; --chip:rgba(255,255,255,.08); --chip-border:1px solid rgba(255,255,255,.14); --r:20px; --font:"Sora",sans-serif; --hw:700; --bar-a:rgba(255,255,255,.14); --sheet:#f6efe2; --sheet-fg:#123c3a; --sheet-muted:#5d6f6a; --in-bg:#ffffff; --sheet-accent:#c2502a; }
+  .v4 .h { font-size: 38px; letter-spacing: -0.04em; }
+  .v4 .num { font-size: 48px; letter-spacing: -0.045em; }
+  .v4 .num small { font-size: 22px; }
+  /* ---------- V5 TEPLÁ (warm soft) ---------- */
+  .v5 { --bg:#f6f3ee; --fg:#141414; --muted:#77736b; --accent:#141414; --accent-fg:#f6f3ee; --accent-text:#e2591b; --chip:#ffffff; --r:22px; --font:"Plus Jakarta Sans",sans-serif; --hw:800; --bar-a:#e4dfd6; --num:#141414; }
+  .v5 .chip { box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.04); }
+  .v5 .bars .b { background: #e2591b; }
+  .v5 .resultcard { background:#fff; border-radius: 28px; padding: 22px 20px; box-shadow: 0 10px 30px rgba(0,0,0,.06); margin-top: auto; }
+  .v5 .resultcard .lbl { margin-top: 0; }
+  .v5 .resultcard .num { font-size: 50px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Minimal fintech: 5 directions (v2)</h1>
+  <p>Rebuilt after feedback: <b>one statement + one action per screen</b>, built for a 2-second decision. Flow = 1 tap → result → form sheet with autofill. Same copy in all five; only the visual language changes. The number is an illustrative scenario (3 000 Kč/month + 100 000 Kč, 20 years) from the verified fee data; brand "Dvojče" is a placeholder.</p>
+</div>
+
+<!-- template rows -->
+<section class="row" data-v="v1"><h2><span>01</span>Noc: dark, one neon accent</h2><p class="desc">Robinhood / Cash App feel. Maximum contrast; the number glows. Feels like an app, not a website.</p><div class="phones"></div></section>
+<section class="row" data-v="v2"><h2><span>02</span>Svěží: light, fresh green</h2><p class="desc">Wise-like friendliness: bright, rounded, heavy type. Green reads as "money saved" without being a bank.</p><div class="phones"></div></section>
+<section class="row" data-v="v3"><h2><span>03</span>Čistá: white + one cobalt</h2><p class="desc">Mercury / Stripe calm. Lightest weight, most whitespace; the blue number is the only colour on screen.</p><div class="phones"></div></section>
+<section class="row" data-v="v4"><h2><span>04</span>Barva: full-bleed colour field</h2><p class="desc">N26 / Monzo boldness: deep teal background, warm coral action. Most thumb-stopping right after the ad.</p><div class="phones"></div></section>
+<section class="row" data-v="v5"><h2><span>05</span>Teplá: warm neutral, soft cards</h2><p class="desc">Apple Card / Revolut-light softness: warm off-white, floating white cards, black buttons, one orange highlight.</p><div class="phones"></div></section>
+
+<template id="tpl">
+  <div><div class="phone"><div class="scr">
+    <div class="logo"><i></i><b>Dvojče</b></div>
+    <h3 class="h">Stejný index.<br><em>Jiná cena.</em></h3>
+    <p class="sub">Kolik vám ETF ukusuje na poplatcích?</p>
+    <div class="q"><span>Kolik měsíčně investujete?</span><span>1/3</span></div>
+    <div class="chips tab"><div class="chip">1 000 Kč</div><div class="chip on">3 000 Kč</div><div class="chip">5 000 Kč</div><div class="chip">10 000 Kč</div></div>
+    <p class="fine">Zdarma · 10 vteřin · bez registrace</p>
+  </div></div><div class="cap">1 · arrival (2-second test)</div></div>
+
+  <div><div class="phone"><div class="scr">
+    <div class="logo"><i></i><b>Dvojče</b></div>
+    <div class="res">
+      <p class="lbl">Rozdíl za 20 let</p>
+      <p class="num tab">168 600<small>Kč</small></p>
+      <p class="vs">CSPX přes XTB vs. VOO přes Fio · stejný S&amp;P 500</p>
+      <div class="bars"><div class="a"><span>VOO · Fio</span></div><div class="b"><span>CSPX · XTB</span></div></div>
+    </div>
+    <div class="cta" style="margin-top:44px">Ukázat celý rozpis</div>
+  </div></div><div class="cap">2 · result</div></div>
+
+  <div><div class="phone"><div class="scr">
+    <div class="logo"><i></i><b>Dvojče</b></div>
+    <p class="lbl" style="margin-top:40px">Rozdíl za 20 let</p>
+    <p class="num tab">168 600<small>Kč</small></p>
+    <div class="dim"></div>
+    <div class="sheet">
+      <div class="grab"></div>
+      <h4>Kam poslat rozpis?</h4>
+      <p class="s">Ukážeme ho hned a pošleme i e-mailem.</p>
+      <div class="in">Jméno</div>
+      <div class="in">E-mail</div>
+      <div class="in">Telefon</div>
+      <div class="auto"><span><b>Jan Novák</b> · jan@email.cz · +420…</span><em>Vyplnit</em></div>
+      <div class="cta">Zobrazit rozpis</div>
+      <p class="fine">Jednou vám zavoláme k výpočtu. Žádný spam.</p>
+    </div>
+  </div></div><div class="cap">3 · form sheet with autofill</div></div>
+</template>
+
+<script>
+  const tpl = document.getElementById('tpl');
+  document.querySelectorAll('.row').forEach(row => {
+    const v = row.dataset.v;
+    const frag = tpl.content.cloneNode(true);
+    frag.querySelectorAll('.scr').forEach(s => s.classList.add(v));
+    if (v === 'v5') {
+      // warm variant wraps the result in a floating card
+      const res = frag.querySelectorAll('.res')[0];
+      res.classList.add('resultcard');
+    }
+    row.querySelector('.phones').appendChild(frag);
+  });
+</script>
+</body>
+</html>
