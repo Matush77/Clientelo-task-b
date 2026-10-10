@@ -80,3 +80,12 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D16b | Hero | **Photo hero** (v7 #2). More photo options shown in v8. **No photo credit on the page**: production will use a commercially licensed photo (free or paid). | Human choice. Note: the Unsplash Licence already allows commercial use without attribution, but licences must be checked per image before launch. |
 | D13c | Hero copy | H1 line-height fixed (the "á" in "Jiná" collided with the line above); **"ukusuje" replaced** in the sub-line; trust checks in regular (not bold) weight. | Human feedback. |
 | D17 | Cookie consent | Design requested (v8). Constraints from research: "reject" in the first layer with the same prominence as "accept", no pre-ticked categories, a settings layer, easy to change later [log D4]; GA4 + Meta Pixel load only after consent, the cookie-free funnel log runs regardless (D11). | Human request; legal constraints from [04]. |
+
+## Round 10 — 2026-10-10 (v8 feedback + scope check against the brief)
+
+| # | Decision | Chosen / change | Why / implications |
+|---|---|---|---|
+| D16c | Hero photo | **Photo 1**: Prague Castle over the Vltava at dusk. | Human choice. Licence to be confirmed or a commercial photo bought before launch. |
+| D13d | Sub-line | **"Zjistěte, kolik vás stojí poplatky za vaše ETF."** | Human choice. |
+| D17b | Cookie consent | v8 design approved, with **"Přijmout" highlighted** (accent). "Odmítnout" stays in the first layer, the same size and clearly readable. | Human choice. Lead-agent note: the ÚOOÚ treats equal prominence as good practice, not a hard rule [log D4]. A highlighted accept with an equal-size, visible reject is common; small residual risk. |
+| D0b | Scope check | **Human flagged that the concept drifted away from the brief's core: "porovnání ETF obchodovaných na NYSE".** The current page compares two *routes* to one index (VOO via Fio vs CSPX via XTB); it shows no side-by-side comparison of NYSE ETFs. → Concept revisit below. | The brief is the evaluation criterion. The PRIIPs finding (F1) stays, as a layer of the comparison ("can you buy it from CZ / its UCITS twin"), not as its replacement. |
