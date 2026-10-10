@@ -983,3 +983,2583 @@ Links: [{"title":"Hlavní obsah","url":"https://www.seznamzpravy.cz/clanek/ekono
 **→ WebFetch** https://www.amf-france.org/en/news-publications/news-releases/amf-news-releases/investment-recommendations-social-media-amf-backs-esmas-reminder
 
 > prompt: Summarize what ESMA's reminder (statement) says on investment recommendations on social media; date; what must be disclosed.
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "cnb.cz finfluenceři upozornění ČNB investiční doporučení MAR sdělení finfluencerům pravidla 2024"
+
+Links: [{"title":"Upozornění České národní banky pro influencery v oblasti financí - Česká národní banka","url":"https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/upozorneni/Upozorneni-Ceske-narodni-banky-pro-influencery-v-oblasti-financi/"},{"title":"Upozornění České národní banky pro investory sledující tzv. finfluencery - Česká národní banka","url":"https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/upozorneni/Upozorneni-Ceske-narodni-banky-pro-investory-sledujici-tzv.-finfluencery/"},{"title":"Jan Procházka: Chceme upozornit na povinnosti finfluencerů - Česká národní banka","url":"https://www.cnb.cz/cs/verejnost/servis-pro-media/autorske-clanky-rozhovory-s-predstaviteli-cnb/Jan-Prochazka-Chceme-upozornit-na-povinnosti-finfluenceru/"},{"title":"Jan Procházka: Chceme, aby finfluenceři neporušovali pravidla. Jejich přínos však může být i pozitivní - Česká národní banka","url":"https://www.cnb.cz/cs/verejnost/servis-pro-media/autorske-clanky-rozhovory-s-predstaviteli-cnb/Jan-Prochazka-Chceme-aby-finfluenceri-neporusovali-pravidla
+… [truncated, 4972 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date:** ESMA published its statement on 28 October 2021. The AMF's backing release is dated 29 October 2021.
+
+**Summary:** ESMA set out the rules for people who share investment recommendations aimed at a broad audience, including on social media. Under the Market Abuse Regulation (MAR), sharing a view on the current or future price of an EU-listed stock counts as an investment recommendation. These recommendations must be presented in an "objective and transparent way."
+
+**What must be disclosed:** The person making the recommendation must disclose "their identity, sources, and possible conflicts of interest." The AMF also urges investors to question the credibility of online opinions and to base decisions on reliable information.
+```
+
+</details>
+
+**→ WebFetch** https://www.cnb.cz/cs/dohled-financni-trh/ochrana-spotrebitele/upozorneni/Upozorneni-Ceske-narodni-banky-pro-influencery-v-oblasti-financi/
+
+> prompt: Summarize in detail the ČNB warning for finance influencers: date, what counts as investment recommendation (MAR), direct vs indirect recommendation, requirements, investment advice requiring licence, marketing communications labelling, role of securities dealers paying influencers. Czech short quotes <15 words.
+
+**→ WebFetch** https://www.cnb.cz/cs/verejnost/servis-pro-media/autorske-clanky-rozhovory-s-predstaviteli-cnb/Jan-Prochazka-Finfluencery-sledujeme-ispomociAI/
+
+> prompt: Summarize: date of publication, three categories of finfluencer communications (general opinions, marketing cooperation, individual recommendations), the educational vs recommendation boundary, enforcement status.
+
+<details><summary>result</summary>
+
+```
+**Date:** Published 24 July 2026. The article is a transcript of an interview with Jan Procházka, a member of the ČNB bank board, on ČRo Radiožurnál.
+
+**Three categories of finfluencer communications:**
+1. **General opinions:** Content aimed at the broad public doesn't require a licence, but creators must present information objectively and manage conflicts of interest.
+2. **Marketing cooperation:** Promoting investment services or products under a paid partnership must be disclosed as an advertisement.
+3. **Individual recommendations:** Advice tailored to a specific investor is subject to the licensing regime. The interview describes this as the most common category.
+
+**Educational vs. recommendation boundary:** The interview treats financial education as a benefit, since finfluencers can explain complex topics clearly, especially to young people. It cautions that not everyone giving investment advice has the necessary knowledge or experience. The article doesn't set out a precise line between education and recommendation beyond the three categories above. Paid promotion of a specific product is flagged as a conflict of interest that viewers should weigh.
+
+**Enforcement status:** 
+… [truncated, 460 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date:** The CNB published the notice on **23 January 2025**.
+
+**Investment recommendations under MAR**
+An investment recommendation is any public communication, including on social media, that gives advice, opinions, or ideas about buying or selling investment instruments such as shares, bonds, fund units, or derivatives, or about how to build a portfolio of them.
+
+**Direct vs. indirect recommendations**
+- **Direct:** The communication explicitly urges buying, selling, or holding an instrument.
+- **Indirect:** The communication does not explicitly urge a trade. For example, saying a stock is overvalued or undervalued without recommending a transaction is generally indirect.
+
+**Requirements for anyone giving a direct recommendation**
+The recommendation should:
+- State the author's identity, including name and job position, and the employer if the author works for a company.
+- State the date and time it was made.
+- Present information objectively, separating facts from interpretations, estimates, and personal opinions.
+- Rely on reliable sources and disclose the material ones.
+- Disclose any conflicts of interest.
+
+For audio or video recommendations, the information may be omitted 
+… [truncated, 2813 more chars]
+```
+
+</details>
+
+**→ WebSearch** `ČNB stanovisko rozlišení veřejného investičního doporučení a investičního poradenství`
+
+**→ WebSearch** `ESMA supervisory briefing on understanding the definition of advice and its application in practice August 2023 influencers decision tree`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ESMA supervisory briefing on understanding the definition of advice and its application in practice August 2023 influencers decision tree"
+
+Links: [{"title":"Go to content","url":"https://www.afm.nl/en/sector/actueel/2023/augustus/esma-beleggingsadvies"},{"title":"ESMA updates its guidance on the definition of advice in a supervisory briefing","url":"https://www.esma.europa.eu/node/202977"},{"title":"ESMA updates its guidance on the definition of advice in a supervisory briefing","url":"https://www.esma.europa.eu/press-news/esma-news/esma-updates-its-guidance-definition-advice-supervisory-briefing"},{"title":"ESMA updates its guidance on the definition of advice in a supervisory briefing","url":"https://centralbank.ie/regulation/markets-update/article/markets-update-issue-7-2023/european-securities-and-markets-authority-esma/esma-updates-its-guidance-on-the-definition-of-advice-in-a-supervisory-briefing"},{"title":"supervisory briefing understanding definition advice under mifid ii","url":"https://www.esma.europa.eu/document/supervisory-briefing-understanding-definition-advice-under-mifid-ii"},{"title":"Mondo Visione Worldwide Financial Markets Intell
+… [truncated, 3405 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ČNB stanovisko rozlišení veřejného investičního doporučení a investičního poradenství"
+
+Links: [{"title":"investicni zprostredkovatel pod dohledem povinnosti rizika a regulatorni mantinely jeho cinnosti 120004","url":"https://www.epravo.cz/top/clanky/investicni-zprostredkovatel-pod-dohledem-povinnosti-rizika-a-regulatorni-mantinely-jeho-cinnosti-120004.html?pdf=1"},{"title":"Novinky z oblasti práva finančních trhů","url":"https://www.pravniprostor.cz/clanky/financni-pravo/novinky-z-oblasti-prava-financnich-trhu"},{"title":"Přeskočit na obsah","url":"https://arws.cz/novinky-v-arrows/cnb-a-finfluenceri-pozor-na-pokuty"},{"title":"odpovednost financnich instituci za nespravne investicni poradenstvi 120323","url":"https://www.epravo.cz/top/clanky/odpovednost-financnich-instituci-za-nespravne-investicni-poradenstvi-120323.html?pdf=1"},{"title":"Informace poskytnute Ceskou narodni bankou podle zakona c. 106 1999 Sb 00124. o svobodnem pristupu k informacim","url":"https://www.cnb.cz/cs/o_cnb/106/informace-poskytnute-ceskou-narodni-bankou-podle-zakona-c.-106-1999-sb.-o-svobodnem-pristupu-k-informacim/Informace-poskytnute-Ceskou-narodni-bankou-podle-zakona-c.-
+… [truncated, 5051 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.esma.europa.eu/press-news/esma-news/esma-updates-its-guidance-definition-advice-supervisory-briefing
+
+> prompt: Summarize the key points: date, what changed, influencer cases, personal recommendation test, presented as suitable.
+
+**→ WebSearch** `ESMA finfluencers factsheet January 2026 responsible promotion financial products`
+
+<details><summary>result</summary>
+
+```
+**Date:** 11 July 2023. ESMA published the supervisory briefing that day.
+
+**What changed:** ESMA reviewed and updated its CESR Q&A on understanding the definition of advice under MiFID. The update aligns it with "new business models and recent technological developments." The document is issued as a supervisory briefing for National Competent Authorities, and it is also meant to guide firms.
+
+**Influencer cases:** The page does not describe any influencer cases. It only lists "use of social media posts" as a form-of-communication issue the briefing covers.
+
+**Personal recommendation test:** The page does not set out a test. It says the briefing covers when a personal recommendation is provided, whether other information could amount to investment advice, and perimeter issues around the definition. It also gives guidance on when a recommendation is viewed as based on a person's circumstances.
+
+**Presented as suitable:** The page does not address this. It does not say whether or how a recommendation presented as suitable is treated.
+
+For these last two points, the full briefing (ESMA35-43-3861) would be needed.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ESMA finfluencers factsheet January 2026 responsible promotion financial products"
+
+Links: [{"title":"whats up 2026 esma says finfluencers","url":"https://webiis08.mondaq.com/germany/financial-services/1732616/whats-up-2026-esma-says-finfluencers"},{"title":"whats up 2026 esma says finfluencers","url":"https://webiis10.mondaq.com/germany/financial-services/1732616/whats-up-2026-esma-says-finfluencers"},{"title":"pr 20260112","url":"https://www.consob.it/documents/d/asset-library-1912910/pr_20260112"},{"title":"Januar 2026 Blog","url":"https://www.gvw.com/aktuelles/blog/detail/bankaufsichtsrecht-esma-factsheet-fuer-finfluencer"},{"title":"Veröffentlicht am 20. Februar 2026","url":"https://www.roedl.com/insights/bafin-und-ema-nehmen-finfluencer-staerker-in-den-fokus-wie-muss-zukuenftig-finanzcontent-gestaltet-werden/"},{"title":"Finfluencers, ESMA issues tips for responsible conduct (Press release of 12 January 2026)","url":"https://www.consob.it/web/consob-and-its-activities/w/press-release-of-12-january-2026-finfluencers-"},{"title":"Featured news from 2018 to 2025","url":"https://www.consob.it/web/consob-and-its-activities/featured-news-from-2018-to-
+… [truncated, 2814 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.consob.it/web/consob-and-its-activities/w/press-release-of-12-january-2026-finfluencers-
+
+> prompt: Summarize the ESMA finfluencers tips announced; date; key points.
+
+**→ WebSearch** `Retail Investment Strategy agreement December 2025 marketing communications finfluencers third parties rules provisional agreement Council Parliament`
+
+<details><summary>result</summary>
+
+```
+**Date:** 12 January 2026
+
+**Summary:** ESMA, the EU's financial markets regulator, issued guidance for "finfluencers," financial influencers whose online posts can harm followers when they don't take proper precautions.
+
+**Key points:**
+- **Promotion isn't like ordinary product marketing.** Promoting financial products on social media differs from promoting consumer goods. Telling followers what to invest in or avoid may count as investment advice, which requires authorisation from the competent national authority.
+- **Disclaimers don't offer full protection.** A statement such as "This is not investment advice" does not shield influencers from the consequences of unauthorised promotion.
+- **Disclose compensation and interests.** Influencers should declare any payment, gift, or benefit using clear labels such as "advertisement," "sponsored," or "paid collaboration." They should also disclose personal holdings in the instrument being discussed.
+- **Avoid misleading or reckless content.** Influencers should not spread untruthful messages. They should separate facts from opinions and present risks, not just benefits. They should avoid pressure tactics and promises of quick wealth.
+- 
+… [truncated, 568 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Retail Investment Strategy agreement December 2025 marketing communications finfluencers third parties rules provisional agreement Council Parliament"
+
+Links: [{"title":"the eu reaches an agreement for protection 97386","url":"https://informat.ro/en/international/the-eu-reaches-an-agreement-for-protection-97386"},{"title":"EU Retail Investment Strategy: Political Agreement – Key Points and Implications for EU and non-EU Firms","url":"https://cms.law/en/int/legal-updates/eu-retail-investment-strategy-political-agreement-key-points-and-implications-for-eu-and-non-eu-firms"},{"title":"EU Retail Investment Strategy: Political Agreement – Key Points and Implications for EU and non-EU Firms","url":"https://cms.law/en/bel/legal-updates/eu-retail-investment-strategy-political-agreement-key-points-and-implications-for-eu-and-non-eu-firms"},{"title":"EU Retail Investment Strategy: Political Agreement – Key Points and Implications for EU and non-EU Firms","url":"https://cms.law/en/aut/legal-updates/eu-retail-investment-strategy-political-agreement-key-points-and-implications-for-eu-and-non-eu-firms"},{"title":"EU Retail Investment Strategy: Political Agreement –
+… [truncated, 4281 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.finax.eu/cs
+
+> prompt: Find risk warnings/disclaimers in the page text and footer (Czech): past performance, loss of capital, currency, 'not investment advice', marketing communication label. Quote each as short fragments (<15 words) with where it appears. Also list CTA wording and any lead magnets (calculator, e-book, newsletter).
+
+**→ WebFetch** https://www.fondee.cz
+
+> prompt: Find risk warnings/disclaimers in the page text and footer (Czech): past performance, loss of capital, currency, 'not investment advice', marketing communication label. Quote each as short fragments (<15 words). List CTA wording and lead magnets.
+
+**→ WebFetch** https://www.portu.cz
+
+> prompt: Find risk warnings/disclaimers in the page text and footer (Czech): past performance, loss of capital, currency, 'not investment advice', marketing communication label. Quote each as short fragments (<15 words). List CTA wording and lead magnets.
+
+<details><summary>result</summary>
+
+```
+The web page content you provided is empty. It only contains two separator lines (`---`), so I can't find any risk warnings, disclaimers, CTAs, or lead magnets.
+
+Please paste the page text and footer, and I'll check them for:
+
+- **Past performance** disclaimers
+- **Loss of capital** warnings
+- **Currency** risk notices
+- **"Not investment advice"** statements
+- **Marketing communication** labels
+
+I'll quote each match in under 15 words, keep quotes within the 125-character limit, and list the CTA wording and lead magnets.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Risk warnings and disclaimers**
+
+- **Past performance:** "výnosy z minulosti nejsou zárukou výnosů budoucích" (past returns do not guarantee future returns).
+- **Loss of capital:** "Investování je spojeno s rizikem ztráty části nebo celé vložené částky" (investing carries the risk of losing part or all of the amount invested).
+- **Value fluctuation:** "Hodnota investice může v průběhu času kolísat" (investment value may fluctuate over time).
+- **Currency:** "nepříznivého vývoje směnných kurzů" (adverse exchange rate movements). The page also says the historical return is calculated "v eurech" (in euros).
+- **Not investment advice:** "nejsou investičním doporučením" (they are not investment recommendations).
+- **Fees and taxes:** "Výnos investice může být snížen vlivem poplatků a daňových povinností investora" (fees and tax obligations may reduce returns).
+- **Simulation limits:** "Simulace nezohledňuje daňové dopady ani inflaci" (the simulation does not account for tax effects or inflation).
+- **Capital may not be returned:** "Investor může získat zpět méně než kolik investoval" (the investor may get back less than invested).
+- **Marketing communication label:** Not found. The pa
+… [truncated, 1041 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+## Risk warnings and disclaimers
+
+**Footer (site-wide disclosure block)**
+
+- "všechna čísla vážící se k výnosům jsou počítána na základě zpětných modelů" (Past performance: return figures are backtested models, not achieved by clients.)
+- "Hodnota portfolia může klesat a stoupat. Výsledkem vaší investice může být i ztráta." (Loss of capital: portfolio value can fall, and you can lose money.)
+- "Výnos v domácí měně je ovlivněn také kolísáním směnného kurzu EUR/CZK." (Currency: returns in CZK are affected by EUR/CZK exchange rate changes.)
+- "Obchodování je rizikové." (Trading is risky. Links to a risk-information blog post.)
+
+**"Světové investování" product section**
+
+- "S investováním se pojí riziko. Minulé výnosy nejsou zárukou budoucích výnosů." (Investing carries risk. Past returns don't guarantee future returns.)
+
+**"Evropský důchod" product section**
+
+- "Výnosy se mohou měnit a nejsou spolehlivým ukazatelem budoucí výkonnosti." (Returns may change and are not a reliable indicator of future performance.)
+- "S investováním je spojeno riziko." (Investing involves risk. Links to a risk blog post.)
+
+**Not found:** I did not find a "marketing communication" label or a "not investmen
+… [truncated, 1149 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://portu.cz/
+
+> prompt: Find risk warnings/disclaimers in page text and footer (Czech): past performance, loss of capital, currency, 'not investment advice', marketing label. Quote short fragments (<15 words). List CTA wording and lead magnets.
+
+**→ WebFetch** https://www.xtb.com/cz
+
+> prompt: Find risk warnings/disclaimers in page text and footer (Czech): CFD loss percentage of retail accounts, past performance, 'marketing communication' label, 'not investment advice'. Quote short fragments (<15 words). List CTA wording and lead magnets (demo, education).
+
+**→ WebFetch** https://www.trading212.com/cs
+
+> prompt: Find risk warnings/disclaimers in page text and footer (Czech): capital at risk, past performance, 'not investment advice', marketing communication. Quote short fragments (<15 words). List CTA wording.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The "Web page content" section is empty, so I have nothing to analyze yet. Please paste the page text and footer, and I'll return:
+
+- **Risk warnings and disclaimers** (Czech) covering past performance, loss of capital, currency risk, "not investment advice," and marketing labels. Each will be a short quote of under 15 words, in quotation marks.
+- **Calls to action (CTAs)**, listed with their exact wording.
+- **Lead magnets** such as guides, webinars, or free trials.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Risk warnings and disclaimers**
+
+- **CFD loss rate:** The page states the loss figure in several places, including the top banner and the footer. The headline version is "77 % retailových účtů CFD je ztrátových." The page doesn't say what period or methodology the figure covers.
+- **Leverage risk:** The page warns that CFDs carry a high risk of rapid financial loss because of leverage. The Czech text is "...spojeny s vysokým rizikem rychlého vzniku finanční ztráty."
+- **General risk statement:** "Investování je rizikové. Investujte zodpovědně." appears repeatedly.
+- **Suitability:** The footer says CFD trading "nemusí být vhodné pro všechny investory" and calls it a "vysoce spekulativní a rizikovou investici."
+- **Risk-awareness link:** Users are asked whether they understand how CFDs work and can afford the risk of losing their funds. The link points to a PDF risk-awareness statement.
+
+**Not found on the page:**
+- **Past performance disclaimer:** No such warning appears.
+- **"Marketing communication" label:** Not present.
+- **"Not investment advice" statement:** Not present.
+
+**Calls to action (CTAs)**
+- "Otevřít účet" / "Založit účet" / "Vytvořit účet" (open account)
+- "Začněte
+… [truncated, 705 more chars]
+```
+
+</details>
+
+**→ WebSearch** `"nejedná se o investiční doporučení" ETF minulá výkonnost není zárukou budoucích výnosů měnové riziko`
+
+**→ WebSearch** `Portu.cz upozornění rizika "Portu" investiční platforma výnosy z minulosti nejsou zárukou marketingové sdělení`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Portu.cz upozornění rizika "Portu" investiční platforma výnosy z minulosti nejsou zárukou marketingové sdělení"
+
+Links: [{"title":"www.arecenze.cz","url":"https://www.arecenze.cz/?p=215606"},{"title":"portu recenze","url":"https://www.arecenze.cz/clanky/portu-recenze/"},{"title":"forbes.cz","url":"https://forbes.cz/lists/esg-rating-2023/top-5-malych-a-strednich-firem/portu/"},{"title":"recenze portu","url":"https://www.testado.cz/recenze-portu/"},{"title":"investicni platformy","url":"https://www.testado.cz/investicni-platformy/"},{"title":"Češi na investování nezanevřeli ani v těžkém roce 2022. Přes Portu do akcií vložili už 16 miliard","url":"https://cc.cz/cesi-na-investovani-nezanevreli-ani-v-tezkem-roce-2022-pres-portu-do-akcii-vlozili-uz-16-miliard/"},{"title":"Banky.cz Magazín Banky.cz Komerční sdělení Český startup umožňuje automatické investování","url":"https://www.banky.cz/clanky/cesky-startup-umoznuje-automaticke-investovani/"},{"title":"Zavřít reklamu","url":"https://www.letemsvetemapplem.eu/?p=471468"},{"title":"investice pro bezne smrtelniky portu spravuje uz deset miliard a miri do sveta","url":"https://forbes.cz/investice-pro-bezne-smr
+… [truncated, 1792 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: ""nejedná se o investiční doporučení" ETF minulá výkonnost není zárukou budoucích výnosů měnové riziko"
+
+Links: [{"title":"www.amundi-kb.cz","url":"https://www.amundi-kb.cz/cz/download/pdf/detail/fund/CZ0008478492"},{"title":"KID ETF World 02 24","url":"https://online.allianz.cz/content/dam/onemarketing/cee/azcz/dokumenty-a-formulare/kid/2024/KID_ETF_World_02_24.pdf"},{"title":"Fondy a strategie","url":"https://www.schroders.com/cs-cz/cz/soukromy-investor/fondy-a-strategie/"},{"title":"Inzerce | Chci tu být také","url":"https://rostecky.cz/digitalni-investicni-poradce-efrank-cz-t33432"},{"title":"eu priips ishares global clean energy ucits etf usd dist ie00b1xnhc34 cs","url":"https://blackrock.com/cz/profesionalni-investori/literature/kiid/eu-priips-ishares-global-clean-energy-ucits-etf-usd-dist-ie00b1xnhc34-cs.pdf"},{"title":"eu priips ishares msci em imi esg screened ucits etf usd acc ie00bfnm3p36 cs","url":"https://blackrock.com/cz/profesionalni-investori/literature/kiid/eu-priips-ishares-msci-em-imi-esg-screened-ucits-etf-usd-acc-ie00bfnm3p36-cs.pdf"},{"title":"eu priips ishares growth portfolio ucits etf eur acc ie00bllzq805 cs","url":"https://bla
+… [truncated, 2698 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.investicniweb.cz/
+
+> prompt: Find disclaimers (Czech) on page and footer: not investment advice / investment recommendation, past performance, risk. Quote short fragments <15 words and say where they appear.
+
+**→ WebSearch** `Czech ETF education site disclaimer "Tento web nepředstavuje investiční poradenství" OR "není investičním doporučením" ETF kalkulačka`
+
+<details><summary>result</summary>
+
+```
+I found no investment disclaimers on this page. Nothing in the header, body, or footer says the content is not investment advice, that past performance does not guarantee future results, or that investing carries risk.
+
+The only nearby legal text is:
+
+- **Newsletter sign-up (mid-page and lower page):** "Odesláním souhlasíte se zásadami o ochraně osobních údajů." This is a privacy-consent notice, not an investment disclaimer.
+- **Footer:** "Copyright ©2025 Investičníweb.cz - Všechna práva vyhrazena." This is a copyright notice only.
+- **Footer link:** "Pravidla a obchodní podmínky" (rules and terms). The link text appears, but the terms themselves are not included in this content.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Czech ETF education site disclaimer "Tento web nepředstavuje investiční poradenství" OR "není investičním doporučením" ETF kalkulačka"
+
+Links: [{"title":"dk.upce.cz","url":"https://dk.upce.cz/bitstreams/c4825180-c77f-46f1-8e1f-10b52b9befe4/download"},{"title":"Legal Notice - Disclaimer","url":"https://investicnicentrum.cz/en/disclaimer"},{"title":"kid etoro eu cfd etfs v12 18 cs cz 2","url":"https://etoro.com/customer-service/regulation-license/attachment/kid_etoro_eu_cfd_etfs_v12-18_cs_cz-2"},{"title":"Recenze eToro: Nový webinář vysvětlující základy investování do ETF","url":"https://tradersunion.com/cs/news/brokers-news/show/1605732-etoro-review-new/"},{"title":"KEY%20INFORMATION%20DOCUMENT%20 %20CFD%20on%20ETF%20Czech","url":"https://libertex.com/sites/default/files/2024-12/KEY%20INFORMATION%20DOCUMENT%20-%20CFD%20on%20ETF%20Czech.pdf"},{"title":"Inzerce | Chci tu být také","url":"https://rostecky.cz/digitalni-investicni-poradce-efrank-cz-t33432"},{"title":"etfstrategy.com","url":"https://etfstrategy.com/disclaimer"},{"title":"am.gs.com","url":"https://am.gs.com/sk-sk/institutions"},{"title":"Česky | English","url":"https://www2.fio.cz/akcie-inves
+… [truncated, 1776 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://investicnicentrum.cz/disclaimer
+
+> prompt: Extract Czech disclaimer wording: not investment advice, past performance, risks. Quote short fragments (<15 words).
+
+**→ WebFetch** https://www.xtb.com/cz/vzdelavani
+
+> prompt: Does the page contain 'marketing communication' labels, 'not investment advice' statements ('nepředstavuje investiční poradenství'), past performance disclaimers? Quote short fragments <15 words.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Marketing communication labels:** None found.
+
+**"Not investment advice" statements:** None found. The closest content is general risk warnings, such as "Investování je rizikové. Investujte zodpovědně." (investing is risky, so invest responsibly). The page also says CFD trading "nemusí být vhodné pro všechny investory" (may not suit all investors).
+
+**Past performance disclaimers:** None found. The page cites a historical statistic: "U 77 % účtů retailových investorů došlo" (77% of retail investor accounts incurred losses). It does not state that past results don't predict future outcomes.
+```
+
+</details>
+
+**→ WebFetch** https://www.trading212.com/cs/invest
+
+> prompt: Extract Czech risk warnings in page and footer: capital at risk, past performance, marketing communication label, not investment advice. Short fragments <15 words.
+
+**→ WebSearch** `"Marketingové sdělení" investice ETF "Minulá výkonnost není spolehlivým ukazatelem budoucích výsledků" Trading 212 OR Finax OR Fondee OR Portu`
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: ""Marketingové sdělení" investice ETF "Minulá výkonnost není spolehlivým ukazatelem budoucích výsledků" Trading 212 OR Finax OR Fondee OR Portu"
+
+Links: [{"title":"etf trading 212","url":"https://brokerchooser.com/cs/invest-long-term/diversification/etf-trading-212"},{"title":"top 5 etf s nejvyssim vynosem v roce 2023","url":"https://finex.cz/top-5-etf-s-nejvyssim-vynosem-v-roce-2023/"},{"title":"fundamental data at trading 212","url":"https://brokerchooser.com/sk/invest-long-term/tools/fundamental-data-at-trading-212"},{"title":"v20d de","url":"https://www.xtb.com/cz/etf/v20d-de"},{"title":"3f9f342a 2d7b 4207 8f3c d7ae1077c212","url":"https://www.generaliceska.cz/documents/20183/234849/factsheet-universe-10_062023.pdf/3f9f342a-2d7b-4207-8f3c-d7ae1077c212"},{"title":"dk.upce.cz","url":"https://dk.upce.cz/bitstreams/c4825180-c77f-46f1-8e1f-10b52b9befe4/download"},{"title":"f3fd0214 eefa 404d a52c de9029cfc145","url":"https://www.generaliceska.cz/documents/20183/234829/factsheet-universe-13-unor-167.pdf/f3fd0214-eefa-404d-a52c-de9029cfc145"},{"title":"CH1135202120 21SharesAG(SK)","url":"https://cdn.21shares.com/uploads/current-documents/past-performance/
+… [truncated, 2823 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://finex.cz/top-5-etf-s-nejvyssim-vynosem-v-roce-2023/
+
+> prompt: Find any disclaimer text in this Czech finance-education article (e.g. not investment advice, past performance, risk, affiliate/commercial disclosure). Quote short fragments <15 words and say where they appear (top, bottom, footer). Also: does it present ETFs ranked by return?
+
+**→ WebFetch** https://www.xtb.com/cz/etf/v20d-de
+
+> prompt: Find the disclaimers about past performance, marketing/promotional communication, not investment advice, currency risk. Quote short fragments <15 words and say where.
+
+<details><summary>result</summary>
+
+```
+**Past performance:** Found. Located below the performance chart in the ETF section, the page says: "Výkonnost v minulosti nebo budoucí prognózy nejsou spolehlivým ukazatelem budoucí výkonnosti." In English, past results and forecasts don't reliably predict future performance.
+
+**Marketing/promotional communication:** Not found. The page has no disclaimer labeling its content as marketing or promotional.
+
+**Not investment advice:** Not found. The page has general risk warnings, such as "Investování je rizikové. Investujte zodpovědně." ("Investing is risky. Invest responsibly."), but no statement that the content isn't investment advice.
+
+**Currency risk:** Not found. The only currency reference is a fee: "Může být účtován poplatek 0,5 % za konverzi měn." ("A 0.5% fee may be charged for currency conversion.") This is a cost disclosure, not a currency risk disclaimer.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Disclaimers and disclosures**
+
+- **Bottom of article, "Upozornění na rizika" (risk notice):**
+  - Item 1 says the material is for information only and is not investment advice. It cites Cypriot investment law.
+  - Item 2: "Minulá výkonnost není spolehlivým ukazatelem budoucích výsledků nebo budoucího výkonu." (Past performance is not a reliable guide to future results.)
+- **Article conclusion (bottom of body):** "vysoká výkonnost v minulosti nezaručuje budoucí výsledky" (high past performance does not guarantee future results).
+- **Top of article:** A "Reklama" (advertisement) label appears above the article text, marking commercial content.
+- **Mid-page sidebars and broker boxes (right column):** Several CFD risk warnings, such as "Při obchodování CFD ztrácí peníze 77 % účtů" (77% of accounts lose money trading CFDs). The broker box also says "Sponzorovaný odkaz" (sponsored link) and "Investování zahrnuje rizika ztrát" (investing involves risk of loss).
+- **Footer (bottom of page):**
+  - It states that the content is not investment advice or a recommendation to buy or sell.
+  - It warns that investing "je spojeno s rizikem kolísání hodnoty" (involves risk of value fluctuation).
+
+… [truncated, 518 more chars]
+```
+
+</details>
+
+**→ WebSearch** `ÚOOÚ souhlas se zpracováním osobních údajů marketing newsletter zákon 480/2004 § 7 obchodní sdělení souhlas double opt-in`
+
+**→ WebSearch** `uoou.gov.cz newsletter přímý marketing právní základ oprávněný zájem souhlas elektronická obchodní sdělení`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "uoou.gov.cz newsletter přímý marketing právní základ oprávněný zájem souhlas elektronická obchodní sdělení"
+
+Links: [{"title":"primy marketing podle pravni upravy gdpr 107251","url":"https://www.epravo.cz/top/clanky/primy-marketing-podle-pravni-upravy-gdpr-107251.html"},{"title":"uoou 0827718 27","url":"https://uoou.gov.cz/media/poskytnute-informace/2019/20112019/uoou-0827718-27.pdf"},{"title":"primy marketing podle pravni upravy gdpr 107251","url":"https://www.epravo.cz/top/clanky/primy-marketing-podle-pravni-upravy-gdpr-107251.html?pdf=1"},{"title":"23 cj uoou 0516123 3 dokument c 23","url":"https://uoou.gov.cz/media/poskytnute-informace/2024/1742024-iii/23-cj-uoou-0516123-3-dokument-c-23.pdf"},{"title":"cpit.law.muni.cz","url":"https://cpit.law.muni.cz/dokumenty/45657"},{"title":"rozesilani obchodnich sdeleni prostrednictvim treti strany a souhlas dle gdpr 110440","url":"https://www.epravo.cz/top/clanky/rozesilani-obchodnich-sdeleni-prostrednictvim-treti-strany-a-souhlas-dle-gdpr-110440.html?pdf=1"},{"title":"www.lupa.cz","url":"https://www.lupa.cz/clanky/gdpr-last-minute-co-musite-splnit-kdyz-sbirate-e-maily-pro-posilani-newsletteru/nazory/"},{"ti
+… [truncated, 4516 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ÚOOÚ souhlas se zpracováním osobních údajů marketing newsletter zákon 480/2004 § 7 obchodní sdělení souhlas double opt-in"
+
+Links: [{"title":"23 cj uoou 0516123 3 dokument c 23","url":"https://uoou.gov.cz/media/poskytnute-informace/2024/1742024-iii/23-cj-uoou-0516123-3-dokument-c-23.pdf"},{"title":"uoou 0473417 31","url":"https://uoou.gov.cz/media/poskytnute-informace/2019/20112019/uoou-0473417-31.pdf"},{"title":"zakon o nekterych sluzbach informacni spolecnosti co prinasi telemarketingovym spolecnostem a v oblasti spotrebitelskych smluv 28373","url":"https://www.epravo.cz/top/clanky/zakon-o-nekterych-sluzbach-informacni-spolecnosti-co-prinasi-telemarketingovym-spolecnostem-a-v-oblasti-spotrebitelskych-smluv-28373.html"},{"title":"Antispamový zákon bude měkčí","url":"https://www.lupa.cz/clanky/antispamovy-zakon-bude-mekci/"},{"title":"rozesilani obchodnich sdeleni prostrednictvim treti strany a souhlas dle gdpr 110440","url":"https://www.epravo.cz/top/clanky/rozesilani-obchodnich-sdeleni-prostrednictvim-treti-strany-a-souhlas-dle-gdpr-110440.html?pdf=1"},{"title":"22 cj uoou 0512123 3 dokument c 22","url":"https://uoou.gov.cz/media/poskytnute-informac
+… [truncated, 5503 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.zakonyprolidi.cz/cs/2004-480
+
+> prompt: Extract § 7 (Šíření obchodních sdělení): paragraphs 1-4 paraphrased accurately: consent requirement for email, exception for existing customers, labelling, unsubscribe requirement, and § 7 odst. 2 wording about prior consent. Also the fine amount in § 11.
+
+**→ WebSearch** `uoou.gov.cz GDPR souhlas podmínky platného souhlasu zpracování osobních údajů formulář informování subjektů údajů čl. 13 doporučení`
+
+<details><summary>result</summary>
+
+```
+**§ 7 (Šíření obchodních sdělení), odstavce 1–4, parafrázovaně:**
+
+- **Odstavec 1:** Obchodní sdělení lze elektronicky šířit jen za podmínek stanovených zákonem.
+- **Odstavec 2:** Kontaktní údaje pro elektronickou poštu lze k šíření obchodních sdělení použít jen u uživatelů, kteří k tomu předem dali souhlas.
+- **Odstavec 3 (výjimka pro stávající zákazníky):** Firma, která získala e-mailovou adresu zákazníka v souvislosti s prodejem výrobku nebo služby, ji může použít k nabízení svých podobných výrobků či služeb. Zákazník musí mít přitom snadnou a bezplatnou možnost souhlas odmítnout, a to i u každé jednotlivé zprávy, pokud tak předtím neučinil.
+- **Odstavec 4 (zákaz):** Zasílání e-mailů za účelem šíření obchodního sdělení je zakázáno, pokud:
+  - není jasně a zřetelně označeno jako obchodní sdělení,
+  - skrývá nebo utajuje totožnost odesílatele,
+  - neobsahuje platnou adresu, na kterou by příjemce mohl oznámit, že si další zprávy nepřeje.
+
+**Pokuta podle § 11 odst. 5:**
+
+- **Fyzická osoba** (§ 11 odst. 1, tedy hromadné nebo opakované šíření obchodních sdělení bez souhlasu): až **100 000 Kč**.
+- **Právnická nebo podnikající fyzická osoba** (§ 11 odst. 2 písm. a), která hromadně nebo 
+… [truncated, 284 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "uoou.gov.cz GDPR souhlas podmínky platného souhlasu zpracování osobních údajů formulář informování subjektů údajů čl. 13 doporučení"
+
+Links: [{"title":"Cookies a požadavky na souhlas","url":"https://www.pravniprostor.cz/clanky/obcanske-pravo/cookies-pozadavky-na-souhlas"},{"title":"rozesilani obchodnich sdeleni prostrednictvim treti strany a souhlas dle gdpr 110440","url":"https://www.epravo.cz/top/clanky/rozesilani-obchodnich-sdeleni-prostrednictvim-treti-strany-a-souhlas-dle-gdpr-110440.html?pdf=1"},{"title":"Správný souhlas podle GDPR","url":"https://www.mailkit.com/cz/podpora/blog/spravny-souhlas-podle-gdpr"},{"title":"gdpr modelove situace souhlas se zpracovanim udaju","url":"https://mv.gov.cz/gdpr/soubor/gdpr-modelove-situace-souhlas-se-zpracovanim-udaju.aspx"},{"title":"ÚOOÚ: Firmy chtějí souhlas se zpracováním dat mnohdy nadbytečně","url":"https://pravniprostor.cz/aktuality/uoou-firmy-chteji-souhlas-se-zpracovanim-dat-mnohdy-nadbytecne"},{"title":"primy marketing podle pravni upravy gdpr 107251","url":"https://www.epravo.cz/top/clanky/primy-marketing-podle-pravni-upravy-gdpr-107251.html?pdf=1"},{"title":"hp cz eu legal news ll 2018","url":"htt
+… [truncated, 6528 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://pravniprostor.cz/aktuality/uoou-firmy-chteji-souhlas-se-zpracovanim-dat-mnohdy-nadbytecne
+
+> prompt: Summarize date and what ÚOOÚ says about redundant consents, consent conditions.
+
+**→ WebFetch** https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en
+
+> prompt: Summarize key points on consent: freely given, conditionality (Art 7(4)), granular/separate consents, pre-ticked boxes, burden of proof, withdrawal. Date of adoption.
+
+<details><summary>result</summary>
+
+```
+The page doesn't include the substance of the guidelines, so I can't summarize their key points on consent. It shows only the title, a listed date of **04 May 2020**, and links to the full PDF and a summary document. It doesn't address whether consent must be freely given, conditionality under Art. 7(4), granular or separate consents, pre-ticked boxes, the burden of proof, or withdrawal.
+
+To cover those points, you would need to open the full guidelines PDF linked on the page (Guidelines 05/2020, about 321 KB) or the linked summary document.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date:** The statement was made on 31 August 2018 and published on 2 September 2018 by ČTK, reporting on remarks from Ivana Janů, chair of the Czech Office for Personal Data Protection (ÚOOÚ).
+
+**Redundant consent requests:**
+- Some firms ask customers for consent to process personal data for services already provided under a contract or by law, such as banking or telecom services.
+- The ÚOOÚ considers such requests unnecessary, burdensome, often misleading, and contrary to the GDPR.
+- Many people have complained to the Office about the flood of consent requests they receive by email or online.
+
+**Consent conditions:**
+- Where a service rests on a contract, law, or another legal basis under the GDPR, the service cannot be made conditional on consent.
+- Even when consent is given, personal data cannot be traded. Janů said, "Soukromí člověka není obchodovatelnou komoditou."
+- In supervision, the Office will check whether consent was obtained freely, with information, transparently, unambiguously, and fairly.
+- The customer must also know the purpose of the processing and who will use the data.
+```
+
+</details>
+
+**→ WebFetch** https://gdpr-info.eu/art-7-gdpr/
+
+> prompt: Quote/paraphrase Art 7(2) (request for consent distinguishable) and 7(3) withdrawal and 7(4) conditionality ('utmost account whether performance of a contract is conditional').
+
+**→ WebFetch** https://gdpr-info.eu/art-6-gdpr/
+
+> prompt: Paraphrase Art 6(1)(a),(b),(f) wording on lawful bases, particularly (b) 'steps at the request of the data subject prior to entering into a contract'.
+
+<details><summary>result</summary>
+
+```
+- **(a) Consent:** Processing is lawful if the individual has agreed to their personal data being used for one or more defined aims.
+- **(b) Contract:** Processing is lawful when it is needed to fulfil a contract the individual is part of, or to carry out preparatory steps they requested before entering a contract, such as "steps at the request of the data subject prior to entering into a contract."
+- **(f) Justifiable interest:** Processing can rely on a justifiable interest held by the controller or a third party, unless the individual's rights and freedoms outweigh it, especially where the individual is a child. Public authorities cannot use this basis when performing their official tasks.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Art. 7(2): Distinguishable consent requests**
+Where consent appears in a written declaration that also covers other matters, the consent request must be "clearly distinguishable from the other matters." Any part of such a declaration that infringes the Regulation is not binding.
+
+**Art. 7(3): Withdrawal**
+Individuals can withdraw consent at any time. Withdrawing does not make earlier processing unlawful, and they must be told about this right before giving consent. Withdrawal must be as simple as giving consent: "It shall be as easy to withdraw as to give consent."
+
+**Art. 7(4): Conditionality**
+When assessing whether consent is freely given, the controller must give "utmost account" to whether a contract or service depends on consenting to data processing that the contract does not require.
+```
+
+</details>
+
+**→ WebSearch** `zákon 127/2005 § 89 odst. 3 cookies souhlas od 1. 1. 2022 opt-in novela 374/2021 analytické cookies bez souhlasu výjimka`
+
+**→ WebSearch** `ÚOOÚ cookies analytické cookies souhlas Google Analytics GA4 stanovisko nutné cookies výjimka Česko 2024 2025`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ÚOOÚ cookies analytické cookies souhlas Google Analytics GA4 stanovisko nutné cookies výjimka Česko 2024 2025"
+
+Links: [{"title":"www.lupa.cz","url":"https://www.lupa.cz/aktuality/zaplat-nebo-dej-souhlas-mafra-zavadi-na-idnes-cz-platby-za-necileni-reklam/nazory/vlakno/5/"},{"title":"Google a súhlas so získavaním cookies","url":"https://www.podnikajte.sk/informacne-technologie/google-shlas-cookies"},{"title":"Google a súhlas so získavaním cookies","url":"https://www.podnikajte.sk/manazment-marketing/c/2261/category/informacne-technologie/article/google-shlas-cookies.xhtml"},{"title":"Google a súhlas so získavaním cookies","url":"https://www.podnikajte.sk/technologie/google-shlas-cookies"},{"title":"2024 06 12 p04 praxe uoou v oblasti cookies","url":"https://uoou.gov.cz/media/seminare-uoou/prezentace/2024-06-12-p04-praxe-uoou-v-oblasti-cookies.pdf"},{"title":"mediaguru.cz","url":"https://mediaguru.cz/ctk"},{"title":"www.mediaguru.cz","url":"https://www.mediaguru.cz/z"},{"title":"www.mediaguru.cz","url":"https://www.mediaguru.cz/ap"},{"title":"www.mediaguru.cz","url":"https://www.mediaguru.cz/ard"}]
+
+Podle výsledků vyhledávání ÚOOÚ trvá na opt-in princip
+… [truncated, 1874 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "zákon 127/2005 § 89 odst. 3 cookies souhlas od 1. 1. 2022 opt-in novela 374/2021 analytické cookies bez souhlasu výjimka"
+
+Links: [{"title":"stanovisko spolku pro ochranu osobnich udaju k pravni uprave cookies v ceske republice od zacatku roku 2022 114050","url":"https://www.epravo.cz/top/clanky/stanovisko-spolku-pro-ochranu-osobnich-udaju-k-pravni-uprave-cookies-v-ceske-republice-od-zacatku-roku-2022-114050.html?pdf=1"},{"title":"Stanovisko Spolku pro ochranu osobních údajů k právní úpravě cookies v České republice od začátku roku 2022","url":"https://www.epravo.cz/top/clanky/stanovisko-spolku-pro-ochranu-osobnich-udaju-k-pravni-uprave-cookies-v-ceske-republice-od-zacatku-roku-2022-114050.html"},{"title":"Informace pro účetní a podnikatele","url":"https://portal.pohoda.cz/zakon-a-pravo/legislativa-pro-podnikatele/cookies-po-novele-zakona-o-elektronickych-komunika"},{"title":"Informace pro účetní a podnikatele","url":"https://portal.pohoda.cz/?p=13343"},{"title":"Informace pro účetní a podnikatele","url":"https://portal.pohoda.cz/zakon-a-pravo/legislativa-pro-podnikatele/aktivni-souhlas-uzivatele-pro-prijeti-cookies-na-webu/"},{"title":"cookies nove j
+… [truncated, 3553 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://uoou.gov.cz/media/seminare-uoou/prezentace/2024-06-12-p04-praxe-uoou-v-oblasti-cookies.pdf
+
+> prompt: Summarize ÚOOÚ's practice on cookies: which are exempt (technical), statistics/analytics, cookie bar design requirements (equal prominence of reject), enforcement findings, legal basis § 89 odst. 3 zákona 127/2005, who supervises. Czech.
+
+**→ WebSearch** `uoou.gov.cz Q&A cookies "statistické" cookies souhlas měření návštěvnosti první strany cookie lišta tlačítko odmítnout`
+
+<details><summary>result</summary>
+
+```
+Z vloženého obsahu nelze shrnutí spolehlivě sestavit. Jde o binární soubor PDF (18 stránek, metadata uvádějí jazyk `cs`), jehož textové části jsou komprimované a v této podobě nečitelné. Obsah je navíc zkrácen. Rozeznám jen názvy písem, obrázky a strukturu dokumentu, ale ne text o:
+
+- výjimkách pro cookies (technické apod.),
+- statistických a analytických cookies,
+- požadavcích na podobu cookie lišty (včetně rovnocenného zobrazení tlačítka pro odmítnutí),
+- nálezech a postupech dozorového úřadu,
+- právním základu v § 89 odst. 3 zákona č. 127/2005 Sb.,
+- tom, kdo dohled vykonává.
+
+Nechci tyto body doplňovat z odhadu, proto je neuvádím.
+
+Pokud mi pošlete čitelný text, například výstup z nástroje pro extrakci textu z PDF (`pdftotext`) nebo zkopírované relevantní stránky, shrnu je česky a v souladu se zadanými pravidly.
+
+[Binary content (application/pdf, 344.3KB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791637647751-f1qnx8.pdf]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "uoou.gov.cz Q&A cookies "statistické" cookies souhlas měření návštěvnosti první strany cookie lišta tlačítko odmítnout"
+
+Links: [{"title":"Cookies","url":"https://uoou.gov.cz/verejnost/qa-otazky-a-odpovedi/cookies"},{"title":"Úřad odpovídal na dotazy k udělování souhlasu s cookies prostřednictvím cookie lišty","url":"https://uoou.gov.cz/novinky/vse/urad-odpovidal-na-dotazy-k-udelovani-souhlasu-s-cookies-prostrednictvim-cookie-listy"},{"title":"Cookies od začátku roku 2022 pouze se souhlasem","url":"https://uoou.gov.cz/novinky/vse/cookies-od-zacatku-roku-2022-pouze-se-souhlasem"},{"title":"Sbor upozornil na nekalé praktiky k vyžadování souhlasu při použití cookies","url":"https://uoou.gov.cz/sbor-upozornil-na-nekale-praktiky-k-vyzadovani-souhlasu-pri-pouziti-cookies"},{"title":"Cookies lišty vykazují řadu nedostatků","url":"https://uoou.gov.cz/cookies-listy-vykazuji-radu-nedostatku"},{"title":"Předem zaškrtnuté políčko ve webovém formuláři není platným projevem vůle uživatelů","url":"https://uoou.gov.cz/predem-zaskrtnute-policko-ve-webovem-formulari-neni-platnym-projevem-vule-uzivatelu"},{"title":"Obecné nařízení o ochraně osobních údajů slaví dřevěné 
+… [truncated, 3367 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://uoou.gov.cz/verejnost/qa-otazky-a-odpovedi/cookies
+
+> prompt: Extract (in Czech and English summary): which cookies need consent, statement on statistical/analytical cookies, technical cookies exempt, cookie bar first layer reject button, closing banner not consent, 12 months validity / 6 months after refusal, who supervises, and anything on tracking pixels / server-side. Short quotes <15 words.
+
+**→ WebFetch** https://uoou.gov.cz/novinky/vse/cookies-od-zacatku-roku-2022-pouze-se-souhlasem
+
+> prompt: Summarize: date, what changed on 1 January 2022, exceptions, statistics/analytics, who supervises (ÚOOÚ vs ČTÚ), fines.
+
+<details><summary>result</summary>
+
+```
+**Date:** The article was published on 25 November 2021.
+
+**What changed on 1 January 2022:** Under an amendment to the electronic communications act, website operators may collect visitors' personal data through cookies only with consent they can prove. This replaces the previous opt-out reading, where continued use implied consent. The article states: "pouze na základě jejich prokazatelného souhlasu."
+
+**Exceptions:** Technical cookies are exempt. The article says the opt-in principle does not cover technical cookies needed for transmitting messages and providing services, including secure communication.
+
+**Statistics and analytics:** These are not exempt. The article lists analysis, statistics, advertising, and service rating among purposes that require consent. Analytical cookies for visitor traffic analysis fall under this requirement.
+
+**Supervision (ÚOOÚ vs. ČTÚ):** The article mentions only the ÚOOÚ, which has long advocated opt-in and published this guidance. It does not mention the ČTÚ and does not explicitly state which authority enforces the cookie rules.
+
+**Fines:** The article does not mention fines or penalties.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Summary (English, with Czech quotes from the page)**
+
+- **Cookies needing consent:** Non-technical cookies may be stored only with the user's consent under the e-Communications law. The page says they can be stored only "na základě souhlasu uživatele" (based on the user's consent). Consent under the GDPR is a separate matter.
+- **Analytics/statistical cookies:** Cookies used to track traffic or analyze visitor preferences count as non-technical and need consent to store. For first-party analytics, the page cites legitimate interest as an example of a legal basis for later processing: "Příkladem oprávněného zájmu je zpracování osobních údajů pro účely analytiky první strany." It adds that if the user refuses, the site may not use those cookies.
+- **Technical cookies exempt:** "Technické cookies mohou být bez souhlasu zpracovávány pouze pro účely nezbytné pro vlastní provoz stránek." Without consent, they may be used only for the site's essential operation. A cookie bar is not required if only technical cookies are used, but an information notice still is.
+- **Reject button in the first layer:** The reject option should sit at the same layer as accept: "umístění tlačítka pro nesouh
+… [truncated, 1181 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://support.google.com/google-ads/answer/14451858
+
+> prompt: Summarize Google's EU user consent policy / Consent Mode v2 requirements for Google Ads in EEA: consent signals ad_user_data ad_personalization, what happens without them, date, behavioral modeling, conversion modelling.
+
+**→ WebSearch** `Google Consent Mode v2 EEA required March 2024 ad_user_data ad_personalization conversion modeling basic vs advanced consent mode cookieless pings`
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Google Consent Mode v2 EEA required March 2024 ad_user_data ad_personalization conversion modeling basic vs advanced consent mode cookieless pings"
+
+Links: [{"title":"implement consent for ads personalization","url":"https://cdn.cookie-script.com/blog/implement-consent-for-ads-personalization"},{"title":"consent mode v2 google shares shares key details for advertisers","url":"https://www.searchenginejournal.com/consent-mode-v2-google-shares-shares-key-details-for-advertisers/"},{"title":"All Blog Posts","url":"https://www.cookiebot.com/us/google-consent-mode-v2/"},{"title":"Cardinal Path","url":"https://cardinalpath.com/blog/navigating-changes-to-google-consent-mode/amp"},{"title":"Consent & Cookies","url":"https://www.pii.ai/glossary/google-consent-mode-v2"},{"title":"March 6, 2024Ariana Wolf","url":"https://www.cardinalpath.com/blog/navigating-changes-to-google-consent-mode"},{"title":"www.newdesigngroup.ca","url":"https://www.newdesigngroup.ca/?p=12490"},{"title":"Step-by-step help to master cookie compliance","url":"https://wl.cookie-script.com/blog/implement-consent-for-ads-personalization"},{"title":"Step-by-step help to master cookie compliance
+… [truncated, 3418 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.google.com/about/company/user-consent-policy/
+
+> prompt: Summarize the EU user consent policy: who must obtain consent, for what, what must be disclosed, burden of proof, mention of Consent Mode. Short quotes <15 words.
+
+**→ WebFetch** https://developers.google.com/tag-platform/security/guides/consent
+
+> prompt: Summarize consent mode: basic vs advanced implementation, parameters ad_storage analytics_storage ad_user_data ad_personalization, what happens when denied (cookieless pings), conversion modeling.
+
+<details><summary>result</summary>
+
+```
+**Who must comply:** Under the policy, the obligations fall on the party using a Google product. Duties apply to properties "under your control, or that of your affiliate or your client." For third-party properties, you must use "commercially reasonable efforts" to ensure the operator complies.
+
+**Consent required for:**
+- Using cookies or other local storage where legally required.
+- Collecting, sharing, and using personal data for ad personalization.
+
+**Disclosures required:**
+- Clearly identify each party that may collect, receive, or use end users' personal data through your use of a Google product.
+- Provide prominent, easily accessible information about each party's use of that data.
+
+**Burden of proof:** The page does not discuss burden of proof in general. The closest requirement is that you must retain records of the consent end users give. You must also give end users clear instructions for revoking consent.
+
+**Consent Mode:** The page does not mention Consent Mode.
+
+**Scope:** The policy applies to end users in the European Economic Area, the UK, and Switzerland.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Basic vs. advanced:** The page says you can implement consent mode either way, and your company's guidelines should guide the choice: "You can implement consent mode in a basic or advanced way." It doesn't define the two modes. It links to a concepts page for that. For advanced mode, it says to call an update command on the page where consent is granted.
+
+**Parameters**
+
+| Parameter | Controls |
+|---|---|
+| `ad_storage` | Advertising cookies. The page notes that denial stops new ad cookies from being set. |
+| `analytics_storage` | Analytics measurement. Denial affects whether analytics cookies are used, though URL passthrough can still support analytics. |
+| `ad_user_data` | Whether advertising-related user data is sent to Google. Added in consent mode v2. |
+| `ad_personalization` | Whether personalized advertising is allowed. Added in consent mode v2. |
+
+**When consent is denied**
+
+- No new advertising cookies are set. Third-party cookies previously set on google.com and doubleclick.net aren't used, except for spam and fraud purposes.
+- Data sent to Google still includes the full page URL, including any ad click information in URL parameters.
+- With URL passthrough enabled, ad c
+… [truncated, 422 more chars]
+```
+
+</details>
+
+**→ WebSearch** `Meta Pixel Conversions API EU consent requirement Meta business tools terms "consent" EEA Czech cookie banner server-side events still need consent`
+
+**→ WebSearch** `cookieless analytics without consent Czech Republic Plausible Matomo exempt ÚOOÚ § 89 legitimate interest first-party analytics no cookies`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "cookieless analytics without consent Czech Republic Plausible Matomo exempt ÚOOÚ § 89 legitimate interest first-party analytics no cookies"
+
+Links: [{"title":"Cookie Policy","url":"https://bestpragueguide.com/en/cookie-policy"},{"title":"Do I need consent to use web analytics on my website?","url":"https://matomo.org/faq/general/do-i-need-consent-to-use-web-analytics-on-my-website/"},{"title":"Czech Republic: the half year cookie compliance monitoring report from Czech DPA","url":"https://www.uniconsent.com/blog/czech-dpa-gdpr-compliance-2022"},{"title":"Analytics Cookies: Consent Exemption Requirements","url":"https://docs.sealmetrics.com/tags/cnil"},{"title":"Cookieless Analytics","url":"https://sealmetrics.com/glossary/cookieless-analytics"},{"title":"cookieless analytics explained","url":"https://sealmetrics.com/blog/cookieless-analytics-explained/"},{"title":"Analytics without consent","url":"https://www.simpleanalytics.com/cookieless-analytics"},{"title":"czech republic dpa publishes cookie review","url":"https://iapp.org/news/a/czech-republic-dpa-publishes-cookie-review/"},{"title":"Can I get web analytics without cookie consent forms?","url":"
+… [truncated, 2823 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Meta Pixel Conversions API EU consent requirement Meta business tools terms "consent" EEA Czech cookie banner server-side events still need consent"
+
+Links: [{"title":"Meta Pixel and Facebook Conversions API: The GDPR and CCPA Consent Implementation Guide for 2026","url":"https://flexyconsent.com/blog/meta-pixel-facebook-conversions-api-consent-guide/"},{"title":"# Meta Consent Mode Setup Guide","url":"https://support.secureprivacy.ai/article/implementing-meta-consent-mode-with-secure-privacy.md"},{"title":"Is the Meta Pixel Legal? Consent Rules and Lawsuit Risk","url":"https://consently.net/blog/is-meta-pixel-legal"},{"title":"Secure Privacy","url":"https://support.secureprivacy.ai/article/implementing-meta-consent-mode-with-secure-privacy"},{"title":"facebook ads consent tracking complete guide","url":"https://seers.ai/blogs/facebook-ads-consent-tracking-complete-guide/"},{"title":"Black Friday in the EU: What Your Consent Banner Hides From Meta and Google Ads","url":"https://weltpixel.com/blogs/news/black-friday-in-the-eu-what-your-consent-banner-hides-from-meta-and-google-ads"},{"title":"seers.ai","url":"https://seers.ai/?p=10776"},{"title":"faceb
+… [truncated, 2888 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://matomo.org/faq/general/do-i-need-consent-to-use-web-analytics-on-my-website/
+
+> prompt: What does it say about the Czech Republic and countries requiring consent even for cookieless/anonymised analytics vs countries (France CNIL) with exemptions? Date of page. Quote short fragments.
+
+**→ WebFetch** https://www.zakonyprolidi.cz/cs/2005-127
+
+> prompt: Find § 89 odst. 3 (cookies / ukládání údajů v koncovém zařízení): current wording since 1.1.2022, including exceptions (technické uložení, služba výslovně požadovaná). Paraphrase accurately in English and give Czech short fragment <15 words.
+
+<details><summary>result</summary>
+
+```
+The page lists the **Czech Republic** among countries that "require prior consent for all forms of analytics, even for first-party, anonymised and cookieless tools."
+
+**France** is in a different group. The page says countries like France "permit exemptions from consent requirement for first-party, non-invasive analytics tools under specific conditions." It points to a separate CNIL Configuration Guide for those conditions.
+
+The page shows only a copyright year, "© 2026," so its exact publication date isn't stated.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The section you asked about, § 89 odst. 3, isn't in the page content provided. The text is cut off at § 21 ("[Content truncated due to length...]"), so I can't give you its current wording, its exceptions, or a Czech excerpt without guessing.
+
+To get the accurate text, you could:
+- Open the full current version of the law (the page lists "Aktuální znění 01.01.2026 (verze 52)") and go to § 89.
+- Download the PDF or DOCX version linked on the page.
+- Paste the § 89 text here, and I'll paraphrase it in English and quote the Czech fragment you need.
+
+[WebFetch note: this page's text is 609697 characters long and the answer above covers only characters 0 to 100000; the final 509697 were not read — to read on, call WebFetch again with the same url and offset: 100000.]
+```
+
+</details>
+
+**→ Bash** — Download Czech electronic communications act and locate cookie provision
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && curl -sL -m 60 -A "Mozilla/5.0" "https://www.zakonyprolidi.cz/cs/2005-127" -o zek.html; ls -la zek.html; python -I - <<'EOF'
+import re,html
+t=open('zek.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t)
+t=html.unescape(t)
+t=re.sub(r'\s+',' ',t)
+i=t.find('Ochrana údajů a soukromí')
+print(len(t), i)
+for m in re.finditer(r'koncov[ée]m? zařízení',t):
+    print(m.start(), t[max(0,m.start()-300):m.start()+700]); print('----')
+    break
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+Exit code 1
+-rw-r--r-- 1 matus 197609 925931 Oct 10 15:08 zek.html
+594201 -1
+190439 Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0159' in position 7: character maps to <undefined>
+```
+
+</details>
+
+**→ Bash** — List occurrences of section 89
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && PYTHONIOENCODING=utf-8 python -I - <<'EOF'
+import re,html
+t=open('zek.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t)
+t=html.unescape(t)
+t=re.sub(r'\s+',' ',t)
+for m in re.finditer(r'§ 89',t):
+    seg=t[m.start():m.start()+200]
+    print(m.start(), seg[:120]); 
+i=[m.start() for m in re.finditer(r'§ 89 ',t)]
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+Exit code 1
+30250 Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u010d' in position 60: character maps to <undefined>
+```
+
+</details>
+
+**→ Bash** — Extract cookie provision text from Czech law
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && python -I -X utf8 - <<'EOF'
+import re,html
+t=open('zek.html',encoding='utf-8',errors='ignore').read()
+t=re.sub(r'<script.*?</script>','',t,flags=re.S)
+t=re.sub(r'<[^>]+>',' ',t)
+t=html.unescape(t)
+t=re.sub(r'\s+',' ',t)
+open('zek.txt','w',encoding='utf-8').write(t)
+for m in re.finditer(r'ukládat data',t):
+    print(m.start(), t[max(0,m.start()-500):m.start()+1200]); print('-----')
+    break
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+(Bash completed with no output)
+```
+
+</details>
+
+**→ Bash** — Search for cookie-related keywords in law text
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && python -I -X utf8 - <<'EOF'
+import re
+t=open('zek.txt',encoding='utf-8').read()
+print(len(t))
+for kw in ['prokazateln','koncové zařízení','koncovém zařízení','cookies','Ochrana soukromí','Ukládání']:
+    ms=[m.start() for m in re.finditer(kw,t)]
+    print(kw, ms[:10])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+594201
+prokazateln [161709, 234991, 246889, 248459, 248531, 248799, 249202, 249601, 257341, 285490]
+koncové zařízení [190439, 237058, 241175, 267040, 267102, 267226, 267452, 267672, 571560]
+koncovém zařízení [241277]
+cookies [592512, 593073, 593161, 593530, 593564, 593720, 593739, 593869, 593942, 593955]
+Ochrana soukromí []
+Ukládání []
+```
+
+</details>
+
+**→ Bash** — Print section 89 neighbourhood text
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && python -I -X utf8 - <<'EOF'
+t=open('zek.txt',encoding='utf-8').read()
+print(t[248200:250400])
+print('=====')
+print(t[592300:594201])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+y podle odstavce 2 stanoví Úřad prováděcím právním předpisem. § 65 Neplacení nebo opožděné placení účtu (1) Podnikatel poskytující veřejně dostupnou službu elektronických komunikací je povinen před započetím poskytování služby, popřípadě balíčku podle § 63c, prokazatelně upozornit účastníka na důsledky neplacení účtů. Náklady za prokazatelné upozornění hradí podnikatel poskytující veřejně dostupnou službu elektronických komunikací. (2) Nezaplatil-li účastník ve lhůtě splatnosti uvedené na vyúčtování ceny za poskytnuté služby, popřípadě balíček podle § 63c, podnikatel uvedený v odstavci 1 jej prokazatelně upozorní a stanoví náhradní lhůtu plnění ne kratší než 1 týden ode dne dodání upozornění. Po marném uplynutí náhradní lhůty může podnikatel účastníku omezit poskytování dotčené samostatně účtované služby, popřípadě balíčku podle § 63c, zamezením aktivního přístupu ke službě, popřípadě balíčku podle § 63c, s výjimkou přístupu k tísňovým službám prostřednictvím tísňové komunikace. Cena za prokazatelné upozornění musí být nákladově orientovaná. (3) Podnikatel uvedený v odstavci 1 může ukončit smluvní vztah nebo nezřídit účastníkovi přístup k veřejně dostupné službě elektronických komu
+… [truncated, 2909 more chars]
+```
+
+</details>
+
+**→ Bash** — Print terminal-equipment provisions
+
+```
+cd "/c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad" && python -I -X utf8 - <<'EOF'
+t=open('zek.txt',encoding='utf-8').read()
+print(t[240600:242200])
+print("=====")
+print(t[266600:268200])
+EOF
+```
+
+<details><summary>result</summary>
+
+```
+ní jinak nevztahovala. (2) Má-li spotřebitel právo ukončit závazek ze smlouvy ke kterékoli složce balíčku podle odstavce 1 před koncem ujednaného období z důvodu vadného plnění nebo jiného porušení smlouvy, má právo ukončit závazek ze smlouvy ke všem složkám balíčku. (3) Uzavření smlouvy týkající se doplňkových služeb nebo koncového zařízení, které poskytuje nebo distribuuje tentýž poskytovatel služeb přístupu k internetu nebo veřejně dostupných interpersonálních komunikačních služeb založených na číslech, neprodlužuje původní dobu trvání smlouvy, k níž se služby nebo koncové zařízení přidávají, pokud s tím spotřebitel při uzavírání smlouvy o doplňkových službách nebo koncovém zařízení výslovně nevyjádřil svůj souhlas. (4) Odstavce 1 a 3 se použijí rovněž na účastníka, kterým je mikropodnik, malý podnik nebo nezisková organizace, pokud se výslovně nevzdal všech nebo některých práv, která mu plynou z těchto odstavců. Účastník, kterým je mikropodnik, malý podnik nebo nezisková organizace, doloží tuto skutečnost prohlášením v okamžiku uplatnění práva podle odstavců 1 a 3. § 63d Úřad pro potřeby spotřebitele sbírá, zpracovává a zveřejňuje způsobem umožňujícím dálkový přístup vysvětlují
+… [truncated, 2009 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Finax&search_type=keyword_unordered&media_type=all
+
+> prompt: List the ads shown: advertiser, ad text, CTA, landing page links. If no ad content is accessible say so explicitly.
+
+**→ WebFetch** https://adstransparency.google.com/?region=CZ
+
+> prompt: Is any advertiser/ad data visible? Say explicitly if the page is JS-only and returns no ad data.
+
+<details><summary>result</summary>
+
+```
+socket hang up
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**No advertiser or ad data is visible** in the excerpt. It contains only navigation and interface text, such as the "Centrum transparentnosti reklam" heading, a "Přihlásit" (sign in) link, and links to Google product pages.
+
+The content is also truncated ("Content truncated due to length..."), so I can't confirm whether the full page includes ad data. From this excerpt alone, I can't tell whether the page is JS-only or returns no ad data. Nothing here indicates whether ad content loads dynamically, so checking the complete page or its rendered output would be needed to answer that.
+```
+
+</details>
+
+**→ Skill**
+
+```
+{
+ "skill": "anthropic-skills:built-in-browser"
+}
+```
+
+<details><summary>result</summary>
+
+```
+Launching skill: anthropic-skills:built-in-browser
+```
+
+</details>
+
+*[context injected: Base directory for this skill: C:\Users\matus\AppData\Roaming\Claude\local-agent-mode-sessions\skills-plugin\44b821bd-81]*
+
+**→ mcp__Claude_Browser__navigate**
+
+```
+{
+ "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Finax&search_type=keyword_unordered&media_type=all"
+}
+```
+
+<details><summary>result</summary>
+
+```
+navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Finax&search_type=keyword_unordered&media_type=all
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Finax&search_type=keyword_unordered&media_type=all")
+- Viewport: emulating 375x812 (you set this; reset it with preset "desktop" when you finish testing; the app also clears it when your turn ends or the pane's width changes)
+```
+
+</details>
+
+**→ mcp__Claude_Browser__get_page_text**
+
+```
+{}
+```
+
+<details><summary>result</summary>
+
+```
+Title: Ad Library
+URL: https://www.facebook.com
+Source element: <body>
+---
+Meta Ad Library
+​
+Czech Republic
+​
+​
+​
+All ads
+​
+Search by keyword or advertiser
+​
+​
+Log in
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+System status
+Subscribe to email updates
+FAQ
+About ads and data use
+Privacy
+Terms
+Cookies
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Ad Library" ("https://www.facebook.com")
+- Viewport: emulating 375x812 (you set this; reset it with preset "desktop" when you finish testing; the app also clears it when your turn ends or the pane's width changes)
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "scale": 0.5
+}
+```
+
+<details><summary>result</summary>
+
+```
+[image]
+[Image: source: C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\mcp-Claude_Browser-blob-1791637777223-3d7cj6.jpg]
+Screenshot size: 234x507 0.5-scale view; coordinate frame: 469x1015.
+
+
+Tab Context:
+- Executed on tabId: seed
+- Available tabs:
+  • tabId seed: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Fondee&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+- Viewport: emulating 375x812 (you set this; reset it with preset "desktop" when you finish testing; the app also clears it when your turn ends or the pane's width changes)
+```
+
+</details>
+
+**→ mcp__Claude_Browser__tabs_create**
+
+```
+{}
+```
+
+<details><summary>result</summary>
+
+```
+{
+  "serverId": "preview-local_90d888de-08f3-4b9b-8a7c-0bdcf50beee2",
+  "tabId": "tab-1",
+  "reused": false,
+  "type": "browser"
+}
+Opened tab tab-1 in the background — the user's current tab stays in front. Use `navigate` with tabId "tab-1" to load a URL; front it with `tabs_select` when the user should look.
+```
+
+</details>
+
+**→ mcp__Claude_Browser__navigate**
+
+```
+{
+ "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Finax&search_type=keyword_unordered&media_type=all",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Finax&search_type=keyword_unordered&media_type=all
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Finax&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__get_page_text**
+
+```
+{
+ "tabId": "tab-1",
+ "max_chars": 20000
+}
+```
+
+<details><summary>result</summary>
+
+```
+Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Finax&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+​
+​
+All ads
+​
+Search by keyword or advertiser
+​
+​
+Log in
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+System status
+Subscribe to email updates
+FAQ
+About ads and data use
+Privacy
+Terms
+Cookies
+~1 result
+These results include ads that match your keyword search.
+Filters (1)
+Sort by
+​
+Active
+Library ID: 2050594125818494
+Started running on Aug 18, 2026
+Platforms
+​
+​
+​
+This ad has multiple versions
+​
+EU transparency
+​
+Menu
+​
+See ad details
+Finax PL
+Sponsored
+Czasu nie zatrzymasz, ale możesz wykorzystać go na swoją korzyść. ⏳ Inwestuj na emeryturę z Finax i relaksuj się, podczas gdy pieniądze pracują za Ciebie. 💪 
+
+❗Inwestowanie wiąże się z ryzykiem.
+Lepsza emerytura
+See Details
+System status
+Ad Library APIAbout ads and data usePrivacyTermsCookies
+English (US)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available t
+… [truncated, 259 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__browser_batch**
+
+```
+{
+ "actions": [
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Fondee&search_type=keyword_unordered&media_type=all",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 4,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "get_page_text",
+   "input": {
+    "tabId": "tab-1",
+    "max_chars": 30000
+   }
+  }
+ ]
+}
+```
+
+<details><summary>result</summary>
+
+```
+[navigate] navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Fondee&search_type=keyword_unordered&media_type=all
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Fondee&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Fondee&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[get_page_text] Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Fondee&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+… [truncated, 12142 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__browser_batch**
+
+```
+{
+ "actions": [
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Portu&search_type=keyword_unordered&media_type=all",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 4,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "get_page_text",
+   "input": {
+    "tabId": "tab-1",
+    "max_chars": 14000
+   }
+  }
+ ]
+}
+```
+
+<details><summary>result</summary>
+
+```
+[navigate] navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Portu&search_type=keyword_unordered&media_type=all
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Portu&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Portu&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[get_page_text] Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Portu&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+​
+​
+… [truncated, 14205 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__browser_batch**
+
+```
+{
+ "actions": [
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=XTB&search_type=keyword_unordered&media_type=all",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 4,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "get_page_text",
+   "input": {
+    "tabId": "tab-1",
+    "max_chars": 9000
+   }
+  }
+ ]
+}
+```
+
+<details><summary>result</summary>
+
+```
+[navigate] navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=XTB&search_type=keyword_unordered&media_type=all
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=XTB&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=XTB&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[get_page_text] Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=XTB&search_type=keyword_unordered&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+​
+​
+All ads
+… [truncated, 8343 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__browser_batch**
+
+```
+{
+ "actions": [
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Trading%20212&search_type=keyword_exact_phrase&media_type=all",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 4,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "get_page_text",
+   "input": {
+    "tabId": "tab-1",
+    "max_chars": 7000
+   }
+  }
+ ]
+}
+```
+
+<details><summary>result</summary>
+
+```
+[navigate] navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=Trading%20212&search_type=keyword_exact_phrase&media_type=all
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Trading%20212&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Trading%20212&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[get_page_text] Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=Trading%20212&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Librar
+… [truncated, 2222 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__browser_batch**
+
+```
+{
+ "actions": [
+  {
+   "name": "navigate",
+   "input": {
+    "url": "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=ETF&search_type=keyword_exact_phrase&media_type=all",
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "computer",
+   "input": {
+    "action": "wait",
+    "duration": 4,
+    "tabId": "tab-1"
+   }
+  },
+  {
+   "name": "get_page_text",
+   "input": {
+    "tabId": "tab-1",
+    "max_chars": 16000
+   }
+  }
+ ]
+}
+```
+
+<details><summary>result</summary>
+
+```
+[navigate] navigated to https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&q=ETF&search_type=keyword_exact_phrase&media_type=all
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[computer:wait] waited 4s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+[get_page_text] Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+… [truncated, 13122 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__find**
+
+```
+{
+ "query": "Categories",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+Found 1 match(es) for "Categories":
+- generic "Categories" [ref_111]
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "scroll_to",
+ "ref": "ref_111",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+scrolled ref_111 into view
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "hover",
+ "ref": "ref_111",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+hover at (556, 384)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1",
+ "scale": 0.6
+}
+```
+
+<details><summary>result</summary>
+
+```
+[image]
+[Image: source: C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\mcp-Claude_Browser-blob-1791637868776-8nohzj.jpg]
+Screenshot size: 480x365 0.6-scale view; coordinate frame: 799x609.
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "left_click",
+ "coordinate": [
+  565,
+  353
+ ],
+ "tabId": "tab-1",
+ "action_summary": "Opens ad details dialog in Meta Ad Library"
+}
+```
+
+<details><summary>result</summary>
+
+```
+left_click at (565, 353)
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+[image]
+[Image: source: C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\mcp-Claude_Browser-blob-1791637878925-884mfx.jpg]
+Screenshot size: 799x609
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__get_page_text**
+
+```
+{
+ "tabId": "tab-1",
+ "max_chars": 5000
+}
+```
+
+<details><summary>result</summary>
+
+```
+Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&is_targeted_country=false&media_type=all&q=ETF&search_type=keyword_exact_phrase&sort_data[mode]=total_impressions&sort_data[direction]=desc
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+​
+​
+All ads
+​
+Search by keyword or advertiser
+​
+​
+Log in
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+System status
+Subscribe to email updates
+FAQ
+About ads and data use
+Privacy
+Terms
+Cookies
+~180 results
+These results include ads that match your exact phrase search.
+Filters (1)
+Sort by
+​
+Active
+Library ID: 4661636800722781
+Started running on Sep 24, 2026
+Platforms
+​
+​
+​
+​
+This ad has multiple versions
+​
+EU transparency
+​
+Menu
+​
+See ad details
+XTB Online Trading
+Sponsored
+Aplikace XTB je vše, co potřebujete k investování  🚀
+Stáhněte si XTB a začněte investovat
+Install Now
+​
+Active
+Library ID: 1679180523295165
+Started running on Jun 3, 2026
+Platforms
+​
+​
+​
+​
+​
+Categories
+​
+EU transparency
+​
+Menu
+​
+See ad details
+Trading.com EU
+Sponsored
+TRADING.COM
+How to Build a Diversified ETF Portfolio With Fewer Funds
+Le
+… [truncated, 4404 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__navigate**
+
+```
+{
+ "url": "https://www.facebook.com/ads/library/?id=1254974956720567",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+navigated to https://www.facebook.com/ads/library/?id=1254974956720567
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1",
+ "scale": 0.7
+}
+```
+
+<details><summary>result</summary>
+
+```
+[image]
+[Image: source: C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\mcp-Claude_Browser-blob-1791637891260-mwyrri.jpg]
+Screenshot size: 560x426 0.7-scale view; coordinate frame: 799x609.
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "left_click",
+ "coordinate": [
+  393,
+  218
+ ],
+ "tabId": "tab-1",
+ "action_summary": "Opens the ad details view"
+}
+```
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1",
+ "scale": 0.7
+}
+```
+
+<details><summary>result</summary>
+
+```
+left_click at (393, 218)
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+screenshot failed: Screenshot timed out after 5s: the page did not finish rendering in time. Retry; the pane does not need to be displayed. Claude's window may be behind another window, which can stop the page from drawing; if this repeats, continue with `get_page_text` or `find`, or ask the user to bring it forward.
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1",
+ "scale": 0.8
+}
+```
+
+<details><summary>result</summary>
+
+```
+screenshot failed: Screenshot timed out after 5s: the page did not finish rendering in time. Retry; the pane does not need to be displayed. Claude's window may be behind another window, which can stop the page from drawing; if this repeats, continue with `get_page_text` or `find`, or ask the user to bring it forward.
+```
+
+</details>
+
+**→ mcp__Claude_Browser__find**
+
+```
+{
+ "query": "EU transparency",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+Found 8 match(es) for "EU transparency":
+- generic "EU transparency" [ref_109]
+- generic "EU transparency" [ref_155]
+- generic "EU transparency" [ref_254]
+- generic "EU transparency" [ref_289]
+- generic "EU transparency" [ref_388]
+- generic "EU transparency" [ref_520]
+- generic "EU transparency" [ref_553]
+- generic "EU transparency" [ref_706]
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__get_page_text**
+
+```
+{
+ "tabId": "tab-1",
+ "max_chars": 6000
+}
+```
+
+<details><summary>result</summary>
+
+```
+Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+​
+​
+​
+All ads
+​
+Search by keyword or advertiser
+​
+​
+Direct Fondee
+Ads
+About
+Log in
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+System status
+Subscribe to email updates
+FAQ
+About ads and data use
+Privacy
+Terms
+Cookies
+~67 results
+Filters (1)
+Sort by
+​
+Active
+Library ID: 28055100750793947
+Started running on Aug 3, 2026
+Platforms
+​
+​
+3 ads use this creative and text
+Menu
+​
+See summary details
+Direct Fondee
+Sponsored
+Spočítejte si, kolik může mít vaše investice za 10, 20 nebo 30 let. 📈 Neodkládejte investování na později. S Direct Fondee začnete jednoduše, online a na pár kliknutí.
+0:00 / 0:43
+​
+Active
+Library ID: 1254974956720567
+Started running on Aug 26, 2026
+Platforms
+​
+​
+EU transparency
+​
+Menu
+​
+See ad details
+Direct Fondee
+Sponsored
+Investice na míru. Bez skrytých poplatků 
+… [truncated, 5460 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "left_click",
+ "ref": "ref_155",
+ "tabId": "tab-1",
+ "action_summary": "Opens EU transparency info for an ad in Ad Library"
+}
+```
+
+<details><summary>result</summary>
+
+```
+left_click at (100, 384) [ref_155]
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__find**
+
+```
+{
+ "query": "Age OR gender OR reach OR targeting",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+No matches for "Age OR gender OR reach OR targeting".
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1",
+ "scale": 0.7
+}
+```
+
+<details><summary>result</summary>
+
+```
+[image]
+[Image: source: C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\mcp-Claude_Browser-blob-1791637922988-cidwh0.jpg]
+Screenshot size: 560x426 0.7-scale view; coordinate frame: 799x609.
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "left_click",
+ "coordinate": [
+  614,
+  140
+ ],
+ "tabId": "tab-1",
+ "action_summary": "Expands the 'Transparency by location' section"
+}
+```
+
+**→ mcp__Claude_Browser__get_page_text**
+
+```
+{
+ "tabId": "tab-1",
+ "max_chars": 2500
+}
+```
+
+<details><summary>result</summary>
+
+```
+left_click at (614, 140)
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Title: Ad Library
+URL: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709
+Source element: <body>
+---
+Meta Ad Library
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+​
+Czech Republic
+​
+​
+​
+​
+All ads
+​
+Search by keyword or advertiser
+​
+​
+Direct Fondee
+Ads
+About
+Log in
+Ad Library
+Ad Library Report
+Ad Library API
+Branded Content
+System status
+Subscribe to email updates
+FAQ
+About ads and data use
+Privacy
+Terms
+Cookies
+~67 results
+Filters
+Sort
+​
+Sort by
+Active status: Active ads
+Remove
+​
+​
+Active
+Library ID: 28055100750793947
+Started running on Aug 3, 2026
+Platforms
+​
+​
+3 ads use this creative and text
+Open Dropdown
+​
+See summary details
+Direct Fondee
+Sponsored
+Spočítejte si, kolik může mít vaše investice za 10, 20 nebo 30 let. 📈 Neodkládejte investování na později. S Direct Fondee začnete jednoduše, online a na pár kliknutí.
+0:00 / 0:43
+​
+Active
+Library ID: 1254974956720567
+Started running on Aug 26, 2026
+Platforms
+​
+​
+EU transparency
+​
+Open Dropdown
+​
+See ad details
+Direct Fo
+… [truncated, 1970 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "screenshot",
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+screenshot failed: Screenshot timed out after 5s: the page did not finish rendering in time. Retry; the pane does not need to be displayed. Claude's window may be behind another window, which can stop the page from drawing; if this repeats, continue with `get_page_text` or `find`, or ask the user to bring it forward.
+```
+
+</details>
+
+**→ mcp__Claude_Browser__javascript_tool**
+
+```
+{
+ "action": "javascript_exec",
+ "tabId": "tab-1",
+ "text": "const d=document.querySelector('[role=\"dialog\"]'); d? d.innerText.slice(0,3000) : 'no dialog'"
+}
+```
+
+<details><summary>result</summary>
+
+```
+"Log in\nAd Library\nAd Library Report\nAd Library API\nBranded Content\nSystem status\nSubscribe to email updates\nFAQ\nAbout ads and data use\nPrivacy\nTerms\nCookies"
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__javascript_tool**
+
+```
+{
+ "action": "javascript_exec",
+ "tabId": "tab-1",
+ "text": "const all=[...document.querySelectorAll('div')].filter(e=>/Transparency by location|Advertiser and payer|About the disclaimer/.test(e.innerText||'') && (e.innerText||'').length<4000); all.length? all.sort((a,b)=>a.innerText.length-b.innerText.length)[all.length-1].innerText.slice(0,3500):'none'"
+}
+```
+
+<details><summary>result</summary>
+
+```
+"Ad Details\nClose\n​\n​\nActive\nLibrary ID: 1254974956720567\nStarted running on Aug 26, 2026\nPlatforms\n​\n​\nDirect Fondee\nSponsored\nLibrary ID: 1254974956720567\nOpen Dropdown\n​\nInvestice na míru. Bez skrytých poplatků a záhadných poznámek pod čarou. 👀 Investujte jednoduše s Direct Fondee.\n0:00 / 0:34\nWWW.FONDEE.CZ\nInvestování bez stresu💚\nLearn more\nTransparency by location\nAbout the disclaimer\nAbout the advertiser\nAdvertiser and payer\nAbout ads and data use\nClose"
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__javascript_tool**
+
+```
+{
+ "action": "javascript_exec",
+ "tabId": "tab-1",
+ "text": "const el=[...document.querySelectorAll('div,span')].find(e=>e.children.length==0 && e.innerText==='Transparency by location'); if(el){el.click(); await new Promise(r=>setTimeout(r,2500)); const root=[...document.querySelectorAll('div')].filter(e=>/Transparency by location/.test(e.innerText||'') && /Library ID/.test(e.innerText||'')).sort((a,b)=>a.innerText.length-b.innerText.length)[0]; root.innerText.slice(0,3500)} else 'no el'"
+}
+```
+
+<details><summary>result</summary>
+
+```
+"​\nActive\nLibrary ID: 1254974956720567\nStarted running on Aug 26, 2026\nPlatforms\n​\n​\nDirect Fondee\nSponsored\nLibrary ID: 1254974956720567\nOpen Dropdown\n​\nInvestice na míru. Bez skrytých poplatků a záhadných poznámek pod čarou. 👀 Investujte jednoduše s Direct Fondee.\n0:00 / 0:34\nWWW.FONDEE.CZ\nInvestování bez stresu💚\nLearn more\nTransparency by location\nEuropean Union\nWe provide additional information for ads that were shown on Meta technologies anywhere in the EU.\nEU ad audience\nLocation\nAdvertisers can target their ads to certain audiences based on their country, region, postal code or city.\nFilter type\nAll location types\n​\nInclude Exclude filter\nIncluded \nExcluded\n​\n​\nLocation\nLocation type\nIncluded or excluded\n​\nCzech Republic\nCountry\nIncluded\nAge\n18-65+ years old\nAdvertisers can choose a minimum and maximum age of who will be shown an ad.\nGender\nAll\nAdvertisers can choose to target their ad based on gender.\nEU ad delivery\nReach\n35,454\nThe number of Meta Accounts in the EU that saw this ad at least once. Reach is different from impressions, which may include multiple views of your ads by the same accounts. This metric is estimated.\nR
+… [truncated, 1298 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__javascript_tool**
+
+```
+{
+ "action": "javascript_exec",
+ "tabId": "tab-1",
+ "text": "const clickTxt=async(t)=>{const el=[...document.querySelectorAll('div,span')].find(e=>e.children.length==0 && e.innerText===t); if(el){el.click(); await new Promise(r=>setTimeout(r,2000));}}; await clickTxt('Advertiser and payer'); await clickTxt('About the disclaimer'); const root=[...document.querySelectorAll('div')].filter(e=>/Advertiser and payer/.test(e.innerText||'') && /Library ID/.test(e.innerText||'')).sort((a,b)=>a.innerText.length-b.innerText.length)[0]; const t=root.innerText; t.slice(t.indexOf('About the disclaimer')).slice(0,2500)"
+}
+```
+
+<details><summary>result</summary>
+
+```
+"About the disclaimer\nBased on where the ad is shown and the ad category, advertisers may choose or be required to disclose information about themselves or their ad. They may also disclose additional information.\nLocation\nCzech Republic\nWebsite\nhttp://www.fondee.cz/\nAdvertiser\nFONDEE A.S.\nPayer\nFONDEE A.S.\nAbout the advertiser\nAdvertiser and payer\nFor ads to be delivered in some locations, details about the advertiser and payer must be provided.\nCurrent\nAdvertiser\nFondee\nPayer\nFondee\nAbout ads and data use"
+
+(captured at origin https://facebook.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=1254974956720567&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=203616297073709")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__navigate**
+
+```
+{
+ "url": "https://www.facebook.com/ads/library/?id=2498638017229101",
+ "tabId": "tab-1"
+}
+```
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "wait",
+ "duration": 4,
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+navigated to https://www.facebook.com/ads/library/?id=2498638017229101
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=2498638017229101&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=1716285315339294")
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+waited 4s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Ad Library" ("https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=CZ&id=2498638017229101&is_targeted_country=false&media_type=all&search_type=page&sort_data[mode]=total_impressions&sort_data[direction]=desc&view_all_page_id=1716285315339294")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__javascript_tool**
+
+```
+{
+ "action": "javascript_exec",
+ "tabId": "tab-1",
+ "text": "const sleep=ms=>new Promise(r=>setTimeout(r,ms)); const clickTxt=async(t)=>{const el=[...document.querySelectorAll('div,span')].find(e=>e.children.length==0 && e.innerText===t); if(el){el.click(); await sleep(2500); return true} return false}; const a=await clickTxt('See ad details'); await clickTxt('Transparency by location'); await clickTxt('About the disclaimer'); const root=[...document.querySelectorAll('div')].filter(e=>/Transparency by location/.test(e.innerText||'') && /Library ID/.test(e.innerText||'')).sort((a,b)=>a.innerText.length-b.innerText.length)[0]; const hdr=document.title; (a+' | '+(root? root.innerText.replace(/\\n+/g,' | ').slice(0,2200):'noroot'))"
+}
+```
+
+<details><summary>result</summary>
+
+```
+"true | ​ | Active | Library ID: 1441679956882506 | Started running on Aug 29, 2025 | Platforms | ​ | ​ | ​ | This ad has multiple versions | ​ | Portu | Sponsored | Library ID: 1441679956882506 | Menu | ​ | Nemusíte být investiční expert, stačí chtít začít. S Portu je investování snadné a dostupné pro každého. Stáhněte si naši aplikaci, založte si účet a nechte své peníze růst. | Investování pro každého! 🚀 | Install Now | This ad has multiple versions | ​ | 1 of 2 | Transparency by location | European Union | We provide additional information for ads that were shown on Meta technologies anywhere in the EU. | EU ad audience | Location | Advertisers can target their ads to certain audiences based on their country, region, postal code or city. | All location types | Included  | Excluded | ​ | Location | Location type | Included or excluded | ​ | Czech Republic | Country | Included | Age | 18-65+ years old | Advertisers can choose a minimum and maximum age of who will be shown an ad. | Gender | All | Advertisers can choose to target their ad based on gender. | EU ad delivery | Reach | 130,936 | The number of Meta Accounts in the EU that saw this ad at least once. Reach is different fr
+… [truncated, 1399 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__navigate**
+
+```
+{
+ "url": "https://adstransparency.google.com/?region=CZ&domain=finax.eu",
+ "tabId": "tab-1"
+}
+```
+
+**→ mcp__Claude_Browser__computer**
+
+```
+{
+ "action": "wait",
+ "duration": 5,
+ "tabId": "tab-1"
+}
+```
+
+<details><summary>result</summary>
+
+```
+navigated to https://adstransparency.google.com/?region=CZ&domain=finax.eu
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "https://adstransparency.google.com/?region=CZ&domain=finax.eu" ("https://adstransparency.google.com/?region=CZ&domain=finax.eu")
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+waited 5s
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Centrum transparentnosti reklam" ("https://adstransparency.google.com/?region=CZ&domain=finax.eu")
+```
+
+</details>
+
+**→ mcp__Claude_Browser__get_page_text**
+
+```
+{
+ "tabId": "tab-1",
+ "max_chars": 5000
+}
+```
+
+<details><summary>result</summary>
+
+```
+Title: Centrum transparentnosti reklam
+URL: https://adstransparency.google.com/?region=CZ&domain=finax.eu
+Source element: <body>
+---
+Centrum transparentnosti reklam
+Přihlásit
+Časté dotazy
+Všechna témata
+Politické reklamy
+search
+Vyhledávání zobrazených reklam podle názvu inzerenta nebo webové stránky
+check
+Reklamy v oblasti Česko
+arrow_drop_down
+Reklamy zobrazované v Evropě
+finax.eu
+Tato doména zahrnuje výsledky pro několik inzerentských účtů s reklamami odkazujícími na tuto doménu. Níže můžete provést filtrování podle jednotlivých inzerentů.
+42 reklam
+calendar_today
+Kdykoli
+arrow_drop_down
+Všechny platformy
+arrow_drop_down
+Všechny formáty
+arrow_drop_down
+Finax, o.c.p., a.s.
+Ověřeno
+Finax, o.c.p., a.s.
+Ověřeno
+Finax, o.c.p., a.s.
+Ověřeno
+Finax, o.c.p., a.s.
+Ověřeno
+See all ads
+Další informace najdete na souvisejících stránkách
+Analyzujte politické reklamní kampaně na Googlu
+Podívejte se na další transparentní informace o volebních reklamách z celého světa, včetně toho, kdo je zaplatil a koho měly oslovit.
+Politická reklama na Googlu
+Posuďte sami, jak značky využívají placený obsah na YouTube
+Vyhledávejte placená zobrazení produktu, sponzorství a doporučení zobrazovaná na YouTube.
+Vy
+… [truncated, 885 more chars]
+```
+
+</details>
+
+**→ mcp__Claude_Browser__javascript_tool**
+
+```
+{
+ "action": "javascript_exec",
+ "tabId": "tab-1",
+ "text": "const sleep=ms=>new Promise(r=>setTimeout(r,ms)); const out=[]; for (const d of ['fondee.cz','portu.cz','xtb.com','trading212.com','etoro.com']) { location.href='https://adstransparency.google.com/?region=CZ&domain='+d; await sleep(6000); out.push(d+': '+document.body.innerText.split('\\n').filter(x=>/reklam|Ověřeno|a\\.s\\.|s\\.r\\.o|Ltd|ltd|S\\.A|XTB|Fondee|Portu|Trading|Finax|eToro|Nenalezeno|žádn/i.test(x)).slice(0,14).join(' | ')); } out.join('\\n')"
+}
+```
+
+<details><summary>result</summary>
+
+```
+The page navigated while this script was running, so the script was cut off and any return value was lost. If the script itself navigated (clicked a link, submitted a form, changed location), do not re-run it — continue from the page the tab is on now. If it did not, something else navigated the page (a reload, a redirect, or the user); check the page and redo whatever is still missing.
+
+(captured at origin https://adstransparency.google.com)
+
+
+Tab Context:
+- Executed on tabId: tab-1
+- Available tabs:
+  • tabId tab-1: "Centrum transparentnosti reklam" ("https://adstransparency.google.com")
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:13:19
+
+Right, navigating inside the script kills it. I'll do each domain via navigate calls.

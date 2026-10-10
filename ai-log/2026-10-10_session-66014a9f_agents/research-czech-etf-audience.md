@@ -1055,3 +1055,1742 @@ The article is dated **6 October 2015** (06. 10. 2015), by Radovan Novotný.
 ```
 
 </details>
+
+<details><summary>result</summary>
+
+```
+Ukázka je omezena na 125 znaků na citaci, takže úryvky textů jsou zkráceny na 125 znaků místo požadovaných 150. Níže jsou všechny záznamy (50) v pořadí, v jakém jsou uvedeny ve zdroji.
+
+| # | Datum | Hodnocení | Název | Text (úryvek) |
+|---|---|---|---|---|
+| 1 | 2026-10-04 | 3 | Everything except withdrawals | "Had this app for years, really good for beginners and smaller capital investors. Everything works except the withdrawal" |
+| 2 | 2026-09-24 | 5 | Skvělá jednoduchá appka 👍🏼 | "Aktuální promo kód : 11Q8EeTUn6 (akcie az do 100€ zdarma). Výborná, přehledná apka, ideál pro začátečníky." |
+| 3 | 2026-09-24 | 5 | Great for investing | "I like it since they’re not watching every dollar that you send to your investment account. If you once verified your income" |
+| 4 | 2026-09-20 | 5 | top | "proste fajn" |
+| 5 | 2026-08-31 | 5 | ZAČÍNAJÍCÍ INVESTOR | "Trading 212 poskytuje možnost investování vy si vyberete co chcete koupit můžete si dokoupit to bylo pro mě dost dlouho" |
+| 6 | 2026-08-27 | 5 | Super aplikace | "Jednoduchá na používání, přijatelné malé poplatky, možnost investic v malých částkách.. Nedávno konečně přidali možnost" |
+| 7 | 2026-08-23 | 5 | Reliable, no fees | "Best
+… [truncated, 5193 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://itunes.apple.com/search?term=Trading+212&country=cz&entity=software&limit=3
+
+> prompt: For each result give trackName, trackId, userRatingCount, averageUserRating, sellerName.
+
+**→ WebFetch** https://itunes.apple.com/search?term=XTB&country=cz&entity=software&limit=4
+
+> prompt: For each result give trackName, trackId, userRatingCount, averageUserRating, sellerName.
+
+**→ WebFetch** https://itunes.apple.com/search?term=Portu&country=cz&entity=software&limit=3
+
+> prompt: For each result give trackName, trackId, userRatingCount, averageUserRating, sellerName.
+
+**→ WebFetch** https://itunes.apple.com/search?term=Fondee&country=cz&entity=software&limit=3
+
+> prompt: For each result give trackName, trackId, userRatingCount, averageUserRating, sellerName.
+
+**→ WebFetch** https://itunes.apple.com/search?term=Revolut&country=cz&entity=software&limit=2
+
+> prompt: For each result give trackName, trackId, userRatingCount, averageUserRating, sellerName.
+
+<details><summary>result</summary>
+
+```
+| trackName | trackId | userRatingCount | averageUserRating | sellerName |
+|---|---|---|---|---|
+| Revolut — Mobile Finance | 932493382 | 64126 | 4.83 | Revolut Ltd |
+| Revolut — Teen Finance | 1499857038 | 2429 | 4.79 | Revolut Ltd |
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+| # | trackName | trackId | userRatingCount | averageUserRating | sellerName |
+|---|---|---|---|---|---|
+| 1 | Direct Fondee: investing | 1616141130 | 67 | 3.73 | Direct Fondee a.s. |
+| 2 | Portu: Invest in stocks & ETFs | 1580563467 | 14 | 4.93 | WOOD & Company Financial Services, a.s. |
+| 3 | Stocks | 1069512882 | 4659 | 4.45 | Apple Distribution International |
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+| trackName | trackId | userRatingCount | averageUserRating | sellerName |
+|---|---|---|---|---|
+| XTB Online Investing | 949905889 | 10942 | 4.72 | XTB S A |
+| Trading 212 | 566325832 | 26607 | 4.82 | Avus Capital LLC |
+| Stocks | 1069512882 | 4659 | 4.45 | Apple Distribution International |
+| TradingView: Track All Markets | 1205990992 | 4995 | 4.84 | TradingView, Inc. |
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+| trackName | trackId | userRatingCount | averageUserRating | sellerName |
+|---|---|---|---|---|
+| Portu: Invest in stocks & ETFs | 1580563467 | 14 | 4.93 | WOOD & Company Financial Services, a.s. |
+| XTB Online Investing | 949905889 | 10942 | 4.72 | XTB S A |
+| Trading 212 | 566325832 | 26607 | 4.82 | Avus Capital LLC |
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+| trackName | trackId | userRatingCount | averageUserRating | sellerName |
+|---|---|---|---|---|
+| Trading 212 | 566325832 | 26607 | 4.82 | Avus Capital LLC |
+| Stocks | 1069512882 | 4659 | 4.45 | Apple Distribution International |
+| XTB Online Investing | 949905889 | 10942 | 4.72 | XTB S A |
+
+Ratings are rounded to two decimal places from the raw values.
+```
+
+</details>
+
+**→ WebFetch** https://itunes.apple.com/cz/rss/customerreviews/page=1/id=949905889/sortby=mostrecent/json
+
+> prompt: List all entries: date, rating, title, text (first 140 chars). Verbatim, Czech where present. Skip none.
+
+**→ WebFetch** https://itunes.apple.com/cz/rss/customerreviews/page=1/id=1616141130/sortby=mostrecent/json
+
+> prompt: List all entries: date, rating, title, text (first 140 chars). Verbatim, Czech where present. Skip none.
+
+**→ WebFetch** https://itunes.apple.com/cz/rss/customerreviews/page=1/id=1580563467/sortby=mostrecent/json
+
+> prompt: List all entries: date, rating, title, text (first 140 chars). Verbatim, Czech where present. Skip none.
+
+<details><summary>result</summary>
+
+```
+Ukázky textu jsou omezeny na 125 znaků, takže nejsou delší než 140 znaků, jak jste požadoval.
+
+| # | Datum | Hodnocení | Název | Text (ukázka) |
+|---|---|---|---|---|
+| 1 | 2026-09-16 | 5 | "Skvělá aplikace pro investování jednoduše" | "Direct Fondee používám už delší dobu a jsem opravdu spokojená. Mám zde několik portfolií – investuji nejen pro sebe" |
+| 2 | 2026-09-15 | 5 | "Jednoduché" | "Appka je extrémně jednoduchá, což mi vyhovuje. Jednou jsem prošel nastavením, nastavil si trvalý příkaz" |
+| 3 | 2026-04-12 | 1 | "🤦🏼‍♀️🤷🏼‍♀️" | "Dvakrát jsem musela dělat registraci, protože první nefungovala. Když jsem prošla dotazníkem," |
+| 4 | 2026-04-07 | 1 | "zatim spatne" | "Registracni proces nefunguje. Po vytvoreni uctu pres apple ID a kliknuti na overovaci link v emailu" |
+| 5 | 2026-02-04 | 5 | "Velmi dobrá aplikace" | "Vždy funguje bez problému" |
+| 6 | 2025-06-20 | 4 | "Kontrola údajů mimo aplikaci" | "Aplikace je fajn, chápu i smysl jednou za čas požadovat po klientovi ze zákonných důvodů kontrolu údajů." |
+| 7 | 2025-05-29 | 3 | "Problémy s FaceID" | "Hodně často nefunguje přihlášení přes FaceID." |
+| 8 | 2025-02-18 | 2 | "." | "- při každém spuštění otravuje s povolením notifik
+… [truncated, 3081 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+I found 50 entries on this page (the feed has more pages). Each excerpt is verbatim and capped at 125 characters, which is below the 140 you asked for, to respect the quote limit. Truncated excerpts end with "…".
+
+1. **2026-10-08** | 3 | Začátečníci nesahat ! | "Nepřehledné rozdělení CDF a přímého nákupu akcií nevodné pro začátečníky .. super pro obchodování"
+2. **2026-10-06** | 1 | Novy font totalne znicil appku!!! | "Vratte zpatky stary font!!! Ten novej je katastrofalni!! Je to giganticke pismo namackane na sebe a prekryva se a kontrast…"
+3. **2026-09-29** | 3 | Stale se načítá | "Při zapnutí aplikace se začne načítak, pak ihned spadne a zvova. Pak se ti stane jeste nekolikrat a nakonec najede."
+4. **2026-09-28** | 4 | iPad už není hrůza | "Kdo v téhle době z renomovaných společností, neumí podporovat multitasking ?! Neuvěřitelné."
+5. **2026-09-21** | 5 | Liquid Glass | "Děkuji za přidání Liquid Glass. Dokonalá aplikace 😍 Nemám co vytknout."
+6. **2026-09-20** | 5 | Obcho | "Jednoduchost v detailech"
+7. **2026-09-13** | 4 | Ok | "Jediné co - nakupování akcií je daleko složitější než u Trading212, to je škoda."
+8. **2026-09-10** | 1 | Non working | "Aktuálně se do aplikace nelze p
+… [truncated, 5772 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The feed contains 50 reviews, listed newest first. Review text is shown verbatim, truncated with "…" where it exceeds the 125-character quote limit.
+
+| # | Date | Rating | Title | Text |
+|---|---|---|---|---|
+| 1 | 2026-10-02 | 5 | "Skvělá služba i aplikace" | "Aplikace funguje skvěle, vše je bezpečné a jednoduché, oceňuju snížené poplatky pro studenty a intuitivní…" |
+| 2 | 2026-10-01 | 5 | "Pavel" | "The best investment app I know!" |
+| 3 | 2026-10-01 | 5 | "Skvělá česká investiční aplikace" | "Naprosto nejlepší investiční aplikace pro lidi, co se nechtějí o nic starat. Mám přes 6 let portfolio od…" |
+| 4 | 2026-09-09 | 4 | "Portu..." | "Nevím jestli je to tím, ale po aktualizaci dělá appka strašné brikule - 'špatný passcode', mizení klávesnice…" |
+| 5 | 2026-07-02 | 5 | "Číslo 1 na investice v CZ" | "Jednoduché investování, apka je velmi user friendly i pro začátečníky. Posílám prachy a jsem spoko. Doporučuji…" |
+| 6 | 2026-06-30 | 1 | "Každý měsíc vydávají nucený update" | "Pokaždé se chci přihlásit a musím aktualizovat. A pak ještě 'something went wrong'. Takhle fakt ne." |
+| 7 | 2026-03-24 | 4 | "Předtím fungovala" | "Dobrý den, provedl jsem aktualizaci Vaší aplikace a nejde 
+… [truncated, 6221 more chars]
+```
+
+</details>
+
+**→ WebSearch** `hledanost ETF Google Trends Česko vyhledávání "S&P 500" "jak investovat" nárůst zájmu Češi hledají`
+
+**→ WebSearch** `průzkum proč Češi neinvestují obavy ztráta peněz nevím jak začít poplatky důvěra bankám poradcům 2025 2026`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "hledanost ETF Google Trends Česko vyhledávání "S&P 500" "jak investovat" nárůst zájmu Češi hledají"
+
+Links: [{"title":"porazit inflaci sazkou na sp 500 cesti investori prikyvuji","url":"https://forbes.cz/porazit-inflaci-sazkou-na-sp-500-cesti-investori-prikyvuji/"},{"title":"toto je ta nejchytrejsi investice kterou dnes muzete udelat","url":"https://finex.cz/toto-je-ta-nejchytrejsi-investice-kterou-dnes-muzete-udelat/"},{"title":"v roce 2015 jste investovali 100 000 kc do sp 500 kolik mate nyni","url":"https://finex.cz/v-roce-2015-jste-investovali-100-000-kc-do-sp-500-kolik-mate-nyni/"},{"title":"Passive investing and ETF S&P 500","url":"https://vskp.vse.cz/english/89022"},{"title":"www.google.com","url":"https://www.google.com/finance/quote/SPY:ASX?hl=sk"},{"title":"jak investovat do indexu sp 500","url":"https://www.testado.cz/jak-investovat-do-indexu-sp-500/"},{"title":"nejzajimavejsi etf fondy kopirujici sp 500","url":"https://finex.cz/nejzajimavejsi-etf-fondy-kopirujici-sp-500/"},{"title":"www.google.com","url":"https://www.google.com/finance/quote/SPY:ASX?hl=cs"},{"title":"how to trade sp500 with usd1000","url":"https://brokerchooser.com/cs/educ
+… [truncated, 2027 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "průzkum proč Češi neinvestují obavy ztráta peněz nevím jak začít poplatky důvěra bankám poradcům 2025 2026"
+
+Links: [{"title":"Průzkum pro HK ČR: Více než třetina Čechů chce, aby jejich penzijní úspory pomáhaly financovat rozvoj ČR","url":"https://www.businessinfo.cz/clanky/pruzkum-pro-hk-cr-vice-nez-tretina-cechu-chce-aby-jejich-penzijni-uspory-pomahaly-financovat-rozvoj-cr/"},{"title":"Investuje 39 procent Čechů. Nejvíc si cení nákupu bydlení","url":"https://ct24.ceskatelevize.cz/clanek/ekonomika/investuje-39-procent-cechu-nejvic-si-ceni-nakupu-bydleni-346260"},{"title":"Strach ze ztráty jako hlavní brzda. Proč Češi stále váhají s investováním?","url":"https://www.e15.cz/finexpert/banky-a-ucty/strach-ze-ztraty-jako-hlavni-brzda-proc-cesi-stale-vahaji-s-investovanim-1434418"},{"title":"investovani je novy standard zajem cechu vyrazne roste","url":"https://www.newstream.cz/money/investovani-je-novy-standard-zajem-cechu-vyrazne-roste"},{"title":"Letos si finančně polepšíme, věří většina Čechů","url":"https://www.e15.cz/domaci/letos-si-financne-polepsime-veri-vetsina-cechu-1149441"},{"title":"www.newstream.cz","url":"https://www.newstream.cz/stitek/pruz
+… [truncated, 3280 more chars]
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:04:59
+
+Let me open the key survey articles directly.
+
+**→ WebFetch** https://www.e15.cz/finexpert/banky-a-ucty/strach-ze-ztraty-jako-hlavni-brzda-proc-cesi-stale-vahaji-s-investovanim-1434418
+
+> prompt: Extract date, survey source and sample, percentages for barriers (fear of loss 73%, lack of money/knowledge 71%), who are non-investors (age/gender), any motivation percentages.
+
+**→ WebFetch** https://ct24.ceskatelevize.cz/clanek/ekonomika/investuje-39-procent-cechu-nejvic-si-ceni-nakupu-bydleni-346260
+
+> prompt: Extract date, survey source, sample, share who invest (39%), breakdown by instrument, age/gender/income/education/region, motivations.
+
+**→ WebFetch** https://www.newstream.cz/money/stale-vice-cechu-realizuje-sve-plany-pomoci-pasivniho-investovani
+
+> prompt: Extract date, who published (XTB?), survey data, ETF investor share, age, gender, motivations, S&P 500, platform numbers for Czechia.
+
+<details><summary>result</summary>
+
+```
+**Survey source and sample**
+- **Source:** Raiffeisenbank survey, cited by e15.cz (article dated 20 July 2026). Tereza Kaiseršotová (Raiffeisenbank press spokesperson) and Marek Podrabský (Raiffeisenbank investment director) are quoted.
+- **Sample size, methodology, and respondent demographics:** not stated in the article.
+
+**Investor status**
+- 39% are active investors.
+- 24% are considering investing.
+- 38% have no plans to invest.
+
+**Barriers among non-investors**
+- **Fear of loss:** 73%.
+- **Subjective feeling of lacking money and lack of know-how:** both cited by 71%. The article says both factors are mentioned by the same 71%, so it's unclear whether these are separate figures or one shared figure.
+
+**Non-investors (age/gender)**
+- The article does not provide age or gender breakdowns for non-investors.
+
+**Motivation percentages**
+- Retirement reserve: 78%, the top priority.
+- Improving living standards: 63%.
+- Protecting savings from inflation: 39%.
+
+**Other notable figures**
+- 40% of investors and prospective investors use online platforms or specialized websites as their main information source, up from 21% the previous year.
+- 30% rely mainly on bank advisors.
+- One-fifth
+… [truncated, 57 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Source and date**
+- Published 20 February 2024 by ČTK (ČT24, Česká televize)
+- Survey by agency Perfect Crowd for the Asociace pro kapitálový trh ČR (Asset Management Association / Capital Market Association)
+- Sample: "more than a thousand respondents" (exact number not stated)
+
+**Investing share**
+- 39% of respondents currently invest, up 2 percentage points year on year. The authors called this a "velmi pozvolný vzestup" (very gradual rise).
+
+**Breakdown**
+- **Gender:** Men invest more, partly due to a willingness to take risk. Women more often save.
+- **Income:** Higher-income people invest more.
+- **Education:** More educated people invest more.
+- **Age:** Not stated.
+- **Region:** Not stated.
+- **Investment instruments:** Not stated, though the article mentions real estate as the best investment historically.
+
+**Motivations**
+- Most investors seek returns on spare money (extra income).
+- 41% cite saving for retirement.
+- 35% cite maintaining an active lifestyle in older age.
+
+**Other findings**
+- Best life investment: real estate (29%), followed by family, relationships and children (17%).
+- Main barriers: fear of fraud (43%, up 10 points year on year) and risk (42%).
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date:** 18 January 2024, 11:24.
+
+**Publisher:** The article is labeled "Komerční spolupráce" (commercial cooperation) on newstream.cz. It promotes XTB's Investment Plans and quotes XTB's Czech branch director, David Šnajdr.
+
+**Survey data:** The article reports no survey. Its figures come from XTB client data.
+
+**ETF investor share:**
+- The number of Czech XTB clients investing in ETFs more than doubled since 2021.
+- ETFs made up 42% of all investment forms XTB offers.
+- More than 31% of Czech investors start their investing with ETFs.
+
+**Age and gender:** Not provided.
+
+**Motivations:** The article gives no survey-based motivations. It describes ETFs as suited to stable, long-term investing and diversification without manual stock selection. It gives retirement or a new product launch as examples of investment goals.
+
+**S&P 500:** Czech investors' top choice last year was index ETFs, including those tracking the S&P 500, MSCI World, and NASDAQ 100. No percentage is given.
+
+**Platform figures (XTB Czechia):**
+- Investors can create up to 10 investment plans (portfolios) made of different ETFs.
+- Each holding's percentage share can be set and adjusted.
+- Recurring payments can be 
+… [truncated, 10 more chars]
+```
+
+</details>
+
+**→ WebSearch** `Household Finance and Consumption Survey Czech Republic 2021 share of households holding mutual funds listed shares ČNB HFCS results`
+
+**→ WebSearch** `ČNB zpráva o finanční stabilitě domácnosti investice do akcií ETF zahraniční brokeři růst retailových investorů`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Household Finance and Consumption Survey Czech Republic 2021 share of households holding mutual funds listed shares ČNB HFCS results"
+
+Links: [{"title":"20210913 rod 2021 presentation bruha","url":"https://CNB.cz/export/sites/cnb/en/economic-research/.galleries/seminars_workshops/2021/20210913_rod_2021_presentation_bruha.pdf"},{"title":"household finance and consumption survey hfcs in czechia","url":"https://csu.gov.cz/household-finance-and-consumption-survey-hfcs-in-czechia"},{"title":"household finance and consumption survey hfcs methodology","url":"https://csu.gov.cz/household-finance-and-consumption-survey-hfcs-methodology"},{"title":"The sample survey Household Finance and Consumption Survey (HFCS)","url":"https://www.czso.cz/csu/vykazy/the-sample-survey-household-finance-and-consumption-survey-hfcs"},{"title":"www.czso.cz","url":"https://www.czso.cz/documents/10180/230783424/160077-23.pdf"},{"title":"the sample survey household finance and consumption survey hfcs","url":"https://csu.gov.cz/vykazy/the-sample-survey-household-finance-and-consumption-survey-hfcs"},{"title":"Možnosti vyhľadávania","url":"https://www.ecb.europa.eu/pub/research-networ
+… [truncated, 2046 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ČNB zpráva o finanční stabilitě domácnosti investice do akcií ETF zahraniční brokeři růst retailových investorů"
+
+Links: [{"title":"fs 2015 2016 uvod","url":"https://www.cnb.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2015-2016/fs_2015-2016_uvod.pdf"},{"title":"fs 2016 2017","url":"https://www.cnb.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2016-2017/fs_2016-2017.pdf"},{"title":"fs 2015 2016","url":"https://www.cnb.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2015-2016/fs_2015-2016.pdf"},{"title":"zfs podzim 2023","url":"https://www.cnb.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2023_podzim/zfs_podzim_2023.pdf"},{"title":"zfs jaro 2023","url":"https://CNB.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2023_jaro/zfs_jaro_2023.pdf"},{"title":"fs 2012 2013","url":"https://www.cnb.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2012-2013/fs_2012-2013.pdf"},{"title":"fs 2014 2015","url":"https://www.cnb.cz/export/sites/cnb/cs/financni-stabilita/.galleries/zpravy_fs/fs_2014-2015/fs_2014-2015.pdf"},{"title":"fs 2018 2019","url":"https:
+… [truncated, 3405 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://csu.gov.cz/household-finance-and-consumption-survey-hfcs-in-czechia
+
+> prompt: Extract any statistics on share of households owning mutual funds, shares, bonds, voluntary pension, with year of the survey; latest wave and publication date.
+
+**→ WebFetch** https://www.ecb.europa.eu/pub/research-networks/html/hfcn_faq_2021_wave.sk.html
+
+> prompt: Is there any data on Czech participation in mutual funds/shares? Probably not; report if so.
+
+<details><summary>result</summary>
+
+```
+The page doesn't include any statistics on the share of households owning mutual funds, shares, bonds, or voluntary pensions. It is only an abstract and bibliographic record for the article.
+
+The relevant details it does provide:
+
+- **Survey years:** "the survey has been conducted annually since 2020 under the name Finanční situace domácností (FSD)."
+- **Latest wave:** The page doesn't identify the most recent wave.
+- **Publication:** The article appears in *Statistika*, 105(1): 123–130 (DOI 10.54694/stat.2024.38). The page was last updated 11.03.2025, but it doesn't state a specific publication date for the article.
+
+The full article is available as a PDF on the page, and it may contain the ownership figures you need.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**No, this page has no data on Czech participation in mutual funds or shares.** It only notes that the Czech Republic was one of the non-euro countries covered by the 2021 wave, alongside Croatia and Hungary. It describes the survey's asset coverage in general terms, saying it covers "assets and liabilities held or incurred by the surveyed households," but gives no breakdown by country or asset type.
+```
+
+</details>
+
+**→ WebFetch** https://CNB.cz/export/sites/cnb/en/economic-research/.galleries/seminars_workshops/2021/20210913_rod_2021_presentation_bruha.pdf
+
+> prompt: Find participation rates (% of households) for mutual funds, shares, bonds, and any year/wave of the HFCS data. Report table values with their labels.
+
+<details><summary>result</summary>
+
+```
+REDIRECT DETECTED: The URL redirects to a location that was not fetched automatically.
+
+    Original URL: https://CNB.cz/export/sites/cnb/en/economic-research/.galleries/seminars_workshops/2021/20210913_rod_2021_presentation_bruha.pdf
+    Redirect URL (from the server's Location header — server-supplied, not verified): http://www.cnb.cz/export/sites/cnb/en/economic-research/.galleries/seminars_workshops/2021/20210913_rod_2021_presentation_bruha.pdf
+    Status: 301 Moved Permanently
+
+    To complete your request, I need to fetch content from the redirected URL. Please use WebFetch again with these parameters:
+    - url: "http://www.cnb.cz/export/sites/cnb/en/economic-research/.galleries/seminars_workshops/2021/20210913_rod_2021_presentation_bruha.pdf"
+    - prompt: "Find participation rates (% of households) for mutual funds, shares, bonds, and any year/wave of the HFCS data. Report table values with their labels."
+```
+
+</details>
+
+**→ WebFetch** https://datareportal.com/reports/digital-2026-czechia
+
+> prompt: Extract: internet users, mobile connections, social media user identities (number, % of population), Instagram/Facebook/TikTok/YouTube ad reach in Czechia, age and gender splits of ad audiences, time spent, share of web traffic from mobile. Report exact numbers and the data dates.
+
+**→ WebFetch** https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/czech-republic
+
+> prompt: Extract the latest share of mobile, desktop, tablet in Czech Republic and the period covered.
+
+<details><summary>result</summary>
+
+```
+In September 2026, the Czech Republic's market share was **Mobile 49.34%**, **Desktop 49.05%**, and **Tablet 1.61%**.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Core connectivity (Czechia)**
+
+| Metric | Value | Data date |
+|---|---|---|
+| Internet users | 9.96 million (94.2% of population) | October 2025 |
+| Internet users, change | Down 127 thousand (-1.3%) | Oct 2024 to Oct 2025 |
+| Offline population | 610 thousand (5.8%) | End of 2025 |
+| Mobile connections | 14.7 million (139% of population) | End of 2025 |
+| Mobile connections, change | Down 41 thousand (-0.3%) | End 2024 to end 2025 |
+| Social media user identities | 8.08 million (76.4% of population) | October 2025 |
+| Social media identities, change | Up 90 thousand (+1.1%) | Late 2024 to end 2025 |
+
+Population was 10.6 million in October 2025 (UN data). The page advises caution when comparing social media figures with previous reports.
+
+**Ad reach by platform**
+
+| Platform | Ad reach | % of population | Age 18+ / 13+ share | % of internet users | Female / Male | Change |
+|---|---|---|---|---|---|---|
+| Instagram | 3.95M (late 2025) | 37.4% | 46.4% of adults 18+; 42.9% of 13+ | 39.6% | 52.5% / 43.8% | +150K (+3.9%), Oct 2024 to Oct 2025; +150K (+3.9%), Jul to Oct 2025 |
+| Facebook | 5.00M (late 2025) | 47.3% | 58.0% of adults 18+; 54.3% of 13+ | 50.2% | 52.0% / 46.0% | -250K (-4
+… [truncated, 1156 more chars]
+```
+
+</details>
+
+**→ WebSearch** `landing page conversion rate benchmark financial services mobile vs desktop lead generation 2025 report Unbounce OR WordStream OR Focus Digital`
+
+**→ WebSearch** `podíl mobilu na návštěvnosti webu Česko 2025 sociální sítě reklama mobil 80 % Meta Instagram Facebook Češi věk uživatelé`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "landing page conversion rate benchmark financial services mobile vs desktop lead generation 2025 report Unbounce OR WordStream OR Focus Digital"
+
+Links: [{"title":"landing page statistics","url":"https://sender.net/blog/landing-page-statistics"},{"title":"landing page statistics","url":"https://www.sender.net/blog/landing-page-statistics/?afsrc=1"},{"title":"Closing Time","url":"https://www.insightly.com/?p=25700"},{"title":"Closing Time","url":"https://www.insightly.com/episodes/landing-pages-that-convert/"},{"title":"landing page statistics","url":"https://www.sender.net/blog/landing-page-statistics/?app=1"},{"title":"Mobile and social are your cash cows","url":"https://unbounce.com/conversion-benchmark-report/finance-insurance-conversion-rate"},{"title":"Wealth Management Landing Page Statistics: 2026 Conversion Benchmarks & CRO Data","url":"https://www.webtonic.io/blog/wealth-management-landing-page-statistics"},{"title":"landing page conversion statistics","url":"https://www.shno.co/marketing-statistics/landing-page-conversion-statistics"},{"title":"2026 Fintech Landing Pages & CRO Report: Trends, Stats & Performance Data","url":"https://www.webt
+… [truncated, 2297 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "podíl mobilu na návštěvnosti webu Česko 2025 sociální sítě reklama mobil 80 % Meta Instagram Facebook Češi věk uživatelé"
+
+Links: [{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/clanky/2020/09/mif-pocet-page-views-z-mobilu-uz-prekonal-desktop/"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/mif-pocet-page-views-z-mobilu-uz-prekonal-desktop"},{"title":"NetMonitor: 1,4 milionu uživatelů přistupuje na internet z mobilních zařízení","url":"https://www.e15.cz/byznys/ostatni/netmonitor-1-4-milionu-uzivatelu-pristupuje-na-internet-z-mobilnich-zarizeni-963056"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/spir-rozdelil-navstevnost-podle-pc-mobilu-a-tabletu"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/internet-jen-z-mobilu-a-tabletu-prijde-pres-250-tis-ru"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/clanky/2015/07/spir-rozdelil-navstevnost-podle-pc-mobilu-a-tabletu"},{"title":"Křišťálová Lupa 2026","url":"https://www.lupa.cz/n/navstevnost/?pi=3"},{"title":"Mobile Internet FORUM 2013: uživatelé utěšeně rostou, následovat by měly peníze","url":"https://www.lupa.c
+… [truncated, 4124 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forbes.cz/youtube-a-facebook-v-cesku-vede-obe-socialni-site-zustavaji-dal-nejoblibenejsimi/
+
+> prompt: Extract date, source (Ami Digital Index?), usage percentages for YouTube, Facebook, Instagram, TikTok among Czech internet users, daily use, age splits, device (mobile) information.
+
+**→ WebFetch** https://cc.cz/jak-vypada-boj-o-cechy-na-sitich-dominance-facebooku-se-otrasa-uz-ho-temer-dohnal-vlastni-bratr/
+
+> prompt: Extract date, source, user numbers/percentages for Facebook, Instagram, TikTok, YouTube in Czechia, age splits, mobile usage.
+
+**→ WebFetch** https://unbounce.com/conversion-benchmark-report/finance-insurance-conversion-rate
+
+> prompt: Extract all numbers: median conversion rate for finance & insurance landing pages, by mobile vs desktop, by traffic channel (social, paid), year of report, sample size, and any form length/field findings.
+
+<details><summary>result</summary>
+
+```
+**Date:** Article published 2 September 2026 (CzechCrunch, by David Zlomek). The Eurostat data is for 2025.
+
+**Source:** CzechCrunch, citing EU Digital Services Act (DSA) platform reports via Social Media Transparency, and Eurostat for age data. The DSA figures are average monthly active recipients, not unique individuals.
+
+**Monthly active users in Czechia (DSA data):**
+
+| Platform | Users | Notes |
+|---|---|---|
+| Facebook | 6.7 million | Grew slowly since spring 2023 (6.4 million) |
+| Instagram | 6.6 million | Up from 5.5 million in spring 2023; gap with Facebook is about 100,000 |
+| TikTok | 2.5 million | About 23% of the population |
+| YouTube | 10.2 million | Logged-in accounts only |
+
+**Age splits:**
+- Eurostat (2025): 97.2% of Czechs aged 16–29 used social networks, the second-highest share in the EU after Cyprus.
+- Ages 16–74: 70%, compared with an EU average of 67.3%.
+- The article gives no age breakdown for the individual platforms.
+
+**Mobile usage:** The article does not mention mobile usage, so I can't provide that.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The content you provided is only a headline: "YouTube a Facebook v Česku vede. Obě sociální sítě zůstávají nadále nejoblíbenějšími | Forbes." It contains no article body, so I can't extract the other details.
+
+- **Source:** The headline ends with "Forbes," so the page appears to be a Forbes article. The Ami Digital Index is not mentioned in the text.
+- **Date:** Not provided.
+- **Usage percentages** for YouTube, Facebook, Instagram, and TikTok: Not provided.
+- **Daily use, age splits, and mobile/device information:** Not provided.
+
+The headline's main claim is that YouTube leads in the Czech Republic, and that Facebook and YouTube remain the most popular social networks. To get the figures you need, please share the full article text.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Financial services (finance & insurance) benchmarks, 2024 report**
+
+- **Median conversion rate (overall):** 8.3%
+- **Mobile:** 11.5% (the text calls this an "average," not a median). The all-industries mobile median is 11.2%.
+- **Desktop:** 9%. The all-industries desktop median is 12.1%.
+- **Paid search:** 10.1% median (all-industries benchmark: 6.7%)
+- **Paid social:** 9.3% median (all-industries median: 5.2%)
+- **Email (for comparison):** 7.9% (all-industries benchmark: 6.7%)
+- **Paid social by platform:** Instagram 15.5%, TikTok 10.8%, Facebook 10.1% (medians)
+- **Year:** The report is labeled 2024 in the page's asset names. The page's copyright notice reads 2009–2026, but that is site-wide and doesn't date the data.
+- **Sample size (financial services):** Not stated. The page cites over 57 million landing page conversions across industries, but it doesn't give a figure for this vertical.
+- **Form length or field findings:** None. The page doesn't discuss form length or number of form fields.
+```
+
+</details>
+
+**→ WebSearch** `Portu počet klientů tisíc spravuje miliard WOOD Portu aplikace nové klienty 2026`
+
+**→ WebSearch** `XTB Česko Slovensko počet klientů tisíc David Šnajdr 2026`
+
+**→ WebSearch** `Česká spořitelna George ETF investování klienti počet investičních klientů 2026 Fio e-Broker počet klientů Patria`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "XTB Česko Slovensko počet klientů tisíc David Šnajdr 2026"
+
+Links: [{"title":"Trhy se s největší recesí od druhé světové války vypořádaly snadno. XTB vyrostlo na trojnásobek, říká David Šnajdr","url":"https://cc.cz/trhy-se-s-nejvetsi-recesi-od-druhe-svetove-valky-vyporadaly-snadno-xtb-vyrostlo-na-trojnasobek-rika-david-snajdr/"},{"title":"Sobota 01. srpna 2026 16:57","url":"https://www.fxstreet.cz/xtbcr-xtb-predstavuje-svuj-plan-produktu-a-oznamuje-predbezne-financni-vysledky-za-rok-2023.html"},{"title":"77 % retailových CFD účtů přichází o peníze","url":"https://brokerchooser.com/cs/broker-reviews/xtb-review/xtb-regulation"},{"title":"www.letemsvetemapplem.eu","url":"https://www.letemsvetemapplem.eu/?p=799260"},{"title":"2012 2q organizacni struktura","url":"https://www.xtbofficial.com/cz/nabidka/informace-o-uctech/dulezite-dokumenty/obligatory-published-information/2012-2q-organizacni-struktura.pdf"},{"title":"2012 3Q organizacni struktura","url":"https://www.xtbofficial.com/cz/nabidka/informace-o-uctech/dulezite-dokumenty/obligatory-published-information/2012-3Q-organizacni-struktura.pdf"},{"title":"xtb predstavuje svuj plan produktu a oznamuje pre
+… [truncated, 2037 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Česká spořitelna George ETF investování klienti počet investičních klientů 2026 Fio e-Broker počet klientů Patria"
+
+Links: [{"title":"sporitelna zlevnuje investovani u malych nakupu srazi poplatek z 90 korun na par korun","url":"https://www.newstream.cz/money/sporitelna-zlevnuje-investovani-u-malych-nakupu-srazi-poplatek-z-90-korun-na-par-korun"},{"title":"859528 sporitelna jako prvni banka v cesku rusi minimalni vysi poplatku za investovani klienti zaplati","url":"https://zpravy.kurzy.cz/859528-sporitelna-jako-prvni-banka-v-cesku-rusi-minimalni-vysi-poplatku-za-investovani-klienti-zaplati/"},{"title":"ceska sporitelna digitalizuje nove muzete v georgi obchodovat s akciemi certifikaty a etf","url":"https://finex.cz/ceska-sporitelna-digitalizuje-nove-muzete-v-georgi-obchodovat-s-akciemi-certifikaty-a-etf/"},{"title":"Česká spořitelna vyráží proti Revolutu. V aplikaci spouští investice do akcií a přes ETF i do bitcoinu","url":"https://cc.cz/ceska-sporitelna-vyrazi-proti-revolutu-v-aplikaci-spousti-investice-do-akcii-a-pres-etf-i-do-bitcoinu/"},{"title":"ceska sporitelna zavadi investovani do frakci","url":"https://finex.cz/ceska-sporitelna-zavadi-invest
+… [truncated, 3703 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Portu počet klientů tisíc spravuje miliard WOOD Portu aplikace nové klienty 2026"
+
+Links: [{"title":"Česká investiční služba Portu už lidem spravuje přes 18 miliard korun. Rozpíná se i za hranicemi","url":"https://cc.cz/ceska-investicni-sluzba-portu-uz-lidem-spravuje-pres-18-miliard-korun-rozpina-se-i-za-hranicemi/"},{"title":"Lidé už přes Portu investovali do akcií či dluhopisů přes pět miliard. Dobře funguje spolupráce s Air Bank","url":"https://cc.cz/lide-uz-pres-portu-investovali-do-akcii-ci-dluhopisu-pres-pet-miliard-dobre-funguje-spoluprace-s-air-bank/"},{"title":"Annual report 2025","url":"https://cdn.portu.cz/portu/documents/obligatory-published-information/cs/Annual-report-2025.pdf"},{"title":"finex.cz","url":"https://finex.cz/recenze/portu/"},{"title":"portu hlasi pres 40 tisic uzivatelu a dve a pul miliardy korun ve sprave do konce roku prekoname 5 miliard veri jeho sef","url":"https://cc.cz/portu-hlasi-pres-40-tisic-uzivatelu-a-dve-a-pul-miliardy-korun-ve-sprave-do-konce-roku-prekoname-5-miliard-veri-jeho-sef/"},{"title":"portu snizuje poplatky a zlevnuje pro dlouhodobe investory ve sprave ma jiz 30 miliard korun","url":"https://finex.cz/p
+… [truncated, 3726 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://cdn.portu.cz/portu/documents/obligatory-published-information/cs/Annual-report-2025.pdf
+
+> prompt: Extract: number of clients/investors at end of 2025, assets under management, growth %, share of women, average age, product split (ETF portfolios, DIP, brokerage), top ETFs or S&P 500 demand if mentioned. Quote numbers exactly.
+
+**→ WebFetch** https://www.newstream.cz/money/sporitelna-zlevnuje-investovani-u-malych-nakupu-srazi-poplatek-z-90-korun-na-par-korun
+
+> prompt: Extract date and numbers: number of investing clients, assets, fee changes, age of clients, share buying ETFs via George, number of new investors.
+
+<details><summary>result</summary>
+
+```
+I couldn't find the requested figures in the content you provided. It's a raw, compressed PDF byte stream (FlateDecode object streams) rather than readable text, and the dump is truncated, so I can't see any of the client, AUM, growth, demographic, or product data.
+
+To get the figures, you could:
+- Paste the extracted text from the PDF (for example, copy it from a viewer or run `pdftotext` on the file).
+- Share the page's HTML or plain-text version, if one exists.
+- Upload the document directly, if your interface supports it.
+
+Once I have readable text, I'll pull the requested numbers and quote them exactly, keeping any quotations under 125 characters.
+
+[Binary content (application/pdf, 2.7MB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791637138497-msirtu.pdf]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Česká spořitelna: extracted data**
+
+- **Investing clients:** Over 780,000 at the end of April 2026, up 14% year-on-year. The article says: "Počet klientů, kteří s námi investují, ke konci dubna 2026 meziročně vzrostl o 14 procent."
+- **Assets under management:** More than CZK 520 billion.
+- **Fee change:** From 18 May 2026, the bank removed the minimum fee of CZK 90 (or EUR 4 / USD 4) on one-off purchases of shares, fractional investing, ETFs, ETCs, and certificates. The new fee is 0.35% of the transaction value. For a CZK 1,000 investment, the fee falls from CZK 90 to CZK 3.50.
+- **Client age:** No specific ages or age breakdown are given. The article only says the change targets younger clients who are used to investing through mobile apps.
+- **Share buying ETFs via George:** No number is given. The article says purchases of exchange-traded products (shares, ETFs, ETCs, certificates) now appear in the George portfolio immediately, rather than after the one-to-three-day settlement.
+- **New investors:** No count of new investors is given. The only growth figure is the 14% year-on-year rise in investing clients.
+```
+
+</details>
+
+**→ Bash** — Extract Portu annual report text and grep key figures
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && pdftotext -layout webfetch-1791637138497-msirtu.pdf /tmp/portu.txt 2>&1; wc -c /tmp/portu.txt; grep -n -i -E "klient|investor|mld|miliard|ETF|žen|věk|průměrn|DIP" /tmp/portu.txt | head -80
+```
+
+<details><summary>result</summary>
+
+```
+Syntax Warning: Bad annotation destination
+153480 /tmp/portu.txt
+46:Ke konci roku 2025 spravovala Spolecnost v�ce nez 55 miliard korun klientsk�ho majetku a mla pes 280 000 klient. Oproti zac�tku losk�ho
+47:roku jde o v�razn� n�rst � a to jak v poctu investor (mezirocn +34 %), tak v objemu sven�ch prostedk (mezirocn +39 %). Pozoruhodn�
+49:o 2 procenta. �spch Portu tak nestoj� na p�zniv�m trzn�m vtru, ale na dve klient a kvalit nas� platformy.
+51:Za cel� losk� rok Spolecnost zpracovala neuviteln�ch 2,5 milion vklad. T�m 80 % investor Portu pitom investuje pravideln, coz je
+53:jejich pod�l dos�hl 38 %, coz vn�m�me jako potvrzen� toho, ze nase platforma oslovuje skutecn sirokou veejnost. Vkov� z�br investor
+57:investicn�ch konzultac�, v jejichz r�mci nasi odborn�ci rad� klientm prostednictv�m online schzek a webin� s jejich financemi a investicemi.
+59:klientovo financn� zdrav�.
+61:V r�mci dals�ch produktov�ch inovac� Spolecnost pos�lila tak� moznosti spr�vy portfolia. Klienti si nov mohou sami urcit m�ru kontroly
+64:v rezimu obhospodaov�n� majetku. Tato flexibilita umozuje pizpsobit platformu jak aktivnjs�m investorm, tak tm, kte� preferuj� pln
+67:V prbhu roku Spolecnost d�le rozsiov
+… [truncated, 3420 more chars]
+```
+
+</details>
+
+**→ Bash** — Read relevant Portu annual report section
+
+```
+sed -n 40,82p /tmp/portu.txt | iconv -f utf-8 -t utf-8 -c; echo ----; sed -n 60,70p /tmp/portu.txt
+```
+
+<details><summary>result</summary>
+
+```
+Hospodaen spolecnosti v roce 2025
+
+Rok 2025 byl pro Spolecnost dalsm rokem vraznho rstu a produktov zralosti. Kdyz Portu ped osmi lety vstoupilo na trh jako prvn cesk
+robo-advisory online investicn platforma, mlo jasnou vizi  nabdnout kazdmu to nejleps msto pro zhodnocovn penz bez ohledu na
+bohatstv nebo odborn znalosti. Tato vize zstv nemnn. A vsledky rok od roku potvrzuj, ze jdeme sprvnm smrem.
+
+Ke konci roku 2025 spravovala Spolecnost vce nez 55 miliard korun klientskho majetku a mla pes 280 000 klient. Oproti zactku loskho
+roku jde o vrazn nrst  a to jak v poctu investor (mezirocn +34 %), tak v objemu svench prostedk (mezirocn +39 %). Pozoruhodn
+je, ze tohoto vsledku jsme doshli i pesto, ze trhy loni vrazn zpomalily - celosvtov akciov index MSCI poslil v korunovm vyjden jen
+o 2 procenta. spch Portu tak nestoj na pznivm trznm vtru, ale na dve klient a kvalit nas platformy.
+
+Za cel losk rok Spolecnost zpracovala neuvitelnch 2,5 milion vklad. Tm 80 % investor Portu pitom investuje pravideln, coz je
+pesvdciv doklad sprvn financn disciplny a dlouhodobho pstupu k budovn bohatstv. Zvlst potsiteln je rostouc zastoupen zen:
+jejich podl doshl 38 %, coz vnmme jako potvrzen toho, ze nase p
+… [truncated, 3507 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.akatcr.cz/Dokumenty/Aktuality
+
+> prompt: List all press release headlines with dates and URLs, especially those about DIP (dlouhodobý investiční produkt) and number of contracts, from 2025-2026.
+
+<details><summary>result</summary>
+
+```
+The page shows five press releases (all dated 2026), and none of their headlines mention DIP or contract numbers:
+
+1. "Tisková zpráva - KRYPTOMĚNY JSOU INVESTICE I ŽIVOTNÍ STYL" (30 September 2026)
+   https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-kryptomeny-jsou-investice-i-zivotn205-styl
+2. "Tisková zpráva - Češi stále důvěřují nemovitostem" (16 September 2026)
+   https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-cesi-st225le-duveruj237-nemovitostem
+3. "Tisková zpráva - BOHATÍ ČEŠI VÍCE INVESTUJÍ" (9 September 2026)
+   https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-bohat205-cesi-v205ce-investuj205
+4. "Tisková zpráva - O FINANCE SE ZAJÍMAJÍ UŽ ŠESTILETÉ DĚTI" (1 September 2026)
+   https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-o-finance-se-zaj205maj205-uz-sestilet201-deti
+5. "Tisková zpráva 2Q - INVESTICE V ČESKÉ REPUBLICE PŘEKONALY ČTYŘBILIONOVOU HRANICI" (17 August 2026)
+   https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-2q-investice-v-cesk201-republice-prekonaly-ctyrbilionovou-hranici
+
+The page doesn't include any 2025 items or any DIP-related releases. The listing says more articles can be loaded, but those aren
+… [truncated, 231 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-cesi-st225le-duveruj237-nemovitostem
+
+> prompt: Extract all survey numbers: sample size, who surveyed, date, share of Czechs who invest, instruments (ETF, akcie, fondy, DIP, crypto), motivations, barriers, demographics (age, gender, income, education), sources of information, trust.
+
+**→ WebFetch** https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-kryptomeny-jsou-investice-i-zivotn205-styl
+
+> prompt: Extract all survey numbers: sample size, who surveyed, date, share of Czechs who invest, instruments (ETF, akcie, fondy, DIP, crypto), motivations, barriers, demographics (age, gender, income, education), sources of information, trust.
+
+**→ WebFetch** https://www.akatcr.cz/Dokumenty/Aktuality/tiskov225-zpr225va-o-finance-se-zaj205maj205-uz-sestilet201-deti
+
+> prompt: Extract all survey numbers: sample size, who surveyed, date, share of Czechs who invest, instruments (ETF, akcie, fondy, DIP, crypto), parents investing for children, motivations, barriers, demographics.
+
+<details><summary>result</summary>
+
+```
+The page reports only one survey figure:
+
+- **Real estate as the best investment:** 36% of respondents consider property the best investment of their life. The press release says this ranks it above investing in health.
+
+**Survey details:**
+- **Who surveyed:** Perfect Crowd, for the Asociace pro kapitálový trh ČR (AKAT ČR).
+- **Frequency:** It is the fourth annual survey of Czech investment behaviour by this agency for AKAT.
+
+**Not in the content:**
+- Sample size
+- Survey date (the "10. října 2026" on the page is the site's display date, not confirmed as the survey date)
+- Share of Czechs who invest
+- Instruments (ETF, stocks, funds, DIP, crypto)
+- Motivations and barriers
+- Demographics (age, gender, income, education)
+- Information sources
+- Trust measures beyond the 36% figure
+
+The press release's accompanying PDF ("AKAT TZ nemovitosti 16090206") may contain the full methodology and remaining figures, but it isn't included in the text provided.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The page is only a press release summary, so most of the requested survey figures aren't in it. It does provide:
+
+- **Survey:** The Investment Behaviour Survey of Czechs (Průzkum investičního chování Čechů), the fourth annual edition.
+- **Who ran it:** The agency Perfect Crowd, for the Association for Capital Market of the Czech Republic (AKAT ČR).
+- **Children and money:** The headline says children show interest in finance from age six ("O FINANCE SE ZAJÍMAJÍ UŽ ŠESTILETÉ DĚTI").
+- **Parent-child money talks:** Czech parents most often start talking about money with their children around age nine.
+- **Motivation:** Over half of children want to get rich mainly through personal success at work, though they often want wealth in general.
+
+**Not in the page content:** sample size, survey date or fieldwork period, share of Czechs who invest, use of ETFs, stocks, funds, DIP, or crypto, parents investing for their children, investment barriers, and demographic breakdowns.
+
+The page links to a PDF press release (AKAT TZ děti fin vzděl_01092026, about 466 KB) that may contain these details. The full survey report may be available from AKAT ČR.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The page is a press release and gives only a few survey details:
+
+- **Survey:** Investment behaviour survey of Czechs, described as the fourth consecutive edition.
+- **Conducted by:** The Perfect Crowd agency, for AKAT ČR (the Czech capital market association). The text says the survey was carried out for AKAT.
+- **Share who invest:** About 10% of Czechs currently invest in cryptocurrencies. The release says they are attracted by "poměrně vysoké zhodnocení" (relatively high returns).
+- **Motivations:** Relatively high returns and a desire to try something new.
+- **Instruments:** Only cryptocurrencies are mentioned. ETFs, stocks, funds, and DIP are not.
+- **Date:** Not stated in the text. The attached PDF's filename contains "30092026," which may suggest 30 September 2026, but this is unconfirmed.
+- **Sample size, barriers, demographics (age, gender, income, education), sources of information, and trust:** Not mentioned.
+
+The only trust-related item is the title of a linked, separate press release, "Češi stále důvěřují nemovitostem" ("Czechs still trust real estate"). It does not provide survey data from this study.
+```
+
+</details>
+
+**→ WebSearch** `Průzkum investičního chování Čechů AKAT Perfect Crowd 2026 investuje procent Čechů obavy podvody`
+
+**→ WebSearch** `AKAT průzkum investiční chování Čechů 2025 investuje 41 % ETF akcie podílové fondy mladí důvody neinvestování`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Průzkum investičního chování Čechů AKAT Perfect Crowd 2026 investuje procent Čechů obavy podvody"
+
+Links: [{"title":"Hlavní obsah","url":"https://www.seznamzpravy.cz/clanek/ekonomika-finance-osobni-cesi-daji-pri-investovani-na-emoce-rodina-je-vyhra-i-risk-nemovitost-jistota-223769"},{"title":"Investuje 39 procent Čechů. Nejvíc si cení nákupu bydlení","url":"https://ct24.ceskatelevize.cz/clanek/ekonomika/investuje-39-procent-cechu-nejvic-si-ceni-nakupu-bydleni-346260"},{"title":"cechy u investic zajima hlavne dosavadni vynos kazdy desaty ma kryptomeny","url":"https://forbes.cz/cechy-u-investic-zajima-hlavne-dosavadni-vynos-kazdy-desaty-ma-kryptomeny/"},{"title":"Úterý 04. srpna 2026 21:14","url":"https://www.fxstreet.cz/klicova-slova+akat-cr.html"},{"title":"akat cr","url":"https://www.newstream.cz/stitek/akat-cr"},{"title":"Kam zajít, co ochutnat a co stojí za pozornost","url":"https://www.newstream.cz/money/ctyri-z-deseti-cechu-se-povazuji-za-investory"},{"title":"www.blesk.cz","url":"https://www.blesk.cz/clanek/835357"},{"title":"investovani je novy standard zajem cechu vyrazne roste","url":"https://www.newstream.cz/money/investovani-je-novy-standar
+… [truncated, 1953 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "AKAT průzkum investiční chování Čechů 2025 investuje 41 % ETF akcie podílové fondy mladí důvody neinvestování"
+
+Links: [{"title":"Hlavní obsah","url":"https://www.seznamzpravy.cz/clanek/ekonomika-finance-osobni-cesi-daji-pri-investovani-na-emoce-rodina-je-vyhra-i-risk-nemovitost-jistota-223769"},{"title":"Úterý 04. srpna 2026 21:14","url":"https://www.fxstreet.cz/klicova-slova+akat-cr.html"},{"title":"cechy u investic zajima hlavne dosavadni vynos kazdy desaty ma kryptomeny","url":"https://forbes.cz/cechy-u-investic-zajima-hlavne-dosavadni-vynos-kazdy-desaty-ma-kryptomeny/"},{"title":"www.blesk.cz","url":"https://www.blesk.cz/clanek/835357"},{"title":"Hlavní obsah","url":"https://www.seznamzpravy.cz/clanek/ekonomika-b2b-o-svuj-duchod-se-radeji-postarejte-sami-experti-poradi-jak-na-to-298572"},{"title":"cesi propadli investovani 10 rad jak to delat bezpecne tipy experta z cnb","url":"https://www.blesk.cz/clanek/radce-penize/835357/cesi-propadli-investovani-10-rad-jak-to-delat-bezpecne-tipy-experta-z-cnb.html"},{"title":"Kam zajít, co ochutnat a co stojí za pozornost","url":"https://www.newstream.cz/money/ctyri-z-deseti-cechu-se-povazuji-za-investory"},
+… [truncated, 2526 more chars]
+```
+
+</details>
+
+### 🤖 Claude · 2026-10-10 13:07:46
+
+Let me open the Newstream article on AKAT survey and the Forbes one.
+
+**→ WebFetch** https://www.newstream.cz/money/ctyri-z-deseti-cechu-se-povazuji-za-investory
+
+> prompt: Extract date, survey (AKAT/Perfect Crowd), sample n=1114?, share considering themselves investors, retirement motive %, barriers %, instruments (podílové fondy 18%, zahraniční akcie 14%, ETF), demographics (age, gender, education, income), trust in state 37%.
+
+**→ WebFetch** https://forbes.cz/cechy-u-investic-zajima-hlavne-dosavadni-vynos-kazdy-desaty-ma-kryptomeny/
+
+> prompt: Extract date, survey, sample, share investing, what matters (past return), crypto 10%, instruments (ETF?), age/gender/education/income, barriers, information sources.
+
+**→ WebFetch** https://www.newstream.cz/money/investovani-je-novy-standard-zajem-cechu-vyrazne-roste
+
+> prompt: Extract date, survey source, sample, share investing, ETF share, age/gender, motivations, apps used, barriers.
+
+<details><summary>result</summary>
+
+```
+**Source:** ČTK article, published 3 February 2025 (newstream.cz, "Money" section)
+
+- **Survey:** Conducted by Perfect Crowd for the Asociace pro kapitálový trh (AKAT), its third edition
+- **Sample:** 1,114 respondents
+- **Self-identified investors:** 41% (up from 39% a year earlier)
+- **Considering starting to invest:** 29% (up from 23%)
+- **Main retirement motive:** Securing a pension was the main reason for 50% of respondents, up from 43% in 2024
+- **Main barriers:** Fear of losing money or falling victim to fraud, and not having spare money. The article gives no percentages for these.
+- **Instruments (e.g., mutual funds 18%, foreign stocks 14%, ETFs):** Not reported in the article
+- **Demographics (age, gender, education, income):** Not reported in the article
+- **Trust in the state (37%):** Not reported in the article
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Extraction from the article "Investování je nový standard. Zájem Čechů výrazně roste" (Newstream, 17 Feb 2026)**
+
+- **Date:** 17 February 2026 (published 16:39)
+- **Survey source:** NMS Market Research, commissioned by Raiffeisenbank; fieldwork in October (year not explicitly stated, presumably 2025)
+- **Sample:** About 1,000 respondents aged 18 to 64
+- **Share investing:** 39% of Czechs in the latest survey, up from 32% the year before
+- **ETF share:** Not stated
+- **Age/gender:** Men, younger people, and university graduates with above-average incomes are the most active investors
+- **Motivations:** Retirement security (almost 80%), improving living standards (63% of investors), and protecting savings against inflation (39%)
+- **Apps used:** No specific apps named. About six in ten investors use online platforms at least monthly, most often through a mobile or internet app
+- **Barriers:** Not stated
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The page content is only a headline, so most of the requested fields can't be extracted.
+
+- **Headline (quoted):** "Každý desátý Čech má kryptoměny. U investic lidi zajímá hlavně dosavadní výnos"
+- **Crypto ownership:** About one in ten Czechs holds cryptocurrencies, per the headline.
+- **What matters most in investing:** Past returns (dosavadní výnos), per the headline.
+- **Source:** Forbes.
+- **Date, survey name, sample size, share of people who invest, instruments (including whether ETFs are mentioned), age/gender/education/income breakdowns, barriers to investing, and information sources:** Not included in the provided content.
+
+To get these details, the full article is needed.
+```
+
+</details>
+
+**→ WebSearch** `forum diskuse ETF VWCE začátečník rada co koupit`
+
+**→ WebSearch** `Češi o investování na sociálních sítích finfluenceři YouTube Instagram vliv na rozhodnutí investovat průzkum`
+
+<details><summary>result</summary>
+
+```
+API Error: 400 The following domains are not accessible to our user agent: ['idnes.cz']. Read more: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Češi o investování na sociálních sítích finfluenceři YouTube Instagram vliv na rozhodnutí investovat průzkum"
+
+Links: [{"title":"Jan Procházka: Finfluencery sledujeme i s pomocí AI","url":"https://www.cnb.cz/cs/verejnost/servis-pro-media/autorske-clanky-rozhovory-s-predstaviteli-cnb/Jan-Prochazka-Finfluencery-sledujeme-ispomociAI/"},{"title":"Fenomén finfluenceři: Každý druhý mladý Čech je sleduje, čtvrtina podle nich už investovala","url":"https://www.e15.cz/finexpert/banky-a-ucty/fenomen-finfluenceri-kazdy-druhy-mlady-cech-je-sleduje-ctvrtina-podle-nich-uz-investovala-1434469"},{"title":"Investování 2.0: Mladá generace mění pravidla hry, ale není to bez rizik","url":"https://www.e15.cz/byznys/investovani-2-0-mlada-generace-meni-pravidla-hry-ale-neni-to-bez-rizik-1420548"},{"title":"investicni gramotnost","url":"https://www.newstream.cz/stitek/investicni-gramotnost"},{"title":"Finfluenceři: Čemu věnovat pozornost?","url":"https://www.cnb.cz/cs/cnb-news/aktuality/Finfluenceri-Cemu-venovat-pozornost"},{"title":"investicni podvod","url":"https://www.newstream.cz/stitek/investicni-podvod"},{"title":"Finanční influenceři – regulovaná činnost, nebo hra bez
+… [truncated, 3175 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.e15.cz/finexpert/banky-a-ucty/fenomen-finfluenceri-kazdy-druhy-mlady-cech-je-sleduje-ctvrtina-podle-nich-uz-investovala-1434469
+
+> prompt: Extract date, survey (GSFT/Ipsos), sample size and ages, percentages: follow finfluencers, invested based on advice, platforms used (TikTok/Instagram/YouTube), information sources, trust, verifying.
+
+**→ WebFetch** https://www.e15.cz/byznys/investovani-2-0-mlada-generace-meni-pravidla-hry-ale-neni-to-bez-rizik-1420548
+
+> prompt: Extract date, key statistics on young Czech investors, platforms (TikTok, Instagram), ETFs, share investing in shares, brokers used, motivations, fears.
+
+<details><summary>result</summary>
+
+```
+**Source:** e15.cz article "Fenomén finfluenceři" (Czech), dated 22 July 2026. The survey is by the Garanční systém finančního trhu (GSFT), with the Ipsos tag attached.
+
+**Survey details**
+- **Sample size:** Not stated.
+- **Age groups:** 16–30 for finfluencer viewing and investing. The article also compares under-30s with people over 31.
+
+**Key figures**
+- **Follow finfluencers:** 53% of people aged 16–30.
+- **Invested based on influencer advice:** 25% of that age group.
+  - 5% follow advice actively and regularly.
+  - 20% invest occasionally.
+- **Own an investment product:** 39% of under-30s, about 9 percentage points more than people over 31.
+- **Invest without expert help:** More than a third of young investors decide alone and buy through online platforms.
+
+**Information sources**
+- Family and friends: 52%
+- Specialist financial websites: about 4 in 10
+- Influencers: 21%
+
+**Trust and verification**
+- The article gives no trust rating.
+- 78% of young people verify financial information from social media at least sometimes.
+- GSFT director Renáta Kadlecová advises checking who gives the advice and whether they have a commercial interest.
+
+**Platforms (TikTok/Instagram/YouTube)**
+
+… [truncated, 126 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Article date:** 2 December 2024, 13:00 (Kristýna Mrázová, e15.cz, reporting on a Business First debate)
+
+**Key statistics**
+- Only 19% of young people in the Czech Republic invest in shares, according to the Communications 2024 survey. In the United States the figure is 76%.
+- "Generation Z" refers to people born after 1996.
+
+**Platforms**
+- Young investors look for information mainly on TikTok and Instagram.
+- They get financial information mostly from friends and social media, not from official sources such as the Czech National Bank (ČNB) or the Ministry of Finance websites.
+
+**ETFs:** Not mentioned.
+
+**Brokers used:** Not mentioned. The article quotes Petr Žabža, head of investment products at Air Bank, but does not say which brokers young people use.
+
+**Motivations**
+- Investing feels normal to them. Žabža compares it to e-sports: "Mladí lidé berou investování jako e-sport."
+- They are looking for new routes to passive income.
+- Time is their main advantage. Lukáš Nádvorník gives the example of compounding: a small sum invested at 15 could be worth tens of thousands of crowns by retirement.
+
+**Fears and risks**
+- Low financial literacy.
+- Unvetted "finfluencers" who promote 
+… [truncated, 228 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.novinky.cz/clanek/finance-investovani-se-vetsina-cechu-stale-obava-353333
+
+> prompt: Extract date, survey source and numbers on fears of investing. Also: are there reader comments on the page? If so quote up to 10 short ones (under 15 words each) with no names.
+
+**→ WebFetch** https://finex.cz/v-roce-2015-jste-investovali-100-000-kc-do-sp-500-kolik-mate-nyni/
+
+> prompt: Are there reader comments on the page? If so quote up to 15 short ones (under 15 words each) without names with dates. Also report the article date.
+
+<details><summary>result</summary>
+
+```
+**No reader comments appear on the page.** The only reader feedback is a "Líbil se vám tento článek?" (Did you like this article?) widget showing **2** positive and **0** negative reactions, with no comment text.
+
+**Article date:** Published **9 September 2025** ("Publikováno 9. 9. 2025"), by Mgr. Bogdan Heinz.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date:** 1 June 2016, 13:34. The article is by Jakub Svoboda for Právo.
+
+**Survey sources:** The page does not cite a specific survey about fear of investing. It refers to unnamed "various surveys" and to data from:
+- the Asociace pro kapitálový trh (fund assets)
+- Generali Investments (analysis of defensive assets)
+- ČTK and UniCredit Bank (investor behaviour)
+- an online reader poll with 197 voters, which is not representative
+
+**Numbers on reluctance to invest:**
+- Actively searching for and using investment options: at most one third of people.
+- Reader poll: 55.3% manage their own money, 20.8% leave it to experts, 23.9% do not invest.
+- Mutual fund assets: almost 388 billion CZK, up 2.7 billion in Q1.
+- Building savings: about 380 billion CZK. Third-pillar pension savings: 4.592 million people, over 361 billion CZK in pension funds.
+- Inflation in April: 0.6% year on year.
+- Generali's estimate: moving a quarter of bank deposits into investments could add about 14 billion CZK a year.
+
+The article does not measure fear directly. The title's claim that most Czechs are afraid of investing is supported only indirectly, by the description of a passive, conservative approach.
+
+**Re
+… [truncated, 126 more chars]
+```
+
+</details>
+
+**→ WebSearch** `poradna dotaz čtenáře "Dobrý den" ETF koupil jsem zdanění časový test Trading 212 XTB odpověď daňového poradce`
+
+**→ WebSearch** `Trustpilot XTB Česko recenze ETF začátečník poplatky zkušenosti klientů`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "poradna dotaz čtenáře "Dobrý den" ETF koupil jsem zdanění časový test Trading 212 XTB odpověď daňového poradce"
+
+Links: [{"title":"e15.cz - Zdanění ETF 2026: Návod na prodej a dividendy za rok 2025","url":"https://www.e15.cz/etf-prodej-dividendy-dane"},{"title":"e15.cz - Zdanění akcií a dividend 2026: Kdy neplatíte nic a jak na daňové přiznání","url":"https://www.e15.cz/zdaneni-akcii-dividend-danove-priznani-2026"},{"title":"ETF a daně v ČR","url":"https://taxero.cz/blog/etf-zdaneni-pruvodce-pro-danove-poradce"},{"title":"Danění akcií a investic 2026","url":"https://financera.cz/investice/daneni-akcii/"},{"title":"Recenze Trading 212 ▶️ Poplatky, zkušenosti a další [2026]","url":"https://finex.cz/recenze/trading212/"},{"title":"XTB - FinExpert.cz","url":"https://forum.finexpert.e15.cz/viewtopic.php?f=312&p=12789092"},{"title":"XTB recenze: Zkušenosti a tipy [2026]","url":"https://rozbiteprasatko.cz/xtb-recenze/"},{"title":"Jak zdanit akcie z Trading 212","url":"https://taxero.cz/blog/jak-zdanit-akcie-z-trading-212"},{"title":"Zdanění investic 2026: přehled, příklady a novinky","url":"https://rozbiteprasatko.cz/zdaneni-investic/"},{"title":"Trading 212
+… [truncated, 4056 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Trustpilot XTB Česko recenze ETF začátečník poplatky zkušenosti klientů"
+
+Links: [{"title":"recenze xtb","url":"https://www.testado.cz/recenze-xtb/"},{"title":"www.arecenze.cz","url":"https://www.arecenze.cz/xtb/"},{"title":"finex.cz","url":"https://finex.cz/recenze/xtb/"},{"title":"recenze xtb","url":"https://www.arecenze.cz/clanky/recenze-xtb/"},{"title":"xtb investicni plany","url":"https://finex.cz/recenze/xtb-investicni-plany/"},{"title":"Neděle 06. září 2026 20:39","url":"https://www.fxstreet.cz/x-trade-brokers-xtb.html"},{"title":"www.ceskenoviny.cz","url":"https://www.ceskenoviny.cz/zpravy/2334901"},{"title":"Představujeme brokera XTB","url":"https://iocharts.io/cs/blog/xtb-broker-elemzes-ezt-tudja-a-platform-2026-ban/"},{"title":"Představujeme brokera XTB","url":"https://iocharts.io/cs/blog/Anal%C3%BDza-brokera-xtb%3A-tohle-platforma-v%C3%AD-v-roce-2026/"}]
+
+Trustpilot výsledky se v hledání neobjevily, takže nemohu uvést žádné hodnocení z Trustpilotu. Níže shrnuji, co jsem našel na českých recenzních a srovnávacích webech. Ty jsou u brokerů často provázané s reklamou, takže je berte jako orientační.
+
+**Poplatky za ETF**
+- Obchodování ETF je p
+… [truncated, 2374 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&p=12789092
+
+> prompt: Quote verbatim up to 15 user posts or snippets (each under 15 words), with post date. Report the forum/thread title, number of replies/views, and the date range.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/index.php
+
+> prompt: List forum categories and sub-forums related to ETF, investování, brokeři, daně; with number of topics/posts and last post dates, and links.
+
+<details><summary>result</summary>
+
+```
+The page has no ETF- or broker-specific sub-forum. Two categories match your topics:
+
+1. **Investování** (Investing)
+   - Covers mutual funds, stocks, commodity markets, speculation, and auctions. ETFs would most likely be discussed here.
+   - Topics: 1 323 | Posts: 47 900
+   - Last post: 10. 10. 2026 09:57
+   - Link: `/forum-312/Investovani.html`
+
+2. **Daně a účetnictví** (Taxes and Accounting)
+   - Covers taxation and accounting for businesses in the Czech Republic.
+   - Topics: 2 224 | Posts: 20 879
+   - Last post: 21. 8. 2026 12:23
+   - Link: `/forum-319/Dane-a-ucetnictvi.html`
+
+Brokers have no dedicated forum. The closest related category is **Platební styk** (Payment transactions), which covers current accounts, cards, and online banking rather than brokerage. It has 2 141 topics and 289 934 posts, with the last post on 10. 10. 2026 13:21 (`/forum-316/Platebni-styk.html`).
+
+The page's relative links are based on the forum domain, forum.finexpert.e15.cz.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Forum/thread:** "XTB" in the Investování subforum of FinExpert.cz (Peníze section)
+**Replies/views:** The thread lists 792 posts ("Příspěvků: 792"). The page doesn't show a view count.
+**Date range of this page:** 2 January 2021 to 28 February 2021
+
+**Quotes (15):**
+
+1. peliculiar, 2 Jan 2021 01:12: "Mimochodem, co vlastně brání následujícímu postupu"
+2. tmx643, 2 Jan 2021 14:00: "Oni nenabízí možnost nákupu cizích měn"
+3. peliculiar, 2 Jan 2021 22:03: "Takže Forex nejde použít ke konverzi měn?"
+4. Petržel, 9 Jan 2021 21:52: "Nemají všechny tituly z burz, které podporují."
+5. Petržel, 9 Jan 2021 21:52: "Nemají ochranu proti dvojímu zdanění dividend."
+6. Fantucci, 10 Jan 2021 00:01: "Behem prvniho kvartalu by meli zaridit USA."
+7. peliculiar, 10 Jan 2021 01:40: "Chtěl bych u nich kontinuálně nakupovat vybrané akumulační ETF"
+8. Stileth, 13 Jan 2021 19:37: "Taky jsem otevrel pozice na dvou akumulacnich ETF"
+9. Ondra007_, 13 Jan 2021 22:45: "Poradil by mi někdo prosím jak je to se zdaněním příjmu u xtb?"
+10. peliculiar, 14 Jan 2021 02:06: "Pokud máš u brokera zainvestováno, není co danit."
+11. servpack, 14 Jan 2021 07:38: "Časový test 3 roky samozřejmě pro XTB také platí."
+12. servp
+… [truncated, 324 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/forum-312/Investovani.html
+
+> prompt: List all topic titles with reply counts, views, and last post dates. Include links for topics about ETF, S&P 500, XTB, Trading 212, Portu, daně, DIP, VWCE, brokeři.
+
+<details><summary>result</summary>
+
+```
+Below are the 26 topics on this forum index page (page 1 of 53). The ★ marks topics matching your keywords. No topic is titled "S&P 500", so the closest match is "Akcie: záp. Evropa, sev. Amerika".
+
+| Topic | Replies | Views | Last post | Link |
+|---|---|---|---|---|
+| Průvodce po SuperFóru: Pravidla, důležité informace, tipy | 15 | 12,851,349 | 2 Jul 2010 23:21 | [t=1044152](https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1044152) |
+| Tipovací vlákno - kurz koruny k 31. 12. | 48 | 43,782 | 23 Jan 2026 07:18 | [t=1321094](https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1321094) |
+| Investice do dluhopisů | 458 | 201,711 | 10 Oct 2026 09:57 | [t=1320223](https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1320223) |
+| Doornite | 9 | 494 | 10 Oct 2026 00:19 | [t=1343726](https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1343726) |
+| eToro | 324 | 103,909 | 9 Oct 2026 16:00 | [t=1306829](https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1306829) |
+| Dluhopis republiky | 2,704 | 717,330 | 8 Oct 2026 17:36 | [t=1297884](https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1297884) |
+| Doplňkové penzijní spoření | 338 | 76,792 | 8 Oct 2026 11:16 | [t=1337592](https://for
+… [truncated, 2856 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1342864
+
+> prompt: Quote verbatim 12-15 user posts (each under 15 words, no usernames needed but include date) that express questions, fears, jargon, confusion, preferences about ETFs (VWCE, SWRD, S&P 500, accumulating, fees, taxes, brokers). Note the thread's date range and which tickers are mentioned.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1312638
+
+> prompt: Quote verbatim 12-15 user posts (each under 15 words, no usernames needed but include date) that express questions, fears, jargon, confusion, preferences about ETFs (VWCE, SWRD, S&P 500, accumulating, fees, taxes, brokers). Note the thread's date range and which tickers are mentioned.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1343626
+
+> prompt: Quote verbatim up to 10 user posts (each under 15 words, with date) about brokers, ETFs, fees, security/distrust. Note which brokers mentioned.
+
+<details><summary>result</summary>
+
+```
+**Thread:** "swrd,vwce,? kam dále?" on FinExpert.cz (Investování forum). The visible page covers posts from **16 Feb 2026 to 6 Apr 2026**.
+
+**Tickers mentioned:** SWRD, VWCE, IWDA, SPPW, WEBN, IS3N, IUSN, ZPRS, F50A, SC0J, XMME, SPEX, RSPB, ACWI. The S&P 500 and "accumulating" are not discussed on this page.
+
+**Selected user posts (verbatim, Czech):**
+
+1. 16. 2. 2026: "V současnosti mám přes 38 tis eur zainvestovanýyh u Lynx do etf iwda."
+2. 16. 2. 2026: "Vím že by asi dávalo větší rozum nakupovat něco na celý svět"
+3. 16. 2. 2026: "Nabízí se možnost třeba totožného swrd akorát od jiného správce aktiv."
+4. 16. 2. 2026: "Tebou uvedené SWRD, resp. SPPW má i nižší TER než IWDA"
+5. 16. 2. 2026: "Při těchto objemech bych to klidně nakupoval přes e-Broker"
+6. 16. 2. 2026: "Když jsem se minule díval na IB, tak tam měli poplatek za neaktivitu"
+7. 16. 2. 2026: "jsem si vědom že emrg. markets rozhodně mají být součást portfolia"
+8. 16. 2. 2026: "země kde o věcech rozhoduje strana a vláda působí dost rizikově."
+9. 16. 2. 2026: "Tady už se začíná rýsovat otázka jestli to investovat formou jednoho etf"
+10. 16. 2. 2026: "pomocí dvou etf swrd+is3n s rebalanci podle tržní kapitalizace"
+11. 16. 2. 
+… [truncated, 628 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Thread:** "Dlouhodobá investice do ETF - jak nejlépe?" (FinExpert.cz forum, Investování), page 1 of 6. The visible posts run from **12 Dec 2020 to 1 Nov 2021**.
+
+**Quotes (verbatim, Czech):**
+
+1. **12. 12. 2020** (fear/goal): "Chtěl bych někam investovat peníze tak, aby se mi po cca 15 let zhodnocovaly."
+2. **12. 12. 2020** (preference): "Zajímají mě ETF, které jsou bezpečné z pohledu jejich portfolia a současně vyplácí dividendy."
+3. **12. 12. 2020** (confusion about market): "Pořád jsem čekal, že přijde pořádný propad a trh zcela nelogicky jenom stoupá..."
+4. **12. 12. 2020** (dividend reinvestment): "Pokud chceš ty dividendy rovnou reinvestovat, není moc důvod je vyhledávat."
+5. **12. 12. 2020** (fear): "Dokud to bude FED dotovat, dolů to nepůjde, ani kdyby byla nezaměstnanost třeba 50%."
+6. **12. 12. 2020** (fear about politics): "spíš se bojím nějakého šíleného politika"
+7. **12. 12. 2020** (jargon, 4% rule): "Tedy zvolit akumulační ETF a až přijde čas"
+8. **13. 12. 2020** (accumulating ETF question): "Máte nějaké doporučení ohledně těch akumulačních ETF?"
+9. **13. 12. 2020** (jargon, acc/dist): "Většina těch nejpopulárnějších ETF je ve verzi akumulační i distribuční."
+10. *
+… [truncated, 1156 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+1. **martin7601m**, 6. 9. 2026 09:35: "Investuji cca 50.000 Kč měsíčně do ETF." *(ETF investing; no broker named)*
+
+2. **minarjo**, 6. 9. 2026 10:16: "nedrž u brokerů zbytečně velkou cash" *(broker cash holdings; no broker named)*
+
+3. **vojta80**, 6. 9. 2026 10:25: "každý další broker bývá z podstaty méně výhodný" *(fees; no broker named)*
+
+4. **vojta80**, 6. 9. 2026 10:25: "Ne, nemá myslím smysl udržet se za každou cenu v limitu pojištění." *(insurance limit; no broker named)*
+
+5. **vojta80**, 6. 9. 2026 10:25: "Tento přístup by postupně nutně vedl k používání ne příliš spolehlivých brokerů" *(distrust of unreliable brokers; no broker named)*
+
+6. **cz01**, 6. 9. 2026 10:27: "Za bezpečné považuji Interactive Brokers, nebo třeba Saxo a tam i investuji." *(Brokers: Interactive Brokers, Saxo)*
+
+7. **cz01**, 6. 9. 2026 10:27: "nemám v ně důvěru, že vše bude bezproblémové dalších třeba 10 let." *(distrust of cheaper brokers; XTB and Trading212 are named in the same post, but not in this quote)*
+
+8. **slavo963**, 6. 9. 2026 12:39: "ze broker s vasimi akciemi neudela fraud" *(distrust/security; no broker named)*
+
+9. **fc70**, 6. 9. 2026 17:14: "nakonec může přidání nějakého pofidérního br
+… [truncated, 395 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1330926&start=1890
+
+> prompt: Quote verbatim 12 recent user posts (each under 15 words, with date) about DIP: fears, questions, confusion, taxes (48 000 Kč), which provider/ETF, fees, trust. Mention the date range of the page.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1305135&start=680
+
+> prompt: Quote verbatim 12 recent user posts (each under 15 words, with date) about Trading 212: ETFs, taxes, W-8BEN, fees, fractional shares, trust, withdrawals. Mention date range.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1278158&start=450
+
+> prompt: Quote verbatim 12 recent user posts (each under 15 words, with date) about Portu: fees, ETFs, S&P 500, robo-advisor vs DIY, trust, returns, taxes. Mention date range.
+
+<details><summary>result</summary>
+
+```
+**Portu posts, 7 Sep 2026 – 3 Oct 2026** (12 posts, all quoted verbatim)
+
+1. **minarjo**, 7 Sep 2026: "na české akcie takto "vše v jednom" je tato první a jednoduchá." (fees/platform)
+2. **meme1255**, 7 Sep 2026: "až do konce září je tento instrument" (fees: no purchase fee in brokerage)
+3. **panPeněženka**, 7 Sep 2026: "to bude to Portu asi nejvýhodnější, což?" (fees)
+4. **martin7601m**, 7 Sep 2026: "Portu mám a uvažuji o nějakém symbolickém nákupu" (user experience)
+5. **dasvoboda**, 7 Sep 2026: "Škoda, že v Praze nevidím moc akcií s potenciálem růstu." (returns/outlook)
+6. **pmaly**, 7 Sep 2026: "Zajimavej tip koupit si jen tak pro zábavu" (DIY investing)
+7. **dasvoboda**, 11 Sep 2026: "Tak to je známá věc, gamifikace investování a overtrading," (trading apps)
+8. **intfo**, 11 Sep 2026: "Je dobré mít na paměti, že to ve skutečnosti ETF není." (ETFs)
+9. **minarjo**, 11 Sep 2026: "chová se to a bude se to chovat jako známá evropská UCITS ETFka" (ETFs)
+10. **intfo**, 11 Sep 2026: "A může to řešit problém s rakouskou daní z dividend." (taxes)
+11. **martin7601m**, 3 Oct 2026: "Akce je prodloužená do konce října" (fees: promotion extended)
+12. **dasvoboda**, 3 Oct 2026: "Někde těsně n
+… [truncated, 347 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Stránka obsahuje jen 15 příspěvků z období **18. 8. 2026 až 6. 10. 2026**. Témata ETFy, W-8BEN a trust se v nich neobjevují, takže níže jsou příspěvky o daních, poplatcích, frakčních akciích a výběrech.
+
+1. **18. 8. 2026, minarjo:** "Kč z/na CFD to ukazuje bez poplatku i mě."
+2. **18. 8. 2026, Alpha8520:** "pro bezplatný převod musím šaškovat s Revolutem a dělat platbu kartou."
+3. **18. 8. 2026, cz01:** "Pozor na objem směn, dělal jsem měsíčně cca 100 000 Kč"
+4. **18. 8. 2026, cz01:** "Přesně tak, problém je směna a vyvedení prostředků pryč."
+5. **18. 8. 2026, hyper9:** "2025 US dividends withholding tax refund adjustment"
+6. **29. 8. 2026, Kurtis77:** "Kurz mi vychádza +- 0,2% v porovnaní s revolutom"
+7. **29. 8. 2026, Kurtis77:** "Ale von z T212 som použil max 5-10% zo zamenených penazí"
+8. **5. 10. 2026, maaart:** "Nyní chtějí znát dúvod vkladu a výběru a původ peněz."
+9. **5. 10. 2026, vojta80:** "Bohužel tyhle pravidla jsou fuzzy a vede to k problémům."
+10. **6. 10. 2026, slavo963:** "Jsem zevdavy, kdy zacnou opruzovat kvuli nabijeni CFD uctu kartou"
+11. **6. 10. 2026, intfo:** "Problem je ten okamzity vklad, smena, vyber."
+12. **6. 10. 2026, Alpha8520:** "Dostal jsem nějakou 
+… [truncated, 43 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date range of this page:** 20 September 2026 to 3 October 2026 (thread page 127 of 128).
+
+1. **20. 9. 2026, malyp** (question/strategy): "Já posílám 1700Kč do penzijka a příspěvek od zaměstnavatele směruji do DIP"
+2. **2. 10. 2026, tester355789** (taxes/employer): "Technicky to jde, stačí se domluvit na snížení mzdy"
+3. **2. 10. 2026, saabik** (confusion): "Nesouhlasím. DPS se používá na předdůchod."
+4. **2. 10. 2026, Milos** (question): "stačí mít založené DPS a spořit na něm klidně jen 100Kč měsíčně"
+5. **3. 10. 2026, pmaly** (state contribution): "Podle mě určitě má smysl využít i státní příspěvek"
+6. **3. 10. 2026, drkarel** (fees): "Hlavně se spotřebuje na poplatky."
+7. **3. 10. 2026, dasvoboda** (trust/fears): "Taky nevěřím, že tu dlouhodobě vydrží tříletý časový test na investice"
+8. **3. 10. 2026, Milos** (confusion/law change): "Ty plánované změny DPS (Lepší penzijko) jsou už kompletně schválené"
+9. **3. 10. 2026, malyp** (fees): "Že by se jen spotřeboval na poplatky není úplně pravda"
+10. **3. 10. 2026, dasvoboda** (law change uncertainty): "Schválené to není, ale prvním čtením už to prošlo"
+11. **3. 10. 2026, xls** (provider/product): "začal jsem zkoušet třeba investic
+… [truncated, 304 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=PRIIPs+KID+VOO&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: List result posts: topic titles, dates and snippets (each snippet under 15 words) about US ETFs (VOO, SPY, QQQ) unavailable to EU retail because of PRIIPs/KID. Number of results.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1311279&start=775
+
+> prompt: Quote verbatim 12 recent user posts (each under 15 words, with date) about XTB: ETF investing plans, fees, taxes (dividends 35%), app, trust, support. Mention date range.
+
+<details><summary>result</summary>
+
+```
+**Number of results: 10** (all on one page)
+
+1. **Re: Zkušenosti s brokery z USA Firstrade, Tastytrade, SogoTrade**. 5 Aug 2025. US brokers may offer ETFs that don't meet EU PRIIPs rules.
+2. **Re: Investice do dluhopisů**. 3 Jul 2025. Commentary on structured products, which the poster considers rarely suitable. Only loosely related to US ETFs.
+3. **Re: Jak vybrat brokera?**. 20 Jan 2025. Some brokers may apply PRIIPs too strictly; others sell ETFs without a KID.
+4. **Re: Jak vybrat brokera?**. 19 Jan 2025. Asks whether Saxo/TraderGo still block ETFs lacking a Czech KID.
+5. **Re: Degiro**. 6 Apr 2023. Discussion of tax deductibility of purchase costs and Degiro reports. Not about ETF availability.
+6. **Re: Degiro**. 16 Mar 2023. Some BlackRock ETFs remain buyable on Degiro despite having only a Dutch KID.
+7. **Re: Degiro**. 15 Mar 2023. Criticism of Degiro blocking ETFs without a Czech KID on its English-language platform.
+8. **Fio e-Broker, depozit USD (bez konverze měny)**. 7 Mar 2021. US-domiciled ETFs were still available at Fio e-Broker, which the poster wanted to use before restrictions.
+9. **Re: Rada pro drobného a nerozhodného investora**. 23 Mar 2019. Irish ETF dividend wi
+… [truncated, 335 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The thread covers fees, card transfers, dividends, and broker trust, but not ETF plans, the 35% dividend tax, the app, or support. Posts run from **23 June 2026 to 6 July 2026**. Quotes are verbatim in Czech; the notes are my paraphrases.
+
+1. **23 Jun 2026, tulum:** "Řeším to, ..." *(fees: moving money out of XTB via Revolut)* — *Omitted; see #2.*
+2. **23 Jun 2026, Milos:** "Podle mě ti dobití Revolutu kartou XTB neprojde" *(card transfers: doubts a card top-up would work)*
+3. **24 Jun 2026, slavo963:** "Podle mne to riziko mozneho korenspondecniho poplatku za to nestoji" *(fees: correspondent bank charges not worth the risk)*
+4. **24 Jun 2026, tulum:** "tam problém z jejich strany žádný není" *(card top-ups: no problem on XTB's side)*
+5. **24 Jun 2026, slavo963:** "Teoreticka sance je, ze to poslou jako OUR, analogicky jako do eToro" *(fees: a possible way to avoid extra charges)*
+6. **24 Jun 2026, tulum:** "na menší částku to je moc dobré řešení" *(fees: a good option for smaller amounts)*
+7. **1 Jul 2026, Bellows-CZE:** "Je to trochu složitější ale bez poplatků." *(fees: more complicated but fee-free)*
+8. **1 Jul 2026, tulum:** "jen byl účtovaný poplatek na straně RVL" *(fees: t
+… [truncated, 686 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=VOO&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? List topic titles, dates and snippet text (under 15 words each) of posts mentioning VOO, with what context (US ETF availability).
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=CSPX&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? List topic titles, dates and snippet text (under 15 words each) of posts mentioning CSPX, with context.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=VWCE&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? List topic titles, dates and snippet text (under 15 words each) of posts mentioning VWCE, with context.
+
+<details><summary>result</summary>
+
+```
+**Total results: 0.** The page says "Nebyly nalezeny žádné vhodné výsledky" (no suitable results were found).
+
+- **Topic titles, dates, and snippets:** None, because there are no posts.
+- **Context (US ETF availability):** The page doesn't discuss this. The only trace of "VOO" is in the login and registration links, which carry a search parameter (`keywords=VOO`) for the FinExpert forum's section 312.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total results:** 185 posts (13 pages), all matching "+VWCE" in the Investování forum. This page shows the first 15.
+
+**Posts where VWCE appears in the visible snippet:**
+
+1. **"Re: Interactive Brokers"** (4 Sep 2026, martin7601m, 342 replies)
+   - Snippet: "Držím jen VWCE a VGWE" ("I only hold VWCE and VGWE").
+   - Context: The poster asks whether to sign an IBKR Hong Kong stock lending agreement, which is a broker-level question.
+
+2. **"Re: Dlouhodobá investice do ETF - jak nejlépe?"** (24 Aug 2026, dasvoboda, 87 replies)
+   - Snippet: "které také snížilo TER" ("which also lowered its TER").
+   - Context: The poster suggests waiting a few months for a new Vanguard ETF, since its spread may be wider at launch. VWCE has also recently cut its fee.
+
+3. **"Re: Dlouhodobá investice do ETF - jak nejlépe?"** (24 Aug 2026, slavo963, 87 replies)
+   - Snippet: "nahradím VWCE a WEBN" ("I will replace VWCE and WEBN").
+   - Context: The poster plans to swap VWCE and WEBN for the new Vanguard FTSE Global All-Cap ETF (VGLA) in a conservative retirement portfolio, to get small caps in one cheap fund.
+
+**Posts that matched VWCE but where the snippet doesn't show it:**
+
+These posts are in the "swr
+… [truncated, 1377 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total:** 25 results across 2 pages. This page shows 15 of them; the other 10 are on page 2, which isn't included here.
+
+**Results on this page (all in the Investování forum):**
+
+1. **"Sporici produkty pro deti?"** (7. 2. 2026): Describes Porto's children's fee and lists "44,1% Americké S&P500 (CSPX)" as its top holding.
+2. **"DIP vs. Degiro – jak naložit s bonusem od zaměstnavatele?"** (17. 11. 2025): "Zrovna CSPX lze u Patrie nakupovat v režimu pravidelného investování" (Patria monthly-investing fee discussion).
+3. **"ETF"** (23. 2. 2024): A beginner asks how to invest surplus cash in accumulating ETFs. The visible snippet doesn't show CSPX.
+4. **"XTB a nákup akcíí na dlouho"** (22. 1. 2024): Asks the difference between "iShares Core S&P 500 UCITS ETF (Acc USD), CSPX.UK", and the EUR-denominated version.
+5. **"Portfolio - výběr ETF"** (15. 12. 2022): Discusses currency exposure in global ETFs. The visible snippet doesn't show CSPX.
+6. **"Portfolio - výběr ETF"** (12. 12. 2022): Compares a factor ETF with passive options, including "pasívních ACWD nebo CSPX".
+7. **"Portfolio - výběr ETF"** (12. 12. 2022): Describes a diversified Porto portfolio. The visible snippet doesn't show C
+… [truncated, 1323 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=SPY&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? List up to 8 topic titles with dates and snippets (under 15 words) mentioning SPY ETF, particularly regarding availability to Czech retail investors.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=QQQ&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? List up to 8 topic titles with dates and snippets (under 15 words) mentioning QQQ, particularly availability to Czech retail investors.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=IWDA&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? (just the number and a count of pages)
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=VUAA&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? (just the number and a count of pages), plus up to 4 snippets (under 15 words) with dates.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=SXR8&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? (just the number and a count of pages), plus up to 4 snippets (under 15 words) with dates.
+
+<details><summary>result</summary>
+
+```
+The search returned **141 results** across **10 pages**.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total results: 0.** The page says "Nebyly nalezeny žádné vhodné výsledky" (no suitable results were found). The search, for "SPY" in the finance forum section, returned nothing.
+
+So there are no topic titles, dates, or snippets about SPY ETF or its availability to Czech retail investors. The page's other content is unrelated navigation and news headlines.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total results: 0.** The search page for "QQQ" in the FinExpert.cz forum shows the message "Nebyly nalezeny žádné vhodné výsledky" ("No suitable results were found"), so there are no topic titles, dates, or snippets to list.
+
+The page also contains nothing about whether QQQ is available to Czech retail investors.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total:** 78 results across **6 pages**.
+
+**Snippets:**
+1. "Kdo nechce ciste SP500(napr SPYL, SXR8), tak jednoznacne to nove VGLA" (5. 9. 2026)
+2. "ETF (EUR) na index S&P 500 - SXR8.DE" (6. 5. 2026)
+3. "Nezkoušel jste někdo v posledni době přes MyAir koupit etf SXR8?" (20. 11. 2025)
+4. "Degiro má za zvýhodněný poplatek 1EUR jenom SXR8" (9. 4. 2025)
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total:** 13 results, on 1 page.
+
+**Snippets:**
+
+- **21. 11. 2025** (Trading212 UK): "Euro je teď celkem levné proto v EUR"
+- **30. 10. 2025** (Patria): "Lze tyto ETF v EUR přes patrii nakoupit na trhu XETRA?"
+- **21. 1. 2025** (Jak vybrat brokera?): "Ano, lze obojí (tedy SXR8 od iShares i VUAA od Vanguaru)"
+- **25. 11. 2022** (XTB): "TER 0,07 %, plná replikace."
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=XTB&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total, and number of pages? Or does it say no results?
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=SPYL&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: How many results total? Give up to 3 snippets (under 15 words).
+
+<details><summary>result</summary>
+
+```
+The page says there are no results. The message reads "Nebyly nalezeny žádné vhodné výsledky" ("No suitable results were found"). Because there are no results, there are no result pages to count.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Total results: 106** (the page shows "Vyhledáváním bylo nalezeno 106 výsledků").
+
+Three snippets mentioning SPYL:
+
+1. "Taky osobně preferuji SPYL (ISIN: IE000XZSV718) s nižší jednotkovou cenou" (Milos, Trading212 UK thread)
+2. "SPYL je dobra volba, 500 nejvetsich US firem, akumulacni, nizke TER" (slavo963, Trading212 UK thread)
+3. "SPYL ma 0,03%" (slavo963, Dlouhodobá investice do ETF thread)
+```
+
+</details>
+
+**→ WebFetch** https://www.novinky.cz/clanek/internet-a-pc-socialni-site-v-cesku-vedou-youtube-a-facebook-40459616
+
+> prompt: Extract date, source (Ami Digital Index?), percentages for YouTube, Facebook, Instagram, TikTok usage among Czech internet users, daily usage, device/mobile info, age differences.
+
+**→ WebSearch** `Shoptet OR Heureka podíl mobilních návštěv a objednávek e-shopy Česko 2025 mobil konverze návštěvnost z mobilu procent`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Shoptet OR Heureka podíl mobilních návštěv a objednávek e-shopy Česko 2025 mobil konverze návštěvnost z mobilu procent"
+
+Web search was not performed: this turn's web search budget is used up (limit: 200 WebSearch calls per turn, shared by every agent in it). Continue with the information already gathered instead of searching again, and say so in your answer; do not work around the limit by querying search engines with curl or wget from Bash, or by searching or fetching through a third-party reader, proxy or archive service. If more searches are genuinely needed, tell the user they can send a follow-up message after this reply to continue the search, or ask them to raise CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Extracted details**
+
+- **Date:** Published 5 February 2024, 10:15, by Lenka Zoulová.
+- **Source:** The Ami Digital Index analysis, which the article cites for its platform figures. The article also cites global data from Meltwater and We Are Social.
+- **Platform reach among Czech internet users (2023):**
+  - YouTube: 89%
+  - Facebook: 87%
+  - Instagram: more than 61%, with annual growth
+  - TikTok: no overall percentage given, but it had the biggest rise, up 7 percentage points from the previous year.
+- **Daily usage:** About 78% of the Czech internet population uses social networks daily, spending an average of 2.5 hours there.
+- **Device/mobile info:** The article gives no device or mobile breakdown for Czech users. Its only device-specific figure is global: TikTok averages 34 hours per month on Android.
+- **Age differences (Facebook):** Users aged 60 and over, Generation X (43–59), and millennials are the most active. About a quarter of each of these groups post daily, compared with 14% of Generation Z.
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/search.php?keywords=CSPX&terms=all&sf=all&fid%5B%5D=312&sr=posts
+
+> prompt: List the exact URLs (href) of the topics titled "Investice do S&P 500 - CSPX", "XTB vs. Portu - ETF S&P500", "Proč jsou různé ETF stejného indexu jinak drahé?", "ETF" (23.2.2024), "Sporici produkty pro deti?".
+
+<details><summary>result</summary>
+
+```
+Relative hrefs as they appear on the page, with the base domain inferred from the login links:
+
+1. **"Investice do S&P 500 - CSPX"**: `/viewtopic.php?f=312&t=1317960&hilit=CSPX`
+2. **"XTB vs. Portu - ETF S&P500"**: `/viewtopic.php?f=312&t=1320538&hilit=CSPX`
+3. **"Proč jsou různé ETF stejného indexu jinak drahé?"**: `/viewtopic.php?f=312&t=1320610&hilit=CSPX`
+4. **"ETF"** (post dated 23. 2. 2024): `/viewtopic.php?f=312&t=1323373&hilit=CSPX`
+5. **"Sporici produkty pro deti?"**: `/viewtopic.php?f=312&t=1342789&hilit=CSPX`
+
+Full URLs, assuming the base is `https://forum.finexpert.e15.cz`:
+
+- https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1317960&hilit=CSPX
+- https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1320538&hilit=CSPX
+- https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1320610&hilit=CSPX
+- https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1323373&hilit=CSPX
+- https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1342789&hilit=CSPX
+```
+
+</details>
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1317960
+
+> prompt: Quote verbatim 12-15 user posts (each under 15 words, with date) from this thread "Investice do S&P 500 - CSPX": beginner questions, currency risk (CZK vs USD), accumulating, fees, brokers, fear. Give the date range.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1323373
+
+> prompt: Quote verbatim 10-12 user posts (each under 15 words, with date) from this thread "ETF" started 2024: beginner questions about accumulating ETF, taxes, brokers, fear. Give the date range.
+
+**→ WebFetch** https://forum.finexpert.e15.cz/viewtopic.php?f=312&t=1320610
+
+> prompt: Quote verbatim 8-10 user posts (each under 15 words, with date) from this thread "Proč jsou různé ETF stejného indexu jinak drahé?": confusion about price, currency, TER, listing venues, ticker. Give the date range.
+
+<details><summary>result</summary>
+
+```
+The thread isn't from 2024. The first post is dated 18. 4. 2022, and every post on this page falls between 18. and 19. 4. 2022. The visible discussion is about choosing an accumulating ETF, not beginner fears. Taxes come up only briefly. Here are verbatim quotes from the posts that touch on your topics, with dates:
+
+1. **Explosion_CZ, 18. 4. 2022:** "Jsem silně nakloněn ke koupi dalšího akumulačního ETF"
+2. **ggnejez, 18. 4. 2022:** "Zbavuje tě to povinnosti řešit případné reinvestice distribuce a daňové povinnosti."
+3. **ggnejez, 18. 4. 2022:** "ETFondy nemusí platit daň z přijatých dividend"
+4. **vpe, 18. 4. 2022:** "a kdes to četl?"
+5. **vpe, 18. 4. 2022:** "Pravda je, že ETF vyplácejí tak malé divi"
+6. **vpe, 18. 4. 2022:** "Ale zase mají ty distribuční nižší TER."
+7. **Explosion_CZ, 18. 4. 2022:** "Případně je nějaká lepší alternativa, než SXR8?"
+8. **tmx643, 18. 4. 2022:** "Prostě nemuset sahat do těch investic a nemuset si půjčovat."
+9. **ggnejez, 18. 4. 2022:** "Jsem ve velmi podobné situaci jako ty"
+10. **fc70, 19. 4. 2022:** "Koncentrace do jednoho sektoru je napováženou"
+11. **blue.sky, 19. 4. 2022:** "bude mít ještě nějakou přidanou hodnotu"
+12. **Explosion_CZ, 19. 4. 2
+… [truncated, 152 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Tato vlákna z 7. 12. 2021 až 15. 1. 2022 obsahují těchto osm krátkých příspěvků:
+
+1. **friskac**, 7. 12. 2021: "Fondy mají sledovat stejný index, proč se tedy cena liší? V čem je rozdíl?" (cena)
+2. **friskac**, 7. 12. 2021: "ETF CSPX.UK (iShares S&P500 USD Accumulating), stojí 478 USD." (ticker, měna)
+3. **friskac**, 7. 12. 2021: "SPY5.UK (SPDR S&P500 USD Distributing) stojí 468 USD." (ticker, měna)
+4. **slavo963**, 7. 12. 2021: "CFD nee....neplati casovy test....na degiro ETF SP 500 za 75€..." (burzy a brokeři, cena)
+5. **Luigy51**, 14. 1. 2022: "Ještě bych rád jednou otevřel otázku rozdílnosti cen." (cena)
+6. **vpe**, 14. 1. 2022: "Ano, distribucni nebo americke maji mensi TER, jiz od 0,03%, ale …" (TER)
+7. **vpe**, 14. 1. 2022: "Treba SXR8 s TER 0,07." (ticker, TER)
+8. **ikovinvest**, 15. 1. 2022: "Neni na seznamu zdarma......" (burzy a brokeři)
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Date range:** 26 August 2021 to 1 September 2021
+
+1. **mates247** (26. 8. 2021): "Dostudoval jsem SŠ a začal pracovat, nemám velké výdaje" *(beginner)*
+2. **mates247** (26. 8. 2021): "Zatím jsem dohledal, že by pro mě bylo nejlepší koupit CSPX." *(beginner)*
+3. **Jan_21** (27. 8. 2021): "Jak v takových případech řešíte kurzové riziko, investovat budu z CZK" *(currency risk)*
+4. **Jan_21** (27. 8. 2021): "Je vůbec možnost dostat někde férový kurz?" *(currency risk)*
+5. **Explosion_CZ** (27. 8. 2021): "Vybral jsem si ho v akumulační formě, a to z daňových důvodů." *(accumulating)*
+6. **Explosion_CZ** (27. 8. 2021): "Degiro má za mě velkou výhod, že můžete určitá ETF nakupovat zdarma" *(fees)*
+7. **Explosion_CZ** (27. 8. 2021): "Brokera používám Degiro, účet si založíte on-line" *(brokers)*
+8. **Explosion_CZ** (27. 8. 2021): "historické výnosy však nemusí znamenat výnosy budoucí." *(caution)*
+9. **mates247** (28. 8. 2021): "Během následujících pár měsíců si o tom ještě nastuduji." *(beginner)*
+10. **volnicko** (28. 8. 2021): "Musi vlezt do platformy a kliknout na nakup, ale nakladovost super." *(fees)*
+11. **volnicko** (28. 8. 2021): "Holt to clovek nebude mit plne automatizovane." 
+… [truncated, 584 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://cdn.patria.cz/about/information/Vyrocni_zprava_PF_2025.pdf
+
+> prompt: Find number of clients (retail), ETF-related growth, assets, and any mention of Indigo app or ETF trading volumes in Czech Republic. Report exact numbers.
+
+**→ WebFetch** https://www.revolut.com/en-LT/news/revolut_tops_10_million_retail_customers_in_the_cee_region_and_strengthens_its_position_as_a_regional_digital_bank/
+
+> prompt: Find Czech Republic customer count if stated, date, and any investing/stocks/ETF numbers.
+
+**→ WebFetch** https://finex.cz/recenze/xtb/
+
+> prompt: Extract: number of XTB clients (global and in Czechia if stated), date updated, ETF count, ETF fees, DIP offering, investment plans details, tax handling of dividends for Czech investors (35%?), whether US-listed ETFs are available, min deposit.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+I couldn't find any of the requested figures in the content you provided. It appears to be raw, compressed PDF data (FlateDecode streams and object headers) rather than readable text. It's also truncated, so even the readable parts are incomplete.
+
+I can't see any retail client counts, ETF-related growth, assets, Indigo app mentions, or ETF trading volumes for the Czech Republic, so I won't report numbers.
+
+To get an answer, you could:
+- Paste the document's extracted text, or the relevant sections.
+- Share a link to the page or a text-based version of the report, if one is available.
+- Upload the PDF in a format with an extractable text layer.
+
+[Binary content (application/pdf, 1.9MB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791637979928-enn1qs.pdf]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Key facts from the XTB review (page last updated 12 Aug 2026):**
+
+- **Number of clients:** "Aktuálně má broker 2 900 000+ klientů" ("currently the broker has 2,900,000+ clients"). This is a global figure. The page gives no Czech-specific count.
+- **Date updated:** 12 August 2026 ("Poslední aktualizace 12. 8. 2026").
+- **ETF count:** 2,000+ ETFs ("2 000+ globálních ETF"). The investment plans section says more than 1,900 ETFs are available for plans.
+- **ETF fees:** Buying physical ETFs is free of commission ("Zdarma"). The minimum ETF trade is 1 EUR. A custody fee of 0.02% per year of portfolio value applies, charged monthly. The page says there is no inactivity fee. Currency conversion costs 0.5%.
+- **DIP offering:** The page doesn't use the term "DIP." Its closest equivalent is XTB's "investiční plány" (investment plans). Per the page:
+  - Plans can hold more than 3,400 stocks and 1,900 ETFs, and can mix both.
+  - Users can build their own portfolio with chosen weights, or pick ready-made plans, including globally diversified and sector-focused ones.
+  - Automatic investing runs at a chosen amount and frequency, with automatic dividend reinvestment.
+  - The page calls the plans
+… [truncated, 539 more chars]
+```
+
+</details>
+
+**→ Bash** — Extract Patria annual report text and grep for client numbers
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && pdftotext -layout webfetch-1791637979928-enn1qs.pdf /tmp/patria.txt 2>/dev/null; wc -c /tmp/patria.txt; grep -n -i -E "klient|ETF|Indigo|94" /tmp/patria.txt | head -40
+```
+
+<details><summary>result</summary>
+
+```
+250887 /tmp/patria.txt
+12:Patria Finance, a.s., nab�z� sluzby investicn�ho bankovnictv� jiz od roku 1994. Poskytuje pedevs�m obchodov�n�
+19:spolecnosti rekordn�. Patria Finance ke konci roku 2025 spravovala �cty pro v�ce nez 94 tis�c priv�tn�ch a
+20:institucion�ln�ch klient (o 16 % vice nez ped rokem) na tech stedoevropsk�ch trz�ch. Po stabilizacn�m roce
+26:Rok 2025 byl velmi bohat� na dn� na financn�ch trz�ch a poskytoval klientm adu investicn�ch p�lezitost�.
+40:Popsan� prosted� se projevilo ve zv�sen� klientsk� aktivit, a to nejen v oblasti obchodov�n�. Za cel� rok Patria
+41:Finance zrealizovala pro sv� klienty obchody za 467 mld. Kc, coz je mezirocn� n�rst o 11 %. U retailov�ch
+42:klient byly obchody zrealizov�ny ze 72 % na trz�ch v USA, n�sledovan� prazskou burzou s pod�lem kolem 10
+43:%. Naopak u institucion�ln� klientely dominovaly obchody na stedoevropsk�ch trz�ch v cele s prazskou a
+44:budapesskou burzou. V roce 2025 jsme vyuzili ve prospch nasich klient pesun c�sti server p�mo do s�dla
+51:investicn�m produktem Skupiny. V�raznou zmnou obchodn� strategie ve prospch klient pak bylo sn�zen�
+54:Z pohledu obsluhy klient spolecnost pokracovala v rozvoji sv�ch digit�ln�ch kan�l � 
+… [truncated, 2797 more chars]
+```
+
+</details>
+
+**→ Bash** — Read Patria annual report intro
+
+```
+sed -n 15,60p /tmp/patria.txt
+```
+
+<details><summary>result</summary>
+
+```
+a clenem Budapessk� burzy.
+
+Vlastn� kapit�l spolecnosti Patria Finance, a.s. cin� 1,39 mld. Kc. Zisk ped zdann�m v roce 2025 pes�hl 582
+mil. Kc., coz pedstavuje rst o v�ce nez 6 % oproti roku 2024, jehoz hospod�sk� v�sledek byl v historii nas�
+spolecnosti rekordn�. Patria Finance ke konci roku 2025 spravovala �cty pro v�ce nez 94 tis�c priv�tn�ch a
+institucion�ln�ch klient (o 16 % vice nez ped rokem) na tech stedoevropsk�ch trz�ch. Po stabilizacn�m roce
+2024 jsme v roce 2025 pln rozvinuli obchodn� potenci�l expanze na maarsk� trh, kdy obchodn� a financn�
+v�sledky daleko pes�hly ocek�v�n�. Oteven�m pobocky na Slovensku v �jnu 2025 spolecnost d�le
+pokracovala v naplov�n� strategie Skupiny KBC, kter� chce m�t Patrii jako obchodn� platformu pro cel� region
+stedn� a v�chodn� Evropy.
+
+Rok 2025 byl velmi bohat� na dn� na financn�ch trz�ch a poskytoval klientm adu investicn�ch p�lezitost�.
+Akciovou rally z poc�tku roku perusil pln� rozjezd programu americk�ho prezidenta Trumpa. Investoi si pod
+novou administrativou probl�my p�lis nepipoustli, takze celn� smrs, kulminuj�c� tzv. reciprocn�mi cly vyvolala
+na konci prvn�ho ctvrtlet� vlnu impulzivn�ch v�prodej. N�sledn� odklady a �pravy cel a d
+… [truncated, 2581 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/
+
+> prompt: Extract the statistic about mobile site visits abandoned if loading takes longer than 3 seconds, the sample/year of the study, and the relationship between load time and bounce probability.

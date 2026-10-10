@@ -1623,3 +1623,1547 @@ Links: [{"title":"double opt in vs single opt in","url":"https://www.sender.net/
 ```
 
 </details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Meta Lead Ads vs landing page lead quality conversion cost per lead financial services benchmark WordStream OR Hootsuite OR Triple Whale finance Facebook ads CPL"
+
+Links: [{"title":"metadata b2b benchmark report 2026","url":"https://www.metadata.io/benchmark/metadata-b2b-benchmark-report-2026.pdf"},{"title":"facebook lead ads","url":"https://superscale.ai/learn/facebook-lead-ads/"},{"title":"meta ads benchmarks 2026 b2b saas b2b cpm cpc cpl vertical","url":"https://www.growthspreeofficial.com/blogs/meta-ads-benchmarks-2026-b2b-saas-b2b-cpm-cpc-cpl-vertical.md"},{"title":"average cost per lead on facebook july 2026 report","url":"https://focus-digital.co/average-cost-per-lead-on-facebook-july-2026-report/"},{"title":"meta ads benchmarks 2026 b2b saas b2b cpm cpc cpl vertical","url":"https://www.growthspreeofficial.com/blogs/meta-ads-benchmarks-2026-b2b-saas-b2b-cpm-cpc-cpl-vertical"},{"title":"Facebook Lead Ads vs Landing Pages in 2026: $27.66 CPL, Conversion Rates, and Hybrid Plays","url":"https://www.leadgen-economy.com/blog/facebook-lead-ads-vs-landing-pages/"},{"title":"8 min read","url":"https://leadsync.me/blog/facebook-lead-ads-vs-landing-pages/
+… [truncated, 3147 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "cena za lead Facebook reklama finance Česko CPL investice průměr Meta Ads"
+
+Links: [{"title":"Jak snížit CPL u reklam na Facebooku po nových zásadách ochrany osobních údajů","url":"https://mundobytes.com/cs/Jak-sn%C3%AD%C5%BEit-CPL-v-reklam%C3%A1ch-na-Facebooku-po-zaveden%C3%AD-nov%C3%BDch-z%C3%A1sad-ochrany-osobn%C3%ADch-%C3%BAdaj%C5%AF/"},{"title":"ile kosztuje reklama na facebooku","url":"https://www.shopify.com/pl/blog/ile-kosztuje-reklama-na-facebooku"},{"title":"kolik stoji reklama na facebooku","url":"https://www.shopify.com/cz/blog/kolik-stoji-reklama-na-facebooku"},{"title":"CPL (Cost Per Lead)","url":"https://www.kontentino.com/sk/social-media-urban-dictionary/cpl-cost-per-lead/"},{"title":"CPL (Cost Per Lead)","url":"https://www.kontentino.com/cs/social-media-urban-dictionary/cpl-cost-per-lead/"},{"title":"CPL (Cost Per Lead)","url":"https://www.kontentino.com/sk/slovnik-slangu-socialnych-medii/cpl-cost-per-lead/"},{"title":"databox.com","url":"https://databox.com/?p=162776"},{"title":"Facebook Ads Insights Tool","url":"https://www.superads.ai/facebook-ads-costs/cost-per-lead/finance"},{"title":"average cost per lead facebook","url":"https:
+… [truncated, 1549 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.superads.ai/facebook-ads-costs/cost-per-lead/finance
+
+> prompt: Finance CPL average on Facebook ads, period covered, sample size, countries, cost per click, CTR if available.
+
+**→ WebSearch** `WordStream Facebook ads benchmarks 2025 finance and insurance lead generation CTR conversion rate cost per lead`
+
+**→ WebFetch** https://www.shopify.com/cz/blog/kolik-stoji-reklama-na-facebooku
+
+> prompt: Does it give Czech CPM/CPC/CPL numbers, by industry, e.g. finance? Source of numbers and date.
+
+<details><summary>result</summary>
+
+```
+The page does **not** give Czech CPM, CPC, or CPL figures, and it has no breakdown by industry, including finance.
+
+The only figures are global averages for July 2025, in USD, with approximate Czech koruna conversions:
+
+- **CPC:** about 0.768 USD (the page gives both "cca 16,17 Kč" and "cca 14,73 Kč")
+- **CPM:** about 15.49 USD (about 326.06 Kč)
+- **CPL:** about 44.55 USD (about 937.78 Kč)
+
+The article is dated 20 August 2025. It attributes the averages to third-party sources, mainly app.bir.ch. The CPM figure links to a URL that refers to cost per lead, so that citation may be wrong. The page does not say whether the averages are global or limited to any market.
+
+The article says costs vary with seasonality, competition, audience, placement, and campaign objective, but it gives no industry-specific numbers.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Finance CPL on Facebook Ads (from the page)**
+
+- **Average CPL:** About **$39.2 per lead** across the 13-month window. The page reports the average, though it says benchmarks are generally medians.
+- **Range:** Started at $27.22 (July 2025), peaked at $73.16 (December 2025), bottomed at $15.76 (June 2026), and ended at $15.96 (July 2026).
+- **Global comparison:** The global baseline averaged about $44.1, so Finance ran roughly 11% below it overall.
+- **Period covered:** The body text says July 2025 to July 2026. The page header says October 2025 to September 2026, so the dates are inconsistent.
+- **Sample size:** The page cites over $3B in Facebook ad spend from thousands of anonymized ad accounts. It does not give a Finance-specific campaign count.
+- **Countries:** "All countries" only. No country-level breakdown is provided.
+- **Cost per click (CPC):** Not provided for Finance.
+- **Click-through rate (CTR):** Not provided for Finance. The page links to a separate CTR benchmark page.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "WordStream Facebook ads benchmarks 2025 finance and insurance lead generation CTR conversion rate cost per lead"
+
+Links: [{"title":"facebook ads benchmarks 2025","url":"https://www.wordstream.com/blog/facebook-ads-benchmarks-2025"},{"title":"facebook advertising benchmarks","url":"https://localiq.com/blog/facebook-advertising-benchmarks/"},{"title":"Facebook Ads Benchmarks by Industry & Format in 2025","url":"https://www.bestever.ai/post/facebook-ads-benchmarks"},{"title":"Facebook ad costs jump 21% in 2025, but still beat Google","url":"https://searchengineland.com/facebook-ad-costs-jump-beat-google-461690"},{"title":"Most Insurance Brands Overspend on Meta: Ad Statistics Reviewed","url":"https://www.webtonic.io/blog/insurance-meta-ads-statistics"},{"title":"facebook ad costs jump 21 as lead campaigns struggle while traffic ads thrive","url":"https://ppc.land/facebook-ad-costs-jump-21-as-lead-campaigns-struggle-while-traffic-ads-thrive/"},{"title":"facebook lead costs hold at 27 39 as traffic clicks drop to 0 60","url":"https://ppc.land/facebook-lead-costs-hold-at-27-39-as-traffic-clicks-drop-to-0-60/"},{"title":"Adligator Team·","url":"https://adlig
+… [truncated, 2133 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.wordstream.com/blog/facebook-ads-benchmarks-2025
+
+> prompt: Finance and Insurance row: CTR, CPC, conversion rate, CPL (traffic vs lead gen campaigns). Overall lead gen CPL, CVR. Sample size and data period.
+
+**→ WebSearch** `tykání nebo vykání v reklamě finanční produkty banky komunikace s klienty tykání výzkum Češi preferují`
+
+**→ WebSearch** `Czech T-V distinction tykání vykání advertising brands address customers informal "tykání" marketing study young people`
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Czech T-V distinction tykání vykání advertising brands address customers informal "tykání" marketing study young people"
+
+Links: [{"title":"Limitní situace pro použití vykání a tykání v češtině a španělštině","url":"https://dspace.tul.cz/items/eb305c81-02d1-4308-a1fc-9004ab0d8598"},{"title":"Vykaní a Tykaní: A Polite Way to Address Others","url":"https://nobsczech.cz/blog/vykani-tykani"},{"title":"The delicacies of you and You","url":"https://english.radio.cz/node/8566578"},{"title":"Formy oslovování v TV","url":"https://dspace.cuni.cz/handle/20.500.11956/53762"},{"title":"ff.upce.cz","url":"https://ff.upce.cz/en/publikace-detail/39866738"},{"title":"Declension and Conjugation","url":"https://www.cjv.muni.cz/media/3402802/declension-and-conjugations.docx"},{"title":"How do formal and informal addresses differ in Czech business culture? - Talkpal","url":"https://talkpal.ai/?p=1578711"},{"title":"use informal address","url":"https://czechcourse.com/de/vocabulary/words/verbs/tykat"},{"title":"Zobrazit minimální záznam","url":"https://dspace.cuni.cz/handle/20.500.11956/19119?show=full"}]
+
+I didn't find a study that directly measures how Czech brands use "
+… [truncated, 2265 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "tykání nebo vykání v reklamě finanční produkty banky komunikace s klienty tykání výzkum Češi preferují"
+
+Links: [{"title":"Podnikatelé preferují řešit vše s jednou bankou, zjistil průzkum","url":"https://www.businessinfo.cz/clanky/podnikatele-preferuji-resit-vse-s-jednou-bankou-zjistil-pruzkum/"},{"title":"porada oddělení vývoje","url":"https://www.ey.com/cs_cz/insights/financial-services/ey-banking-survey-2023"},{"title":"[bookmark: _GoBack][image: hlavička čms dobrá barva pro tisk jpg]","url":"https://www.mediaguru.cz/media/3081/tiskov%c3%a1_zpr%c3%a1va_%c4%87e%c5%a1i_a_reklama_2018-final.docx"},{"title":"The Research of Satisfaction of Czech Banking Clients and the Comparison of this Issue with Slovakia","url":"https://journals.lib.vutbr.cz/index.php/trends/article/view/353"},{"title":"GfK změřila účinnost bankovních kampaní","url":"https://www.e15.cz/byznys/ostatni/gfk-zmerila-ucinnost-bankovnich-kampani-1178583"},{"title":"váš průvodce finančním světem","url":"https://www.mesec.cz/n/pruzkum/"},{"title":"Marketérem roku 2024 je Robert Chmelař z Partners banky","url":"https://www.mediaguru.cz/ceska-marketingova-spolecnost"},{"title":"cas.cz","url":
+… [truncated, 2793 more chars]
+```
+
+</details>
+
+**→ WebSearch** `průzkum AKA Nielsen Admosphere tykání v reklamě vadí Češi a reklama`
+
+**→ WebFetch** https://www.mediaguru.cz/clanky/2025/10/jak-cesi-vnimaji-reklamu-klicova-je-pro-ne-relevance/
+
+> prompt: Key findings on how Czechs perceive advertising: relevance, tone, tykání/vykání if mentioned, aggressive ads, sample size, research agency, date.
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "průzkum AKA Nielsen Admosphere tykání v reklamě vadí Češi a reklama"
+
+Links: [{"title":"Autor textu Kateřina Straková","url":"https://www.mediaguru.cz/polovine-lidi-vadi-cizojazycne-vyrazy-v-reklamach"},{"title":"Kde je reklama nejotravnější? Češi se v průzkumu vzácně shodli","url":"https://eurozpravy.cz/ekonomika/ceska-republika/215712-kde-je-reklama-nejotravnejsi-cesi-se-v-pruzkumu-vzacne-shodli"},{"title":"Znechuceni reklamou","url":"https://www.lupa.cz/clanky/znechuceni-reklamou/"},{"title":"Autor textu Martina Vojtěchovská","url":"https://www.mediaguru.cz/ppm-factum-nejmene-vadi-reklama-v-miste-prodeje"},{"title":"114582 cesi a reklama zaciname byt puritani neco se deje","url":"https://eurozpravy.cz/ekonomika/ceska-republika/114582-cesi-a-reklama-zaciname-byt-puritani-neco-se-deje"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/cesi-a-reklama-vice-lidem-se-nelibi-manipulativnost-reklamy"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/clanky/2019/02/cesi-a-reklama-vice-lidem-se-nelibi-manipulativnost-reklamy/"},{"title":"Autor textu MediaGuru","url":"https://www.mediaguru.cz/cechum-nejmene-vadi-reklama-v-miste
+… [truncated, 1852 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Key findings on how Czechs perceive advertising (WPP Media, via MediaGuru)**
+
+- **Relevance is central:** Only about a tenth of Czechs agree that ads feature "lidé jako jsou oni" (people like them). Just 8% recalled a recent ad that felt relevant to them.
+- **Exaggeration:** 73% think ads can exaggerate, and 39% strongly agree. Views barely differ by gender or age.
+- **Stereotypes:** 24% say ads contain stereotypes about men and 25% say they do about women (29% of women).
+- **Attractive, wealthy people:** About a third say ads show too many attractive and wealthy people. Lower-income respondents are more likely to feel this way.
+- **Pressure to buy:** 21% say ads push them to buy things they don't need, while 56% disagree.
+- **Self-confidence:** 14% say ads hurt their self-confidence, mainly people with lower incomes.
+- **Least and most disliked categories:** Loans, online and sports betting, and weight-loss products or diets are the most disliked, with 60% or more objecting on average. Household cleaning products, painkillers, supplements, sweets, and beer draw little criticism. Banks are fine if they promote general services rather than loans.
+- **Media:** Newspapers and magazi
+… [truncated, 743 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.mediaguru.cz/polovine-lidi-vadi-cizojazycne-vyrazy-v-reklamach
+
+> prompt: Details on the tykání finding: share bothered, age differences, sample size, agency, and publication date of the article.
+
+**→ WebSearch** `tykání v reklamě finance banka "tykání" Fio OR Moneta OR Air Bank OR Trading 212 OR XTB OR Finax OR Portu vykání tón komunikace`
+
+<details><summary>result</summary>
+
+```
+**Tykání finding:**
+
+- **Share bothered:** About one in five people (roughly 20%) find the informal "ty" address in advertising bothersome. The example given is "Už sis vybral dovolenou?"
+- **Age differences:** The tykání bothers people over 55 more than other age groups.
+- **Regional differences:** Jihočeši (South Bohemians) are more conservative on this point, with 34% saying tykání bothers them.
+- **Everyone else:** About half of respondents say it doesn't bother them at all, and a quarter could not give an opinion.
+- **Sample size:** 513 respondents aged 15 and over.
+- **Agency:** The survey was run by the Asociace komunikačních agentur (AKA) through an online survey conducted by Nielsen Admosphere.
+- **Publication date:** Monday, 13 March 2017, at 12:15.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "tykání v reklamě finance banka "tykání" Fio OR Moneta OR Air Bank OR Trading 212 OR XTB OR Finax OR Portu vykání tón komunikace"
+
+Links: [{"title":"Moneta startuje kampaň „Svoboda je ve vašich rukou“","url":"https://www.mediaguru.cz/moneta-money-bank"},{"title":"Petrus Advisers Moneta presentation 28012021","url":"https://www.motejlekskocdopole.com/wp-content/uploads/2021/01/Petrus-Advisers-Moneta-presentation-28012021.pdf"},{"title":"228207 Fio MMB 09 02 2019","url":"https://www.fio.cz/docs/zpravodajstvi/21-analyzaStrednedoba/cz/228207_Fio_MMB_09_02_2019.pdf"},{"title":"mms ks sejrkova martina","url":"https://bakalarky.vsers.cz/2015/Kombinovan%C3%A9/MMS/Sejrkov%C3%A1%20Martina/mms_ks_sejrkova_martina.pdf"},{"title":"mms ks sejrkova martina","url":"https://bakalarky.vsers.cz/2015/Kombinovan%c3%a9/MMS/Sejrkov%c3%a1%20Martina/mms_ks_sejrkova_martina.pdf"},{"title":"xtb przelamuje temat tabu pomagaja w tym zlatan ibrahimovic i tyson fury","url":"https://comparic.pl/xtb-przelamuje-temat-tabu-pomagaja-w-tym-zlatan-ibrahimovic-i-tyson-fury/"},{"title":"moneta signs agreement with ppf on air bank home credit benxy","url":"https://www.pse.cz/novinky/moneta-si
+… [truncated, 1459 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.finax.eu/cs
+
+> prompt: Quote (under 15 words each) the hero headline and CTA button text; is the visitor addressed with tykání (ty) or vykání (vy) in verb forms; any visible trust elements (regulator, ČNB, number of clients, reviews); any lead form fields shown.
+
+**→ WebFetch** https://www.xtb.com/cz
+
+> prompt: Quote (under 15 words each) hero headline and CTA; tykání vs vykání usage; trust elements (regulator, risk warning, % of retail losing money), any form fields.
+
+**→ WebFetch** https://www.portu.cz/
+
+> prompt: Quote (under 15 words each) hero headline and CTA; tykání vs vykání usage in the copy; trust elements; any calculator or lead magnet.
+
+**→ WebFetch** https://www.fio.cz/
+
+> prompt: Is the tone formal (vykání) or informal (tykání)? Quote short phrases (under 15 words) from hero/CTA. Trust elements.
+
+<details><summary>result</summary>
+
+```
+The web page content didn't come through. Only the separators (`---`) were included, so I can't identify a hero headline, CTA, tykání/vykání usage, trust elements, or any calculator or lead magnet.
+
+Please paste the page text, or the relevant sections, and I'll cover each item. I'll keep any quoted language under 15 words and 125 characters, and I'll paraphrase everything else.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Tone: formal (vykání).** The page addresses visitors with plural imperatives and the polite pronoun "vám," for example:
+
+- Hero/CTA: "NEPLAŤTE ZBYTEČNÉ POPLATKY. PŘEJDĚTE K NÁM." (Don't pay unnecessary fees. Switch to us.)
+- CTA: "INVESTUJTE S NÁMI JEDNODUŠE ONLINE." (Invest with us easily online.)
+- Banner: "NAŠE FIO HYPOTÉKA VÁM SEDNE JAKO ULITÁ" (Our Fio mortgage suits you perfectly.)
+
+**Hero statement:** "Fio banka je moderní česká banka." (Fio banka is a modern Czech bank.)
+
+**Trust elements:**
+
+- **Fraud warning:** The site alerts visitors to phone scams in which callers impersonate staff of the Czech financial authority (FAÚ).
+- **Security page:** A dedicated "Bezpečnost" (Security) link in the header.
+- **Contact access:** Visible contact details, a branch and ATM locator, and a "Napište nám" (Write to us) option.
+- **Transparency:** Links to a FAQ, a price list, investor relations, and a legal disclaimer.
+- **Partner brands:** Footer links to affiliated firms (FIOFONDY, RM-SYSTÉM, AKCIE.CZ).
+- **Social proof:** Links to a "Zlatá koruna" (Golden Crown) public voting competition.
+- **Copyright notice:** "Copyright © 2026 Fio banka."
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Hero headline and CTA**
+- Headline: "Získejte 5% úrok z volných prostředků pro dobrý start"
+- Subtext: "Stačí jeden obchod s akciemi nebo ETF měsíčně a můžete získat zvýhodněnou úrokovou sazbu"
+- Primary CTA: "Otevřít účet"
+- Secondary CTA: "Stáhnout aplikaci"
+
+**Tykání vs. vykání**
+The page uses vykání (formal address) throughout. Examples include "Měli byste zvážit", "Investujte zodpovědně", "Vyzkoušejte si", and "kontaktujte prosím". I found no tykání.
+
+**Trust elements**
+- **Regulation:** The page says it is regulated by "renomovanými regulačními institucemi z celého světa". It does not name a specific regulator.
+- **Risk warnings:** "Investování je rizikové. Investujte zodpovědně." The CFD warning adds that "U 77 % účtů retailových investorů došlo" to a loss.
+- **Retail loss figure:** 77% of retail CFD accounts lose money, stated in the banner and again in the footer warning.
+- **Other trust signals:** "Přes 2,9 milionu investorů", a "Broker roku 2025" award from Invest Cuffs, "20+ let" on the market, and deposit protection up to "20 100 €".
+- **Legal entity:** XTB S.A., organizační složka, Praha 8-Libeň, IČO 27867102.
+
+**Form fields**
+The page has no account sign-up form. T
+… [truncated, 230 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Hero headline:** "Také investování může znamenat relax"
+
+**Primary CTA button:** "Prozkoumejte vaše možnosti"
+**Secondary link:** "Jak to funguje?"
+
+**Form of address:** The page uses **vykání** (formal "vy"). Examples include "Jste na správném místě," "Nechte vše na nás," and "Vyberte si cíl." Only the formal forms appear.
+
+**Trust elements:**
+- **Regulator:** Supervised by the Národná banka Slovenska (National Bank of Slovakia). The page does not mention the ČNB.
+- **Deposit protection:** Included in the Slovak investment guarantee fund, covering up to 50,000 EUR.
+- **Professional body:** Member of the Slovak Association of Securities Dealers (AOCP), with a commitment to its ethical code.
+- **Client figures:** 1,8 miliardy € under management, 115 000+ satisfied clients, 100 000+ app downloads.
+- **Reviews:** Google rating of 4.9 from 399 reviews.
+- **Awards:** "Zlatá mince 2025" and "Invest Cuffs 2024."
+- **Press:** Logos for Fintag, E15, Newstream, and Finex.
+
+**Lead form fields shown:**
+- **Investment planner:** An amount field ("Chci investovat … Kč měsíčně") and a goal selector ("Mým cílem je…" with options such as retirement, children, emergency reserve, property purchase,
+… [truncated, 376 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.revolut.com/cs-CZ/
+
+> prompt: Is tone tykání or vykání? Quote short phrases (<15 words) from hero/CTA.
+
+**→ WebFetch** https://www.trading212.com/cs
+
+> prompt: Is tone tykání or vykání? Quote short phrases (<15 words) from hero/CTA; risk warnings; trust elements.
+
+**→ WebFetch** https://www.investown.cz/
+
+> prompt: Is tone tykání or vykání? Quote short phrases (<15 words) from hero/CTA; trust elements.
+
+**→ WebFetch** https://www.kurzy.cz/
+
+> prompt: skip - return only the word OK
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+This is a Kurzy.cz finance portal snapshot from Saturday, 10 October 2026, around 15:04. Its text is garbled by a character-encoding error, so some Czech words are unreadable.
+
+- **Markets (as of 9 Oct close):** PX index 2,576.77 (down 1.24%), Dow Jones 51,654.95 (up 0.83%), S&P 500 7,811.54, DAX 25,087.27, Eurostoxx 50 6,173.37.
+- **Commodities and crypto:** Brent crude about $102.96, gold about $4,193.71, silver about $60.74, Bitcoin about $82,747.
+- **Currencies:** EUR/USD about 1.1204, GBP/USD about 1.3225, USD/JPY about 158.27.
+- **Czech macro:** Q2 GDP up 1.8% year-on-year, unemployment 5.00% (August), consumer prices up 1.9% year-on-year (August).
+- **Headlines:** Wall Street weakened on AI-related stocks, Prague stocks fell on uncertainty over possible extraordinary taxes, and the EU and China reported progress on limits to Chinese hybrid car exports.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Tone: vykání (formal "you")**. The hero and CTAs address visitors with polite plural imperatives, for example:
+
+- "Zhodnocujte svoje úspory" and "Investujte od 500 Kč"
+- "Spočítejte si, kolik můžete vydělat"
+- "Přidejte se k největší komunitě investorů do nemovitostí"
+
+The main CTA, "Začít investovat", is an infinitive and doesn't show the tone on its own.
+
+**Trust elements:**
+
+- **Regulation:** "Máme licenci České národní banky" (Czech National Bank licence).
+- **Security:** "Úvěry zajištěné nemovitostmi" (loans secured by real estate).
+- **App store ratings:** 4.8/5 on the App Store (1,383 reviews), 4.5/5 on Google Play (1,367), and 4.6/5 on Google (740).
+- **Press coverage:** logos of outlets such as Forbes, CNN, and Hospodářské noviny under "Napsali o nás".
+- **Partnership:** testimonials mention a Česká spořitelna (Czech savings bank) product.
+- **Security details:** the FAQ lists real estate collateral, personal guarantees, and notarial deeds with direct enforceability.
+
+The investor and project counters on the page show "0" in this copy, so they may be placeholders or loaded dynamically. I can't verify the live figures from this content.
+```
+
+</details>
+
+**→ WebSearch** `NN/g how long do users stay on web pages 10-20 seconds first 10 seconds value proposition clarity`
+
+**→ WebSearch** `Steven Hoober how do users really hold mobile devices thumb zone 49% one hand study 1333 observations`
+
+**→ WebSearch** `Goda Manchester Sojourner retirement income projections savings experiment calculator effect on contributions`
+
+**→ WebSearch** `endowed progress effect Nunes Drèze 2006 car wash loyalty card 19% vs 34% completion`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Steven Hoober how do users really hold mobile devices thumb zone 49% one hand study 1333 observations"
+
+Links: [{"title":"how do users really hold mobile devices","url":"https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php?"},{"title":"Making mLearning Usable: How We Use Mobile Devices","url":"https://www.learningguild.com/?p=4634"},{"title":"making mlearning usable how we use mobile devices","url":"https://learningguild.com/insights/174/making-mlearning-usable-how-we-use-mobile-devices"},{"title":"Making mLearning Usable: How We Use Mobile Devices","url":"https://www.learningguild.com/research/making-mlearning-usable-how-we-use-mobile-devices"},{"title":"thumb friendly navigation word oriented design","url":"https://www.monterail.com/blog/thumb-friendly-navigation-word-oriented-design"},{"title":"Steven Hoober","url":"https://www.learningguild.com/author/steven-hoober"},{"title":"The Mario Blog","url":"https://garciamedia.com/?p=7518"},{"title":"Touch Design for Mobile Interfaces","url":"https://smashingmagazine.com/printed-books/touch-design-for-mobile-interfaces"},{"title":"eLearning Guild Research: Making mLear
+… [truncated, 1975 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Goda Manchester Sojourner retirement income projections savings experiment calculator effect on contributions"
+
+Links: [{"title":"What will my account really be worth? Experimental evidence on how retirement income projections affect saving","url":"https://academicnewsletter.sufe.edu.cn/info/278547"},{"title":"what will my account really be worth experimental evidence on how","url":"https://experts.umn.edu/en/publications/what-will-my-account-really-be-worth-experimental-evidence-on-how/"},{"title":"What will my account really be worth? Experimental evidence on how retirement income projections affect saving","url":"https://scholarhub.vn/publication/:slug/379f3928-d8d3-41c7-96c9-99397c46915d"},{"title":"MPC Member Publications","url":"https://memberpubs.pop.umn.edu/citations/show/f2d9bb91-6343-3f35-a829-3f3aeb152d82"},{"title":"References & Citations","url":"https://export.arxiv.org/abs/2005.01692v1"},{"title":"Project Your Retirement Savings & Future Income","url":"https://www.forusall.com/401k-calculators/retirement-savings-calculator"},{"title":"Retirement Income Calculator & Formula","url":"https://taglab.net/?p=21807"},{"title":"Retirement Calcul
+… [truncated, 2144 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "endowed progress effect Nunes Drèze 2006 car wash loyalty card 19% vs 34% completion"
+
+Links: [{"title":"knowledge.wharton.upenn.edu","url":"https://knowledge.wharton.upenn.edu/?p=5630"},{"title":"t car wash loyalty cards endowed progress","url":"https://siliconcanals.com/t-car-wash-loyalty-cards-endowed-progress/"},{"title":"siliconcanals.com","url":"https://siliconcanals.com/?p=108707"},{"title":"the lowdown on customer loyalty programs which are the most effective and why","url":"https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/the-lowdown-on-customer-loyalty-programs-which-are-the-most-effective-and-why/"},{"title":"endowed progress effect","url":"https://www.renascence.io/behavioral-biases/endowed-progress-effect"},{"title":"social commerce learning from the carwash","url":"https://digitalwellbeing.org/social-commerce-learning-from-the-carwash/"},{"title":"We reach our goals faster when we have help getting started","url":"https://coglode.com/nuggets/endowed-progress-effect"},{"title":"Endowed Progress Effect","url":"https://thinkinsights.net/index.php/consulting/endowed-progress-effect"},{"title":"Endowed Progress Effect"
+… [truncated, 2431 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "NN/g how long do users stay on web pages 10-20 seconds first 10 seconds value proposition clarity"
+
+Links: [{"title":"how long do users stay on web pages","url":"https://nngroup.com/articles/how-long-do-users-stay-on-web-pages/"},{"title":"how long do users stay on web pages","url":"https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/?app=1"},{"title":"how long do users stay on web pages","url":"https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/?facet2=pdf"},{"title":"How Long Will Visitors Stay On Your Website","url":"https://blog.catalpha.com/bid/313129/How-Long-Will-Visitors-Stay-On-Your-Website"},{"title":"how long will visitors stay on your website","url":"https://blog.catalpha.com/bid/313129/how-long-will-visitors-stay-on-your-website"},{"title":"Blog Insights","url":"https://www.forumone.com/?p=954"},{"title":"nielsen norman group theclose uowp","url":"https://app.theclose.com/goto/nielsen-norman-group-theclose-uowp/"},{"title":"Web visitors spend only a few seconds on a webpage","url":"https://wyliecomm.com/2023/05/skimming-and-scanning"},{"title":"Users Don’t Read Web Pages","url":"https://www.codecademy.co
+… [truncated, 2692 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/
+
+> prompt: What does it say about the first 10 seconds, leaving decisions, 10-20 seconds, 30 seconds, and the data source (sample size)? Publication date.
+
+**→ WebFetch** https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php
+
+> prompt: Key numbers: sample (observations), one-handed/cradled/two-handed percentages, thumb use percentage, and any editor's note about updated research.
+
+**→ WebFetch** https://experts.umn.edu/en/publications/what-will-my-account-really-be-worth-experimental-evidence-on-how/
+
+> prompt: Abstract: authors, journal, year, design, effect size.
+
+**→ WebFetch** https://knowledge.wharton.upenn.edu/?p=5630
+
+> prompt: Endowed progress effect details: car wash experiment numbers (19% vs 34%), sample, source paper.
+
+<details><summary>result</summary>
+
+```
+- **Authors:** Gopi Shah Goda, Colleen Flaherty Manchester, and Aaron J. Sojourner
+- **Journal:** *Journal of Public Economics*, vol. 119, pp. 80–92
+- **Year:** 2014 (published November 2014)
+- **Design:** Randomized field experiment. Employees received retirement income projections along with enrollment information, and their saving was compared with a group that received no intervention. The projections used randomly assigned assumptions about retirement age, investment returns, and hypothetical contribution amounts.
+- **Effect size:** The intervention raised annual contributions to employer retirement accounts by $85. This equals about 3.6% of the average contribution and 0.15% of average salary. The randomized assumptions also had significant effects on saving behavior.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The 19% vs. 34% figures don't appear in the article, so I can't confirm them.
+
+- **Sample:** 300 car wash customers who received loyalty cards, with their later visits tracked.
+- **Design:** An eight-purchase reward was restructured as a 10-purchase program with two purchases credited upon enrollment. Both versions required eight actual purchases and gave the same reward.
+- **Finding:** Customers given the head start were more likely to complete the program, and they finished sooner.
+- **Source paper:** "The Endowed Progress Effect: How Artificial Advancement Increases Effort" by Joseph C. Nunes and Xavier Drèze, published in the *Journal of Consumer Research*.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+- **First 10 seconds:** The article calls these "critical" for deciding whether users stay. Leaving is most likely in this window because users are skeptical of pages after many poor experiences.
+- **Leaving decisions:** Users sort pages into "good" and "bad" within the first few seconds. Bad pages are abandoned quickly, while good pages may hold attention for minutes.
+- **10–20 seconds:** Pages that survive the first 10 seconds get a brief look around, but users still often leave during the following 20 seconds.
+- **30 seconds:** After about 30 seconds, the likelihood of leaving drops noticeably, though people keep leaving at a slower rate. Pages that hold users this long often keep them for 2 minutes or more.
+- **Data source and sample size:** The findings come from a Microsoft Research study by Chao Liu, Ryen W. White, and Susan Dumais. It analyzed 205,873 web pages, with upwards of 10,000 visits captured for each, from a popular browser plug-in. The dataset included more than 2 billion dwell times.
+- **Publication date:** September 11, 2011.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+- **Sample:** 1,333 observations over two months (ending January 8, 2013), of which 780 involved touching the screen.
+- **Holding methods (among screen-touching users):** one-handed 49%, cradled 36%, two-handed 15%.
+- **Thumb use:**
+  - One-handed: 67% right thumb, 33% left thumb.
+  - Cradled: 72% thumb, 28% finger.
+  - Two-handed: 90% in portrait, 10% in landscape.
+- **Editor's note:** The author later did more user research and updated his mobile design guidelines. The note points to his follow-up column, "Design for Fingers, Touch, and People, Part 1." The article also says the observations are not a count of all people, so they can't show what share of people are using their phones at any moment.
+```
+
+</details>
+
+**→ WebSearch** `FCA financial promotions rules FOMO urgency "fear of missing out" high-risk investments consumer research gamification`
+
+**→ WebSearch** `scarcity urgency messages countdown timer meta-analysis consumer purchase intention effect size trust backfire`
+
+**→ WebSearch** `ESMA warning marketing communications investment firms social media influencers urgency risk warnings requirements retail investors 2022 2023`
+
+**→ WebSearch** `Mathur dark patterns at scale shopping websites countdown timers scarcity 11K sites study 2019`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Mathur dark patterns at scale shopping websites countdown timers scarcity 11K sites study 2019"
+
+Links: [{"title":"Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites","url":"https://arxiv.org/pdf/1907.07032"},{"title":"dark patterns","url":"https://www.cs.umd.edu/class/spring2021/cmsc614/papers/dark-patterns.pdf"},{"title":"arxiv.org","url":"https://arxiv.org/abs/1907.07032v2"},{"title":"dark patterns at scale findings from a crawl of 11k shopping websites","url":"https://www.deceptive.design/articles/dark-patterns-at-scale-findings-from-a-crawl-of-11k-shopping-websites"},{"title":"Award-Winning Paper: \"Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites\"","url":"https://fpf.org/2020/02/04/award-winning-paper-dark-patterns-at-scale-findings-from-a-crawl-of-11k-shopping-websites/"},{"title":"Award-Winning Paper: \"Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites\"","url":"https://fpf.org/blog/award-winning-paper-dark-patterns-at-scale-findings-from-a-crawl-of-11k-shopping-websites/"},{"title":"Award-Winning Paper: \"Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites\"","
+… [truncated, 2080 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "scarcity urgency messages countdown timer meta-analysis consumer purchase intention effect size trust backfire"
+
+Links: [{"title":"mastering scarcity unveiling the psychology and impact of scarcity marketing cues on consumer behavior","url":"https://newneuromarketing.com/mastering-scarcity-unveiling-the-psychology-and-impact-of-scarcity-marketing-cues-on-consumer-behavior"},{"title":"Scarcity tactics in marketing: a meta-analysis of product scarcity effects on consumer purchase intentions","url":"https://research.monash.edu/en/publications/scarcity-tactics-in-marketing-a-meta-analysis-of-product-scarcity/"},{"title":"Psychology%20and%20Marketing%20 %202023%20 %20Ladeira","url":"https://radar.brookes.ac.uk/radar/file/609e47cf-0367-4af7-82ac-9ab7154e2a2c/1/Psychology%20and%20Marketing%20-%202023%20-%20Ladeira.pdf"},{"title":"scarcity tactics in marketing a meta analysis of product scarcity","url":"https://research.bond.edu.au/en/publications/scarcity-tactics-in-marketing-a-meta-analysis-of-product-scarcity/"},{"title":"Scarcity tactics in marketing","url":"https://pure.bond.edu.au/ws/portalfiles/portal/182976505/Scarcity_tactics_in_marketing.pdf"},{"tit
+… [truncated, 3659 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ESMA warning marketing communications investment firms social media influencers urgency risk warnings requirements retail investors 2022 2023"
+
+Links: [{"title":"investmentexecutive.com","url":"https://www.investmentexecutive.com/?p=458670"},{"title":"European securities regulators target marketing practices","url":"https://www.investmentexecutive.com/?p=12957"},{"title":"www.mexc.com","url":"https://www.mexc.com/news/467012"},{"title":"www.mexc.com","url":"https://www.mexc.com/it-IT/news/467012"},{"title":"www.investmentexecutive.com","url":"https://www.investmentexecutive.com/?p=432477"},{"title":"ESMA74 1103241886 912 Warnings on Social Media and Investment Recommendations","url":"https://www.esma.europa.eu/sites/default/files/2024-02/ESMA74-1103241886-912_Warnings_on_Social_Media_and_Investment_Recommendations.pdf"},{"title":"ESMA issues recommendations on marketing communications","url":"https://fxnewsgroup.com/forex-news/regulatory/esma-issues-recommendations-on-marketing-communications/"},{"title":"www.financialinstitutionsnews.com","url":"https://www.financialinstitutionsnews.com/?p=25969"},{"title":"eu watchdog throws weight behind crackdown 
+… [truncated, 3231 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "FCA financial promotions rules FOMO urgency "fear of missing out" high-risk investments consumer research gamification"
+
+Links: [{"title":"FCA sets out new rules on financial promotion of high risk investments","url":"https://www.simmons-simmons.com/en/publications/cl6f4kpvp1or80a26iwul09ox/fca-sets-out-new-rules-on-financial-promotion-of-high-risk-investments"},{"title":"FCA sets out proposals to strengthen its financial promotion rules for high-risk investments","url":"https://www.fca.org.uk/news/press-releases/fca-proposals-strengthen-financial-promotion-rules-high-risk-investments"},{"title":"ps22 10.pdf","url":"https://www.fca.org.uk/publication/policy/ps22-10.pdf"},{"title":"FCA sets out proposals to strengthen its financial promotion rules for high-risk investments","url":"https://scottishfinancialnews.com/article/fca-sets-out-proposals-to-strengthen-its-financial-promotion-rules-for-high-risk-investments"},{"title":"FCA sets out proposals to strengthen its financial promotion rules for high-risk investments","url":"https://www.scottishfinancialnews.com/articles/fca-sets-out-proposals-to-strengthen-its-financial-promotion-rules-for-high-risk-in
+… [truncated, 3250 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://research.monash.edu/en/publications/scarcity-tactics-in-marketing-a-meta-analysis-of-product-scarcity/
+
+> prompt: Abstract: authors, journal, year, number of effect sizes/studies, main findings and moderators.
+
+**→ WebFetch** https://arxiv.org/pdf/1907.07032
+
+> prompt: What does the paper say about countdown timers and scarcity/urgency messages: how many sites had them, how many were fake (e.g., timers that reset), low-stock messages that were fabricated? Give numbers.
+
+**→ WebFetch** https://www.fca.org.uk/news/press-releases/fca-clamps-down-marketing-high-risk-investments-consumers
+
+> prompt: What new rules on marketing high-risk investments: risk warning, banning incentives (refer a friend bonuses), 24-hour cooling off, date, and how they relate to urgency/FOMO.
+
+<details><summary>result</summary>
+
+```
+I can't find the answer in the content you pasted. It's the raw binary of a PDF: compressed (FlateDecode) streams, object headers, and embedded fonts and images. Decoding it would require a PDF parser, and I can't run one here. None of the readable fragments mention countdown timers, scarcity or urgency messages, or site counts.
+
+So I can't give you the numbers you're asking for, such as how many sites had timers, how many timers were fake or reset, or how many low-stock messages were fabricated. Any figures I gave would be invented.
+
+To get an answer, you could:
+- Paste the paper's extracted text, or the section on dark patterns or urgency tactics, or
+- Run the PDF through a text extractor (such as `pdftotext` or a PDF library) and share the output.
+
+Once I have readable text, I can summarize the findings and pull out the exact figures.
+
+[Binary content (application/pdf, 5.7MB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791637547492-sr1gm4.pdf]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Authors:** Belinda Barton, Natalina Zlatevska, and Harmen Oppewal (Monash University, Department of Marketing)
+
+**Journal:** *Journal of Retailing*, vol. 98, no. 4, pp. 741-758
+
+**Year:** 2022 (published December 2022)
+
+**Sample:** A meta-analysis of 416 effect sizes from 131 studies
+
+**Main findings:** Scarcity cues, which signal that a product is or may become unavailable, generally raise its perceived value and desirability, which in turn increases purchase intentions. The authors argue that earlier reviews left the research fragmented, so they aimed to estimate the overall size of the effect and how it varies.
+
+**Moderators:**
+- **Scarcity type and product category:** Demand-based scarcity works best for utilitarian products, supply-based scarcity works best for experiences, and time-based scarcity works best for high-involvement products.
+- **Practical implication:** Marketers should match the scarcity approach to the product type and consumer involvement to maximize campaign success.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Risk warnings:** Firms must use clearer, more prominent risk warnings. The FCA also describes its new risk warnings as simplified, to help consumers understand the risks.
+
+**Banned incentives:** Certain incentives to invest are now prohibited, including "refer a friend bonuses." The article doesn't list other banned incentives.
+
+**24-hour cooling-off period:** The article doesn't mention one.
+
+**Dates:**
+- The press release was first published on 1 August 2022.
+- The main risk warning proposals have a four-month implementation period. All other rules have six months.
+- Based on those periods, my own calculation puts the risk warning deadline around December 2022 and the other rules around February 2023. The article doesn't state these dates.
+- The rules don't apply to cryptoasset promotions, which will be addressed separately.
+
+**Urgency and FOMO:** The article doesn't address urgency tactics or fear of missing out. It does say the FCA is concerned that many people who invest in high-risk products don't see losing money as a risk. It also warns that rising living costs could push people to chase higher returns, which may be risky. The refer-a-friend ban is the only incentive rest
+… [truncated, 21 more chars]
+```
+
+</details>
+
+**→ Bash** — Search Mathur dark patterns paper for countdown timer findings
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && pdftotext -layout webfetch-1791637547492-sr1gm4.pdf mathur.txt && grep -n -i -E "countdown|low-stock|high-demand|fake|reset" mathur.txt | head -50
+```
+
+<details><summary>result</summary>
+
+```
+503:text from subsequent user interactions, and with dynamically loaded content (e.g., a countdown
+622:values (e.g., a countdown timer)--for deceptive practices. To this end, we used our checkout crawler
+653:          Countdown Timer       pretense of a one-time fee or a free trial              Framing
+683:Scarcity  Low-stock Message     Indicating to users that limited quantities 632 581
+687:          High-demand Message Indicating to users that a product is in high- 47 43
+788:   We observed two types of the Urgency dark pattern: Countdown Timers and Limited-time
+798:(a) Countdown Timer on mattressfirm.com. The header displays a Flash Sale where the majority of
+801:(b) Countdown Timer on justfab.com. The offer (c) Limited-time Message on chicwish.com. The website
+807:   Countdown Timers. The `Countdown Timer' dark pattern is a dynamic indicator of a deadline,
+808:counting down until the deadline expires. Figures 4a and 4b show the Countdown Timer dark
+811:of the Countdown Timer dark pattern.
+813:   Deceptive Countdown Timers. Using the visit-and-record method described in Section 4.4, we
+814:examined the countdown timers in our data set for deceptive practices. We stitched the scr
+… [truncated, 3475 more chars]
+```
+
+</details>
+
+**→ WebSearch** `calculator "email" to see results gated calculator A/B test case study lead conversion rate dropped OR increased mortgage OR retirement OR investment`
+
+**→ WebSearch** `HubSpot research landing pages calculators lead generation conversion rates "calculator" CTA conversion rate data 330,000 CTAs`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "calculator "email" to see results gated calculator A/B test case study lead conversion rate dropped OR increased mortgage OR retirement OR investment"
+
+Links: [{"title":"Lead Conversion Rate Calculator","url":"https://www.mailmodo.com/calculators/lead-conversion-rate-calculator/"},{"title":"Conversion Rate Calculator - Built on 1,055 Real A/B Tests","url":"https://www.conversionteam.com/conversion-rate-calculator/"},{"title":"Make Your Mortgage Website Convert 5-12% of Visitors Into Leads","url":"https://leadpops.com/mortgage-website-lead-generation"},{"title":"Mortgage Calculator Leads: Building Traffic That Converts","url":"https://www.leadgen-economy.com/blog/mortgage-calculator-leads-traffic-conversion/"},{"title":"Lead Conversion Rate Calculator & Formula - TAGLAB","url":"https://taglab.net/calculators/lead-conversion-rate-calculator/"},{"title":"Lead Conversion Rate Calculator","url":"https://www.tripledart.com/tools/lead-conversion-rate-calculator"},{"title":"Mortgage Websites That Convert 5-12% of Visitors Into Leads","url":"https://leadpops.com/mortgage-websites"},{"title":"Lead Conversion Rate Calculator","url":"https://pancalchub.com/market
+… [truncated, 1964 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "HubSpot research landing pages calculators lead generation conversion rates "calculator" CTA conversion rate data 330,000 CTAs"
+
+Links: [{"title":"popular use cases hubspot website performance","url":"https://help.databox.com/popular-use-cases-hubspot-website-performance"},{"title":"The Landing Page Template HubSpot Uses to Convert at a 35% Rate","url":"https://blog.hubspot.com/marketing/landing-page-templates?authuser=0"},{"title":"landing page templates","url":"https://blog.hubspot.com/marketing/landing-page-templates"},{"title":"The short version:","url":"https://foundrycro.com/blog/cta-button-conversion-rate-benchmarks-2026/"},{"title":"How Do You Calculate a Conversion Rate in HubSpot?","url":"https://climbtheladder.com/how-do-you-calculate-a-conversion-rate-in-hubspot/"},{"title":"- Knowledge Base","url":"https://knowledge.hubspot.com/ai-tools/analyze-content-variants?swcfpc=1"},{"title":"community.hubspot.com","url":"https://community.hubspot.com/t5/HubSpot-Ideas/Landing-Page-No-Longer-Shows-Conversion-Rates/idi-p/28088"},{"title":"hubspot track cta click through by page type","url":"https://www.pedowitzgroup.com/hubspot-track-cta-click-through
+… [truncated, 2298 more chars]
+```
+
+</details>
+
+**→ WebSearch** `Demand Metric interactive content benchmarks report conversion 70% vs 36% original study sample`
+
+**→ WebFetch** https://outgrow.co/blog/interactive-content-roi-data-driven-insights
+
+> prompt: What stats does it give for calculators/quizzes conversion rates and lead quality; sources cited; sample sizes; year.
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Demand Metric interactive content benchmarks report conversion 70% vs 36% original study sample"
+
+Links: [{"title":"Interactive Content: The Successor Of The Landing Page","url":"https://martech.org/interactive-content-successor-landing-page/"},{"title":"interactive content","url":"https://storychief.io/blog/amp/interactive-content"},{"title":"written by","url":"https://storychief.io/blog/interactive-content"},{"title":"Interactive Content Marketing","url":"https://www.slideshare.net/ioninteractive/interactive-content-marketing"},{"title":"Interactive Content Generates 2x More Conversions Than Passive Content","url":"https://uplandsoftware.com/kapost/resources/blog/interactive-content-conversions/"},{"title":"25 Interactive Content Statistics and Trends Shaping Marketing in 2024","url":"https://expertbeacon.com/25-interactive-content-statistics-and-trends-shaping-marketing-in-2024/"},{"title":"producing engaging content","url":"https://www.slideshare.net/ioninteractive/producing-engaging-content"},{"title":"Producing engaging content","url":"https://www.slideshare.net/slideshow/producing-engaging-content/41119816"},{"title":"fr.slideshare.net","url":"
+… [truncated, 4016 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The page gives no sourced conversion-rate or lead-quality statistics specific to calculators or quizzes. The article is dated 5 August 2025, but none of the figures below include a publication year.
+
+**Quizzes**
+- Quizzes "create 83% more qualified leads than gated whitepapers." No source, sample size, or year is given.
+
+**Calculators**
+- Calculators convert at 3–5x the rate of regular landing pages. No source, sample size, or year is given.
+- Outgrow customers see 40–60% conversion rates on ROI calculators and evaluation tools. This is a vendor claim with no source, sample size, or year.
+
+**Lead quality**
+- Interactive leads score 40% higher on qualification metrics. This appears in a bullet list based on the author's review of "50+ campaigns from various industries." No methodology, sample breakdown, or year is given.
+- The same review reports 30–50% lower cost per lead for interactive campaigns, with no further detail.
+
+**Other cited sources (not specific to calculators or quizzes)**
+- Demand Metric: interactive content produces 2x as many conversions as passive content. Named, but no link or year.
+- Content Marketing Institute: 81% of marketers say interactive content gets more
+… [truncated, 163 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://eu-assets.contentstack.com/v3/assets/blt663d10211b43b0ca/bltdf544ccdf7c23d06/67ed4d5c2545ec5ffe16a9b1/Ion_CMI_InteractiveContent_Final.pdf
+
+> prompt: Find the survey methodology (dates, responses count) and the finding comparing interactive vs passive content on conversion ("moderately well or very well"), sponsor, year.
+
+**→ WebSearch** `first name only vs name and email form field lead capture A/B test; email-only opt-in vs adding name field conversion`
+
+**→ WebSearch** `Google Chrome autofill forms study completion faster mobile "autocomplete" attributes form conversion web.dev address forms best practices`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Google Chrome autofill forms study completion faster mobile "autocomplete" attributes form conversion web.dev address forms best practices"
+
+Links: [{"title":"Address form best practices codelab","url":"https://web.dev/codelab-address-form-best-practices/"},{"title":"payment and address form best practices","url":"https://web.dev/payment-and-address-form-best-practices/"},{"title":"payment and address form best practices","url":"https://web.dev/articles/payment-and-address-form-best-practices"},{"title":"payment and address form best practices","url":"https://web.dev/i18n/es/payment-and-address-form-best-practices/"},{"title":"payment and address form best practices","url":"https://web.dev/i18n/ja/payment-and-address-form-best-practices/"},{"title":"Address form best practices codelab","url":"https://web.dev/articles/codelab-address-form-best-practices?authuser=0"},{"title":"Address form best practices codelab","url":"https://web.dev/articles/codelab-address-form-best-practices"},{"title":"payment and address form best practices","url":"https://web.dev/i18n/zh/payment-and-address-form-best-practices/"},{"title":"Address form best practices codelab","u
+… [truncated, 1950 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+I couldn't find the survey details in the content you provided. It's a raw PDF file dump: compressed streams and binary data, with no readable text about a survey. The only plain-text items are PDF metadata, such as a 2016-05-26 "LastModified" date and references to Illustrator, and the dump is also cut off partway through.
+
+So I can't confirm the methodology (dates or response count), the interactive-versus-passive content finding on conversion, or the sponsor and year.
+
+To get these, you could:
+- Paste the extracted text from the PDF, or the HTML version of the report if one exists.
+- Share the report's executive summary or methodology section directly.
+- Open the PDF in a reader and copy the relevant pages.
+
+[Binary content (application/pdf, 7.3MB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791637596622-t6rprn.pdf]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "first name only vs name and email form field lead capture A/B test; email-only opt-in vs adding name field conversion"
+
+Links: [{"title":"a b testing 17479","url":"https://community.klaviyo.com/marketing-30/a-b-testing-17479"},{"title":"The Only Two Questions Your Lead Capture Form Should Ask For Higher Conversions","url":"https://www.advisorpedia.com/advisor-tools/two-questions-your-lead-capture-form-should-ask-for-higher-conversions"},{"title":"Written By: author avatar Chipo","url":"https://thrivethemes.com/contact-form-tips/"},{"title":"name and email form","url":"https://orbitforms.ai/blog/name-and-email-form"},{"title":"A/B Test From Name | Community","url":"https://experienceleaguecommunities.adobe.com/adobe-marketo-engage-27/a-b-test-from-name-170018"},{"title":"A/B Test Results: Which Email Sender Name Is Better?","url":"https://9clouds.com/blog/a-b-test-results-which-email-sender-name-is-better/"},{"title":"November 06, 2012","url":"https://www.marketingsherpa.com/article/chart/top-lead-gen-form-fields"},{"title":"Definition of Form A/B Testing","url":"https://adogy.com/terms/form-ab-testing"},{"title":"A/B test - Lead.Firstname token | Comm
+… [truncated, 3486 more chars]
+```
+
+</details>
+
+**→ Bash** — Extract text from Ion CMI interactive content PDF and grep methodology
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && pdftotext -layout webfetch-1791637596622-t6rprn.pdf ion.txt && wc -l ion.txt && grep -n -i -E "responses|complete enough|administered|moderately well|very well|sponsor|ion interactive|36%|70%|2014|2015|2016" ion.txt | head -40
+```
+
+<details><summary>result</summary>
+
+```
+647 ion.txt
+16:                                                                                                    MAY 2016
+17: ion interactive is proud to sponsor this study from Content Marketing Institute. Interactive content is our
+41: very well feel dizzy--but exhilarated.
+48: Interactive content is like augmented reality for a web page. As Scott Brinker, CTO of ion interactive,
+66:  In a June 2014 study conducted by Demand Metric, respondents reported that interactive content
+71:  According to Demand Gen Report's 2015 Content Preferences Survey, when respondents were asked,
+101: Invitations to participate in the online survey were emailed on February 29, 2016. By March 15, 2016, a total of
+182:   of interactive content would increase in   INTERACTIVE CONTENT - 2016 VS. 2015
+183:   2016 compared with 2015. About one-
+188:   amount they deploy in 2016. In sum, the     Remain   Increase
+281:    content enables brands to educate an audience             Note: Multiple responses permitted.
+300:                                                              Note: Multiple responses permitted.
+329:    Contests                  75%                           36%           3%
+362:       
+… [truncated, 1346 more chars]
+```
+
+</details>
+
+**→ Bash** — Read relevant lines from Ion CMI report
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && sed -n 60,80p ion.txt && sed -n 98,110p ion.txt
+```
+
+<details><summary>result</summary>
+
+```
+The expansion of the typical website monologue into a true two-way dialogue can give you deeper
+      insight
+      between watching customers as they stroll through a store and having a conversation with them. The
+      information and inputs that consumers provide when using interactive content lead to richer profiles,
+      better lead scoring, and improved nurturing of prospects along the buyer's journey.
+
+  In a June 2014 study conducted by Demand Metric, respondents reported that interactive content
+      (compared with passive content) increased content sharing (from 17% with passive to 38% with
+
+                                                                                                                                                                                                                                        3
+
+  According to Demand Gen Report's 2015 Content Preferences Survey, when respondents were asked,
+      "How have your B2B content consumption habits changed over the past year," 91% agreed that "I prefer
+      more interactive/visual content that I can access on demand" (up from 88% the previous year).4
+
+ INTERACTIVE IS INESCAPABLE
+
+ Business benefits 
+… [truncated, 1092 more chars]
+```
+
+</details>
+
+**→ Bash** — Grep conversion mentions in Ion report
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && sed -n 64,72p ion.txt | cut -c1-300; grep -n -i "conver" ion.txt | head
+```
+
+**→ WebSearch** `Facebook Instagram lead ads instant form vs landing page lead quality finance Meta "higher intent" form fields conversion rate study 2025`
+
+**→ WebSearch** `thank you page second conversion step upsell survey share social booking call "thank you page" conversion rate case study lead gen`
+
+<details><summary>result</summary>
+
+```
+better lead scoring, and improved nurturing of prospects along the buyer's journey.
+
+  In a June 2014 study conducted by Demand Metric, respondents reported that interactive content
+      (compared with passive content) increased content sharing (from 17% with passive to 38% with
+
+                                                                                                                                                                                                                                        3
+
+  According to Demand Gen Report's 2015 Content Preferences Survey, when respondents were asked,
+      "How have your B2B content consumption habits changed over the past year," 91% agreed that "I prefer
+62:      between watching customers as they stroll through a store and having a conversation with them. The
+269:    creating brand awareness (57%). Conversion                Educating the audience ................................ 75%
+273:    These results seem to substantiate the growing            Conversion....................................................... 49%
+278:    to convert and sell diminishes and the opportunity        Sales/sales enablement ....................
+… [truncated, 441 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Facebook Instagram lead ads instant form vs landing page lead quality finance Meta "higher intent" form fields conversion rate study 2025"
+
+Links: [{"title":"Meta Ads Management Services: Why Cheap Leads Cost You the Most in 2026","url":"https://elevarus.com/meta-ads-management/"},{"title":"The Science of Lead Generation With Meta Ads","url":"https://www.jonloomer.com/lead-generation-meta-ads/"},{"title":"Facebook Leads Ads – Optimise for Quality vs Quantity Conversions","url":"https://oneppcagency.co.uk/facebook-ads/facebook-metas-leads-ads-optimisation-lead-quantity-vs-quality/"},{"title":"A Test of Lead Quality","url":"https://www.jonloomer.com/qvt/a-test-of-lead-quality/"},{"title":"create more valuable leads than ever with metas instant forms","url":"https://projecter.workplace.com/business/news/create-more-valuable-leads-than-ever-with-metas-instant-forms"},{"title":"Meta Ads strategy: Lead forms vs website conversions","url":"https://trio-media.co.uk/meta-lead-forms-vs-website-conversions"},{"title":"Meta Ads strategy: Lead forms vs website conversions","url":"https://trio-media.co.uk/?p=1678"},{"title":"Meta Lead Ads Guide: How to Generate Hig
+… [truncated, 2631 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "thank you page second conversion step upsell survey share social booking call "thank you page" conversion rate case study lead gen"
+
+Links: [{"title":"thank you pages delight users and increase lead generation","url":"https://blog.spitfireinbound.com/thank-you-pages-delight-users-and-increase-lead-generation"},{"title":"How to find out which (landing) page drives the most conversions as well as the conversion rate? | Community","url":"https://experienceleaguecommunities.adobe.com/adobe-analytics-3/how-to-find-out-which-landing-page-drives-the-most-conversions-as-well-as-the-conversion-rate-93759"},{"title":"How to find out which (landing) page drives the most conversions as well as the conversion rate? | Community","url":"https://experienceleaguecommunities-beta.adobe.com/adobe-analytics-3/how-to-find-out-which-landing-page-drives-the-most-conversions-as-well-as-the-conversion-rate-93759"},{"title":"thank you lead generating machine","url":"https://growandconvert.com/conversion-rate-optimization/thank-you-lead-generating-machine/"},{"title":"experienceleaguecommunities.adobe.com","url":"https://experienceleaguecommunities.adobe.com/t5/adobe-analytics-
+… [truncated, 3471 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://growandconvert.com/conversion-rate-optimization/thank-you-lead-generating-machine/
+
+> prompt: Details: what was tested on the thank-you page, conversion rates (2.6% to 7.5-11%), sample sizes, time period, lead qualification caveats.
+
+**→ WebFetch** https://www.jonloomer.com/qvt/a-test-of-lead-quality/
+
+> prompt: Describe the test: setup, sample sizes, results comparing instant form vs website landing page lead quality (email engagement), conclusion.
+
+**→ WebSearch** `Gal Rucker "The loss of loss aversion" 2018 Journal of Consumer Psychology; Ruggeri 2020 Nature Human Behaviour prospect theory replication 19 countries loss aversion`
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**What was tested:** The author's company, SnackNation, replaced the standard thank-you page on its blog with an offer for a free office snack sample box. Visitors who downloaded a content upgrade or signed up for email were sent to a page that tied the post's topic to the product. Some pages also used "message match" copy, while a "catch-all" page did not.
+
+**Time period:** About 10 months of testing, as of the article's writing.
+
+**Results and conversion rates:**
+- Standard exit popups for content upgrades converted at about 2.6%. Full-page exit popups converted at 5.58%, which the author reports as roughly 115% better.
+- Message-matched thank-you pages converted at about 7.5–11%. The employee engagement page converted at 10.52%, and the employee appreciation page at 7.59%.
+- A catch-all thank-you page with no message match converted at 10.67%, but the author found its leads closed at a lower rate.
+
+**Sample size:** The thank-you pages produced 884 leads and over 20 sales. The article does not give per-page sample sizes. The author says the employee appreciation page's data is too limited to be conclusive.
+
+**Lead qualification caveats:**
+- Only about 18% of the 884 leads were qu
+… [truncated, 295 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Gal Rucker "The loss of loss aversion" 2018 Journal of Consumer Psychology; Ruggeri 2020 Nature Human Behaviour prospect theory replication 19 countries loss aversion"
+
+Links: [{"title":"Start of Main Content","url":"https://www.kellogg.northwestern.edu/academics-research/research/detail/2018/the-loss-of-loss-aversion-will-it-loom-larger/"},{"title":"The Loss of Loss Aversion: Will It Loom Larger Than Its Gain?","url":"https://papers.ssrn.com/abstract=3049660"},{"title":"loss loss aversion paying attention reference points","url":"https://business.columbia.edu/faculty/research/loss-loss-aversion-paying-attention-reference-points"},{"title":"Is Loss Aversion a Fallacy?","url":"https://ritholtz.com/?p=208083"},{"title":"loss aversion","url":"https://atticusli.com/replication-crisis/loss-aversion/"},{"title":"Executive Summary","url":"https://www.kitces.com/blog/loss-aversion-pain-loom-larger-than-gain-gal-rucker-journal-psychology/"},{"title":"Executive Summary","url":"https://www.kitces.com/?p=23365"},{"title":"Academic Journal","url":"https://librarysearch.aut.ac.nz/vufind/EdsRecord/edb,130749900"},{"title":"The Loss of Loss Aversion: Paying Attention
+… [truncated, 4854 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.publichealth.columbia.edu/public-health-now/news/global-study-confirms-influential-theory-behind-loss-aversion
+
+> prompt: Key findings of the Ruggeri et al. replication: number of participants, countries, replication rate, loss aversion finding, date, whether Czech Republic was included.
+
+**→ WebFetch** https://www.kellogg.northwestern.edu/academics-research/research/detail/2018/the-loss-of-loss-aversion-will-it-loom-larger/
+
+> prompt: Abstract: argument about loss aversion, journal, year.
+
+**→ WebSearch** `Iyengar Huberman Jiang 2004 How much choice is too much 401(k) participation drops 10 funds added 1.5% to 2%`
+
+**→ WebSearch** `default value slider anchoring effect savings amount online calculator experiment initial value influences chosen contribution`
+
+<details><summary>result</summary>
+
+```
+- **Participants:** 4,098 respondents who completed all questions were included in the final analysis.
+- **Countries:** 19 countries, with materials in 13 languages.
+- **Replication rate:** About 90% in areas directly testing the core theoretical contrasts of prospect theory.
+- **Loss aversion finding:** The study supports the concept that people will accept a smaller sure gain over a larger gamble. Some effects were weaker than in 1979, which the researchers attribute mainly to easier participant access in 2019. Awareness of loss aversion had only a weak effect on decisions.
+- **Date:** The article is dated May 18, 2020.
+- **Czech Republic:** The article doesn't say whether the Czech Republic was included. It names only the total of 19 countries.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Iyengar Huberman Jiang 2004 How much choice is too much 401(k) participation drops 10 funds added 1.5% to 2%"
+
+Links: [{"title":"how much choice too much contributions 401k retirement plans","url":"https://business.columbia.edu/faculty/research/how-much-choice-too-much-contributions-401k-retirement-plans"},{"title":"Sheena S. Iyengar, Gur Huberman, and Wei Jiang","url":"https://pensionresearchcouncil.wharton.upenn.edu/?p=643"},{"title":"How Much Choice is Too Much?: Contributions to 401(k) Retirement Plans","url":"https://repository.upenn.edu/prc_papers/426"},{"title":"offering versus choice 401k plan participants equity exposure and number funds","url":"https://business.columbia.edu/faculty/research/offering-versus-choice-401k-plan-participants-equity-exposure-and-number-funds"},{"title":"www0.gsb.columbia.edu","url":"https://www0.gsb.columbia.edu/cfusion/faculty/ghuberman/offering%20versus%20choice.pdf"},{"title":"thesis.lib.nccu.edu.tw","url":"https://thesis.lib.nccu.edu.tw/thesis/detail/67970d050494408b8030af356997787f"},{"title":"thesis.lib.nccu.edu.tw","url":"https://thesis.lib.nccu.edu.tw/detail/67970d050494408b8030af356997787f/"},{"title":"Off
+… [truncated, 2098 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The page doesn't include an abstract about loss aversion, so I can't give a journal or year for it. It's a landing page for Kellogg faculty research. It says Kellogg faculty publish often in leading academic journals and that their work influences academic fields and policy, but it doesn't name any specific article, author, journal, or publication date.
+
+If you share the text of the article or a link to the specific paper, I can summarize its argument about loss aversion and identify the journal and year.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "default value slider anchoring effect savings amount online calculator experiment initial value influences chosen contribution"
+
+Links: [{"title":"‘Street Cred: an empirical study of anchoring in credit card repayment settings’","url":"https://www.socialscienceregistry.org/trials/3546"},{"title":"www.bi.team","url":"https://www.bi.team/?p=13884"},{"title":"choi et al small cues change savings choices","url":"https://faculty.wharton.upenn.edu/wp-content/uploads/2013/06/choi-et-al-small-cues-change-savings-choices.pdf"},{"title":"Case Study","url":"https://advanced-hindsight.com/?p=6668"},{"title":"P20180108 DP001 Verhallen","url":"https://www.netspar.nl/wp-content/uploads/P20180108_DP001_Verhallen.pdf"},{"title":"Case Study","url":"https://advanced-hindsight.com/case-study/using-defaults-and-anchors-to-help-members-start-saving-for-retirement/"},{"title":"2019 Poster De La Rosa Wendy financial saving anchoring~","url":"https://dlab.sauder.ubc.ca/sjdm/presentations/2019-Poster-De_La_Rosa-Wendy-financial-saving-anchoring~.pdf"},{"title":"English Français Deutsch Italiano 中文","url":"https://cepr.org/publications/dp12142"},{"title":"www.stlouisfed.org","ur
+… [truncated, 2577 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://faculty.wharton.upenn.edu/wp-content/uploads/2013/06/choi-et-al-small-cues-change-savings-choices.pdf
+
+> prompt: Abstract and main findings: authors, year, design, effect sizes of salient high vs low savings rates on contribution rates, persistence.
+
+**→ WebFetch** https://repository.upenn.edu/prc_papers/426
+
+> prompt: Abstract: sample size, finding about participation vs number of funds offered.
+
+**→ WebFetch** https://www.bi.team/?p=13884
+
+> prompt: Key findings about credit card repayment slider anchoring experiment: sample size, effect sizes, year.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+- **Sample size:** The page doesn't report it.
+- **Effect size:** The page gives no numbers. It says that "All variations of the slider interface significantly increased repayment rates."
+- **Year:** The page lists 2016.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+I can't answer this from the content provided. The text is a raw PDF file dump, mostly compressed binary streams and font data, and the abstract and findings are not readable in it. The truncation also cuts off the body of the document.
+
+The readable metadata gives only partial identification:
+
+- **Journal:** *Journal of Economic Behavior & Organization* (ScienceDirect journal ID 01672681)
+- **DOI:** 10.1016/j.jebo.2017.08.010, which suggests a 2017 publication
+- **Corresponding author email:** james.choi@yale.edu, which suggests James Choi of Yale, though the full author list isn't readable
+- **Title:** not visible in the extracted text
+
+I can't confirm the paper's design, sample, effect sizes, or persistence results from this material, so I won't estimate them.
+
+To get the summary, you could:
+
+1. Paste the abstract and the results section as plain text.
+2. Share the DOI (10.1016/j.jebo.2017.08.010) or a link to the article page, if you can access it.
+
+[Binary content (application/pdf, 2.4MB) also saved to C:\Users\matus\.claude\projects\C--Users-matus-Desktop-B-project\66014a9f-a5a6-413b-8552-f9844a0020a6\tool-results\webfetch-1791637664627-dal69s.pdf]
+```
+
+</details>
+
+**→ Bash** — Extract abstract of Choi et al small cues paper
+
+```
+cd "C:/Users/matus/.claude/projects/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/tool-results/" && pdftotext -layout webfetch-1791637664627-dal69s.pdf choi.txt && head -90 choi.txt
+```
+
+<details><summary>result</summary>
+
+```
+Journal of Economic Behavior & Organization 142 (2017) 378�395
+
+                            Contents lists available at ScienceDirect
+
+Journal of Economic Behavior & Organization
+
+            journal homepage: www.elsevier.com/locate/jebo
+
+Small cues change savings choices
+
+James J. Choi a,, Emily Haisley b, Jennifer Kurkoski c, Cade Massey d
+
+a Yale University and NBER, 165 Whitney Ave., P.O. Box 208200, New Haven, CT 06520-8200, United States
+b BlackRock, United States
+c Google Inc., United States
+d University of Pennsylvania, United States
+
+article info                             abstract
+
+Article history:                         We present evidence from randomized field experiments that 401(k) savings choices are
+Received 18 February 2017                significantly affected by one- to two-sentence anchoring, goal-setting, or savings threshold
+Received in revised form 10 August 2017  cues embedded in emails sent to employees about their 401(k) plan. Even though these
+Accepted 14 August 2017                  cues contain little to no marginal information, cues that make high savings rates salient
+Available online 24 August 2017          increased 401(k) 
+… [truncated, 5681 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://web.dev/articles/lcp
+
+> prompt: What are the LCP thresholds for good / needs improvement / poor, at what percentile are they measured, and for which device types?
+
+**→ WebFetch** https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/
+
+> prompt: Bounce probability increase from 1s to 3s load time (32%), 1s to 5s (90%), sample size of the analysis, date; and the average mobile landing page load time.
+
+**→ WebFetch** https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html
+
+> prompt: Key stats of Deloitte Milliseconds Make Millions; lead generation finding; sample size and period.
+
+<details><summary>result</summary>
+
+```
+REDIRECT DETECTED: The URL redirects to a location that was not fetched automatically.
+
+    Original URL: https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/
+    Redirect URL (from the server's Location header — server-supplied, not verified): https://business.google.com/en-all/think/
+    Status: 301 Moved Permanently
+
+    To complete your request, I need to fetch content from the redirected URL. Please use WebFetch again with these parameters:
+    - url: "https://business.google.com/en-all/think/"
+    - prompt: "Bounce probability increase from 1s to 3s load time (32%), 1s to 5s (90%), sample size of the analysis, date; and the average mobile landing page load time."
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Lead generation finding:** A 0.1-second improvement in mobile site speed reduced the bounce rate on lead generation information pages by 8.3%.
+
+**Sample size:** The page doesn't give a number of sites, visits, or sessions. It says the study covered mobile site data from retail, travel, luxury, and lead generation brands across Europe and the US.
+
+**Study period:** Four weeks.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Good:** LCP of 2.5 seconds or less. The article states, "A good LCP value is 2.5 seconds or less."
+
+**Needs improvement:** Values between 2.5 and 4.0 seconds.
+
+**Poor:** Values above 4.0 seconds.
+
+**Percentile:** The 75th percentile of page loads.
+
+**Device types:** Mobile and desktop, measured separately.
+```
+
+</details>
+
+**→ WebSearch** `benchmark Meta Ads Česká republika CPC CPM CPL 2025 oborové finance pojištění agentura průměrné ceny reklamy Facebook Instagram ČR`
+
+**→ WebSearch** `Meta ads cost per lead CEE Czech Republic Poland Hungary CPM CPC benchmark by country 2025 Smart Digital OR AdAmigo OR Revealbot`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Meta ads cost per lead CEE Czech Republic Poland Hungary CPM CPC benchmark by country 2025 Smart Digital OR AdAmigo OR Revealbot"
+
+Links: [{"title":"Adligator Team·","url":"https://adligator.com/blog/meta-ads-cpm-by-country-benchmarks"},{"title":"Facebook & Instagram ADS | targeting | Modular houses","url":"https://freelancehunt.com/en/showcase/work/facebook-instagram-ads-target/2044010.html"},{"title":"Strategically Target Countries for Quality Leads with Meta Ads","url":"https://www.jonloomer.com/strategically-target-countries-for-quality-leads-with-meta-ads/"},{"title":"Site icon Jon Loomer Digital","url":"https://www.jonloomer.com/strategically-target-countries-for-quality-leads-with-meta-ads/amp/"},{"title":"Meta Ads CPM & CPC Benchmarks by Country in 2026","url":"https://www.adamigo.ai/blog/meta-ads-cpm-cpc-benchmarks-by-country-2026"},{"title":"facebook ads cost","url":"https://localiq.com/blog/facebook-ads-cost/"},{"title":"2025 Facebook Advertising Expenses Vary: A Comprehensive Guide","url":"https://chartlocal.com/2025/09/10/2025-facebook-advertising-expenses-vary-a-comprehensive-guide/"},{"title":"average cost per lead on facebook july 2026
+… [truncated, 3415 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "benchmark Meta Ads Česká republika CPC CPM CPL 2025 oborové finance pojištění agentura průměrné ceny reklamy Facebook Instagram ČR"
+
+Links: [{"title":"Meta ad spend by industry 2025: the ultimate benchmark report","url":"https://wf.trendtrack.io/blog-post/meta-ad-spend-by-industry"},{"title":"Meta ad spend by industry 2025: the ultimate benchmark report","url":"https://www.trendtrack.io/blog-post/meta-ad-spend-by-industry"},{"title":"Meta ad spend by industry 2025: the ultimate benchmark report","url":"https://www.trendtrack.io/fr/blog-post/meta-ad-spend-by-industry"},{"title":"What is a good CPC, CPM, and CTR for Meta ads?","url":"https://creatify.ai/pt/blog/what-is-a-good-cpc-cpm-and-ctr-for-meta-ads"},{"title":"What is a good CPC, CPM, and CTR for Meta ads?","url":"https://creatify.ai/es/blog/what-is-a-good-cpc-cpm-and-ctr-for-meta-ads"},{"title":"Meta ads benchmarks 2026: Average CPM, CPC, and CTR by industry","url":"https://contentstudio.io/blog/meta-ads-benchmarks"},{"title":"What is a good CPC, CPM, and CTR for Meta ads?","url":"https://creatify.ai/id/blog/what-is-a-good-cpc-cpm-and-ctr-for-meta-ads"},{"title":"What is a good CPC, CPM, and CTR 
+… [truncated, 4500 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://adligator.com/blog/meta-ads-cpm-by-country-benchmarks
+
+> prompt: Czech Republic Facebook and Instagram CPM ranges, Poland, Slovakia, and how the data was derived (estimates vs measured); date; Czech CPC/CPL if given.
+
+**→ WebFetch** https://influee.co/cz/blog/how-much-do-facebook-ads-cost
+
+> prompt: Finance & insurance CPC and CTR numbers, lead campaign CPC and CPL average, data source (LocaliQ?), date, any Czech-specific numbers.
+
+<details><summary>result</summary>
+
+```
+**Czech Republic:** Facebook CPM $3.50-$5.00; Instagram CPM $4.50-$6.50.
+
+**Poland:** Facebook CPM $3.50-$5.50; Instagram CPM $4.50-$7.00.
+
+**Slovakia:** Not included in the article.
+
+**Data derivation:** The article doesn't say whether the figures are estimates or measured values. It describes its figures as a way to "consolidate current CPM benchmark data across 40+ countries," but it doesn't explain its sources or methodology.
+
+**Date:** The article is dated 31.03.2026.
+
+**Czech CPC/CPL:** Not given. The article reports only CPM ranges.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+- **Finance & insurance (traffic campaigns):** CPC is **$1.22** and CTR is **0.98%**. This is the most expensive traffic-campaign category in the table.
+- **Lead campaign CPC:** The average is **$1.92** per click.
+- **Lead campaign CPL (average):** The article gives no overall average. Its lead cost table lists per-industry values from $3.16 (food and grocery) to $76.71 (dentistry), and finance and insurance doesn't appear in that table.
+- **Data source:** LocaliQ, October 2025, covering 21 industries. The article cites the LocaliQ benchmarks page.
+- **Article date:** 4 September 2026.
+- **Czech-specific numbers:** None. The page contains no Czech Facebook ad benchmarks. The only Czech references are Influee's own marketing details, such as its 3,000+ verified creators in the Czech Republic and UGC videos from €68.
+```
+
+</details>
+
+**→ WebSearch** `Facebook Instagram in-app browser landing page views vs link clicks discrepancy slow load percentage lost clicks study autofill unavailable`
+
+**→ WebSearch** `NN/g photos as web content eyetracking users ignore stock photos real people images attention`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "NN/g photos as web content eyetracking users ignore stock photos real people images attention"
+
+Links: [{"title":"Not All Images Are the Same","url":"https://www.nngroup.com/articles/photos-as-web-content/?tab=suite"},{"title":"Not All Images Are the Same","url":"https://www.nngroup.com/articles/photos-as-web-content/"},{"title":"Not All Images Are the Same","url":"https://www.nngroup.com/articles/photos-as-web-content/?pp=env"},{"title":"What Makes Web Images Attractive","url":"https://www.poynter.org/news/what-makes-web-images-attractive"},{"title":"netimperative.com","url":"https://netimperative.com/?p=735"},{"title":"What Kind of Photos Work on the Web?","url":"https://www.selling-stock.com/Article/what-kind-of-photos-work-on-the-web"},{"title":"June 23, 2006","url":"https://www.poynter.org/?p=75924"},{"title":"photographybay.com","url":"https://photographybay.com/tag/websites"},{"title":"Information Today, Inc. Corporate Site KMWorld CRM Media Streaming Media Faulkner Speech Technology DBTA/Unisphere","url":"https://www.infotoday.com/LinkUp/Being-Picture-Perfect-on-the-Web-72037.shtml"},{"title":"the end of commercial stock","url":"https://blog.m
+… [truncated, 2478 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Facebook Instagram in-app browser landing page views vs link clicks discrepancy slow load percentage lost clicks study autofill unavailable"
+
+Links: [{"title":"Why Instagram Links Lose 40% of Sales: The In-App Browser Problem","url":"https://blog.bouncy.ai/blog/instagram-links-lose-sales/"},{"title":"www.clickcease.com","url":"https://www.clickcease.com/blog/wp-json/wp/v2/posts/11153"},{"title":"open instragram link in browser","url":"https://linklyhq.com/blog/open-instragram-link-in-browser"},{"title":"Facebook Landing Page","url":"https://rocketlink.io/blog/facebook-landing-page-views-vs-link-clicks-explained"},{"title":"Fix Instagram In-App Browser: Links Not Opening in Safari","url":"https://blog.bouncy.ai/blog/fix-links-not-opening-safari-chrome/"},{"title":"amazon storefront link from instagram","url":"https://link.boo/fix/amazon-storefront-link-from-instagram"},{"title":"Escape the in-app browser","url":"https://u2l.ai/features/open-in-external-browser"},{"title":"Instagramm In App Browser Problem","url":"https://community.shopify.com/t/instagramm-in-app-browser-problem/409392"},{"title":"On this page","url":"https://link.boo/guides/instagram-l
+… [truncated, 3688 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://developer.chrome.com/blog/autofill-insights-2024
+
+> prompt: Key stats: abandonment with autofill vs without (75% less?), time savings (35%), sample/period, how measured, caveats on correlation.
+
+**→ WebFetch** https://www.nngroup.com/articles/photos-as-web-content/
+
+> prompt: What does it say about stock photos vs real photos, and attention? Publication date and sample.
+
+<details><summary>result</summary>
+
+```
+**Key stats (from the Chrome blog, Dec 17, 2024):**
+
+- **Abandonment:** On the average form, users abandon forms 75% less often when they use autofill than when they type exclusively.
+- **Time:** Time spent filling forms is about 35% lower with autofill.
+
+**Sample and period:**
+- Thousands of address and credit card forms across millions of page loads on the most visited websites in Chrome in the United States.
+- The page does not state the time period studied.
+
+**Measurement:**
+- "With autofill" means the user autofilled some fields, not necessarily all. Partial autofill was the majority of cases.
+- Completion time starts when the user first interacts with the form, by typing or using autofill.
+- The authors report the minimum drops observed consistently across verticals such as travel and retail.
+
+**Caveats:**
+- The study is correlational. Autofill users may already be faster or less likely to abandon forms, possibly due to greater comfort with online forms or digital literacy.
+- The study covers only the US. Success rates can vary by region due to site implementations, address formats, and Chrome's handling of those formats.
+- The data is aggregated from users with usage statist
+… [truncated, 12 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Publication date:** The article was published October 31, 2010, and last reviewed August 13, 2026.
+
+**Sample:** The page doesn't give a participant count. It draws on examples from one eyetracking study "we ran earlier this year" (2010), plus unspecified "thousands more" from other studies. The gaze plots shown come from individual test users.
+
+**What it says about stock vs. real photos:**
+- **Real people get attention.** Portraits of FreshBooks' actual staff drew strong focus. One user spent 10% more time on the portrait photos than on the biographies, even though the bios took up 316% more space.
+- **Stock photos are ignored.** The article says users ignore stock photos of generic people. On a Yale application page, the photo was "pure filler" that users skipped because they wanted information about the process.
+- **Decorative images are a poor use of space.** The author argues that "jazzed-up" pages are ignored, and that images attract attention when they carry relevant information, such as product photos or author photos.
+```
+
+</details>
+
+**→ WebSearch** `ad–landing page congruence academic study effect on click-through conversion "landing page" "message congruence" online advertising experiment`
+
+**→ WebSearch** `scent of information NN/g information foraging users follow link scent expectation mismatch leave page`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "scent of information NN/g information foraging users follow link scent expectation mismatch leave page"
+
+Links: [{"title":"information scent","url":"https://nngroup.com/articles/information-scent/"},{"title":"information scent","url":"https://wordspy.com/words/information-scent"},{"title":"What makes the scent of a webpage?","url":"https://metafilter.com/205432/What-makes-the-scent-of-a-webpage"},{"title":"Information Scent","url":"https://www.personizely.net/glossary/information-scent"},{"title":"information scent","url":"https://www.switas.com/glossary/information-scent"},{"title":"information scent","url":"https://jakobnielsenphd.substack.com/p/information-scent?open=false"},{"title":"www.doi.org","url":"https://www.doi.org/10.1007/3-540-44963-9_8"},{"title":"Reviewed by Jason Hreha","url":"https://www.thebehavioralscientist.com/?p=9790"},{"title":"Information Scent","url":"https://concepts.dsebastien.net/concept/information-scent/"},{"title":"What is Information scent In formation scent In UX?","url":"https://www.thebehavioralscientist.com/glossary/information-scent"}]
+
+Here's what the search turned up on information scent and why users leave a pa
+… [truncated, 2711 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "ad–landing page congruence academic study effect on click-through conversion "landing page" "message congruence" online advertising experiment"
+
+Links: [{"title":"How congruence between ad and landing page affects conversion","url":"https://www.nextafter.com/?p=13009"},{"title":"How increasing landing page congruence affects cost per subscriber","url":"https://www.nextafter.com/?p=11434"},{"title":"Around the Net","url":"https://www.mediapost.com/publications/article/70934"},{"title":"Around the Net","url":"https://www.mediapost.com/publications/article/70934/improve-conversions-by-up-to-60-a-landing-page-c.html"},{"title":"Posted September 04, 2014","url":"https://optimizely.com/2014/09/04/symmetry-in-online-marketing"},{"title":"How to Boost Your Landing Page Conversions","url":"https://10xconversions.substack.com/p/how-to-boost-your-landing-page-conversions"},{"title":"How a Growth Manager Tests with Intelligems","url":"https://www.intelligems.io/resources/blog/how-a-growth-manager-tests-with-intelligems"},{"title":"Impact of streamlining the layout and copy of a landing page","url":"https://www.nextafter.com/?p=16261"},{"title":"Measuring Ad-to-La
+… [truncated, 4445 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.nextafter.com/?p=13009
+
+> prompt: Experiment details: organization, control/treatment, conversion rates, relative difference, confidence, sample size, dates.
+
+**→ WebFetch** https://www.nextafter.com/?p=11434
+
+> prompt: Experiment details: organization, control/treatment, conversion/cost per subscriber, relative difference, confidence, sample size, dates.
+
+**→ WebFetch** https://optimizely.com/2014/09/04/symmetry-in-online-marketing
+
+> prompt: Experiment details: what changed, conversion lift numbers, sample size, significance, company.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Experiment #314: Hoover Institution (Strategika newsletter)**
+
+| Detail | Value |
+|---|---|
+| **Organization** | Hoover Institution |
+| **Timeframe** | 12/01/2014 to 12/25/2014 |
+| **Control (C)** | Strategika-branded landing page; 25.0% conversion rate |
+| **Treatment (T1)** | Landing page with the same WWII beachhead background as the Facebook ad, plus shortened copy; 34.8% conversion rate |
+| **Relative difference** | 39.2% increase in conversion rate |
+| **Cost per subscriber** | Reduced by 86%, per NextAfter's summary. No absolute dollar figures are given. |
+| **Confidence** | 100.0% |
+| **Sample size** | 3,687 total; 163 required for validity. The results are valid. |
+| **Other metrics** | No change in traffic or average gift |
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Experiment #4854: Dallas Theological Seminary**
+
+- **Organization:** Dallas Theological Seminary
+- **Test:** A/B test of a Facebook ad promoting its second course, *Genesis*
+- **Control (C):** The original ad, which showed a person studying
+- **Treatment (T1):** The ad used the Sistine Chapel image from the landing page, to increase congruence between ad and page
+- **Conversion rates:** Control 0.49%; Treatment 0.73%
+- **Relative difference:** 47.6%
+- **Confidence:** 100.0%
+- **Sample size:** 239,607 total, against a required 9,488. The results were judged valid.
+- **Dates:** July 1, 2016 to August 29, 2016
+```
+
+</details>
+
+**→ WebSearch** `quiz number of questions completion rate data analysis shorter quiz higher completion 5 questions vs 10 questions Typeform OR Involve.me OR Outgrow dataset`
+
+**→ WebSearch** `Typeform completion rate benchmark number of questions form completion rate data report`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Typeform completion rate benchmark number of questions form completion rate data report"
+
+Links: [{"title":"pmc.ncbi.nlm.nih.gov","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC8521856/table/T3"},{"title":"whats the average completion rate of a typeform","url":"https://typeform.com/help/whats-the-average-completion-rate-of-a-typeform"},{"title":"What’s the average completion rate of a typeform?","url":"https://help.typeform.com/hc/en-us/articles/360029615911"},{"title":"23 Jan, 2024, 15:18 GMT","url":"https://www.prnewswire.co.uk/news-releases/new-typeform-report-reveals-how-marketers-can-drive-higher-form-completion-rates-302042004.html"},{"title":"Research-driven tips to power up your lead capture forms","url":"https://help.typeform.com/hc/en-us/articles/4406587604116"},{"title":"Research-driven tips to power up your lead capture forms","url":"https://typeform.com/help/a/research-driven-tips-to-power-up-your-lead-capture-forms-4406587604116"},{"title":"how many questions is too many 9854","url":"https://community.typeform.com/build-your-typeform-7/how-many-questions-is-too-many-9854"},{"title":"75+ Online Form Statistics: Completion, Abandonment, a
+… [truncated, 2649 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "quiz number of questions completion rate data analysis shorter quiz higher completion 5 questions vs 10 questions Typeform OR Involve.me OR Outgrow dataset"
+
+Links: [{"title":"73000524383 best quiz practices","url":"https://support.credspark.com/support/solutions/articles/73000524383-best-quiz-practices"},{"title":"how to become a quiz master","url":"https://magazine.pinpoll.com/en/how-to-become-a-quiz-master/"},{"title":"Quizzes Analytics","url":"https://support.skilljar.com/hc/articles/38190389530637"},{"title":"pmc.ncbi.nlm.nih.gov","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC9262006/table/T2"},{"title":"quiz completion rate","url":"https://docs.wisdmlabs.com/article/wisdm-learndash-reports/gutenberg-blocks/quiz-completion-rate/"},{"title":"Have a Question?","url":"https://prehook.com/?p=1502"},{"title":"We were able to analyze following parameters already:","url":"https://help.pinpoll.com/en/articles/6092089-which-parameters-are-giving-information-about-how-good-pinpoll-elements-are-performing"},{"title":"8617091 what do the quiz numbers tell us","url":"https://help.pinpoll.com/en/articles/8617091-what-do-the-quiz-numbers-tell-us"},{"title":"c
+… [truncated, 5074 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://typeform.com/help/a/research-driven-tips-to-power-up-your-lead-capture-forms-4406587604116
+
+> prompt: Stats about number of questions vs completion, form time, mobile vs desktop; sample sizes; year.
+
+**→ WebFetch** https://support.credspark.com/support/solutions/articles/73000524383-best-quiz-practices
+
+> prompt: The statistical analysis of quiz length vs completion rate: variance explained, sample, other findings about what predicts completion.
+
+<details><summary>result</summary>
+
+```
+REDIRECT DETECTED: The URL redirects to a location that was not fetched automatically.
+
+    Original URL: https://www.typeform.com/help/a/research-driven-tips-to-power-up-your-lead-capture-forms-4406587604116
+    Redirect URL (from the server's Location header — server-supplied, not verified): https://help.typeform.com/hc/en-us/articles/4406587604116-research-driven-tips-to-power-up-your-lead-capture-forms
+    Status: 301 Moved Permanently
+
+    To complete your request, I need to fetch content from the redirected URL. Please use WebFetch again with these parameters:
+    - url: "https://help.typeform.com/hc/en-us/articles/4406587604116-research-driven-tips-to-power-up-your-lead-capture-forms"
+    - prompt: "Stats about number of questions vs completion, form time, mobile vs desktop; sample sizes; year."
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+The article analyzed quizzes published by CredSpark's clients, comparing the number of questions with the percentage of starters who finished. It found that "the length of a quiz only accounts for a 2.3% variance in the completion rate," so length is a minor factor once someone starts.
+
+- **Sample:** The article doesn't state how many quizzes or participants were included. The charts are images, and their underlying figures aren't described in the text.
+- **Difficulty and completion:** The final score explains less than 2% of the variation in completion rates.
+- **Difficulty and registration:** The "How did I do?" factor explains less than 5% of the variation in registration completion.
+- **Cited research:** The article notes that surveys that are too short generally have lower response rates. It also cites psychological studies finding that challenging tasks bring more satisfaction and improve flow.
+```
+
+</details>
+
+**→ WebFetch** https://help.typeform.com/hc/en-us/articles/4406587604116-research-driven-tips-to-power-up-your-lead-capture-forms
+
+> prompt: Stats about number of questions vs completion, form time, mobile vs desktop; sample sizes; year.
+
+**→ WebSearch** `Czech Republic internet users mobile share of traffic smartphone 2025 ČSÚ OR Eurostat Czech households smartphone use percentage investing`
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 403 Forbidden.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Czech Republic internet users mobile share of traffic smartphone 2025 ČSÚ OR Eurostat Czech households smartphone use percentage investing"
+
+Links: [{"title":"ICT in households and ICT users","url":"https://csu.gov.cz/ict-in-households-and-ict-users"},{"title":"Mobile internet use in Czechia surges over past decade","url":"https://english.radio.cz/mobile-internet-use-czechia-surges-over-past-decade-8881376"},{"title":"Share of devices used to access the internet in Czechia in 2025","url":"https://statista.com/statistics/1299670/czechia-most-used-internet-devices"},{"title":"Digital 2026: Czechia","url":"https://datareportal.com/reports/digital-2026-czechia"},{"title":"Statistics about Technology & Telecommunications in Czechia","url":"https://www.statista.com/map/europe/czechia/technology-telecommunications?p=2"},{"title":"Survey: Over 80 percent of Czechs use smartphones","url":"https://english.radio.cz/node/8767691"},{"title":"Mobile internet user penetration in Czechia 2012-2029","url":"https://statista.com/statistics/567760/predicted-mobile-internet-user-penetration-rate-in-the-czech-republic"},{"title":"Internet usage in Czechia - statistics & fa
+… [truncated, 2259 more chars]
+```
+
+</details>
+
+**→ WebSearch** `Guéguen foot-in-the-door technique computer-mediated communication email request compliance small request first experiment`
+
+**→ WebSearch** `"The Foot-in-the-Door Phenomenon 40 and 50 Years Later" direct replication Freedman Fraser Poland Ukraine Social Psychological and Personality Science`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: ""The Foot-in-the-Door Phenomenon 40 and 50 Years Later" direct replication Freedman Fraser Poland Ukraine Social Psychological and Personality Science"
+
+Links: [{"title":"Supplemental_Material.pdf (410.17 kB)","url":"https://sage.figshare.com/articles/Supplemental_material_for_The_Foot-in-the-Door_Phenomenon_40_and_50_Years_Later_A_Direct_Replication_of_the_Original_Freedman_and_Fraser_Study_in_Poland_and_in_Ukraine/9767399"},{"title":"do social psychology findings persist over time","url":"https://spsp.org/news-center/character-context-blog/do-social-psychology-findings-persist-over-time"},{"title":"does social psychology persist over half a century a direct repli","url":"https://fis.leuphana.de/en/publications/does-social-psychology-persist-over-half-a-century-a-direct-repli/"},{"title":"community.macmillanlearning.com","url":"https://community.macmillanlearning.com/t5/psychology-blog/the-safe-driving-sign-study-does-it-illustrate-foot-in-the-door/m-p/17153"},{"title":"fcb4280a 914b 43bd 85fd 8766e90ea11b","url":"https://claude.ai/public/artifacts/fcb4280a-914b-43bd-85fd-8766e90ea11b"},{"title":"kups.ub.uni-koeln.de","url":"https://kups.ub.uni-koeln
+… [truncated, 1991 more chars]
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Guéguen foot-in-the-door technique computer-mediated communication email request compliance small request first experiment"
+
+Links: [{"title":"Foot-in-the-door technique","url":"https://en.wikipedia.org/wiki/Foot-in-the-door_technique"},{"title":"archivesic.ccsd.cnrs.fr","url":"https://archivesic.ccsd.cnrs.fr/sic_00870107/document"},{"title":"Repeating “Yes” in a first request and compliance with a later request: The four walls technique","url":"https://new.sbp-journal.com/index.php/sbp/article/view/2542"},{"title":"Fund-Raising on the Web: The Effect of an Electronic Foot-in-the-Door on Donation","url":"https://cbsm.com/articles/32751-fund-raising-on-the-web-the-effect-of-an-electronic-foot-in-the-door-on-donation"},{"title":"Back to Search Start Over","url":"https://searchworks.jioinstitute.edu.in/articles/asx__35578159"},{"title":"default search action","url":"https://dblp.org/pid/34/9942"},{"title":"prosocialness and sequential request compliance techniques limits","url":"https://pure.psu.edu/en/publications/prosocialness-and-sequential-request-compliance-techniques-limits/"},{"title":"Foot-in-the-door technique and computer-mediated communication
+… [truncated, 2288 more chars]
+```
+
+</details>
+
+**→ WebSearch** `Morningstar experiment fees displayed as dollars vs percentages 3,622 participants only 14% invested all in cheapest fund`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "Morningstar experiment fees displayed as dollars vs percentages 3,622 participants only 14% invested all in cheapest fund"
+
+Links: [{"title":"Morningstar Magazine - June/July 2018 - 24","url":"https://nxtbook.com/nxtbooks/morningstar/magazine_20180607/index.php?startid=24"},{"title":"are cheaper funds better","url":"https://www.benefitspro.com/amp/2016/05/10/are-cheaper-funds-better"},{"title":"Fund Fees at Record Lows but Decline Is Slowing: Morningstar","url":"https://www.etf.com/sections/news/fund-fees-record-lows-decline-slowing-morningstar"},{"title":"Fund Fees at Record Lows but Decline Is Slowing: Morningstar","url":"https://finance.yahoo.com/news/fund-fees-record-lows-decline-120000319.html"},{"title":"Morningstar Study Shows Investors Are Choosing Low-Cost Fund Options","url":"https://401kspecialistmag.com/?p=291"},{"title":"Bringing you live news and features since 2006","url":"https://etfexpress.com/2016/05/06/study-morningstars-russel-kinnel-shows-fund-fees-are-proven-predictors-future-suc/"},{"title":"www.etf.com","url":"https://www.etf.com/node/129629.md"},{"title":"the key to successful mutual fund investing","url":"https://www.fool.com
+… [truncated, 1797 more chars]
+```
+
+</details>
+
+**→ WebSearch** `popup vs inline form conversion rate data Sumo top-performing popups 3.09% average analysis of 2 million popups; mobile popups Google intrusive interstitial penalty`
+
+<details><summary>result</summary>
+
+```
+Web search results for query: "popup vs inline form conversion rate data Sumo top-performing popups 3.09% average analysis of 2 million popups; mobile popups Google intrusive interstitial penalty"
+
+Links: [{"title":"Emailoctopus image","url":"https://emailoctopus.com/blog/how-to-grow-your-email-list-with-pop-up-forms"},{"title":"Popup forms: how to use them without annoying your visitors","url":"https://fomr.io/blog/popup-forms-guide"},{"title":"pop up statistics","url":"https://bdow.com/stories/pop-up-statistics/"},{"title":"Top-Line Popup Statistics for 2026","url":"https://easyappsecom.com/guides/shopify-popup-conversion-statistics-2026.html"},{"title":"Pop-Up Forms: An In-Depth Guide for Marketers in 2024","url":"https://greenlitcontent.com/marketing/pop-up-forms-an-in-depth-guide-for-marketers-in-2024"},{"title":"Top-Line Popup Statistics for 2026","url":"https://easyappsecom.com/guides/shopify-popup-conversion-statistics-2026"},{"title":"The Highest Converting Email Signup Form To Grow Your List","url":"https://mywifequitherjob.com/best-converting-email-signup-forms/"},{"title":"bdow.com","url":"https://bdow.com/?p=6266"},{"title":"inline form vs popup performance","url":"htt
+… [truncated, 4265 more chars]
+```
+
+</details>
+
+**→ Write** `C:\Users\matus\Desktop\B_project\research\03-conversion-psychology.md`
+
+```
+# Conversion & psychology evidence for a mobile finance lead-gen landing page
+
+All sources accessed 2026-10-10. Tags: `VERIFIED` = I opened the page (or extracted the PDF) and it states this; `INFERRED` = my reasoning, or I only saw a search-result snippet / secondary summary. Evidence strength: **Strong** = peer-reviewed, large-sample experiment or multi-company dataset; **Medium** = credible industry dataset or documented A/B test with numbers; **Weak** = opinion, vendor blog, or number without method. Each claim carries `[tag · strength]`.
+
+## Summary
+- Finance-specific and Czech-specific evidence is thin. Most lead-gen CRO numbers come from vendors or agencies. The most solid material is general behavioural research (peer-reviewed) plus a few large datasets (Unbounce, Google/Deloitte, GetResponse).
+- Benchmark: Unbounce's financial-services landing page median is 8.3%. Investing is much lower (3.9%). Paid social in finance is 9.3% (Facebook 10.1%, TikTok 10.8%, Instagram 15.5%). Finance converts better on mobile (11.5%) than desktop (9%). These are medians over pages that had conversions, so they are probably optimistic.
+- No controlled study was found on where to put the email gate for a calculator, quiz or personalised result. Vendor claims point in opposite directions. The claim "interactive converts 2x" traces back to a 2014 self-rating survey (n=185), not measured conversions.
+- Form evidence: fewer fields usually helps, but the widely cited Imagescape test rests on 10 vs 26 submissions. A required GDPR-style consent checkbox cut sign-ups by 15% in one test (n=3,040, non-finance). Autofill users abandon forms 75% less, but only correlationally.
+- Message match: two documented Facebook-ad tests show +39% to +48% (non-finance). The popular "66%" figure could not be traced to a source.
+- Speed: a 0.1 s mobile improvement was associated with a 21.6% higher progression to a form-submission page for lead-gen brands (37 brands, 2019, correlational). Core Web Vitals "good" LCP is 2.5 s or less.
+- Fee framing: showing fees in currency helps larger investors but small investors dismiss small amounts. Making fees salient moves choices toward cheaper funds, yet most people still do not pick the cheapest. No study of "CZK lost over 20 years" versus "TER %" on conversion was found.
+- Urgency/scarcity raises purchase intent on average (meta-analysis), but it is also widely faked online (157 deceptive countdown timers in one crawl) and finance regulators target inducements. No evidence found on trust backlash either way.
+- Czech tone: no finance-specific study on tykání vs vykání. A 2017 survey found about one in five annoyed by tykání in ads (more over 55). The four Czech finance/investing sites I could read all use vykání.
+- Post-submit: welcome emails (35.5% open, cross-industry) outperform finance campaigns (20.3% open). Double opt-in cuts sign-up volume about 4x but lifts open and click rates. No evidence found on instant vs delayed delivery of the lead magnet.
+
+## Findings
+
+### Q1. Lead-magnet types
+- Quiz funnels (ConvertFlow, 1,063 campaigns, Sept 2026, means): lead capture 7.85% of visitors across formats, 11.28% for landing-page quizzes, 10.45% for embedded; "engagement" conversion 23.84%. No breakdown by industry or length. [VERIFIED · Medium] https://www.convertflow.com/benchmark-reports/lead-generation-quiz-funnel-benchmark-september-2026
+- Octane AI (vendor): 29% average quiz email opt-in, 190M+ quiz starts, method undisclosed. [VERIFIED · Weak] https://www.octaneai.com/solutions/lead-generation
+- "Interactive 70% vs static 36%" is a Demand Metric June 2014 survey of marketers rating their own content, sponsored by an interactive-content vendor; the later CMI/ion 2016 report (n=341) also relies on what respondents "reported". It is not a measured conversion rate. [VERIFIED (ion/CMI PDF), details of 185 respondents INFERRED · Weak] https://eu-assets.contentstack.com/v3/assets/blt663d10211b43b0ca/bltdf544ccdf7c23d06/67ed4
+… [truncated, 29468 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+File created successfully at: C:\Users\matus\Desktop\B_project\research\03-conversion-psychology.md (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ SubagentHandback**
+
+```
+{
+ "message": "File: C:\\Users\\matus\\Desktop\\B_project\\research\\03-conversion-psychology.md\n\n5-bullet summary\n- Finance-specific and Czech-specific conversion evidence is thin. Most lead-gen CRO numbers come from vendors or agencies. The solid material is peer-reviewed behavioural research and a few large datasets (Unbounce 41k pages, Google/Deloitte 37 brands, GetResponse).\n- Benchmarks (Unbounce, Jul 2023 to Jul 2024). Financial-services median 8.3%, investing 3.9%, finance paid social 9.3% (Facebook 10.1%, TikTok 10.8%, Instagram 15.5%), finance mobile 11.5% vs desktop 9%. An older edition of the finance page says 3.8%. These medians exclude pages with no conversions, so they probably run optimistic.\n- No controlled study exists on where to put the email gate for a calculator, quiz or personalised result. Vendor claims conflict. The \"interactive converts 2x\" claim is a 2014 self-rating survey (n=185), not measured conversion.\n- Forms and message match:\n  - Fewer fields usually helps, but the famous Imagescape test rests on 10 vs 26 submissions.\n  - A required GDPR-style checkbox cut sign-ups 15% in one test (n=3,040, non-finance).\n  - Autofill users abandon forms 75% less, but only correlationally.\n  - Message match: two Facebook-ad tests show +39% and +48% (non-finance). The \"66%\" figure has no traceable source.\n- Czech tone and post-submit:\n  - No finance-specific study on tykání vs vykání. A 2017 survey (n=513) found about 20% annoyed by tykání, mor
+… [truncated, 1371 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+{"success":true,"message":"Report delivered to your caller."}
+```
+
+</details>
