@@ -4700,3 +4700,138 @@ Links: [{"title":"Úvod do světa dluhopisů: Představení největších dluhop
 **→ WebFetch** https://www.irs.gov/instructions/iw8ben
 
 > prompt: How long is a W-8BEN valid (three calendar years)? Who must provide it; what happens without it (30% withholding / backup withholding). Revision date of instructions.
+
+<details><summary>result</summary>
+
+```
+**Dividends (per the IRS page):**
+
+- **Statutory rate:** U.S.-source dividends paid to a nonresident alien are reportable for any amount. The page says to "Withhold at 30% or lesser tax treaty rate."
+- **Treaty reduction:** The beneficial owner can claim a lower treaty rate, and the page says this is done by filing Form W-8BEN with the withholding agent.
+- **Reporting:** The withholding agent reports the payment on Forms 1042 and 1042-S, even when a treaty exempts the entire amount.
+- **Not providing Form W-8BEN:** The page does not say what happens if the form isn't provided. It only indicates that the 30% rate applies unless a lower treaty rate is claimed through the form.
+
+**Page review date:** 23-Jul-2026
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+**Validity:** A Form W-8BEN generally remains in effect "for purposes of establishing foreign status" from the date it is signed through the last day of the third succeeding calendar year. It ends earlier if a change in circumstances makes its information incorrect. For example, a form signed in September 2015 stays valid through the end of 2018. Under certain conditions, it remains valid indefinitely until a change occurs.
+
+**Who must provide it:** Nonresident alien individuals who are beneficial owners of amounts subject to withholding must provide it, as must individuals who are account holders of a foreign financial institution documenting themselves as nonresident aliens. The form is submitted when requested, whether or not the individual claims a reduced rate or exemption. Foreign individuals receiving certain reportable payments, such as payment card transactions, and sellers of certain life insurance contracts may also need to provide it.
+
+**Without it:** Failure to provide the form when requested "may lead to withholding at the foreign-person withholding rate of 30%." Backup withholding may also apply.
+
+**Revision date:** The instructions are dated October 2021 (the form i
+… [truncated, 30 more chars]
+```
+
+</details>
+
+**→ WebFetch** https://www.nyse.com/markets/nyse-arca
+
+> prompt: What does NYSE say NYSE Arca is (ETF listings, equities, options)? Any statistics on ETFs listed? Quote under 15 words.
+
+**→ WebFetch** https://www.nyse.com/markets/nyse-american
+
+> prompt: What does NYSE say NYSE American is (small/mid caps, formerly NYSE MKT/AMEX)? Does it list ETFs? Quote under 15 words.
+
+**→ WebFetch** https://www.nyse.com/etf/products
+
+> prompt: What does NYSE say about ETF listings: where ETFs list (NYSE Arca, NYSE), number of ETFs, AUM share, and listing directory? Date.
+
+<details><summary>result</summary>
+
+```
+The server returned HTTP 404 Not Found.
+
+The response body was not retrieved. If this URL requires authentication, use an authenticated tool (e.g. `gh` for GitHub, or an MCP-provided fetch tool) instead of WebFetch.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+NYSE says NYSE American is "an exchange designed for growing companies." Its listings highlights specify "Primary Listings for small cap companies." The page links NYSE American to the American Stock Exchange but does not mention NYSE MKT.
+
+The page does not say whether NYSE American lists ETFs. It describes NYSE Arca as the leading U.S. exchange for listing exchange-traded products, but says nothing about ETF listings on NYSE American.
+```
+
+</details>
+
+<details><summary>result</summary>
+
+```
+NYSE describes NYSE Arca as "the leading U.S. exchange for the listing and trading of exchange-traded products." The page also says it trades all NMS securities, which covers equities. It does not mention options for NYSE Arca.
+
+The page gives no count of ETFs listed. It says NYSE Arca has the greatest market share of traded volume and depth of liquidity across U.S. ETPs, but the market quality charts' values aren't included in the text.
+```
+
+</details>
+
+**→ Bash** — Read IBKR Germany commission section
+
+```
+cd /c/Users/matus/AppData/Local/Temp/claude/C--Users-matus-Desktop-B-project/66014a9f-a5a6-413b-8552-f9844a0020a6/scratchpad && sed -n 981,1030p ibkr_eu.txt | cut -c1-200
+```
+
+<details><summary>result</summary>
+
+```
+Germany
+ Monthly Trade Value (EUR) 1 
+ Tiered 5 
+ Fixed - IB SmartRouting SM 
+ Fixed - Direct Routing 6 
+ Fixed - Direct Routing (SWB) 6 
+ Fixed - Direct Routing (GETTEX) 6 
+ ≤ 50,000,000 
+ 0.05% of Trade Value 
+ 0.05% of Trade Value 
+ 0.10% of Trade Value 
+ 0.12% of Trade Value 
+ 0.05% of Trade Value 
+ 50,000,000.01 - 100,000,000 
+ 0.03% of Trade Value 
+ 100,000,000.01 - 500,000,000 
+ 0.02% of Trade Value 
+ > 500,000,000 
+ 0.015% of Trade Value 
+ Fractional Shares 
+ Tiered Pricing 
+ 0.05% of Trade Value 
+ Minimum per order (shares) 
+ EUR 1.25 
+ EUR 3.00 
+ EUR 4.00 
+ EUR 6.00 
+ EUR 3.00 
+ Minimum per order (fractional shares) 
+ EUR 1.25 
+ EUR 1.25 
+ Maximum per order (shares) 
+ EUR 29.00 
+ None
+ None
+ None
+ None
+ Maximum per order (fractional shares) 
+ None
+ IB SmartRouting SM 
+ Third Party Fees 2 
+ Exchange Fees
+ Clearing Fees
+ Regulatory Fees
+ None
+ None
+ None
+ None
+ Germany - Fees
+ Germany - Third Party Fees
+```
+
+</details>

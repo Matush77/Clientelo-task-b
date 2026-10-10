@@ -3995,3 +3995,57 @@ Links: [{"title":"We Value Your Privacy ... Now Take Some Cookies: Measuring the
 ```
 
 </details>
+
+**→ Write** `C:\Users\matus\Desktop\B_project\research\04-ads-compliance.md`
+
+```
+# Agent D — Ads, compliance, GDPR/cookies and competitor ads (Czech ETF lead-magnet page)
+
+Access date for every source: 2026-10-10. Tags: `[VERIFIED]` = I opened the page and it states this; `[INFERRED]` = my reasoning, or only a search snippet / vendor summary / unreadable page. This is research, not legal advice. No form on a third-party site was filled in or submitted.
+
+## Summary (max 10 bullets)
+
+- **Google Ads:** financial-services advertiser verification now covers Czechia, so a non-authorised publisher would probably be blocked from showing financial ads there. Sources conflict on the start date (23 Jul 2026 vs 15 Sep 2026), but both are in the past. Google's help text mentions no educational exemption. Czech-specific treatment of educational or comparison pages: no evidence found.
+- **TikTok (Czech entry):** "Investment services" are allowed only with a local licence, 18+ targeting and disclaimers. "Advisory services" are not allowed. ETFs are not mentioned.
+- **Meta:** the policy body could not be read (JS page). Search snippets say advertisers may need verification and a licence in the targeted country. The "Financial products and services" special-ad-category rules are documented for the US only, and Czechia is not mentioned. Competitors run finance ads in Czechia on broad targeting (18–65+, all genders, country-level).
+- **MiFID II Art. 24(3) and Delegated Regulation 2017/565 Art. 44** bind investment firms. They set out what "fair, clear, not misleading" means: risk prominence, comparison rules, past-performance rules (5 years, complete 12-month periods, currency warning) and no use of regulator names as endorsement. A non-licensed publisher is not named as an addressee, but it is exposed through MAR Art. 20 and the advice licensing perimeter.
+- **The perimeter test is individualisation.** The ČNB (Jan 2025 notice) says advice is an individualised recommendation on a specific instrument and needs a licence. A public "investment recommendation" is allowed without a licence but carries MAR duties (identity, date, facts vs. opinion, sources, conflicts). ESMA (Jan 2026) says a "not investment advice" disclaimer does not protect an influencer.
+- **GDPR / ePrivacy:** separate consents are needed. Czech Act 480/2004 §7 requires prior consent for e-mailed commercial communications (fine up to CZK 10m for legal entities). Double opt-in is not legally required but is a practical way to prove consent. Non-technical cookies, including analytics, need opt-in. The ÚOOÚ wants "reject" in the first layer.
+- **Measuring the funnel:** Czech authorities treat analytics as consent-requiring, and a vendor source lists Czechia among countries that require consent even for cookieless analytics. Some funnel data will therefore be consent-gated or modelled. No Czech opt-in rate was found.
+- **Competitors (Meta Ad Library, accessible without login):** Fondee, Portu and XTB are active. The lead-magnet pattern (free course, e-books, webinar, free consultation) is used by XTB and by small Czech educators or advisers. Finax shows one Polish-language ad only, and Trading 212 showed none.
+- **Creative evidence is mostly Weak/Medium.** TikTok's own survey (7,500 users) favours candid, human, transparent tone. Instant-form-vs-landing-page claims come from vendors, apart from Meta's own 2023 test.
+- **Biggest open items:** whether paid lead-referral to brokers counts as regulated intermediation; whether Meta requires verification for Czech investment ads; Czech rules on server-side tracking.
+
+## Findings
+
+### 1. Ad platform policies
+
+**Google Ads**
+- Google announced on 23 June 2026 that financial services verification covers all EU/EEA countries (42 in total). Verification is checked against official registries, and unverified in-scope advertisers have financial ads restricted. [VERIFIED] ppc.land + Google blog.
+- Google's help page lists Czechia among 24 EEA markets with rolling enforcement from 23 July 2026. Its regulator table says Czechia's 
+… [truncated, 33052 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+File created successfully at: C:\Users\matus\Desktop\B_project\research\04-ads-compliance.md (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ SubagentHandback**
+
+```
+{
+ "message": "**File:** C:\\Users\\matus\\Desktop\\B_project\\research\\04-ads-compliance.md\n\n**5-bullet summary**\n- **Platforms:**\n  - Google financial-services verification now covers Czechia. Google's two help pages give different enforcement dates (23 Jul and 15 Sep 2026), and both are already past. A non-authorised publisher likely cannot run financial ads on Google, and third parties cannot apply on their own.\n  - TikTok's Czech entry allows \"Investment services\" only with a licence, 18+ targeting and disclaimers, and prohibits \"Advisory services\". ETFs are not mentioned.\n  - The Meta policy body was unreadable. Meta's special-ad-category rules are documented for the US only, and Czechia is not mentioned.\n- **Regulation:**\n  - The MiFID II Art. 24(3) text and Delegated Regulation 2017/565 Art. 44 are quoted from EUR-Lex. They bind investment firms. They cover comparison rules, the 5-year past-performance rule and the currency warning.\n  - The ESMA marketing-communications guidelines apply to fund managers only.\n  - The perimeter test is individualisation. A public recommendation falls under MAR duties (ČNB notice, Jan 2025). An individualised recommendation needs a licence. ESMA (Jan 2026) and the ČNB say a \"not investment advice\" disclaimer does not protect.\n  - No evidence found on whether per-lead broker fees turn a comparison site into regulated intermediation.\n- **GDPR and cookies:**\n  - Separate consents are needed. Act 480/2004 §7 requires pri
+… [truncated, 2342 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+{"success":true,"message":"Report delivered to your caller."}
+```
+
+</details>
