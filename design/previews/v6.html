@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veenos — website feel (v6)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e8e5; color: #1b1b1d; font: 15px/1.5 "Manrope", system-ui, sans-serif; padding: 40px 16px 80px; }
+  .head, .block { max-width: 1280px; margin: 0 auto; }
+  .head { margin-bottom: 24px; }
+  .head h1 { font-weight: 800; font-size: 28px; letter-spacing: -0.03em; }
+  .head p { max-width: 860px; margin-top: 8px; color: #55555b; }
+  .ab { display: flex; gap: 8px; margin: 16px 0 28px; flex-wrap: wrap; }
+  .ab button { font: 700 13px "Manrope"; border: 1px solid #c9c8c4; background: #fff; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+  .ab button.on { background: #18191c; color: #fff; border-color: #18191c; }
+  .phones { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .cap { font-size: 12px; color: #4d4d52; text-align: center; margin-top: 8px; font-weight: 700; max-width: 320px; }
+  .cap span { display: block; font-weight: 500; color: #7d7d82; }
+  .live { outline: 3px solid #cfe68a; outline-offset: 4px; border-radius: 44px; }
+
+  /* ===== phone & tokens ===== */
+  .phone { width: 320px; height: 664px; border-radius: 40px; background: #050505; padding: 9px; box-shadow: 0 16px 36px rgba(0,0,0,.18); flex: none; }
+  .frame { --bg:#18191c; --fg:#f3f3ef; --muted:#9a9b97; --line:#2f3035; --card:#202125; --chip:#26272c; --field:#2c2d32; --accent:#cfe68a; --on-accent:#18191c;
+    --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px;
+    position: relative; width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: var(--bg); color: var(--fg); font-family: "Manrope", sans-serif; }
+  .scr { height: 100%; overflow-y: auto; scrollbar-width: none; }
+  .scr::-webkit-scrollbar { display: none; }
+  .tab { font-variant-numeric: tabular-nums; }
+
+  /* header */
+  .bar { position: sticky; top: 0; z-index: 5; height: 60px; padding: 18px var(--s3) 0; display: flex; align-items: center; justify-content: space-between; background: rgba(24,25,28,.86); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; }
+  .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 17px; letter-spacing: -0.04em; }
+  .mark { position: relative; width: 26px; height: 16px; }
+  .mark::before, .mark::after { content: ""; position: absolute; top: 0; width: 16px; height: 16px; border-radius: 50%; }
+  .mark::before { left: 0; background: var(--accent); }
+  .mark::after { left: 10px; border: 2px solid var(--fg); }
+  .nav { display: flex; align-items: center; gap: 14px; font-size: 13px; font-weight: 600; color: var(--muted); }
+  .burger { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; cursor: pointer; background: none; }
+  .burger i, .burger i::before, .burger i::after { display: block; width: 14px; height: 1.6px; background: var(--fg); border-radius: 2px; position: relative; }
+  .burger i::before, .burger i::after { content: ""; position: absolute; left: 0; }
+  .burger i::before { top: -5px; } .burger i::after { top: 5px; }
+  .menu { position: absolute; inset: 0; z-index: 8; background: var(--bg); padding: 18px var(--s3) var(--s3); display: flex; flex-direction: column; transform: translateY(-100%); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .frame.menu-open .menu { transform: none; }
+  .menu .row1 { display: flex; justify-content: space-between; align-items: center; height: 42px; }
+  .close { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 18px; cursor: pointer; background: none; color: var(--fg); }
+  .menu nav { margin-top: var(--s5); display: grid; gap: 6px; }
+  .menu nav a { font-size: 28px; font-weight: 800; letter-spacing: -0.04em; color: var(--fg); text-decoration: none; padding: 6px 0; }
+  .menu nav a small { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0; color: var(--muted); }
+  .menu .cta { margin-top: auto; }
+
+  /* hero */
+  .hero { min-height: 586px; display: flex; flex-direction: column; padding: var(--s3) var(--s3) var(--s4); }
+  .h { font-weight: 800; font-size: 44px; line-height: .98; letter-spacing: -0.05em; margin-top: auto; }
+  .h em { font-style: normal; color: var(--accent); }
+  .sub { font-size: 16px; color: var(--muted); margin-top: var(--s2); line-height: 1.4; }
+  .checks { margin-top: var(--s3); display: grid; gap: 12px; }
+  .checks div { display: flex; gap: 12px; align-items: center; font-size: 14px; font-weight: 600; }
+  .checks i { width: 22px; height: 22px; border-radius: 50%; background: rgba(207,230,138,.14); color: var(--accent); display: grid; place-items: center; font-style: normal; font-size: 12px; font-weight: 800; flex: none; }
+  .cta { height: 58px; border-radius: 999px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: 16.5px; letter-spacing: -0.01em; border: 0; width: 100%; cursor: pointer; font-family: inherit; }
+  .cta .arr { width: 30px; height: 30px; border-radius: 50%; background: rgba(24,25,28,.12); display: grid; place-items: center; font-size: 15px; }
+  .hero .cta { margin-top: var(--s4); }
+  .fine { font-size: 11.5px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+  /* calculator */
+  .calc { padding: var(--s3) var(--s2) var(--s5); }
+  .sec-t { font-size: 12px; font-weight: 700; color: var(--muted); padding: 0 var(--s1) 12px; display: flex; justify-content: space-between; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 22px; margin-bottom: 12px; overflow: hidden; transition: opacity .35s, transform .35s; }
+  .step.hidden { display: none; }
+  .step.enter, .result.enter { opacity: 0; transform: translateY(16px); }
+  .ask { padding: 22px 18px 18px; }
+  .ask h4 { font-weight: 800; font-size: 24px; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: var(--s2); }
+  .ask h4 small { display: block; font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0; margin-bottom: 8px; }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .chips.one { grid-template-columns: 1fr; }
+  .chip { min-height: 54px; border-radius: 16px; background: var(--chip); border: 1px solid var(--line); color: var(--fg); display: flex; align-items: center; justify-content: center; font: 700 16.5px "Manrope"; cursor: pointer; padding: 0 16px; }
+  .chips.one .chip { justify-content: space-between; }
+  .chip small { font-weight: 600; font-size: 12px; color: var(--muted); }
+  .chip.on { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  .chip.on small { color: inherit; opacity: .7; }
+  .chip[disabled] { opacity: .45; cursor: default; }
+  .soon { font-size: 10px; font-weight: 700; border: 1px solid var(--line); border-radius: 99px; padding: 2px 7px; color: var(--muted); }
+  .sum { display: none; align-items: center; justify-content: space-between; padding: 16px 18px; cursor: pointer; }
+  .step.done .sum { display: flex; } .step.done .ask { display: none; }
+  .sum .k { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .sum .k i { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 800; }
+  .sum .v { font-weight: 800; font-size: 15px; }
+  .sum .edit { font-size: 12px; color: var(--muted); font-weight: 600; margin-left: 10px; text-decoration: underline; text-underline-offset: 3px; }
+
+  .result { padding: 26px 20px 22px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; margin-top: 12px; transition: opacity .35s, transform .35s; }
+  .result.hidden { display: none; }
+  .lbl { font-size: 14px; color: var(--muted); }
+  .num { font-weight: 800; font-size: 52px; letter-spacing: -0.055em; line-height: 1; margin: 8px 0 6px; color: var(--accent); }
+  .num small { font-size: 24px; margin-left: 4px; letter-spacing: -0.02em; }
+  .vs { font-size: 13px; color: var(--muted); }
+  /* horizontal cost bars */
+  .hb { margin: var(--s4) 0 var(--s3); display: grid; gap: 18px; }
+  .hb-t { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: -6px; }
+  .hb .r .top { display: flex; justify-content: space-between; align-items: baseline; font-size: 13.5px; margin-bottom: 8px; }
+  .hb .r .top span { color: var(--muted); } .hb .r .top span b { color: var(--fg); font-weight: 700; }
+  .hb .r .top strong { font-weight: 800; font-size: 15px; }
+  .hb .track { height: 10px; border-radius: 99px; background: #2a2b30; overflow: hidden; }
+  .hb .fill { height: 100%; border-radius: 99px; transition: width .6s cubic-bezier(.2,.8,.2,1); }
+  .hb .a .fill { background: #8a8b88; } .hb .b .fill { background: var(--accent); }
+  .hb .b .top strong { color: var(--accent); }
+  .ghost { text-align: center; font-size: 12px; color: var(--muted); margin-top: 12px; }
+  .breakdown { margin-top: 4px; }
+  .rowh, .rowv { display: grid; grid-template-columns: 1fr 72px 72px; gap: 6px; font-size: 13px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .rowh { font-size: 11px; color: var(--muted); font-weight: 700; padding-top: 0; }
+  .rowh span:not(:first-child), .rowv span:not(:first-child) { text-align: right; }
+  .rowv span:first-child { color: var(--muted); }
+  .rowv.tot { border: 0; font-weight: 800; font-size: 15px; } .rowv.tot span:first-child { color: var(--fg); }
+  .rowv .g { color: var(--accent); }
+  .thanks { font-size: 12.5px; color: var(--muted); margin-top: var(--s2); line-height: 1.5; }
+  .thanks b { color: var(--fg); }
+
+  /* how we calculate */
+  .how { padding: 0 var(--s3) var(--s5); }
+  .how h5 { font-size: 22px; font-weight: 800; letter-spacing: -0.035em; margin-bottom: var(--s2); }
+  .how .it { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+  .how .it span { color: var(--muted); text-align: right; }
+
+  /* footer */
+  footer { border-top: 1px solid var(--line); padding: var(--s4) var(--s3) var(--s4); background: #141518; }
+  footer .tag { font-size: 13px; color: var(--muted); margin: 10px 0 var(--s3); }
+  footer .links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; font-size: 13px; font-weight: 600; margin-bottom: var(--s3); }
+  footer .disc { font-size: 11px; line-height: 1.55; color: #7f807c; }
+  footer .copy { font-size: 11px; color: #7f807c; margin-top: var(--s2); }
+
+  /* sheet */
+  .dim { position: absolute; inset: 0; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; z-index: 9; }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; z-index: 10; background: #222327; border-radius: 26px 26px 0 0; padding: 12px var(--s3) var(--s3); transform: translateY(105%); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .frame.sheet-open .dim { opacity: 1; pointer-events: auto; } .frame.sheet-open .sheet { transform: none; }
+  .grab { width: 38px; height: 4px; border-radius: 4px; background: #45464b; margin: 0 auto var(--s2); }
+  .sheet h4 { font-weight: 800; font-size: 24px; letter-spacing: -0.035em; }
+  .sheet .s { font-size: 13px; color: var(--muted); margin: 4px 0 var(--s2); }
+  .sheet input[type=text], .sheet input[type=email], .sheet input[type=tel] { width: 100%; height: 50px; border-radius: 14px; background: var(--field); border: 1px solid transparent; padding: 0 14px; font: 500 15px "Manrope"; color: var(--fg); margin-bottom: 10px; outline: none; }
+  .sheet input:focus { border-color: var(--accent); }
+  .sheet input::placeholder { color: #9a9b97; }
+  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); margin: 2px 0 10px; cursor: pointer; }
+  .toggle b { font-size: 14.5px; display: block; } .toggle small { font-size: 12px; color: var(--muted); }
+  .sw { width: 44px; height: 26px; border-radius: 99px; background: #3a3b40; position: relative; flex: none; transition: background .2s; }
+  .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #f3f3ef; transition: transform .2s; }
+  .toggle.on .sw { background: var(--accent); } .toggle.on .sw::after { transform: translateX(18px); background: var(--on-accent); }
+  .phonef { display: none; } .phonef.show { display: block; }
+  .mk { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--muted); margin: 4px 2px 14px; }
+  .mk i { width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid #5a5b60; flex: none; margin-top: 1px; }
+  .sheet .fine { margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Veenos: website feel (v6)</h1>
+  <p>Changes from v5: lighter dark background, "10 vteřin" removed, a website header with a menu, horizontal cost bars, more breathing room, a "Jak počítáme" section, a footer, and the <b>phone number as opt-in</b> ("Chci zavolat" switch). <b>The outlined phone is clickable</b>; tap the menu icon too. The toggle below switches the CTA label for the A/B test.</p>
+  <div class="ab" id="ab"><button class="on" data-l="Začít investovat">A · Začít investovat</button><button data-l="Spočítat poplatky">B · Spočítat poplatky</button></div>
+</div>
+
+<div class="block"><div class="phones" id="phones"></div></div>
+
+<template id="proto">
+  <div class="phone"><div class="frame">
+    <div class="scr">
+      <header class="bar">
+        <div class="logo"><span class="mark"></span>veenos</div>
+        <div class="nav"><span>Jak počítáme</span><button class="burger js-menu" aria-label="Menu"><i></i></button></div>
+      </header>
+
+      <section class="hero">
+        <h3 class="h">Stejný index.<br><em>Jiná cena.</em></h3>
+        <p class="sub">Zjistěte, kolik vám ETF ukusuje na poplatcích.</p>
+        <div class="checks">
+          <div><i>✓</i>Americký fond vs. evropské dvojče</div>
+          <div><i>✓</i>Poplatky, směna i broker v korunách</div>
+          <div><i>✓</i>Data od emitentů a ČNB</div>
+        </div>
+        <button class="cta js-start"><span class="js-label">Začít investovat</span> <span class="arr">↓</span></button>
+        <p class="fine">Zdarma · bez registrace</p>
+      </section>
+
+      <section class="calc">
+        <div class="sec-t"><span>Vaše srovnání</span><span class="js-count">0/3</span></div>
+        <div class="step" data-step="0">
+          <div class="sum"><span class="k"><i>✓</i>Měsíčně</span><span><span class="v js-v"></span><span class="edit">změnit</span></span></div>
+          <div class="ask"><h4><small>1/3</small>Kolik měsíčně investujete?</h4>
+            <div class="chips tab"><button class="chip" data-val="1000">1 000 Kč</button><button class="chip" data-val="3000">3 000 Kč</button><button class="chip" data-val="5000">5 000 Kč</button><button class="chip" data-val="10000">10 000 Kč</button></div></div>
+        </div>
+        <div class="step hidden" data-step="1">
+          <div class="sum"><span class="k"><i>✓</i>Doba</span><span><span class="v js-v"></span><span class="edit">změnit</span></span></div>
+          <div class="ask"><h4><small>2/3</small>Na jak dlouho?</h4>
+            <div class="chips tab"><button class="chip" data-val="5">5 let</button><button class="chip" data-val="10">10 let</button><button class="chip" data-val="20">20 let</button><button class="chip" data-val="30">30 let</button></div></div>
+        </div>
+        <div class="step hidden" data-step="2">
+          <div class="sum"><span class="k"><i>✓</i>Index</span><span><span class="v js-v"></span><span class="edit">změnit</span></span></div>
+          <div class="ask"><h4><small>3/3</small>Který index?</h4>
+            <div class="chips one"><button class="chip" data-val="sp500" data-label="S&amp;P 500">S&amp;P 500 <small>VOO ↔ CSPX</small></button><button class="chip" disabled>Celý svět <span class="soon">brzy</span></button><button class="chip" disabled>Celý trh USA <span class="soon">brzy</span></button></div></div>
+        </div>
+        <div class="result hidden">
+          <p class="lbl js-rlbl">Rozdíl za 20 let</p>
+          <p class="num tab js-num">0<small>Kč</small></p>
+          <p class="vs">Stejný S&amp;P 500, jiná cesta.</p>
+          <div class="hb tab">
+            <div class="hb-t js-hbt">Náklady za 20 let</div>
+            <div class="r a"><div class="top"><span><b>VOO</b> přes Fio</span><strong class="js-ea"></strong></div><div class="track"><div class="fill js-ba" style="width:0"></div></div></div>
+            <div class="r b"><div class="top"><span><b>CSPX</b> přes XTB</span><strong class="js-eb"></strong></div><div class="track"><div class="fill js-bb" style="width:0"></div></div></div>
+          </div>
+          <div class="js-pre"><button class="cta js-open">Ukázat celý rozpis</button><p class="ghost">Ilustrativní výpočet · Jak počítáme</p></div>
+          <div class="breakdown js-post" hidden>
+            <div class="rowh"><span>Náklady</span><span>VOO · Fio</span><span>CSPX · XTB</span></div>
+            <div class="rowv tab"><span>Poplatek fondu</span><span class="js-t1"></span><span class="js-t2"></span></div>
+            <div class="rowv tab"><span>Směna CZK → USD</span><span class="js-f1"></span><span class="js-f2"></span></div>
+            <div class="rowv tab"><span>Provize brokera</span><span class="js-c1"></span><span class="js-c2"></span></div>
+            <div class="rowv tot tab"><span>Celkem</span><span class="js-s1"></span><span class="g js-s2"></span></div>
+            <p class="thanks js-thanks">Hotovo. Rozpis máte i v e-mailu.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="how">
+        <h5>Jak počítáme</h5>
+        <div class="it"><b>Poplatek fondu (TER)</b><span>emitent fondu</span></div>
+        <div class="it"><b>Směna CZK → USD</b><span>ceník brokera, kurz ČNB</span></div>
+        <div class="it"><b>Provize za nákup</b><span>ceník brokera</span></div>
+        <div class="it"><b>Výnos před náklady</b><span>7 % ročně (předpoklad)</span></div>
+      </section>
+
+      <footer>
+        <div class="logo"><span class="mark"></span>veenos</div>
+        <p class="tag">Srovnání nákladů ETF z NYSE a jejich evropských dvojčat.</p>
+        <div class="links"><span>Jak počítáme</span><span>Zdroje dat</span><span>Ochrana údajů</span><span>Cookies</span><span>Kontakt</span><span>O nás</span></div>
+        <p class="disc">Veenos není investiční poradce ani obchodník s cennými papíry. Obsah slouží k informaci a není investičním doporučením. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Výpočty jsou ilustrativní.</p>
+        <p class="copy">© 2026 Veenos · Data k 9. 10. 2026</p>
+      </footer>
+    </div>
+
+    <div class="menu">
+      <div class="row1"><div class="logo"><span class="mark"></span>veenos</div><button class="close js-mclose">×</button></div>
+      <nav>
+        <a>Srovnání <small>Kalkulačka nákladů</small></a>
+        <a>ETF dvojčata <small>Americký fond ↔ evropská verze</small></a>
+        <a>Jak počítáme <small>Zdroje a předpoklady</small></a>
+        <a>O nás</a>
+      </nav>
+      <button class="cta js-mstart"><span class="js-label">Začít investovat</span> <span class="arr">↓</span></button>
+    </div>
+
+    <div class="dim js-close"></div>
+    <form class="sheet js-form" onsubmit="return false">
+      <div class="grab"></div>
+      <h4>Kam poslat rozpis?</h4>
+      <p class="s">Ukážeme ho hned a pošleme i e-mailem.</p>
+      <input type="text" name="name" autocomplete="name" placeholder="Jméno" required>
+      <input type="email" name="email" autocomplete="email" placeholder="E-mail" required>
+      <div class="toggle js-tg"><div><b>Chci zavolat</b><small>Projdeme s vámi výpočet. Jednou, bez nátlaku.</small></div><span class="sw"></span></div>
+      <div class="phonef js-pf"><input type="tel" name="tel" autocomplete="tel" placeholder="Telefon"></div>
+      <label class="mk"><i></i>Občas mi pošlete tipy e-mailem (nepovinné)</label>
+      <button class="cta" type="submit">Zobrazit rozpis</button>
+      <p class="fine">Zásady ochrany osobních údajů</p>
+    </form>
+  </div></div>
+</template>
+
+<script>
+const USDCZK = 21.745;
+const ROUTES = { nyse: { ter: 0.0003, fx: 0.03, comm: 7.95 * USDCZK }, ucits: { ter: 0.0007, fx: 0.005, comm: 0 } };
+const R = Math.pow(1.07, 1/12) - 1;
+function fv(m, y, o) { let v = 0; for (let i = 0; i < y * 12; i++) v = v * (1 + R) * (1 - (o.ter||0) / 12) + m * (1 - (o.fx||0)) - (o.comm||0); return v * (1 - (o.fx||0)); }
+function costs(m, y, r) { const b = fv(m, y, {}); const p = { ter: b - fv(m, y, { ter: r.ter }), fx: b - fv(m, y, { fx: r.fx }), comm: b - fv(m, y, { comm: r.comm }) }; const t = b - fv(m, y, r); const s = p.ter + p.fx + p.comm; for (const k in p) p[k] *= t / s; return { ...p, total: t }; }
+const fmt = n => (Math.round(n / 100) * 100).toLocaleString('cs-CZ');
+
+function mount(root, preset = {}, live = false) {
+  const scr = root.querySelector('.scr'), frame = root.querySelector('.frame');
+  const steps = [...root.querySelectorAll('.step')], result = root.querySelector('.result');
+  const ans = {};
+  const go = (el, smooth = true) => { const top = el.getBoundingClientRect().top - scr.getBoundingClientRect().top + scr.scrollTop - 76; scr.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' }); };
+  const reveal = (el, anim) => { el.classList.remove('hidden'); if (anim) { el.classList.add('enter'); requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove('enter'))); } };
+  const compute = () => {
+    const m = ans[0], y = ans[1], a = costs(m, y, ROUTES.nyse), b = costs(m, y, ROUTES.ucits);
+    root.querySelector('.js-rlbl').textContent = 'Rozdíl za ' + y + ' let';
+    root.querySelector('.js-hbt').textContent = 'Náklady za ' + y + ' let';
+    root.querySelector('.js-num').innerHTML = fmt(a.total - b.total) + '<small>Kč</small>';
+    root.querySelector('.js-ea').textContent = fmt(a.total) + ' Kč'; root.querySelector('.js-eb').textContent = fmt(b.total) + ' Kč';
+    requestAnimationFrame(() => { root.querySelector('.js-ba').style.width = '100%'; root.querySelector('.js-bb').style.width = Math.max(3, 100 * b.total / a.total) + '%'; });
+    [['t','ter'],['f','fx'],['c','comm']].forEach(([p,k]) => { root.querySelector('.js-'+p+'1').textContent = fmt(a[k]); root.querySelector('.js-'+p+'2').textContent = fmt(b[k]); });
+    root.querySelector('.js-s1').textContent = fmt(a.total); root.querySelector('.js-s2').textContent = fmt(b.total);
+  };
+  const answer = (i, chip, anim = true) => {
+    steps[i].querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === chip));
+    ans[i] = chip.dataset.val === 'sp500' ? 'sp500' : Number(chip.dataset.val);
+    steps[i].querySelector('.js-v').innerHTML = chip.dataset.label || chip.firstChild.textContent.trim();
+    steps[i].classList.add('done'); root.querySelector('.js-count').textContent = Object.keys(ans).length + '/3';
+    const next = steps.find(s => !s.classList.contains('done'));
+    if (next) { reveal(next, anim); if (anim) setTimeout(() => go(next), 60); }
+    else { compute(); const h = result.classList.contains('hidden'); reveal(result, anim && h); if (anim) setTimeout(() => go(result), 60); }
+  };
+  steps.forEach((s, i) => {
+    s.querySelectorAll('.chip:not([disabled])').forEach(c => c.addEventListener('click', () => live && answer(i, c)));
+    s.querySelector('.sum').addEventListener('click', () => { if (!live) return; s.classList.remove('done'); go(s); });
+  });
+  root.querySelector('.js-start').addEventListener('click', () => live && go(steps[0]));
+  root.querySelector('.js-menu').addEventListener('click', () => live && frame.classList.add('menu-open'));
+  root.querySelector('.js-mclose').addEventListener('click', () => frame.classList.remove('menu-open'));
+  root.querySelector('.js-mstart').addEventListener('click', () => { if (!live) return; frame.classList.remove('menu-open'); setTimeout(() => go(steps[0]), 300); });
+  root.querySelector('.js-open').addEventListener('click', () => live && frame.classList.add('sheet-open'));
+  root.querySelector('.js-close').addEventListener('click', () => frame.classList.remove('sheet-open'));
+  const tg = root.querySelector('.js-tg'), pf = root.querySelector('.js-pf'), tel = pf.querySelector('input');
+  const setCall = on => { tg.classList.toggle('on', on); pf.classList.toggle('show', on); tel.required = on; };
+  tg.addEventListener('click', () => { if (!live) return; setCall(!tg.classList.contains('on')); if (tg.classList.contains('on')) tel.focus(); });
+  root.querySelector('.js-form').addEventListener('submit', () => {
+    if (!live) return;
+    frame.classList.remove('sheet-open');
+    root.querySelector('.js-pre').hidden = true; root.querySelector('.js-post').hidden = false;
+    root.querySelector('.js-thanks').innerHTML = tg.classList.contains('on') ? 'Hotovo. Rozpis máte i v e-mailu. <b>Zavoláme vám jednou</b> a výpočet projdeme.' : 'Hotovo. Rozpis máte i v e-mailu.';
+    setTimeout(() => go(result), 300);
+  });
+  // presets
+  (preset.answers || []).forEach((v, i) => answer(i, steps[i].querySelector('.chip[data-val="' + v + '"]'), false));
+  if (preset.call) setCall(true);
+  if (preset.done) { root.querySelector('.js-pre').hidden = true; root.querySelector('.js-post').hidden = false; root.querySelector('.js-thanks').innerHTML = 'Hotovo. Rozpis máte i v e-mailu. <b>Zavoláme vám jednou</b> a výpočet projdeme.'; }
+  if (preset.sheet) frame.classList.add('sheet-open');
+  if (preset.menu) frame.classList.add('menu-open');
+  setTimeout(() => {
+    if (preset.scroll === 'calc') go(steps[0], false);
+    else if (preset.scroll === 'last') go(steps.find(s => !s.classList.contains('done') && !s.classList.contains('hidden')), false);
+    else if (preset.scroll === 'result') go(result, false);
+    else if (preset.scroll === 'bottom') scr.scrollTo({ top: scr.scrollHeight, behavior: 'auto' });
+  }, 80);
+}
+
+const frames = [
+  { cap: 'Live prototype', sub: 'tap through it, incl. the menu', live: true },
+  { cap: '1 · Arrival', sub: 'header + hero A + 3 checks', p: {} },
+  { cap: '2 · Menu', sub: 'mock navigation', p: { menu: true } },
+  { cap: '3 · Step 2 of 3', sub: 'answered steps fold up', p: { answers: [3000], scroll: 'last' } },
+  { cap: '4 · Result', sub: 'one number + horizontal cost bars', p: { answers: [3000, 20, 'sp500'], scroll: 'result' } },
+  { cap: '5 · Form, call off', sub: 'name + e-mail only', p: { answers: [3000, 20, 'sp500'], scroll: 'result', sheet: true } },
+  { cap: '6 · Form, "Chci zavolat" on', sub: 'phone appears and becomes required', p: { answers: [3000, 20, 'sp500'], scroll: 'result', sheet: true, call: true } },
+  { cap: '7 · After submit', sub: 'breakdown in place', p: { answers: [3000, 20, 'sp500'], scroll: 'result', done: true } },
+  { cap: '8 · Bottom of page', sub: '"Jak počítáme" + footer', p: { answers: [3000, 20, 'sp500'], scroll: 'bottom', done: true } },
+];
+const host = document.getElementById('phones'), tpl = document.getElementById('proto');
+document.fonts.ready.then(() => {
+  frames.forEach(f => {
+    const wrap = document.createElement('div');
+    const node = tpl.content.firstElementChild.cloneNode(true);
+    if (f.live) node.classList.add('live');
+    wrap.appendChild(node);
+    const cap = document.createElement('div'); cap.className = 'cap'; cap.innerHTML = f.cap + '<span>' + f.sub + '</span>';
+    wrap.appendChild(cap); host.appendChild(wrap);
+    mount(node, f.p || {}, !!f.live);
+  });
+});
+document.getElementById('ab').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('#ab button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.js-label').forEach(l => l.textContent = b.dataset.l);
+});
+</script>
+</body>
+</html>

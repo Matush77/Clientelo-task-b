@@ -51,3 +51,13 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 |---|---|---|---|---|
 | D9c | Accent colour | **Muted lime `#cfe68a`** on near-black `#0c0c0d` | Mint, champagne, ice blue, mono white; original neon lime `#c8f53b` (too loud) | Human design choice from the v3 previews; keeps the energy of the liked neon at a calmer level. |
 | D13 | Hero pattern | **Open:** the human wants to see a CTA-in-hero version (v4 previews: 5 variants) before locking the flow. | — | Chips-in-hero (v3) vs CTA-in-hero is a natural A/B hypothesis (one extra tap vs a clearer first screen). |
+
+## Round 7 — 2026-10-10 (v5 feedback)
+
+| # | Decision | Chosen | Why / implications |
+|---|---|---|---|
+| D13 | Hero | **Hero A ("Stejný index. Jiná cena." + one CTA) with D's three short trust checks.** "10 vteřin" removed from the sub-headline. | Human choice from v4/v5 previews. |
+| D14 | Calculator layout | **Steps flow down the page:** each answered step folds into a one-line summary, the page scrolls to the next question, and the result appears below. | Human request; keeps context visible and feels like a page, not an app. |
+| D15 | CTA label | **A/B test: "Začít investovat" (A) vs "Spočítat poplatky" (B).** | Lead agent flagged the risk that "Začít investovat" promises account opening while the tap opens a calculator; the human chose to test it. → One of the README A/B hypotheses. |
+| D5c | Phone field (revises D5) | **Phone optional and opt-in:** name + e-mail required; a "Chci zavolat" switch reveals the phone field, which is required only when the switch is on. | Human request. Only visitors who want a call give a number, which also gives explicit consent for the one call (Act 127/2005 §96, see D5b). Lowers friction vs three mandatory fields. |
+| D9d | Visual refinements | Background lifted from pure black to a soft dark grey; website header with a menu (mock); a footer; horizontal cost bars in the result; more generous spacing. | Human feedback: v5 "looks like an app". |
