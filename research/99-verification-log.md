@@ -37,4 +37,42 @@ The lead agent (Claude Opus 5.5) re-checked claims from each Sonnet 5.5 research
 | D4 | 04 | ÚOOÚ: analytics cookies need consent; "reject" must be in the first layer; 12-month consent, 6 months before re-asking; same rules for local storage/fingerprinting; pixels and server-side not covered | uoou.gov.cz Q&A cookies | PARTIAL | Everything holds except strength: the ÚOOÚ presents first-layer "reject" as good practice ("as easy as accepting, same layer, similar prominence"), not as an explicit requirement. Agent's summary said "wants". |
 | D5 | 04 | ESMA factsheet via Consob (12 Jan 2026): "not investment advice" disclaimer does not protect; label paid content; disclose holdings | consob.it press release | CONFIRMED | — |
 | D6 | 04 | (agent's least-confident) Meta financial-services policy: licence in targeted country "where required", verification possible | transparency.meta.com (still unreadable via fetch) + web search | UNCHANGED — INFERRED | Lead agent also could not read the policy body. Snippets agree with the agent. **Open item for the decision brief:** whether Meta requires authorisation for a non-licensed educational publisher targeting CZ is unknown. |
+| E1 | 05 | 40M CZK cap on the time-test exemption for securities applied only in 2025, abolished from 1 Jan 2026, kept for crypto; 100k CZK value test stays | financnisprava.gov.cz press release, 5 Jan 2026 | CONFIRMED | **The lead agent's own prompt (05-data-facts.md, Q6) asserted the 40M cap as current. The research agent caught and corrected it.** See L1. |
+| E2 | 05 | Fio: "U nás můžete obchodovat i s americkými ETF"; Fio offers no ETFs itself, only market access; no PRIIPs/KID mention | fio.cz/akcie-investice/etf | CONFIRMED | — |
+| E3 | 05 | SPY, VOO, IVV, VTI, VT, SCHD listed on NYSE Arca (P); QQQ on Nasdaq; ETF counts: Arca 2,737, Cboe BZX 1,655, NYSE 79, NYSE American 0 | nasdaqtrader.com otherlisted.txt / nasdaqlisted.txt (file 2026-10-09 21:31), re-downloaded and counted by lead agent | CONFIRMED | Counts match exactly (ETF=Y, test issue=N). |
+| E4 | 05 | ČNB USD rate 21.745 CZK on 2026-10-09 via JSON API | api.cnb.cz/cnbapi/exrates/daily | CONFIRMED | EUR 24.365 same day. |
+| E5 | 05 | (agent's least-confident) Fio CZK/USD table: buy 21.12293 / sell 22.40707 vs ČNB 21.745 (≈ ±3%); undated; better rates above USD 10k | fio.cz devizove-konverze | CONFIRMED | Table has no date ("Ke dni" blank). Fio says actual conversions use e-Broker rates, which may differ. Treat ±3% as indicative only. |
+| E6 | 05 | DEGIRO blocks new purchases of US ETFs since 2 Jan 2018; holding/selling allowed; "a KID in English is not enough, it must be in the local language and passported" | degiro.com/uk helpdesk | PARTIAL | Block, date and hold/sell confirmed. The local-language/passporting sub-claim is **not on this page**; it says documentation is missing "and/or" not in English. Sub-claim unsupported. Marked in report. |
+| E7 | 05 | FMP requires a Data Display and Licensing Agreement for public display | site.financialmodelingprep.com/terms-of-service | NOT CHECKED (403) | Agent's VERIFIED tag can't be re-confirmed; the conclusion (free APIs don't allow public display) still rests on Alpha Vantage, Twelve Data and Tiingo. |
+| L1 | prompt 05 | **Lead-agent error:** the prompt for agent E stated "the 40 million CZK cap introduced in 2025" as a current fact to confirm | — | WRONG (lead agent) | The cap was abolished for securities from 2026. The research agent did not just confirm the premise, it corrected it with a primary source. Lesson: prompts should ask questions, not assert facts from model memory. |
 | B8 | 02 | (agent's least-confident) Similarweb traffic estimates | — | NOT CHECKED | Free-tier Similarweb needs JS/login. Already tagged INFERRED; treat only as an order-of-magnitude signal. |
+
+## Totals
+
+| Report | Claims re-checked | Confirmed | Partial | Wrong | Inconclusive | Not checkable |
+|---|---|---|---|---|---|---|
+| 01 Audience (A) | 6 | 4 | 1 | 1 | – | – |
+| 02 Competitors (B) | 7 | 7 | – | – | – | 1 (Similarweb, login) |
+| 03 Conversion (C) | 10 | 8 | 2 | – | – | – |
+| 04 Ads & compliance (D) | 6 | 4 | 1 | – | 1 (Meta policy unreadable) | – |
+| 05 Data & facts (E) | 6 | 5 | 1 | – | – | 1 (FMP ToS, 403) |
+| **Total** | **35** | **28 (80%)** | **5** | **1** | **1** | **2** |
+
+Plus one error by the lead agent itself (L1).
+
+## Where the agents went wrong: patterns
+
+1. **Every number was right; the qualifiers around them were not.** No re-checked figure was wrong. All 6 problems were about scope or interpretation:
+   - tickers added that the source didn't name (A1);
+   - an ambiguous "14% share" read as 14% of the population (A3);
+   - a study-wide sample size attributed to one sub-group (C4);
+   - a detail invented to fill a gap ("the offer was a free guide", C3);
+   - a sub-claim merged in from elsewhere (E6);
+   - guidance upgraded to a requirement (D4).
+2. **The errors sat in claims tagged `VERIFIED`, not `INFERRED`.** The agents' self-reported "least confident" claims were mostly fine (C8, A6, E5) or honestly unresolved (D6). A `VERIFIED` tag means "I opened the page", not "my reading of it is correct". Interpretation is where checking pays off.
+3. **Self-correction against the prompt worked.** Agent E refused a false premise in the lead agent's own prompt (L1) and cited a primary source.
+4. **Access limits shaped the evidence.** Reddit, Facebook groups, YouTube comments, Meta's policy page, IBKR and Revolut help pages were not reachable by fetch. Voice of customer therefore comes from one forum and the App Store, and the Meta ad policy stays an open question.
+
+## How this was applied
+- Every PARTIAL/WRONG claim is corrected in place in the report, marked *(lead-agent check …)* with a pointer to this log.
+- The decision brief (00-decision-brief.md) uses only CONFIRMED or explicitly flagged claims.

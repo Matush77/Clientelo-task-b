@@ -4835,3 +4835,56 @@ Germany
 ```
 
 </details>
+
+**→ Write** `C:\Users\matus\Desktop\B_project\research\05-data-facts.md`
+
+```
+# Data sources & product facts: NYSE-listed ETFs for a Czech retail investor
+
+Research only, no recommendation. All sources accessed 2026-10-10. Tags: `VERIFIED` = I opened the page/file and it states this; `INFERRED` = my reasoning, or the page could not be read (search-tool summary only). Items that changed during 2024-2026 are marked **[CHANGED 2024-26]**.
+
+## Summary (max 10 bullets)
+
+- **Access is the central fact.** US-domiciled ETFs (SPY, VOO, IVV, VTI, SCHD, QQQ) have no PRIIPs KID, so most EU brokers block *new purchases* by retail clients. Verified for DEGIRO, LYNX and Saxo (pages dated 2018-2022); IBKR, Trading 212 and XTB only indirectly. Fio is the Czech broker that states it lets clients trade US ETFs. No evidence found that any change in 2024-2026 opened this up.
+- **Nothing changed for US ETFs in the EU rules yet.** The Retail Investment Strategy deal (Dec 2025) rewrites the KID but the Parliament release does not mention non-EU funds; formal adoption was not confirmed. **[CHANGED 2024-26]**
+- **"NYSE" is usually NYSE Arca.** On 2026-10-09 the Nasdaq Trader directory lists SPY, VOO, IVV, VTI, VT, SCHD, VYM on NYSE Arca (code P); QQQ, QQQM, BND, VXUS are on Nasdaq. NYSE American lists 0 ETFs; NYSE (main board) lists only 79.
+- **UCITS equivalents exist for most** (CSPX/SXR8, VUSA, VUAA, VWCE, CNDX, EQQQ; TER 0.07-0.30%). **No exact UCITS copy of SCHD was found**; the nearest are different indices and cost 0.29-0.35%.
+- **Data sources:** issuer pages (SSGA, iShares, Vanguard) give the best per-data-point citations with as-of dates, but their terms limit public reuse to personal use or need written permission. Free API tiers (Alpha Vantage, FMP, Twelve Data, Tiingo) are internal/non-display; FMP and Alpha Vantage explicitly bar public display without a licence. SEC EDGAR and the Nasdaq Trader directory are free, keyless and unrestricted by stated licence (Nasdaq's lookup page notes its fund data are internal non-commercial only).
+- **Costs are lopsided.** Fio US trade: USD 7.95 (<=100 pcs) but a CZK-USD spread of about 3% vs ČNB on its published table. XTB: 0% commission, 0.5% FX. Trading 212: 0.15% FX. IBKR: auto-FX 0.03%. DEGIRO: 0.25% FX + EUR 1-3 per trade.
+- **Czech tax correction:** the 40 million CZK cap applied to securities **only for 2025** and was abolished from 1 Jan 2026 (Finanční správa, 5 Jan 2026). It remains for crypto. The 3-year time test and the 100 000 CZK proceeds test remain. **[CHANGED 2024-26]**
+- **Dividends:** US withholding is 15% with a W-8BEN (IRS treaty table, rate also covers RIC/ETF dividends), 30% without. Foreign dividends can be put in a separate 15% base (§8(8) ZDP); foreign tax is credited (§38f).
+- **ČNB FX:** text file and JSON API are free; USD = 21.745 CZK on 2026-10-09; published about 14:30 each working day. Reuse terms could not be opened.
+
+## Findings
+
+### 1. Accessibility of US ETFs (PRIIPs)
+
+- **Rule.** Before a PRIIP is offered to retail investors its manufacturer must draw up a KID (Art. 5(1)); whoever sells or advises must give the KID in good time (Art. 13). A retail investor is a MiFID retail client. [VERIFIED, S1]
+- **Practical effect.** US issuers do not publish KIDs. Saxo: "US ETFs have NOT issued any KIDs", so retail orders are rejected. [VERIFIED, S6, c. 2022]. DEGIRO has refused new purchases since 2 Jan 2018 but holding/selling is allowed [VERIFIED, S4]. LYNX says retail clients cannot buy US ETFs; only professional clients can [VERIFIED, S5]. A KID in English is not enough for DEGIRO: it must be in the local language and passported [VERIFIED, S4].
+- **Czech nuance (execution-only).** ČNB position RS2018-12: a dealer that only executes orders or gives market access, without offering or advising, need not supply the KID under Art. 13(1); offering a PRIIP without a KID breaches the regulation. [VERIFIED, S7, 2018]. Fio's current ETF page says "U nás můžete obchodovat i s americkými ETF" and that Fio offers no ETFs itself, only market access (advice only in 
+… [truncated, 28632 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+File created successfully at: C:\Users\matus\Desktop\B_project\research\05-data-facts.md (file state is current in your context — no need to Read it back)
+```
+
+</details>
+
+**→ SubagentHandback**
+
+```
+{
+ "message": "File: C:\\Users\\matus\\Desktop\\B_project\\research\\05-data-facts.md\n\n5-bullet summary:\n- US-listed ETFs (SPY, VOO, IVV, VTI, SCHD, QQQ) have no PRIIPs KID, so most EU brokers block new retail purchases. Verified for DEGIRO, LYNX and Saxo, from pages dated 2018-2022. Only Fio states that its clients can trade them, under an execution-only logic (ČNB RS2018-12). No evidence that 2024-26 changed this: the Dec 2025 Retail Investment Strategy deal rewrites the KID but does not mention non-EU funds.\n- \"NYSE\" in practice means NYSE Arca. The Nasdaq Trader files of 2026-10-09 show SPY, VOO, IVV, VTI, VT and SCHD on Arca, QQQ on Nasdaq. NYSE American lists 0 ETFs and NYSE main board 79. UCITS equivalents exist for the S&P 500, Nasdaq-100 and All-World funds (TER 0.07-0.30%), but no exact SCHD copy.\n- Every free data API I checked forbids public display: Alpha Vantage and FMP explicitly, Twelve Data and Tiingo as internal-use-only. Issuer sites (SSGA, iShares, Vanguard) allow only personal use or require written permission. EDGAR and the Nasdaq Trader directory are free, but have no AUM or returns. Stooq returned a JavaScript proof-of-work page to an automated fetch (not usable programmatically).\n- Costs: the Fio price list (effective 1 Jul 2026) charges USD 7.95 per US trade of up to 100 pieces, plus an FX spread of about 3% versus ČNB on its published table. XTB charges 0% commission and 0.5% FX, Trading 212 0.15% FX, IBKR 0.03% auto-FX, DEGIRO 0.25% FX.\n- 
+… [truncated, 1266 more chars]
+```
+
+<details><summary>result</summary>
+
+```
+{"success":true,"message":"Report delivered to your caller."}
+```
+
+</details>
