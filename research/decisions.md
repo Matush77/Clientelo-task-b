@@ -101,3 +101,11 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D19b | Ranked result execution | **v10 option 2 "Sloupce":** a context line + ⓘ, a heading "Náklady za N let", four horizontal bars on one scale (ticker left, CZK right), the cheapest in accent, one CTA. Details (TER, exchange, broker, assumptions) go to the e-mail. | Human choice from v10. Keeps all four funds comparable at a glance, which is the brief's core. |
 | D17c | Cookie re-open | Floating cookie button dropped (it covered content); **"Nastavení cookies" link in the footer** reopens the settings. | Withdrawing consent stays easy (GDPR Art. 7(3)); cleaner page. |
 | D20 | Consolidated candidate | v11 = every decision in one clickable page + the e-mail with the full 4-fund comparison. Cost breakdown in the e-mail: "buying from CZ" depends only on the route (identical for SPY/IVV/VOO); the fund fee takes the remainder. | Basis for the final design sign-off and the build plan. |
+
+## Round 12 — 2026-10-10 (v11 feedback)
+
+| # | Decision | Chosen / change | Why / implications |
+|---|---|---|---|
+| D15b | A/B variant B | **Variant B = CTA "Spočítat poplatky" + a different hero photo (young man with a phone, v8 #6)** to appeal to younger visitors. Variant A = "Začít investovat" + Prague Castle. | Human request. Lead-agent note: changing two elements at once makes B a *variant-level* test ("younger framing"). The result won't show whether the photo or the CTA caused the difference; a follow-up test can isolate them. → README hypothesis. |
+| D2c | E-mail | Make the e-mail realistic: the website's visual language (dark header band, lime accent, logo, rounded cards, pill CTA) and proper Czech copy (subject + preheader, greeting, intro, result, breakdown, takeaways, next step, call-back note if requested, sign-off, assumptions, legal footer, unsubscribe). | Human feedback on v11. |
+| D21 | Responsive | Show tablet and desktop versions. Desktop puts the calculator in the hero next to the headline; the result replaces the card in place. Tablet keeps the mobile flow, wider. | Human request; ad traffic is mostly mobile, but the page must work everywhere. |
