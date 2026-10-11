@@ -109,3 +109,12 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D15b | A/B variant B | **Variant B = CTA "Spočítat poplatky" + a different hero photo (young man with a phone, v8 #6)** to appeal to younger visitors. Variant A = "Začít investovat" + Prague Castle. | Human request. Lead-agent note: changing two elements at once makes B a *variant-level* test ("younger framing"). The result won't show whether the photo or the CTA caused the difference; a follow-up test can isolate them. → README hypothesis. |
 | D2c | E-mail | Make the e-mail realistic: the website's visual language (dark header band, lime accent, logo, rounded cards, pill CTA) and proper Czech copy (subject + preheader, greeting, intro, result, breakdown, takeaways, next step, call-back note if requested, sign-off, assumptions, legal footer, unsubscribe). | Human feedback on v11. |
 | D21 | Responsive | Show tablet and desktop versions. Desktop puts the calculator in the hero next to the headline; the result replaces the card in place. Tablet keeps the mobile flow, wider. | Human request; ad traffic is mostly mobile, but the page must work everywhere. |
+
+## Round 13 — 2026-10-11 (v12 feedback)
+
+| # | Decision | Change | Why / implications |
+|---|---|---|---|
+| D22 | Mobile sizing | Type and elements now **scale with viewport width** (`clamp()`), so a 390 px phone keeps the v11 proportions (headline ≈ 48 px at 390 px, 42 px at 340 px). | Human: v12 looked smaller than v11. Cause: v12 previews were shown at 66 % scale **and** v11 mocked a ~320 px-wide phone while v12 rendered a real 390 px one. Previews now shown at 82 % (≈ v11 size). |
+| D22b | Tablet sizing & layout | Larger type and controls (headline ≈ 77 px, 60 px chips, 64 px CTA); **calculator centred**; **cookie card centred**; hero shifts up while the card is visible. | Human request. |
+| D22c | Desktop cookie consent | **Full-width bottom bar**, text and buttons centred (Odmítnout / Přijmout equal width, Přijmout highlighted, Nastavení link). | Human request. |
+| D22d | Calculator heading | Tablet + desktop: **"Kolik investovat a na jak dlouho?"**; mobile keeps "Kolik a na jak dlouho?" (space). | Human request. |

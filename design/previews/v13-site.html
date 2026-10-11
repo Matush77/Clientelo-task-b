@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veenos: Srovnání S&amp;P 500 ETF z NYSE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#18191c; --bg2:#141518; --fg:#f3f3ef; --muted:#a3a49f; --line:#2c2d32; --card:#202125; --chip:#26272c; --field:#2c2d32; --accent:#cfe68a; --on-accent:#18191c; --wrap: 1200px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.5 "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
+  .tab { font-variant-numeric: tabular-nums; }
+  html.embed { scrollbar-width: none; } html.embed::-webkit-scrollbar { display: none; }
+  .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(20px, 5.6vw, 24px); }
+
+  /* ---------- header ---------- */
+  .top { position: fixed; top: 0; left: 0; right: 0; z-index: 30; transition: background .25s, border-color .25s; border-bottom: 1px solid transparent; }
+  body.scrolled .top { background: rgba(24,25,28,.97); backdrop-filter: blur(12px); border-color: var(--line); }
+  .top .wrap { height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: clamp(21px, 5.6vw, 24px); letter-spacing: -0.045em; }
+  .links { display: none; gap: 30px; font-size: 14.5px; font-weight: 600; color: rgba(243,243,239,.8); }
+  .links a:hover { color: var(--fg); }
+  .right { display: flex; align-items: center; gap: 14px; }
+  .right .how-link { font-size: clamp(13px, 3.6vw, 15px); font-weight: 600; color: rgba(243,243,239,.82); }
+  .burger { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); display: grid; place-items: center; background: none; cursor: pointer; }
+  .burger i, .burger i::before, .burger i::after { display: block; width: 15px; height: 1.6px; background: var(--fg); border-radius: 2px; position: relative; }
+  .burger i::before, .burger i::after { content: ""; position: absolute; left: 0; }
+  .burger i::before { top: -5px; } .burger i::after { top: 5px; }
+  .top-cta { display: none; height: 40px; padding: 0 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font-weight: 800; font-size: 14px; align-items: center; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; }
+  .hero-bg { position: absolute; left: 0; right: 0; top: 0; height: 100svh; min-height: 600px; overflow: hidden; }
+  .photo { position: absolute; inset: 0; background: #222 center 30%/cover no-repeat; animation: ken 24s ease-in-out infinite alternate; }
+  @keyframes ken { from { transform: scale(1); } to { transform: scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) { .photo { animation: none; } html { scroll-behavior: auto; } }
+  .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.32) 0%, rgba(24,25,28,.32) 28%, rgba(24,25,28,.88) 60%, var(--bg) 100%); }
+  .scrim2 { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.35) 0%, rgba(24,25,28,.82) 16%, rgba(24,25,28,.93) 42%, var(--bg) 100%); opacity: 0; transition: opacity .35s; }
+  body.has-banner .scrim2 { opacity: 1; }
+  .hero-inner { position: relative; z-index: 2; }
+  .hero-text { min-height: 100svh; min-height: max(100svh, 600px); display: flex; flex-direction: column; justify-content: flex-end; padding: 80px 0 34px; transition: padding .35s cubic-bezier(.2,.8,.2,1); }
+  body.has-banner .hero-text { padding-bottom: clamp(222px, 62vw, 250px); }
+  .h { font-weight: 800; font-size: clamp(40px, 12.4vw, 54px); line-height: 1.12; letter-spacing: -0.05em; }
+  .h em { font-style: normal; color: var(--accent); }
+  .sub { font-size: clamp(15.5px, 4.4vw, 18px); color: var(--muted); margin-top: 14px; line-height: 1.45; max-width: 520px; }
+  .checks { list-style: none; margin-top: 20px; display: grid; gap: 10px; }
+  .checks li { display: flex; gap: 10px; align-items: center; font-size: clamp(13.5px, 3.75vw, 15.5px); color: #d4d5d0; }
+  .checks i { width: clamp(18px, 5vw, 21px); height: clamp(18px, 5vw, 21px); border-radius: 50%; background: rgba(207,230,138,.15); color: var(--accent); display: grid; place-items: center; font-style: normal; font-size: 10px; font-weight: 800; flex: none; }
+  .cta { height: clamp(56px, 15.4vw, 62px); border-radius: 999px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: clamp(16px, 4.4vw, 18px); letter-spacing: -0.01em; border: 0; width: 100%; cursor: pointer; }
+  .cta .arr { width: clamp(28px, 7.8vw, 32px); height: clamp(28px, 7.8vw, 32px); border-radius: 50%; background: rgba(24,25,28,.12); display: grid; place-items: center; font-size: 14px; }
+  .cta[disabled] { opacity: .35; cursor: default; }
+  .t-up { display: none; }
+  .hero-cta { margin-top: 26px; }
+
+  /* ---------- calculator ---------- */
+  .calc { padding: 26px 0 8px; scroll-margin-top: 76px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: clamp(24px, 6.4vw, 28px) clamp(20px, 5.4vw, 24px) clamp(20px, 5.4vw, 24px); }
+  .card h2 { font-weight: 800; font-size: clamp(25px, 7.2vw, 30px); letter-spacing: -0.035em; line-height: 1.12; }
+  .q { font-size: clamp(13px, 3.6vw, 15px); font-weight: 700; color: var(--muted); margin: 18px 0 9px; }
+  .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, 2.2vw, 10px); }
+  .chip { height: clamp(50px, 14vw, 58px); border-radius: 15px; background: var(--chip); border: 1px solid var(--line); color: var(--fg); font-weight: 700; font-size: clamp(15px, 4.3vw, 18px); cursor: pointer; transition: background .15s; }
+  .chip:hover { border-color: #45464b; }
+  .chip.on { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  .pick .cta { margin-top: 22px; }
+  .result { margin-top: 12px; transition: opacity .35s, transform .35s; scroll-margin-top: 76px; }
+  .result.hidden { display: none; }
+  .result.enter { opacity: 0; transform: translateY(16px); }
+  .back { display: none; font-size: 13px; font-weight: 700; color: var(--muted); background: none; border: 0; cursor: pointer; margin-bottom: 12px; }
+  .ctx { font-size: clamp(13px, 3.6vw, 15px); color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .ctx i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #55565b; display: grid; place-items: center; font-style: normal; font-size: 10px; font-weight: 800; }
+  .ttl { font-size: clamp(26px, 7.4vw, 31px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-top: 6px; }
+  .bars { margin: 26px 0; display: grid; gap: 22px; }
+  .br .t { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; }
+  .br .t b { font-size: clamp(19px, 5.4vw, 22px); font-weight: 800; letter-spacing: -0.02em; }
+  .br .t span { font-size: clamp(18px, 5.1vw, 21px); font-weight: 800; }
+  .br .track { height: clamp(12px, 3.3vw, 14px); border-radius: 99px; background: #2a2b30; overflow: hidden; }
+  .br .fill { height: 100%; width: 0; border-radius: 99px; background: #6e6f6a; transition: width .7s cubic-bezier(.2,.8,.2,1); }
+  .br.w .fill { background: var(--accent); } .br.w .t span { color: var(--accent); }
+  .sent { text-align: center; padding: 10px 0 4px; }
+  .sent .ok { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: 22px; margin: 0 auto 12px; }
+  .sent b { font-size: 21px; font-weight: 800; letter-spacing: -0.03em; display: block; }
+  .sent p { font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+  /* ---------- how ---------- */
+  .how { padding: 56px 0 56px; scroll-margin-top: 64px; }
+  .how h2 { font-size: clamp(26px, 7.4vw, 31px); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 16px; }
+  .how .grid { display: grid; }
+  .how .it { display: flex; justify-content: space-between; gap: 12px; padding: 15px 0; border-top: 1px solid var(--line); font-size: clamp(14px, 3.9vw, 16px); }
+  .how .it b { font-weight: 700; } .how .it span { color: var(--muted); text-align: right; }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--line); background: var(--bg2); padding: 34px 0 30px; }
+  footer .grid { display: grid; gap: 22px; }
+  footer .tag { font-size: 13.5px; color: var(--muted); margin-top: 10px; max-width: 320px; }
+  footer .fl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; font-size: 13.5px; font-weight: 600; }
+  footer .fl a, footer .fl button { color: var(--fg); background: none; border: 0; text-align: left; font: inherit; cursor: pointer; }
+  footer .disc { font-size: 11.5px; line-height: 1.6; color: #7f807c; }
+  footer .copy { font-size: 11.5px; color: #7f807c; margin-top: 18px; }
+
+  /* ---------- menu ---------- */
+  .menu { position: fixed; inset: 0; z-index: 50; background: var(--bg); padding: 0 22px 24px; display: flex; flex-direction: column; transform: translateY(-100%); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  body.menu-open .menu { transform: none; }
+  .menu .row1 { height: 64px; display: flex; justify-content: space-between; align-items: center; }
+  .close { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 18px; cursor: pointer; background: none; color: var(--fg); }
+  .menu nav { margin-top: 40px; display: grid; gap: 6px; }
+  .menu nav a { font-size: 30px; font-weight: 800; letter-spacing: -0.04em; padding: 6px 0; }
+  .menu .cta { margin-top: auto; }
+
+  /* ---------- form ---------- */
+  .dim { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 61; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 24px; transform: translateY(105%); transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; }
+  body.sheet-open .dim { opacity: 1; pointer-events: auto; } body.sheet-open .sheet { transform: none; }
+  .grab { width: 38px; height: 4px; border-radius: 4px; background: #45464b; margin: 0 auto 14px; }
+  .sheet h3 { font-weight: 800; font-size: clamp(24px, 6.8vw, 28px); letter-spacing: -0.035em; }
+  .sheet .s { font-size: 13.5px; color: var(--muted); margin: 4px 0 16px; }
+  .sheet input[type=text], .sheet input[type=email], .sheet input[type=tel] { width: 100%; height: clamp(52px, 14.4vw, 58px); border-radius: 14px; background: var(--field); border: 1px solid transparent; padding: 0 16px; font: 500 clamp(16px, 4.4vw, 17px) "Manrope", sans-serif; color: var(--fg); margin-bottom: 10px; outline: none; }
+  .sheet input:focus { border-color: var(--accent); } .sheet input::placeholder { color: #9a9b97; }
+  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); margin: 2px 0 10px; cursor: pointer; }
+  .toggle b { font-size: 15px; display: block; } .toggle small { font-size: 12.5px; color: var(--muted); line-height: 1.35; display: block; }
+  .sw { width: 44px; height: 26px; border-radius: 99px; background: #3a3b40; position: relative; flex: none; transition: background .2s; cursor: pointer; }
+  .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #f3f3ef; transition: transform .2s; }
+  .sw.on, .toggle.on .sw { background: var(--accent); } .sw.on::after, .toggle.on .sw::after { transform: translateX(18px); background: var(--on-accent); }
+  .phonef { display: none; } .phonef.show { display: block; }
+  .mk { display: flex; gap: 10px; align-items: center; font-size: 12.5px; color: var(--muted); margin: 4px 2px 14px; cursor: pointer; }
+  .mk i { width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid #5a5b60; flex: none; display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 800; }
+  .mk.on i { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .priv { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+  .x { display: none; position: absolute; right: 16px; top: 16px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: none; color: var(--fg); font-size: 18px; cursor: pointer; }
+
+  /* ---------- cookies ---------- */
+  .ck { position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 70; background: rgba(34,35,39,.97); backdrop-filter: blur(12px); border: 1px solid #34353a; border-radius: 22px; padding: 16px 16px 14px; box-shadow: 0 -10px 40px rgba(0,0,0,.35); transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; }
+  body:not(.has-banner) .ck { transform: translateY(130%); opacity: 0; pointer-events: none; }
+  .ck p { font-size: clamp(12.5px, 3.5vw, 14px); line-height: 1.45; color: #d4d5d0; }
+  .ck p b { color: var(--fg); }
+  .ck .btns, .cs .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .b { height: clamp(44px, 12.4vw, 50px); border-radius: 999px; border: 1px solid #55565b; background: transparent; color: var(--fg); font: 700 clamp(14px, 3.9vw, 15.5px) "Manrope", sans-serif; cursor: pointer; }
+  .b.acc { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+  .ck .set { display: block; text-align: center; font-size: 12px; color: var(--muted); margin-top: 10px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; background: none; border: 0; width: 100%; }
+  .cdim { position: fixed; inset: 0; z-index: 71; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .cs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 72; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 24px; transform: translateY(105%); transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; }
+  body.cs-open .cdim { opacity: 1; pointer-events: auto; } body.cs-open .cs { transform: none; }
+  .cs h3 { font-weight: 800; font-size: 22px; letter-spacing: -0.035em; }
+  .cs .s { font-size: 12.5px; color: var(--muted); margin: 4px 0 12px; line-height: 1.4; }
+  .cat { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+  .cat b { font-size: 14px; display: block; } .cat small { font-size: 12px; color: var(--muted); line-height: 1.35; display: block; }
+  .always { font-size: 11px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .cs .save { grid-column: 1 / -1; }
+
+  /* ================= TABLET ≥ 700 ================= */
+  @media (min-width: 700px) {
+    .wrap { padding: 0 48px; }
+    .m-only { display: none; } .t-up { display: inline; }
+    .logo { font-size: 24px; }
+    .right .how-link { font-size: 15px; }
+    .h { font-size: clamp(64px, 10vw, 86px); }
+    .sub { font-size: 20px; max-width: 560px; }
+    .checks { gap: 12px; margin-top: 24px; }
+    .checks li { font-size: 17px; }
+    .checks i { width: 22px; height: 22px; font-size: 11px; }
+    .hero-text { padding-bottom: 64px; max-width: 680px; }
+    .cta { height: 64px; font-size: 18px; }
+    .hero-cta { width: auto; padding: 0 34px; display: inline-flex; align-self: flex-start; margin-top: 30px; }
+    .calc { max-width: 640px; margin: 0 auto; padding-top: 40px; }
+    .card { padding: 34px 32px 30px; border-radius: 28px; }
+    .card h2 { font-size: 32px; }
+    .q { font-size: 15px; margin: 22px 0 10px; }
+    .chips { gap: 10px; }
+    .chip { height: 60px; font-size: 18px; border-radius: 16px; }
+    .pick .cta { margin-top: 26px; }
+    .ctx { font-size: 15px; }
+    .ttl { font-size: 32px; }
+    .bars { gap: 26px; margin: 30px 0; }
+    .br .t b { font-size: 23px; } .br .t span { font-size: 22px; } .br .track { height: 14px; }
+    .how { padding: 64px 48px; }
+    .how h2 { font-size: 34px; }
+    .how .grid { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+    .how .it { font-size: 16px; }
+    footer .grid { grid-template-columns: 1fr 1fr; }
+    footer .disc { grid-column: 1 / -1; }
+    footer .tag, footer .fl { font-size: 15px; }
+    .ck { left: 50%; right: auto; bottom: 24px; width: 520px; transform: translateX(-50%); padding: 20px 22px 16px; }
+    body:not(.has-banner) .ck { transform: translate(-50%, 130%); }
+    .ck p { font-size: 14px; text-align: center; }
+    .ck .btns { max-width: 380px; margin-left: auto; margin-right: auto; }
+    body.has-banner .hero-text { padding-bottom: 236px; }
+    .sheet, .cs { left: 50%; right: auto; top: 50%; bottom: auto; width: 520px; border-radius: 28px; padding: 34px 34px 28px; transform: translate(-50%, -46%); opacity: 0; pointer-events: none; }
+    body.sheet-open .sheet, body.cs-open .cs { transform: translate(-50%, -50%); opacity: 1; pointer-events: auto; }
+    .sheet h3 { font-size: 28px; }
+    .sheet input[type=text], .sheet input[type=email], .sheet input[type=tel] { height: 58px; font-size: 17px; }
+    .grab { display: none; } .x { display: grid; place-items: center; }
+  }
+
+  /* ================= DESKTOP ≥ 1100 ================= */
+  @media (min-width: 1100px) {
+    .links { display: flex; }
+    .burger, .right .how-link { display: none; }
+    .top-cta { display: inline-flex; }
+    .hero { min-height: 820px; }
+    .hero-bg { height: 100%; min-height: 820px; }
+    .scrim { background: linear-gradient(90deg, rgba(24,25,28,.9) 0%, rgba(24,25,28,.55) 52%, rgba(24,25,28,.72) 100%), linear-gradient(180deg, rgba(24,25,28,0) 70%, var(--bg) 100%); }
+    .hero-inner { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 72px; align-items: center; min-height: 820px; padding-top: 64px; padding-bottom: 64px; }
+    .hero-text { min-height: 0; padding: 0; max-width: 620px; }
+    .h { font-size: 76px; }
+    .hero-cta { display: none; }
+    .calc { padding: 0; max-width: none; }
+    .card { background: rgba(32,33,37,.92); backdrop-filter: blur(14px); padding: 30px 28px 26px; }
+    .calc.has-result .pick { display: none; }
+    .result { margin-top: 0; }
+    .back { display: inline-block; }
+    .how { padding: 88px 40px; }
+    .how h2 { font-size: 34px; margin-bottom: 24px; }
+    .how .grid { grid-template-columns: repeat(4, 1fr); column-gap: 20px; }
+    .how .it { flex-direction: column; justify-content: flex-start; gap: 6px; border: 1px solid var(--line); border-radius: 20px; padding: 22px; background: var(--card); }
+    .how .it span { text-align: left; }
+    footer .grid { grid-template-columns: 1.2fr 1fr 1.6fr; gap: 40px; }
+    footer .disc { grid-column: auto; }
+    .calc { margin: 0; padding-top: 0; max-width: none; }
+    .card { padding: 32px 30px 28px; }
+    .card h2 { font-size: 30px; }
+    .chip { height: 56px; font-size: 17px; }
+    .h { font-size: 82px; }
+    .ck { left: 0; right: 0; bottom: 0; width: auto; transform: none; border-radius: 0; border-width: 1px 0 0; padding: 22px 0 18px; text-align: center; }
+    body:not(.has-banner) .ck { transform: translateY(110%); }
+    .ck p { max-width: 760px; margin: 0 auto; font-size: 14.5px; }
+    .ck .btns { display: flex; justify-content: center; gap: 12px; max-width: none; margin-top: 14px; }
+    .ck .b { width: 200px; }
+    .ck .set { display: inline-block; width: auto; margin-top: 10px; }
+    body.has-banner .hero-text { padding-bottom: 0; }
+    body.has-banner .scrim2 { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</a>
+  <nav class="links"><a href="#calc">Srovnání</a><a href="#how">Jak počítáme</a><a href="#how">Zdroje dat</a><a href="#foot">O nás</a></nav>
+  <div class="right"><a class="how-link" href="#how">Jak počítáme</a><a class="top-cta js-label2" href="#calc">Spočítat</a><button class="burger js-menu" aria-label="Menu"><i></i></button></div>
+</div></header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero-bg"><div class="photo js-photo"></div><div class="scrim"></div><div class="scrim2"></div></div>
+    <div class="hero-inner wrap">
+      <div class="hero-text">
+        <h1 class="h">Stejný index.<br><em>Jiná cena.</em></h1>
+        <p class="sub">Zjistěte, kolik vás stojí poplatky za vaše ETF.</p>
+        <ul class="checks"><li><i>✓</i>SPY, IVV a VOO z burzy NYSE</li><li><i>✓</i>Poplatky v korunách, ne v procentech</li><li><i>✓</i>Data od emitentů a ČNB</li></ul>
+        <a class="cta hero-cta js-start" href="#calc"><span class="js-label">Začít investovat</span> <span class="arr">↓</span></a>
+      </div>
+
+      <div class="calc" id="calc">
+        <div class="card pick">
+          <h2><span class="m-only">Kolik a na jak dlouho?</span><span class="t-up">Kolik investovat a na jak dlouho?</span></h2>
+          <p class="q">Měsíčně (Kč)</p>
+          <div class="chips tab js-m"><button class="chip" data-v="1000">1 000</button><button class="chip" data-v="3000">3 000</button><button class="chip" data-v="5000">5 000</button><button class="chip" data-v="10000">10 000</button></div>
+          <p class="q">Let</p>
+          <div class="chips tab js-y"><button class="chip" data-v="5">5</button><button class="chip" data-v="10">10</button><button class="chip" data-v="20">20</button><button class="chip" data-v="30">30</button></div>
+          <button class="cta js-go" disabled>Porovnat 4 fondy</button>
+        </div>
+        <div class="card result hidden" id="result">
+          <button class="back js-back">← Změnit zadání</button>
+          <div class="js-pre">
+            <p class="ctx"><span class="js-ctx"></span><i title="Jak počítáme">i</i></p>
+            <h2 class="ttl js-ttl"></h2>
+            <div class="bars tab js-bars"></div>
+            <button class="cta js-open">Poslat srovnání e-mailem</button>
+          </div>
+          <div class="sent js-post" hidden><div class="ok">✓</div><b>Srovnání je na cestě</b><p class="js-sentp">Celé srovnání najdete v e-mailu.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how wrap" id="how">
+    <h2>Jak počítáme</h2>
+    <div class="grid">
+      <div class="it"><b>Poplatek fondu</b><span>emitent fondu (State Street, BlackRock, Vanguard)</span></div>
+      <div class="it"><b>Směna CZK → USD</b><span>ceník brokera, kurz ČNB</span></div>
+      <div class="it"><b>Provize za nákup</b><span>ceník brokera (Fio, XTB)</span></div>
+      <div class="it"><b>Výnos před náklady</b><span>7 % ročně (předpoklad)</span></div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"><div class="wrap grid">
+  <div><a class="logo" href="#top"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</a><p class="tag">Srovnání ETF z burzy NYSE a jejich evropských verzí, v korunách.</p></div>
+  <div class="fl"><a href="#how">Jak počítáme</a><a href="#how">Zdroje dat</a><a href="#foot">Ochrana údajů</a><button class="js-ckfoot">Nastavení cookies</button><a href="#foot">Kontakt</a><a href="#foot">O nás</a></div>
+  <div><p class="disc">Veenos není investiční poradce ani obchodník s cennými papíry. Obsah slouží k informaci a není investičním doporučením. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Výpočty jsou ilustrativní a vycházejí z veřejných ceníků a údajů emitentů.</p><p class="copy">© 2026 Veenos · Data k 9. 10. 2026</p></div>
+</div></footer>
+
+<div class="menu">
+  <div class="row1"><span class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</span><button class="close js-mclose">×</button></div>
+  <nav><a class="js-mlink" href="#calc">Srovnání</a><a class="js-mlink" href="#how">Jak počítáme</a><a class="js-mlink" href="#how">Zdroje dat</a><a class="js-mlink" href="#foot">O nás</a></nav>
+  <a class="cta js-mlink" href="#calc"><span class="js-label">Začít investovat</span> <span class="arr">↓</span></a>
+</div>
+
+<div class="dim js-close"></div>
+<form class="sheet js-form" onsubmit="return false">
+  <div class="grab"></div><button type="button" class="x js-close">×</button>
+  <h3>Kam poslat srovnání?</h3>
+  <p class="s">Celé srovnání s předpoklady vám pošleme e-mailem.</p>
+  <input type="text" name="name" autocomplete="name" placeholder="Jméno" required>
+  <input type="email" name="email" autocomplete="email" placeholder="E-mail" required>
+  <div class="toggle js-tg"><div><b>Chci pomoct</b><small>Zavolejte mi a pomozte mi s dalším krokem.</small></div><span class="sw"></span></div>
+  <div class="phonef js-pf"><input type="tel" name="tel" autocomplete="tel" placeholder="Telefon"></div>
+  <div class="mk js-mk"><i></i>Občas mi pošlete tipy e-mailem</div>
+  <button class="cta" type="submit">Poslat srovnání</button>
+  <p class="priv">Zásady ochrany osobních údajů</p>
+</form>
+
+<div class="ck">
+  <p><b>Cookies.</b> Nezbytné používáme vždy. S vaším souhlasem i analytické a marketingové, abychom věděli, co na webu funguje.</p>
+  <div class="btns"><button class="b js-rej">Odmítnout</button><button class="b acc js-acc">Přijmout</button></div>
+  <button class="set js-set">Nastavení</button>
+</div>
+<div class="cdim js-cclose"></div>
+<div class="cs">
+  <div class="grab"></div><button type="button" class="x js-cclose">×</button>
+  <h3>Nastavení cookies</h3>
+  <p class="s">Vyberte, co smíme používat. Volbu můžete kdykoli změnit v patičce webu.</p>
+  <div class="cat"><div><b>Nezbytné</b><small>Aby web a formulář fungovaly.</small></div><span class="always">Vždy zapnuto</span></div>
+  <div class="cat"><div><b>Analytické</b><small>Google Analytics: kolik lidí stránku používá.</small></div><span class="sw js-an"></span></div>
+  <div class="cat"><div><b>Marketingové</b><small>Meta Pixel: měření reklam na Facebooku a Instagramu.</small></div><span class="sw js-mk2"></span></div>
+  <div class="btns"><button class="b js-rej">Odmítnout vše</button><button class="b acc js-acc">Přijmout vše</button><button class="b save js-save">Uložit výběr</button></div>
+</div>
+
+<script>
+/* ===== data (verified: research/05-data-facts.md + verification log) ===== */
+const USDCZK = 21.745; // ČNB 9. 10. 2026
+const FUNDS = [
+  { t: 'SPY',  ter: 0.000945, fx: 0.03,  comm: 7.95 * USDCZK, every: 3 },
+  { t: 'IVV',  ter: 0.0003,   fx: 0.03,  comm: 7.95 * USDCZK, every: 3 },
+  { t: 'VOO',  ter: 0.0003,   fx: 0.03,  comm: 7.95 * USDCZK, every: 3 },
+  { t: 'CSPX', ter: 0.0007,   fx: 0.005, comm: 0,             every: 1 },
+];
+const R = Math.pow(1.07, 1 / 12) - 1;
+function fv(m, y, f) { let v = 0, c = 0; for (let i = 0; i < y * 12; i++) { v = v * (1 + R) * (1 - (f.ter || 0) / 12); c += m; if ((i + 1) % (f.every || 1) === 0) { v += c * (1 - (f.fx || 0)) - (f.comm || 0); c = 0; } } return (v + c) * (1 - (f.fx || 0)); }
+const compare = (m, y) => { const base = fv(m, y, {}); return FUNDS.map(f => ({ t: f.t, total: base - fv(m, y, f) })).sort((a, b) => a.total - b.total); };
+const fmt = n => (Math.round(n / 100) * 100).toLocaleString('cs-CZ') + ' Kč';
+
+/* ===== variant A/B ===== */
+const qs = new URLSearchParams(location.search.slice(1) || window.name || '');
+if (window.name) document.documentElement.classList.add('embed');  // window.name: preset passed by the device showcase
+const V = qs.get('v') === 'b' ? 'b' : 'a';
+const VARIANT = {
+  a: { photo: 'https://images.unsplash.com/photo-1637750452992-87153c4b3f65?w=1600&q=70&auto=format&fit=crop', pos: 'center 30%', cta: 'Začít investovat' },
+  b: { photo: 'https://images.unsplash.com/photo-1644895985299-245dddecef9a?w=1600&q=70&auto=format&fit=crop', pos: 'center 25%', cta: 'Spočítat poplatky' },
+}[V];
+const photo = document.querySelector('.js-photo');
+photo.style.backgroundImage = `url('${VARIANT.photo}')`; photo.style.backgroundPosition = VARIANT.pos;
+document.querySelectorAll('.js-label').forEach(e => e.textContent = VARIANT.cta);
+
+/* ===== behaviour ===== */
+const B = document.body, $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
+const desktop = () => matchMedia('(min-width: 1100px)').matches;
+addEventListener('scroll', () => B.classList.toggle('scrolled', scrollY > 30), { passive: true });
+let m = null, y = null;
+const go = $('.js-go'), calc = $('#calc'), result = $('#result');
+const mark = (sel, v) => $$(sel + ' .chip').forEach(c => c.classList.toggle('on', c.dataset.v == v));
+$$('.js-m .chip').forEach(c => c.onclick = () => { m = +c.dataset.v; mark('.js-m', m); go.disabled = !(m && y); });
+$$('.js-y .chip').forEach(c => c.onclick = () => { y = +c.dataset.v; mark('.js-y', y); go.disabled = !(m && y); });
+function show(anim = true) {
+  const res = compare(m, y), max = res[res.length - 1].total;
+  $('.js-ctx').textContent = m.toLocaleString('cs-CZ') + ' Kč měsíčně · ' + y + ' let';
+  $('.js-ttl').textContent = 'Náklady za ' + y + ' let';
+  $('.js-bars').innerHTML = res.map((f, i) => `<div class="br ${i === 0 ? 'w' : ''}"><div class="t"><b>${f.t}</b><span>${fmt(f.total)}</span></div><div class="track"><div class="fill" data-w="${Math.max(5, 100 * f.total / max)}"></div></div></div>`).join('');
+  result.classList.remove('hidden'); calc.classList.add('has-result');
+  if (anim) { result.classList.add('enter'); requestAnimationFrame(() => requestAnimationFrame(() => result.classList.remove('enter'))); }
+  setTimeout(() => $$('.js-bars .fill').forEach(f => f.style.width = f.dataset.w + '%'), anim ? 250 : 0);
+}
+go.onclick = () => { if (go.disabled) return; show(); if (!desktop()) setTimeout(() => result.scrollIntoView({ behavior: 'smooth' }), 80); };
+$('.js-back').onclick = () => { calc.classList.remove('has-result'); result.classList.add('hidden'); };
+$('.js-menu').onclick = () => B.classList.add('menu-open');
+$('.js-mclose').onclick = () => B.classList.remove('menu-open');
+$$('.js-mlink').forEach(a => a.addEventListener('click', () => B.classList.remove('menu-open')));
+$('.js-open').onclick = () => B.classList.add('sheet-open');
+$$('.js-close').forEach(e => e.onclick = () => B.classList.remove('sheet-open'));
+const tg = $('.js-tg'), pf = $('.js-pf'), tel = pf.querySelector('input'), mk = $('.js-mk');
+const setHelp = on => { tg.classList.toggle('on', on); pf.classList.toggle('show', on); tel.required = on; };
+tg.onclick = () => { setHelp(!tg.classList.contains('on')); if (tg.classList.contains('on')) tel.focus(); };
+mk.onclick = () => { mk.classList.toggle('on'); mk.querySelector('i').textContent = mk.classList.contains('on') ? '✓' : ''; };
+const finish = help => { $('.js-pre').hidden = true; $('.js-post').hidden = false; $('.js-sentp').textContent = help ? 'Celé srovnání najdete v e-mailu. Brzy se vám ozveme.' : 'Celé srovnání najdete v e-mailu.'; };
+$('.js-form').addEventListener('submit', () => { B.classList.remove('sheet-open'); finish(tg.classList.contains('on')); });
+// cookies
+const an = $('.js-an'), mk2 = $('.js-mk2');
+const consent = (a, b) => { an.classList.toggle('on', a); mk2.classList.toggle('on', b); B.classList.remove('has-banner', 'cs-open'); /* here GA4 / Meta Pixel would load if allowed */ };
+$$('.js-rej').forEach(e => e.onclick = () => consent(false, false));
+$$('.js-acc').forEach(e => e.onclick = () => consent(true, true));
+$('.js-save').onclick = () => consent(an.classList.contains('on'), mk2.classList.contains('on'));
+$('.js-set').onclick = () => B.classList.add('cs-open');
+$('.js-ckfoot').onclick = () => B.classList.add('cs-open');
+$$('.js-cclose').forEach(e => e.onclick = () => B.classList.remove('cs-open'));
+an.onclick = () => an.classList.toggle('on'); mk2.onclick = () => mk2.classList.toggle('on');
+
+/* ===== preview presets via URL: ?v=a|b&cookie=0|1&m=3000&y=20&show=result|sheet|sent&help=1 ===== */
+if (qs.get('cookie') !== '0') B.classList.add('has-banner');
+if (qs.get('m')) { m = +qs.get('m'); y = +qs.get('y'); mark('.js-m', m); mark('.js-y', y); go.disabled = false; }
+const s = qs.get('show');
+if (s && m) {
+  show(false);
+  if (qs.get('help') === '1') setHelp(true);
+  if (s === 'sheet') B.classList.add('sheet-open');
+  if (s === 'sent') finish(qs.get('help') === '1');
+  if (!desktop()) setTimeout(() => { window.scrollTo({ top: result.getBoundingClientRect().top + scrollY - 76, behavior: 'instant' }); B.classList.toggle('scrolled', scrollY > 30); }, 60);
+}
+</script>
+</body>
+</html>
