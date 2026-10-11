@@ -68,7 +68,7 @@ Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, z
 **Overenie kvality (11. 10. 2026, produkcia):**
 - **Lighthouse mobile:** Performance **96**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,3 s, CLS 0, TBT 60 ms. Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené.
 - **Testy:** 15 automatických testov (`npm test`) a end-to-end v prehliadači na 390 / 768 / 1440 px.
-- **Ostrý test:** 1 testovací lead na produkcii (so súhlasom), e-mail odoslaný cez Brevo.
+- **Ostrý test:** 1 testovací lead na produkcii (so súhlasom). E-mail prišiel do Gmailu (karta *Aktualizácie*, nie spam; DKIM/SPF/DMARC pass). Test odhalil 2 chyby e-mailu, obe opravené: chýbajúce logo (Gmail odstraňuje SVG `data:` obrázky, teraz je logo hostované PNG) a prekrývajúce sa stĺpce rozpisu (teraz riadky pod sebou).
 
 ## 7. Očakávaná konverzia
 **Odhad: 4–8 % návštev → lead, stred okolo 6 %.**
@@ -111,7 +111,7 @@ Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výs
 - **Hlavný agent sám:** do pokynov pre agenta E vložil zastaraný fakt (limit 40 mil. Kč pre časový test, od 2026 zrušený). Agent ho podľa Finančnej správy opravil (L1). Poučenie: pokyny majú klásť otázky, nie tvrdiť fakty z pamäte modelu.
 - **Odklon od zadania:** pri riešení prekážky PRIIPs sa koncept posunul na „dve cesty k S&P 500" a vypadlo porovnanie ETF z NYSE. Opravené po mojej pripomienke (`decisions.md` D0b, D4b).
 - **Dizajn:** prvých 5 smerov bolo preplnených dátami. Náhľady boli zmenšené na 66 % a AI to najprv nespomenula. Nadpis „Jiná" kolidoval s riadkom nad ním. Reklamy sa najprv vykreslili v náhradnom fonte (cesta k fontu cez `file://`). Na reklame zostalo „zdarma", hoci som ho zo stránky predtým odstránil.
-- **Kód:** `form.name` vracal atribút formulára namiesto inputu (chytené pri návrhu), dialóg zameriaval tlačidlo zavrieť namiesto prvého poľa (chytené pri teste v prehliadači), skript na inline náhľadov sa raz commitol prázdny (opravené ďalším commitom).
+- **Kód:** `form.name` vracal atribút formulára namiesto inputu (chytené pri návrhu), dialóg zameriaval tlačidlo zavrieť namiesto prvého poľa (chytené pri teste v prehliadači), skript na inline náhľadov sa raz commitol prázdny (opravené ďalším commitom). Až ostrý e-mail ukázal, že Gmail zahodí SVG logo a zúži 4 stĺpce tak, že sa texty prekrývajú; lokálny náhľad v prehliadači to neodhalil.
 
 ## 10. Rozhodnutia tam, kde zadanie nebolo jednoznačné
 - **„ETF obchodované na NYSE" vs. realita v ČR:** americké ETF väčšina brokerov českému retailu nepredá (PRIIPs). Stránka preto porovnáva **SPY, IVV, VOO z NYSE Arca** a ako kontrolu pridáva **európske dvojča CSPX**, ktoré sa z ČR kúpiť dá. Porovnanie ETF z NYSE zostáva jadrom, realita nákupu je jeho súčasťou.
@@ -124,7 +124,7 @@ Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výs
 Ukážka je hotová a nasadená, pri ostrom spustení by ešte bolo treba:
 - **Údaje prevádzkovateľa a právna kontrola** (zásady ochrany údajov, upozornenia); otázka, či vzdelávací porovnávač neprekročí hranicu investičného odporúčania (MAR, ČNB). Hovor „Chci pomoct" musí zostať pomocou s postupom, nie radou ku konkrétnemu fondu.
 - **Meta:** či vyžaduje od nelicencovaného vydavateľa overenie (neoverené, D6). Google Ads je bez finančného overenia zatvorený.
-- **E-maily z vlastnej domény:** Brevo zo sendera na Gmaile môže padať do spamu (DMARC). Odhlasovanie pre „tipy e-mailem" je len uložený súhlas, newsletter systém neexistuje.
+- **E-maily z vlastnej domény:** Brevo bez vlastnej domény odosiela z `…@brevosend.com` (odpovede idú na overenú adresu); doručenie prešlo, ale vlastná doména by zvýšila dôveryhodnosť aj doručiteľnosť. Odhlasovanie pre „tipy e-mailem" je len uložený súhlas, newsletter systém neexistuje.
 - **Licencia fotky:** Unsplash licencia komerčné použitie povoľuje, pred spustením ju treba potvrdiť alebo fotku kúpiť a hostovať u seba.
 - **Hosting:** Vercel Hobby je na nekomerčné použitie, reálna kampaň potrebuje Pro alebo iný hosting.
 - **Dáta:** Fio kurzová prirážka je orientačná (tabuľka bez dátumu), dáta treba pravidelne obnovovať (zatiaľ ručne v `model.js`).
