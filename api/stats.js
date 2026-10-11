@@ -6,7 +6,7 @@ const LABELS = {
   page_view: 'Příchod', hero_cta: 'Klik na CTA v hero', calc_select: 'Výběr v kalkulačce', calc_compare: 'Porovnat 4 fondy',
   result_view: 'Výsledek viděn', form_open: 'Otevřel formulář', form_start: 'Začal vyplňovat', help_on: '„Chci pomoct" zapnuto',
   form_submit: 'Odeslal formulář', lead_ok: 'Lead uložen + e-mail odeslán', lead_error: 'Chyba odeslání',
-  consent_accept: 'Cookies: přijal', consent_reject: 'Cookies: odmítl',
+  consent_accept: 'Cookies: přijal', consent_reject: 'Cookies: odmítl', faq_open: 'Otevřel otázku v FAQ',
 };
 
 export function aggregate(raw) {

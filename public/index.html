@@ -81,7 +81,8 @@
   .proof { margin-top: auto; border-top: 1px solid var(--line); padding-top: 20px; }
   .proof-k { font-size: clamp(13px, 3.6vw, 15px); font-weight: 700; color: var(--muted); display: flex; align-items: center; gap: 6px; }
   .proof-k a { width: 18px; height: 18px; border-radius: 50%; border: 1px solid #55565b; display: grid; place-items: center; font-size: 10px; font-weight: 800; }
-  .proof-n { font-weight: 800; font-size: clamp(42px, 12.4vw, 54px); letter-spacing: -0.045em; line-height: 1.1; color: var(--accent); margin-top: 4px; white-space: nowrap; }
+  .proof-n { font-weight: 800; font-size: clamp(27px, 7.8vw, 32px); letter-spacing: -0.035em; line-height: 1.15; margin-top: 6px; }
+  .proof-n em { font-style: normal; color: var(--accent); }
   .proof-t { font-size: clamp(14px, 3.9vw, 16px); color: #c9cac4; line-height: 1.45; margin-top: 6px; max-width: 420px; }
   .t-up { display: none; }
 
@@ -131,12 +132,40 @@
   .how .it a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
   .how .asof { font-size: 12.5px; color: #9a9b96; margin-top: 14px; }
 
+  /* FAQ: one open at a time; height via grid rows 0fr->1fr, icon springs from + to x, answer fades up out of a blur */
+  .faq { padding-bottom: 64px; scroll-margin-top: 64px; }
+  .faq h2 { font-size: clamp(26px, 7.4vw, 31px); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 18px; }
+  .faq .list { display: grid; gap: 10px; }
+  .qa { position: relative; border: 1px solid var(--line); border-radius: 20px; background: var(--card); overflow: hidden; isolation: isolate; transition: border-color .45s, box-shadow .6s cubic-bezier(.2,.8,.2,1); }
+  .qa::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(420px 220px at 0 0, rgba(207,230,138,.13), transparent 70%); opacity: 0; transition: opacity .6s; }
+  .qa.open { border-color: rgba(207,230,138,.38); box-shadow: 0 22px 44px -28px rgba(207,230,138,.45); }
+  .qa.open::before { opacity: 1; }
+  .qa h3 { font: inherit; }
+  .qa-q { width: 100%; display: flex; align-items: center; gap: 14px; padding: 18px 16px 18px 18px; background: none; border: 0; color: var(--fg); text-align: left; cursor: pointer; font: 700 clamp(15px, 4.2vw, 17px)/1.35 "Manrope", sans-serif; letter-spacing: -0.01em; -webkit-tap-highlight-color: transparent; }
+  .qa-n { font-size: 12px; font-weight: 800; color: #6f706b; font-variant-numeric: tabular-nums; flex: none; width: 20px; transition: color .4s; }
+  .qa.open .qa-n { color: var(--accent); }
+  .qa-t { flex: 1; }
+  .qa-i { position: relative; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid #45464b; transition: background .4s, border-color .4s, transform .6s cubic-bezier(.34,1.56,.64,1); }
+  .qa-i::before, .qa-i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.8px; margin: -0.9px 0 0 -6px; border-radius: 2px; background: var(--fg); transition: background .4s; }
+  .qa-i::after { transform: rotate(90deg); }
+  .qa-q:hover .qa-i { border-color: var(--accent); }
+  .qa.open .qa-i { background: var(--accent); border-color: var(--accent); transform: rotate(135deg); }
+  .qa.open .qa-i::before, .qa.open .qa-i::after { background: var(--on-accent); }
+  .qa-a { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .6s cubic-bezier(.2,.8,.2,1), visibility 0s .6s; }
+  .qa.open .qa-a { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows .6s cubic-bezier(.2,.8,.2,1); }
+  .qa-in { min-height: 0; overflow: hidden; }
+  .qa-in p { padding: 0 18px 20px 52px; color: #c9cac4; font-size: clamp(14px, 3.9vw, 15.5px); line-height: 1.6; opacity: 0; transform: translateY(10px); filter: blur(6px); transition: opacity .3s, transform .3s, filter .3s; }
+  .qa.open .qa-in p { opacity: 1; transform: none; filter: none; transition: opacity .5s .14s, transform .6s .14s cubic-bezier(.2,.8,.2,1), filter .5s .14s; }
+  .qa-in a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  @media (prefers-reduced-motion: reduce) { .qa, .qa::before, .qa-i, .qa-a, .qa-in p { transition: none !important; } }
+
   /* footer */
   footer { border-top: 1px solid #2a2b30; background: var(--bg2); padding: 40px 0 34px; }
   footer .grid { display: grid; gap: 22px; }
   footer .tag { font-size: 13.5px; color: var(--muted); margin-top: 10px; max-width: 320px; }
-  footer .fl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; font-size: 13.5px; font-weight: 600; }
-  footer .fl a, footer .fl button { color: var(--fg); background: none; border: 0; text-align: left; font: inherit; cursor: pointer; }
+  footer .fl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; align-content: start; align-items: start; font-size: 13.5px; font-weight: 600; }
+  footer .fl a, footer .fl button { color: var(--fg); background: none; border: 0; text-align: left; font: inherit; cursor: pointer; white-space: nowrap; justify-self: start; }
+  footer .fl a:hover, footer .fl button:hover { color: var(--accent); }
   footer .disc { font-size: 11.5px; line-height: 1.6; color: #8a8b86; }
   footer .copy { font-size: 11.5px; color: #8a8b86; margin-top: 18px; }
   footer .ct { margin-top: 18px; display: grid; gap: 4px; font-size: 13.5px; font-weight: 600; scroll-margin-top: 84px; }
@@ -212,7 +241,7 @@
     .cta { height: 64px; font-size: 18px; }
     .hero-cta { width: auto; padding: 0 34px; display: inline-flex; align-self: flex-start; margin-top: 30px; }
     .proof { padding-top: 26px; }
-    .proof-k { font-size: 15px; } .proof-n { font-size: 72px; } .proof-t { font-size: 17px; max-width: 520px; }
+    .proof-k { font-size: 15px; } .proof-n { font-size: 42px; } .proof-t { font-size: 17px; max-width: 560px; }
     .calc { max-width: 640px; margin: 0 auto; padding-top: 40px; }
     .card { padding: 34px 32px 30px; border-radius: 28px; }
     .card h2 { font-size: 32px; }
@@ -229,6 +258,9 @@
     .how .grid { grid-template-columns: 1fr 1fr; gap: 16px; }
     .how .it { font-size: 16px; padding: 22px; }
     footer .grid { grid-template-columns: 1fr 1fr; }
+    footer .fl { grid-template-columns: 1fr; gap: 12px; }
+    .faq { padding-bottom: 80px; } .faq h2 { font-size: 34px; } .faq .list { gap: 12px; }
+    .qa-q { padding: 22px 22px 22px 24px; font-size: 18px; } .qa-n { width: 24px; } .qa-in p { padding: 0 24px 24px 62px; font-size: 16px; }
     footer .disc { grid-column: 1 / -1; }
     footer .tag, footer .fl, footer .ct { font-size: 15px; }
     .ck { left: 50%; right: auto; bottom: 24px; width: 520px; transform: translateX(-50%); padding: 20px 22px 16px; }
@@ -264,6 +296,7 @@
     .back { display: inline-block; }
     .how { padding-top: 88px; padding-bottom: 88px; }
     .how .grid { grid-template-columns: repeat(4, 1fr); }
+    .faq { padding-bottom: 104px; } .faq .list { max-width: 860px; }
     footer .grid { grid-template-columns: 1.2fr 1fr 1.6fr; gap: 40px; }
     footer .disc { grid-column: auto; }
     .ck { left: 0; right: 0; bottom: 0; width: auto; transform: none; border-radius: 0; border-width: 1px 0 0; padding: 22px 0 18px; text-align: center; }
@@ -292,8 +325,8 @@
         <p class="sub">Zjistěte, kolik vás stojí poplatky za vaše ETF.</p>
         <ul class="checks"><li><i aria-hidden="true">✓</i>SPY, IVV a VOO z burzy NYSE</li><li><i aria-hidden="true">✓</i>Poplatky v korunách, ne v procentech</li><li><i aria-hidden="true">✓</i>Data od emitentů a ČNB</li></ul>
         <a class="cta hero-cta js-start" href="#calc"><span class="lab-a">Začít investovat</span><span class="lab-b">Spočítat poplatky</span> <span class="arr" aria-hidden="true">↓</span></a>
-        <!-- Numbers = compare(3000, 20) from js/model.js (SPY − CSPX); tests/model.test.js keeps them in sync. -->
-        <div class="proof"><p class="proof-k">3 000 Kč měsíčně · 20 let <a href="#how" aria-label="Jak počítáme">i</a></p><p class="proof-n tab">114 200 Kč</p><p class="proof-t">Rozdíl v nákladech mezi nejlevnějším a nejdražším fondem na stejný index S&amp;P 500.</p></div>
+        <!-- Numbers = compare(3000, 20) from js/model.js (CSPX vs SPY); tests/model.test.js keeps them in sync. -->
+        <div class="proof"><p class="proof-k">3 000 Kč měsíčně · 20 let <a href="#how" aria-label="Jak počítáme">i</a></p><p class="proof-n">o <em>80&nbsp;%</em> nižší náklady</p><p class="proof-t">u nejlevnějšího ze 4 fondů na stejný index S&amp;P&nbsp;500 oproti nejdražšímu (27&nbsp;900&nbsp;Kč vs 142&nbsp;100&nbsp;Kč).</p></div>
       </div>
 
       <div class="calc" id="calc">
@@ -325,17 +358,28 @@
     <div class="grid js-how"></div>
     <p class="asof js-asof"></p>
   </section>
+
+  <section class="faq wrap" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Časté otázky</h2>
+    <div class="list js-faq">
+      <div class="qa"><h3><button type="button" class="qa-q" id="qa1-b" aria-expanded="false" aria-controls="qa1"><span class="qa-n" aria-hidden="true">01</span><span class="qa-t">Proč většinu ETF z NYSE u českého brokera nekoupíte?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa1" role="region" aria-labelledby="qa1-b"><div class="qa-in"><p>Americké fondy nemají dokument KID, který evropské nařízení PRIIPs vyžaduje u drobných investorů. Většina brokerů v EU je proto drobným investorům neprodává, například DEGIRO, LYNX nebo Saxo. Fio americké ETF zpřístupňuje, nákup ale zadáváte sami, bez doporučení. Stejný index nabízejí i evropské (UCITS) fondy, třeba CSPX.</p></div></div></div>
+      <div class="qa"><h3><button type="button" class="qa-q" id="qa2-b" aria-expanded="false" aria-controls="qa2"><span class="qa-n" aria-hidden="true">02</span><span class="qa-t">Čím se liší SPY, IVV, VOO a CSPX?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa2" role="region" aria-labelledby="qa2-b"><div class="qa-in"><p>Všechny čtyři kopírují stejný index S&amp;P 500. SPY (State Street), IVV (iShares) a VOO (Vanguard) jsou americké fondy z burzy NYSE Arca, CSPX je irský fond iShares podle evropských pravidel UCITS. Liší se ročním poplatkem fondu a hlavně cenou nákupu z Česka: provizí a směnou korun na dolary. Čísla najdete v sekci <a href="#how">Jak počítáme</a>.</p></div></div></div>
+      <div class="qa"><h3><button type="button" class="qa-q" id="qa3-b" aria-expanded="false" aria-controls="qa3"><span class="qa-n" aria-hidden="true">03</span><span class="qa-t">Jak je to s daněmi?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa3" role="region" aria-labelledby="qa3-b"><div class="qa-in"><p>Prodej je v Česku osvobozený od daně, když fond držíte déle než 3 roky (časový test), nebo když příjmy ze všech prodejů cenných papírů za rok nepřesáhnou 100&nbsp;000&nbsp;Kč. Z dividend amerických fondů se s formulářem W-8BEN obvykle sráží 15&nbsp;% daně v USA, bez něj 30&nbsp;%. Přesné dopady závisí na vaší situaci, více v <a href="/navod">návodu</a>.</p></div></div></div>
+      <div class="qa"><h3><button type="button" class="qa-q" id="qa4-b" aria-expanded="false" aria-controls="qa4"><span class="qa-n" aria-hidden="true">04</span><span class="qa-t">Je to investiční doporučení?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa4" role="region" aria-labelledby="qa4-b"><div class="qa-in"><p>Ne. Srovnání je ilustrativní výpočet nákladů z veřejných ceníků a údajů emitentů pro částku a dobu, kterou zadáte. Nedoporučujeme konkrétní fond ani brokera. Když zapnete „Chci pomoct“, provedeme vás postupem nákupu, výběr fondu zůstává na vás.</p></div></div></div>
+      <div class="qa"><h3><button type="button" class="qa-q" id="qa5-b" aria-expanded="false" aria-controls="qa5"><span class="qa-n" aria-hidden="true">05</span><span class="qa-t">Co mi pošlete a co bude s mým kontaktem?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa5" role="region" aria-labelledby="qa5-b"><div class="qa-in"><p>E-mailem dostanete celé srovnání: rozpis nákladů všech čtyř fondů, předpoklady výpočtu a odkaz na návod k nákupu. Telefon použijeme jen tehdy, když zapnete „Chci pomoct“, a to k jednomu hovoru. Tipy posíláme jen s vaším souhlasem a údaje nikomu neprodáváme. Podrobnosti jsou v <a href="/ochrana-udaju">zásadách ochrany údajů</a>.</p></div></div></div>
+    </div>
+  </section>
 </main>
 
 <footer id="foot"><div class="wrap grid">
   <div><a class="logo" href="/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</a><p class="tag">Srovnání ETF z burzy NYSE a jejich evropských verzí, v korunách.</p><div class="ct" id="kontakt"><b>Kontakt</b><a href="tel:+420715123456">+420 715 123 456</a><a href="mailto:fake@nonreal.cz">fake@nonreal.cz</a></div></div>
-  <div class="fl"><a href="#how">Jak počítáme</a><a href="/navod">Návod: nákup ETF</a><a href="/ochrana-udaju">Ochrana údajů</a><button type="button" class="js-ckfoot">Nastavení cookies</button></div>
+  <div class="fl"><a href="#how">Jak počítáme</a><a href="#faq">Časté otázky</a><a href="/navod">Návod: nákup ETF</a><a href="/ochrana-udaju">Ochrana údajů</a><button type="button" class="js-ckfoot">Nastavení cookies</button></div>
   <div><p class="disc">Veenos není investiční poradce ani obchodník s cennými papíry. Obsah slouží k informaci a není investičním doporučením. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Výpočty jsou ilustrativní a vycházejí z veřejných ceníků a údajů emitentů.</p><p class="copy">© 2026 Veenos · Ukázkový projekt</p></div>
 </div></footer>
 
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="row1"><span class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</span><button type="button" class="close js-mclose" aria-label="Zavřít menu">×</button></div>
-  <nav aria-label="Menu"><a class="js-mlink" href="#calc">Srovnání</a><a class="js-mlink" href="#how">Jak počítáme</a><a class="js-mlink" href="/navod">Návod</a><a class="js-mlink" href="#kontakt">Kontakt</a><a class="js-mlink" href="/ochrana-udaju">Ochrana údajů</a></nav>
+  <nav aria-label="Menu"><a class="js-mlink" href="#calc">Srovnání</a><a class="js-mlink" href="#how">Jak počítáme</a><a class="js-mlink" href="/navod">Návod</a><a class="js-mlink" href="#faq">Časté otázky</a><a class="js-mlink" href="#kontakt">Kontakt</a><a class="js-mlink" href="/ochrana-udaju">Ochrana údajů</a></nav>
   <a class="cta js-mlink js-mstart" href="#calc"><span class="lab-a">Začít investovat</span><span class="lab-b">Spočítat poplatky</span> <span class="arr" aria-hidden="true">↓</span></a>
 </div>
 

@@ -41,13 +41,15 @@ test('input whitelist and data completeness', () => {
   for (const f of FUNDS) { assert.ok(f.source.startsWith('https://')); assert.match(f.asOf, /^\d{4}-\d{2}-\d{2}$/); }
 });
 
-test('the hero fact band shows the SPY − CSPX gap for 3 000 Kč over 20 years', async () => {
+test('the hero fact band shows the CSPX vs SPY saving for 3 000 Kč over 20 years', async () => {
   const { readFile } = await import('node:fs/promises');
   const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
+  const band = html.match(/<div class="proof">([\s\S]*?)<\/div>/)[1]
+    .replace(/<[^>]+>/g, '').replace(/&nbsp;|\s+/g, ' ').replace(/&amp;/g, '&');  // text only, plain spaces
   const rows = compare(3000, 20);
-  const gap = roundCzk(rows[rows.length - 1].total) - roundCzk(rows[0].total);
-  const shown = html.match(/class="proof-n tab">([^<]+)</)[1];
-  const norm = t => t.replace(/&nbsp;|\s/g, ' ');  // cs-CZ groups digits with a no-break space
-  assert.equal(norm(shown), norm(gap.toLocaleString('cs-CZ') + ' Kč'));
-  assert.match(html, /class="proof-k">3 000 Kč měsíčně · 20 let/);
+  const low = roundCzk(rows[0].total), high = roundCzk(rows[rows.length - 1].total);
+  const kc = n => n.toLocaleString('cs-CZ').replace(/\s/g, ' ') + ' Kč';
+  assert.ok(band.includes('3 000 Kč měsíčně · 20 let'), band);
+  assert.ok(band.includes(`o ${Math.round(100 * (1 - low / high))} % nižší náklady`), band);
+  assert.ok(band.includes(`(${kc(low)} vs ${kc(high)})`), band);
 });

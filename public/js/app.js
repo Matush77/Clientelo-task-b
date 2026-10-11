@@ -140,6 +140,15 @@ $('.js-how').innerHTML = `
   <div class="it"><h3>Proč jen Fio?</h3><p>Fondy z NYSE nemají český dokument KID (nařízení PRIIPs), proto je většina brokerů drobným investorům v EU neprodává. Burza: NYSE Arca (${link(LISTING_SOURCE, 'Nasdaq Trader')}).</p></div>`;
 $('.js-asof').textContent = `Data k ${new Date(DATA_AS_OF).toLocaleDateString('cs-CZ')}. Ilustrativní výpočet, nejde o investiční doporučení.`;
 
+/* ---------- FAQ: one answer open at a time ---------- */
+$$('.js-faq .qa-q').forEach(btn => btn.addEventListener('click', () => {
+  const item = btn.closest('.qa'), open = !item.classList.contains('open');
+  $$('.js-faq .qa.open').forEach(o => { o.classList.remove('open'); $('.qa-q', o).setAttribute('aria-expanded', 'false'); });
+  item.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', String(open));
+  if (open) track('faq_open');
+}));
+
 /* ---------- lead form ---------- */
 const form = $('.js-form'), F = form.elements, tg = $('.js-tg'), phoneWrap = $('#f-phone-wrap'), tel = $('#f-tel'), err = $('.js-err'), submitBtn = $('.js-submit');
 let openedAt = 0;
