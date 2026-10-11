@@ -1,6 +1,6 @@
 # Veenos: porovnanie S&P 500 ETF z NYSE pre českého investora (Zadanie B)
 
-**Stránka:** `<URL po nasadení>` · **Repo:** https://github.com/Matush77/Clientelo-task-b
+**Stránka:** https://veenos.vercel.app · **Repo:** https://github.com/Matush77/Clientelo-task-b
 **Reklamy:** [`ads/`](ads/) · **Meranie funnelu:** `/api/stats?token=…&format=html` · **Export konverzácií:** [`ai-log/`](ai-log/)
 
 Mobilná lead-magnet stránka v češtine. Návštevník z reklamy za pár sekúnd vidí, že **SPY, IVV a VOO (NYSE Arca) a európsky CSPX sledujú rovnaký index S&P 500, ale z Česka ho stoja úplne iné peniaze**. Dvoma ťuknutiami (suma, roky) dostane porovnanie štyroch fondov v korunách. Za meno a e-mail mu príde podrobný rozpis; telefón dá len vtedy, keď sám chce pomôcť („Chci pomoct").

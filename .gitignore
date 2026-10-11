@@ -7,3 +7,6 @@ node_modules/
 mail-outbox/
 .edge-render-profile/
 .ai-log-redact
+
+.vercel
+.env*.local
