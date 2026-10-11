@@ -100,7 +100,7 @@ Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, z
 ## 9. Ako som pracoval s AI
 Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výskum robilo **5 paralelných subagentov Claude Sonnet 5.5**. Priebeh je v [`ai-log/`](ai-log/):
 - `2026-10-10_session-66014a9f.md` + `_agents/`: **celá** hlavná konverzácia od začiatku a prepis každého subagenta. Generuje ju hook `scripts/export_ai_log.py` z toho istého súboru relácie (JSONL) ako `/export`; osobné údaje (e-mail) sú nahradené.
-- `2026-10-11_claude-export.txt`: oficiálny výstup príkazu `/export`. V desktopovej aplikácii nebol pre túto reláciu dostupný, preto bol spustený cez CLI (`claude --resume`). `/export` obsahuje len časť od posledného `/compact` (11. 10., doladenie dizajnu po builde), staršia časť je v prvom súbore.
+- `2026-10-10_claude-export-part1.txt` + `2026-10-11_claude-export-part2.txt`: oficiálny výstup príkazu `/export`, spolu **celá** konverzácia. `/export` ukladá len časť od posledného `/compact`, a v desktopovej aplikácii nebol pre túto reláciu dostupný. Preto bol spustený cez CLI (`claude --resume`): časť 2 z pôvodnej relácie (po kompaktovaní 11. 10.), časť 1 z kópie relácie orezanej tesne pred kompaktovaním. Používateľské meno Vercelu je nahradené `[redacted]`.
 
 **Postup:**
 1. **Plán bez rozhodnutí.** Najprv plán výskumu; rozhodnutia o segmente, magnete a dizajne mali prísť až z dát a spolu so mnou.
