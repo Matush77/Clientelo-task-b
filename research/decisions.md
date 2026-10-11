@@ -118,3 +118,13 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D22b | Tablet sizing & layout | Larger type and controls (headline ≈ 77 px, 60 px chips, 64 px CTA); **calculator centred**; **cookie card centred**; hero shifts up while the card is visible. | Human request. |
 | D22c | Desktop cookie consent | **Full-width bottom bar**, text and buttons centred (Odmítnout / Přijmout equal width, Přijmout highlighted, Nastavení link). | Human request. |
 | D22d | Calculator heading | Tablet + desktop: **"Kolik investovat a na jak dlouho?"**; mobile keeps "Kolik a na jak dlouho?" (space). | Human request. |
+
+## Round 14 — 2026-10-11 (post-build design tweaks)
+
+| # | Decision | Change | Why / implications |
+|---|---|---|---|
+| D23 | Calculator button | **"Porovnat 4 fondy" is always full lime** (no greyed-out disabled state). If an amount or the years are missing, that label turns lime, its chips nudge and focus moves to them. | Human: looks better without the greyed-out effect. The hint keeps the "what's missing" signal without a dead-looking button. |
+| D24 | Hero position (phone + tablet) | Headline starts in the **upper part of the first screen** (≈ 23 % on a 390×844 phone) instead of being pinned to the bottom of a full-height block; the calculator card now peeks into the first screen. Photo is a shorter band above the headline (Prague Castle / face stay visible above the text). Top padding shrinks on short phones so the CTA stays above the cookie card; the hero no longer moves when the banner closes. | Human: half the mobile screen was empty. |
+| D25 | Edge bleed | Fixed "Jak počítáme" touching the screen edges on phones (a section rule reset the page's side padding). Checked text-to-edge distance ≥ 12 px at 320, 375, 390, 430, 552, 700, 768, 1100, 1280, 1440 px. | Human screenshot. |
+| D26 | Result animation | Bars grow over **1.6 s, staggered**, and the amounts **count up** with them; starts when the bars are on screen. Screen readers get the final amount only; reduced-motion users get no animation. | Human request: slower, with counting numbers. |
+| D27 | Contrast | Cards and chips one step lighter (`#25262b` / `#2e2f35`, border `#34353b`), footer darker (`#0e0f11`) with its own top border. Same tokens on the subpages. | Human request: footer and cards more distinct. |

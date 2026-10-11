@@ -66,24 +66,59 @@ const goBtn = $('.js-go'), calc = $('#calc'), result = $('#result');
 function pick(group, value) {
   $$(group + ' .chip').forEach(c => c.setAttribute('aria-pressed', String(Number(c.dataset.v) === value)));
 }
-$$('.js-m .chip').forEach(c => c.addEventListener('click', () => { monthly = Number(c.dataset.v); pick('.js-m', monthly); goBtn.disabled = !(monthly && years); track('calc_select'); }));
-$$('.js-y .chip').forEach(c => c.addEventListener('click', () => { years = Number(c.dataset.v); pick('.js-y', years); goBtn.disabled = !(monthly && years); track('calc_select'); }));
+function need(group, on) { const g = $(group); g.classList.toggle('need', on); $('#' + g.getAttribute('aria-labelledby')).classList.toggle('need', on); }
+$$('.js-m .chip').forEach(c => c.addEventListener('click', () => { monthly = Number(c.dataset.v); pick('.js-m', monthly); need('.js-m', false); track('calc_select'); }));
+$$('.js-y .chip').forEach(c => c.addEventListener('click', () => { years = Number(c.dataset.v); pick('.js-y', years); need('.js-y', false); track('calc_select'); }));
+$$('.chips').forEach(g => g.addEventListener('animationend', () => g.classList.remove('need')));
 $('.js-start').addEventListener('click', () => track('hero_cta'));
 $('.js-mstart').addEventListener('click', () => track('hero_cta'));
 $('.js-totop').addEventListener('click', () => track('hero_cta'));
 
+const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+const BAR_MS = 1600, STAGGER_MS = 140;
+const ease = t => 1 - Math.pow(1 - t, 3);
+// Bars grow and amounts count up together, once the bars are on screen (on phones the page is still scrolling to them).
+function playBars() {
+  const items = $$('.js-bars .br');
+  if (reduced()) { items.forEach(li => { $('.fill', li).style.width = $('.fill', li).dataset.w + '%'; $('.num', li).textContent = formatCzk(+$('.num', li).dataset.to); }); return; }
+  items.forEach((li, i) => {
+    const fill = $('.fill', li), num = $('.num', li), to = +num.dataset.to, delay = i * STAGGER_MS;
+    fill.style.transitionDelay = delay + 'ms';
+    fill.style.width = fill.dataset.w + '%';
+    const start = performance.now() + delay;
+    const step = now => {
+      const t = Math.min(1, Math.max(0, (now - start) / BAR_MS));
+      num.textContent = formatCzk(Math.round(ease(t) * to / 100) * 100);
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+let barsObs = null;
 function renderResult(animate = true) {
   const rows = compare(monthly, years), max = rows[rows.length - 1].total;
   $('.js-ctx').textContent = `${monthly.toLocaleString('cs-CZ')} Kč měsíčně · ${years} let`;
   $('.js-ttl').textContent = `Náklady za ${years} let`;
-  $('.js-bars').innerHTML = rows.map((r, i) => `<li class="br${i === 0 ? ' w' : ''}"><div class="t"><b>${r.ticker}</b><span>${formatCzk(r.total)}</span></div><div class="track" aria-hidden="true"><div class="fill" data-w="${Math.max(5, 100 * r.total / max).toFixed(1)}"></div></div></li>`).join('');
+  // The counting number is hidden from screen readers; they get the final amount once.
+  $('.js-bars').innerHTML = rows.map((r, i) => `<li class="br${i === 0 ? ' w' : ''}"><div class="t"><b>${r.ticker}</b><span><i class="num" aria-hidden="true" data-to="${r.total}">${formatCzk(0)}</i><span class="sr-only">${formatCzk(r.total)}</span></span></div><div class="track" aria-hidden="true"><div class="fill" data-w="${Math.max(5, 100 * r.total / max).toFixed(1)}"></div></div></li>`).join('');
   result.hidden = false;
   calc.classList.add('has-result');
   if (animate) { result.classList.add('enter'); requestAnimationFrame(() => requestAnimationFrame(() => result.classList.remove('enter'))); }
-  setTimeout(() => $$('.js-bars .fill').forEach(f => { f.style.width = f.dataset.w + '%'; }), animate ? 250 : 0);
+  if (barsObs) barsObs.disconnect();
+  barsObs = new IntersectionObserver((entries, obs) => {
+    if (entries.some(en => en.isIntersecting)) { obs.disconnect(); setTimeout(playBars, animate ? 200 : 0); }
+  }, { threshold: 0.6 });
+  barsObs.observe($('.js-bars'));
 }
 goBtn.addEventListener('click', () => {
-  if (goBtn.disabled || !isAllowed(monthly, years)) return;
+  if (!monthly || !years) {
+    // No greyed-out button: point at what is still missing instead.
+    if (!monthly) need('.js-m', true);
+    if (!years) need('.js-y', true);
+    $((!monthly ? '.js-m' : '.js-y') + ' .chip').focus();
+    return;
+  }
+  if (!isAllowed(monthly, years)) return;
   renderResult();
   track('calc_compare', { m: monthly, y: years });
   if (!desktop()) setTimeout(() => result.scrollIntoView({ behavior: 'smooth' }), 80);

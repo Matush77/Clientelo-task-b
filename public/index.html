@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/fonts/manrope.css">
 <script src="/js/variant.js"></script>
 <style>
-  :root { --bg:#18191c; --bg2:#141518; --fg:#f3f3ef; --muted:#a3a49f; --line:#2c2d32; --card:#202125; --chip:#26272c; --field:#2c2d32; --accent:#cfe68a; --on-accent:#18191c; --wrap: 1200px; }
+  :root { --bg:#18191c; --bg2:#0e0f11; --fg:#f3f3ef; --muted:#a3a49f; --line:#34353b; --card:#25262b; --chip:#2e2f35; --field:#2e2f34; --accent:#cfe68a; --on-accent:#18191c; --wrap: 1200px; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--fg); font: 16px/1.5 "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
@@ -46,7 +46,8 @@
 
   /* hero */
   .hero { position: relative; }
-  .hero-bg { position: absolute; left: 0; right: 0; top: 0; height: 100svh; min-height: 600px; overflow: hidden; }
+  /* Phone: the photo is a band above the headline (a shorter box scales the photo down, so the landmark sits above the text). */
+  .hero-bg { position: absolute; left: 0; right: 0; top: 0; height: clamp(380px, 56svh, 520px); overflow: hidden; }
   .photo { position: absolute; inset: 0; background-color: #222; background-size: cover; background-repeat: no-repeat; animation: ken 24s ease-in-out infinite alternate; }
   html[data-v="a"] .photo { background-position: center 30%; background-image: url("https://images.unsplash.com/photo-1637750452992-87153c4b3f65?w=800&q=70&auto=format&fit=crop"); }
   html[data-v="b"] .photo { background-position: center 25%; background-image: url("https://images.unsplash.com/photo-1644895985299-245dddecef9a?w=800&q=70&auto=format&fit=crop"); }
@@ -60,12 +61,12 @@
   }
   @keyframes ken { from { transform: scale(1); } to { transform: scale(1.08); } }
   @media (prefers-reduced-motion: reduce) { .photo { animation: none; } html { scroll-behavior: auto; } }
-  .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.32) 0%, rgba(24,25,28,.32) 28%, rgba(24,25,28,.88) 60%, var(--bg) 100%); }
+  .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.6) 0%, rgba(24,25,28,.3) 17%, rgba(24,25,28,.36) 30%, rgba(24,25,28,.82) 64%, var(--bg) 100%); }
   .scrim2 { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,25,28,.35) 0%, rgba(24,25,28,.82) 16%, rgba(24,25,28,.93) 42%, var(--bg) 100%); opacity: 0; transition: opacity .35s; }
   html.has-banner .scrim2 { opacity: 1; }
   .hero-inner { position: relative; z-index: 2; }
-  .hero-text { min-height: max(100svh, 600px); display: flex; flex-direction: column; justify-content: flex-end; padding: 80px 0 34px; transition: padding .35s cubic-bezier(.2,.8,.2,1); }
-  html.has-banner .hero-text { padding-bottom: clamp(222px, 62vw, 250px); }
+  /* Content sits in the upper part of the first screen; the top padding shrinks on short phones so the CTA stays above the cookie card. */
+  .hero-text { display: flex; flex-direction: column; padding: clamp(84px, calc(100svh - 650px), 26svh) 0 30px; }
   .h { font-weight: 800; font-size: clamp(40px, 12.4vw, 54px); line-height: 1.12; letter-spacing: -0.05em; }
   .h em { font-style: normal; color: var(--accent); }
   .sub { font-size: clamp(15.5px, 4.4vw, 18px); color: var(--muted); margin-top: 14px; line-height: 1.45; max-width: 520px; }
@@ -85,12 +86,16 @@
   .q { font-size: clamp(13px, 3.6vw, 15px); font-weight: 700; color: var(--muted); margin: 18px 0 9px; }
   .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, 2.2vw, 10px); }
   .chip { height: clamp(50px, 14vw, 58px); border-radius: 15px; background: var(--chip); border: 1px solid var(--line); color: var(--fg); font-weight: 700; font-size: clamp(15px, 4.3vw, 18px); cursor: pointer; transition: background .15s; }
-  .chip:hover { border-color: #45464b; }
+  .chip:hover { border-color: #4c4d53; }
   .chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+  .q.need { color: var(--accent); }
+  .chips.need { animation: nudge .45s; }
+  @keyframes nudge { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
   .pick .cta { margin-top: 22px; }
-  .result { margin-top: 12px; transition: opacity .35s, transform .35s; scroll-margin-top: 76px; }
+  .result { margin-top: 12px; transition: opacity .6s, transform .6s cubic-bezier(.2,.8,.2,1); scroll-margin-top: 76px; }
   .result[hidden] { display: none; }
-  .result.enter { opacity: 0; transform: translateY(16px); }
+  .result.enter { opacity: 0; transform: translateY(24px); }
+  @media (prefers-reduced-motion: reduce) { .br .fill, .result { transition: none; } }
   .back { display: none; font-size: 13px; font-weight: 700; color: var(--muted); background: none; border: 0; cursor: pointer; margin-bottom: 12px; }
   .ctx { font-size: clamp(13px, 3.6vw, 15px); color: var(--muted); display: flex; align-items: center; gap: 6px; }
   .ctx a { width: 18px; height: 18px; border-radius: 50%; border: 1px solid #55565b; display: grid; place-items: center; font-size: 10px; font-weight: 800; }
@@ -98,9 +103,10 @@
   .bars { margin: 26px 0; display: grid; gap: 22px; list-style: none; }
   .br .t { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; }
   .br .t b { font-size: clamp(19px, 5.4vw, 22px); font-weight: 800; letter-spacing: -0.02em; }
-  .br .t span { font-size: clamp(18px, 5.1vw, 21px); font-weight: 800; }
-  .br .track { height: clamp(12px, 3.3vw, 14px); border-radius: 99px; background: #2a2b30; overflow: hidden; }
-  .br .fill { height: 100%; width: 0; border-radius: 99px; background: #6e6f6a; transition: width .7s cubic-bezier(.2,.8,.2,1); }
+  .br .t span { font-size: clamp(18px, 5.1vw, 21px); font-weight: 800; white-space: nowrap; }
+  .br .num { font-style: normal; }
+  .br .track { height: clamp(12px, 3.3vw, 14px); border-radius: 99px; background: #34353b; overflow: hidden; }
+  .br .fill { height: 100%; width: 0; border-radius: 99px; background: #6e6f6a; transition: width 1.6s cubic-bezier(.22,.8,.2,1); }
   .br.w .fill { background: var(--accent); } .br.w .t span { color: var(--accent); }
   .sent { text-align: center; padding: 10px 0 4px; }
   .sent .ok { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: 22px; margin: 0 auto 12px; }
@@ -108,7 +114,7 @@
   .sent p { font-size: 14px; color: var(--muted); margin-top: 4px; }
 
   /* how we calculate */
-  .how { padding: 56px 0; scroll-margin-top: 64px; }
+  .how { padding-top: 56px; padding-bottom: 56px; scroll-margin-top: 64px; }
   .how h2 { font-size: clamp(26px, 7.4vw, 31px); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 8px; }
   .how .lead { color: var(--muted); font-size: clamp(14px, 3.9vw, 16px); margin-bottom: 18px; max-width: 640px; }
   .how .grid { display: grid; gap: 12px; }
@@ -120,7 +126,7 @@
   .how .asof { font-size: 12.5px; color: #9a9b96; margin-top: 14px; }
 
   /* footer */
-  footer { border-top: 1px solid var(--line); background: var(--bg2); padding: 34px 0 30px; }
+  footer { border-top: 1px solid #2a2b30; background: var(--bg2); padding: 40px 0 34px; }
   footer .grid { display: grid; gap: 22px; }
   footer .tag { font-size: 13.5px; color: var(--muted); margin-top: 10px; max-width: 320px; }
   footer .fl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; font-size: 13.5px; font-weight: 600; }
@@ -193,8 +199,7 @@
     .checks { gap: 12px; margin-top: 24px; }
     .checks li { font-size: 17px; }
     .checks i { width: 22px; height: 22px; font-size: 11px; }
-    .hero-text { padding-bottom: 64px; max-width: 680px; }
-    html.has-banner .hero-text { padding-bottom: 236px; }
+    .hero-text { padding: clamp(110px, calc(100svh - 700px), 22svh) 0 40px; max-width: 680px; }
     .cta { height: 64px; font-size: 18px; }
     .hero-cta { width: auto; padding: 0 34px; display: inline-flex; align-self: flex-start; margin-top: 30px; }
     .calc { max-width: 640px; margin: 0 auto; padding-top: 40px; }
@@ -208,7 +213,7 @@
     .ttl { font-size: 32px; }
     .bars { gap: 26px; margin: 30px 0; }
     .br .t b { font-size: 23px; } .br .t span { font-size: 22px; } .br .track { height: 14px; }
-    .how { padding: 64px 48px; }
+    .how { padding-top: 64px; padding-bottom: 64px; }
     .how h2 { font-size: 34px; }
     .how .grid { grid-template-columns: 1fr 1fr; gap: 16px; }
     .how .it { font-size: 16px; padding: 22px; }
@@ -236,18 +241,17 @@
     .scrim { background: linear-gradient(90deg, rgba(24,25,28,.9) 0%, rgba(24,25,28,.55) 52%, rgba(24,25,28,.72) 100%), linear-gradient(180deg, rgba(24,25,28,0) 70%, var(--bg) 100%); }
     .hero-inner { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 72px; align-items: center; min-height: 820px; padding-top: 64px; padding-bottom: 64px; }
     .hero-text { min-height: 0; padding: 0; max-width: 620px; }
-    html.has-banner .hero-text { padding-bottom: 0; }
     html.has-banner .scrim2 { opacity: 0; }
     .h { font-size: 82px; }
     .hero-cta { display: none; }
     .calc { margin: 0; padding: 0; max-width: none; }
-    .card { background: rgba(32,33,37,.92); backdrop-filter: blur(14px); padding: 32px 30px 28px; }
+    .card { background: rgba(37,38,43,.94); backdrop-filter: blur(14px); padding: 32px 30px 28px; }
     .card h2 { font-size: 30px; }
     .chip { height: 56px; font-size: 17px; }
     .calc.has-result .pick { display: none; }
     .result { margin-top: 0; }
     .back { display: inline-block; }
-    .how { padding: 88px 40px; }
+    .how { padding-top: 88px; padding-bottom: 88px; }
     .how .grid { grid-template-columns: repeat(4, 1fr); }
     footer .grid { grid-template-columns: 1.2fr 1fr 1.6fr; gap: 40px; }
     footer .disc { grid-column: auto; }
@@ -286,7 +290,7 @@
           <div class="chips tab js-m" role="group" aria-labelledby="q-m"><button type="button" class="chip" data-v="1000" aria-pressed="false">1 000</button><button type="button" class="chip" data-v="3000" aria-pressed="false">3 000</button><button type="button" class="chip" data-v="5000" aria-pressed="false">5 000</button><button type="button" class="chip" data-v="10000" aria-pressed="false">10 000</button></div>
           <p class="q" id="q-y">Let</p>
           <div class="chips tab js-y" role="group" aria-labelledby="q-y"><button type="button" class="chip" data-v="5" aria-pressed="false">5</button><button type="button" class="chip" data-v="10" aria-pressed="false">10</button><button type="button" class="chip" data-v="20" aria-pressed="false">20</button><button type="button" class="chip" data-v="30" aria-pressed="false">30</button></div>
-          <button type="button" class="cta js-go" disabled>Porovnat 4 fondy</button>
+          <button type="button" class="cta js-go">Porovnat 4 fondy</button>
         </div>
         <div class="card result" id="result" hidden aria-live="polite">
           <button type="button" class="back js-back">← Změnit zadání</button>
