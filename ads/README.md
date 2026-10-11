@@ -2,7 +2,7 @@
 
 Obe verzie používajú rovnaký uhol **„stejný index, levnější dvojče"** (rozhodnutie D8/D8b v `research/decisions.md`) v dvoch rôznych exekúciách. Prvá obrazovka stránky nadväzuje na obe („Stejný index. Jiná cena."), takže sa zachová message match (+39–48 % v dvoch zdokumentovaných testoch, `research/99-verification-log.md` C10).
 
-Prečo len Meta: Google Ads vyžaduje od septembra 2026 v ČR overenie finančného inzerenta, ktoré nelicencovaný vydavateľ nedostane. TikTok povoľuje investičné služby len licencovaným subjektom (`research/04-ads-compliance.md`, overené D1, D2). Pri Mete zostáva otvorená otázka, či overenie vyžaduje aj pre vzdelávací porovnávač (D6).
+Prečo len Meta: Google Ads vyžaduje od leta 2026 v ČR overenie finančného inzerenta (Google uvádza 23. 7. aj 15. 9. 2026), ktoré nelicencovaný vydavateľ nedostane. TikTok povoľuje investičné služby len licencovaným subjektom (`research/04-ads-compliance.md`, overené D1, D2). Pri Mete zostáva otvorená otázka, či overenie vyžaduje aj pre vzdelávací porovnávač (D6).
 
 | | Verzia A: srovnávací karta | Verzia B: otázka |
 |---|---|---|
@@ -12,13 +12,17 @@ Prečo len Meta: Google Ads vyžaduje od septembra 2026 v ČR overenie finančn�
 | Nadpis | Stejný index. Jiná cena. | Kolik vás stojí vaše S&P 500? |
 | Popis | Srovnání S&P 500 ETF v korunách | 4 fondy, 2 odpovědi, výsledek hned |
 | Tlačidlo (Meta CTA) | Další informace | Další informace |
-| Cieľová URL | `https://<doména>/?utm_source=meta&utm_medium=paid_social&utm_campaign=sp500_srovnani&utm_content=ad_a` | `…&utm_content=ad_b` |
+| Cieľová URL | `https://veenos.vercel.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=sp500_srovnani&utm_content=ad_a` | `…&utm_content=ad_b` |
 
 Poznámky ku compliance (ESMA/ČNB, `research/04-ads-compliance.md`):
 - Žiadne „bezpečné", „garantované" ani „nejlepší"; čísla sú vždy s predpokladom (3 000 Kč mesačne, 20 rokov) a poznámkou „ilustrativní výpočet".
 - Na kreatíve je upozornenie na riziko a „nejde o investiční doporučení". Disclaimer sám osebe nechráni (ESMA 2026), preto obsah zostáva neosobný a informačný.
 - Cielenie: ČR, 18–65+, bez cielenia na pohlavie (ako konkurencia v Meta Ad Library). Segment z D1 (DIY investor, ktorý pozná S&P 500) sa rieši textom, nie cielením.
 
-Meranie: `utm_content` (ad_a / ad_b) sa ukladá ku každej udalosti funnelu aj k leadu. `/api/stats?format=html` ukazuje funnel podľa reklamy aj podľa varianty stránky.
+Vizuál: kreatívy používajú rovnaké farby, písmo, logo a nadpis ako finálna stránka (bez svetelných prechodov), aby prvá obrazovka plynulo nadviazala.
+
+Meranie: `utm_content` (ad_a / ad_b) sa ukladá ku každej udalosti funnelu aj k leadu. `/api/stats?token=…&format=html` ukazuje funnel podľa reklamy aj podľa varianty stránky.
+
+Reklama a varianta stránky (A: Pražský hrad + „Začít investovat“, B: mladý muž + „Spočítat poplatky“) sa priraďujú **nezávisle (2 × 2)**: každá reklama vedie na náhodnú variantu, takže sa dá vyhodnotiť kreatíva (`utm_content`) aj stránka (`v`) zvlášť. Ak by sa mali zladiť, do cieľovej URL sa pridá `&v=a` alebo `&v=b`.
 
 Nové vyrenderovanie: `node scripts/render-ads.js` (headless Edge/Chrome).

@@ -27,8 +27,8 @@ Mobilná lead-magnet stránka v češtine. Návštevník z reklamy za pár sekú
 ## 3. Poradie sekcií a prečo
 1. **Hero:** „Stejný index. Jiná cena." + 1 veta + 3 krátke odrážky + 1 CTA. Nadväzuje na obe reklamy (message match +39–48 % v dvoch testoch, log C10) a prejde 2-sekundovým testom: čo to je, čo z toho mám, kam kliknúť. Na desktope je kalkulačka priamo v hero vedľa nadpisu.
    - **Faktický pás na konci prvej obrazovky (mobil, tablet):** „3 000 Kč měsíčně · 20 let → **o 80 % nižší náklady** u nejlevnějšího ze 4 fondů na stejný index S&P 500 oproti nejdražšímu (27 900 Kč vs 142 100 Kč).“ Reálne číslo z modelu, ktoré dokazuje sľub „Jiná cena“ ešte pred prvým klikom a zároveň uzatvára prvú obrazovku, takže kalkulačka príde až po scrollnutí. Percento je nadpis, korunové sumy v podtexte držia sľub „v korunách“. Test v `tests/model.test.js` stráži, aby sa text v HTML nerozišiel s modelom.
-2. **Kalkulačka:** len 2 voľby (mesačne, roky) na jednej karte, žiadne písanie. Podľa zadania sú interaktívne prvky cestou ku kontaktu.
-3. **Výsledok:** 4 pruhy na jednej škále, najlacnejší zvýraznený. Toto je samotné **porovnanie ETF z NYSE**, ktoré zadanie žiada, s európskym dvojčaťom ako kontrolou z pohľadu Čecha.
+2. **Kalkulačka:** len 2 voľby (mesačne, roky) na jednej karte, žiadne písanie. Tlačidlo „Porovnat 4 fondy“ nie je nikdy sivé: ak voľba chýba, jej popis sa zvýrazní a čipy sa pohnú; opätovné ťuknutie voľbu zruší. Podľa zadania sú interaktívne prvky cestou ku kontaktu.
+3. **Výsledok:** 4 pruhy na jednej škále, najlacnejší zvýraznený; pruhy postupne rastú a sumy sa načítavajú (≈ 2 s, spustí sa až keď je výsledok na obrazovke). Toto je samotné **porovnanie ETF z NYSE**, ktoré zadanie žiada, s európskym dvojčaťom ako kontrolou z pohľadu Čecha.
 4. **Formulár (bottom sheet / dialóg):** až po výsledku, 2 povinné polia, autofill.
 5. **Jak počítáme:** zdroje a predpoklady pre skeptikov, pod výsledkom, aby nebrzdili. Počíta sa z rovnakých dát ako kalkulačka.
 6. **Časté otázky (5):** prečo väčšinu ETF z NYSE u českého brokera nekúpite, čím sa líšia SPY/IVV/VOO/CSPX, dane, či ide o investičné odporúčanie a čo bude s kontaktom. Odpovedajú na námietky, ktoré by inak brzdili odoslanie formulára; fakty sú z overeného výskumu (`research/05-data-facts.md`). Otvorenie otázky sa meria (`faq_open`).
@@ -43,7 +43,7 @@ Detaily, texty a UTM odkazy: [`ads/README.md`](ads/README.md).
 |---|---|
 | ![A](ads/png/ad-a-feed-1080x1350.png) | ![B](ads/png/ad-b-feed-1080x1350.png) |
 
-Kanál je **Meta (Facebook + Instagram)**: Google Ads vyžaduje od 9/2026 overenie finančného inzerenta a TikTok licenciu (log D1, D2).
+Kanál je **Meta (Facebook + Instagram)**: Google Ads vyžaduje od leta 2026 overenie finančného inzerenta (Google uvádza 23. 7. aj 15. 9. 2026) a TikTok licenciu (log D1, D2).
 
 ## 5. Dáta a zdroje (skutočné, s dátumom)
 Jediný zdroj pravdy je [`public/js/model.js`](public/js/model.js). Pri každom údaji je URL a dátum; stránka, e-mail aj testy počítajú z neho.
@@ -63,14 +63,14 @@ Predpoklady: výnos 7 % p. a. pred nákladmi pre všetky fondy (rovnaký index),
 ## 6. Meranie celej cesty
 Funnel sa meria **bez cookies**: prehliadač posiela udalosti cez `sendBeacon`, prepojené len ID v pamäti stránky. Na server sa neukladá IP adresa, iba denné počty podľa varianty, zariadenia a reklamy (`utm_content`).
 
-`page_view → hero_cta → calc_select → calc_compare → result_view → form_open → form_start → help_on → form_submit → lead_ok / lead_error` (+ `consent_accept/reject`)
+`page_view → hero_cta → calc_select → calc_compare → result_view → form_open → form_start → help_on → form_submit → lead_ok / lead_error` (+ `faq_open`, `consent_accept/reject`)
 
 Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, zariadenia a reklamy plus počet leadov. GA4 a Meta Pixel sú pripravené v [`public/js/config.js`](public/js/config.js), načítajú sa iba po súhlase a v tejto ukážke sú vypnuté (prázdne ID). Cookie lišta je súčasťou ukážky.
 
 **Overenie kvality (11. 10. 2026, produkcia):**
 - **Lighthouse mobile** (po úpravách dizajnu z 11. 10.): Performance **98**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,4 s, CLS 0,001, TBT 0 ms. Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené. Pozor pri meraní hneď po nasadení: beh spustený pár sekúnd po `vercel deploy` zachytil ešte starú verziu stránky a ukázal falošný posun rozloženia (filmstrip mal staré aj nové rozloženie); opakovaný beh bol čistý.
-- **Testy:** 16 automatických testov (`npm test`) a end-to-end v prehliadači na 390 / 768 / 1440 px.
-- **Ostrý test:** 1 testovací lead na produkcii (so súhlasom). E-mail prišiel do Gmailu (karta *Aktualizácie*, nie spam; DKIM/SPF/DMARC pass). Test odhalil 2 chyby e-mailu, obe opravené: chýbajúce logo (Gmail odstraňuje SVG `data:` obrázky, teraz je logo hostované PNG) a prekrývajúce sa stĺpce rozpisu (teraz riadky pod sebou).
+- **Testy:** 16 automatických testov (`npm test`), end-to-end v prehliadači (A aj B, kalkulačka, formulár, cookies, FAQ, menu) a automatická kontrola, že žiadny text nie je bližšie než 12 px k okraju a stránka sa neposúva do strany, na 10 šírkach (320–1440 px).
+- **Ostrý test:** 2 testovacie leady na produkcii (so súhlasom). E-mail prišiel do Gmailu (karta *Aktualizácie*, nie spam; DKIM/SPF/DMARC pass). Prvý odhalil 2 chyby e-mailu: chýbajúce logo (Gmail odstraňuje SVG `data:` obrázky, teraz je logo hostované PNG) a prekrývajúce sa stĺpce rozpisu (teraz riadky pod sebou). Druhý, po oprave, bol doručený rovnako.
 
 ## 7. Očakávaná konverzia
 **Odhad: 4–8 % návštev → lead, stred okolo 6 %.**
@@ -104,9 +104,9 @@ Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výs
 1. **Plán bez rozhodnutí.** Najprv plán výskumu; rozhodnutia o segmente, magnete a dizajne mali prísť až z dát a spolu so mnou.
 2. **Výskum, 5 agentov naraz:** publikum, konkurencia (5 CZ/SK + 3 zahraničné weby), konverzná psychológia, reklamy + compliance, dáta + dane. **Presné pokyny** sú v [`research/prompts/`](research/prompts/). Spoločné pravidlá: každé tvrdenie s URL a dátumom, značka `VERIFIED`/`INFERRED`, citácie pod 15 slov, nič nevypĺňať na cudzích weboch, **iba možnosti, žiadne odporúčania**. Každý agent na konci uviedol 3 tvrdenia, ktorými si je najmenej istý.
 3. **Kontrola výstupov.** Hlavný agent znova otvoril zdroje **35 tvrdení** (prednostne čísla, právo a tvrdenia, ktorými si agenti neboli istí): [`research/99-verification-log.md`](research/99-verification-log.md). Výsledok: 28 potvrdených, 5 čiastočne, 1 nesprávne, 1 nerozhodnuteľné, 2 nedostupné. Chyby sú opravené priamo v reportoch s odkazom na log.
-4. **Decision brief → rozhodnutia.** [`research/00-decision-brief.md`](research/00-decision-brief.md) dal ku každému rozhodnutiu 2–4 možnosti s dôkazmi. Rozhodoval som ja (často proti odporúčaniu AI), všetko je zapísané v [`research/decisions.md`](research/decisions.md) (13 kôl).
-5. **Dizajn v 13 iteráciách** ([`design/previews/`](design/previews/)): od piatich „dátových" smerov (všetky zamietnuté ako preplnené) cez minimal fintech, výber farby, loga a fotky až po responzívnu verziu. Kľúčový zásah: **AI sa odklonila od zadania** (porovnávala dve cesty k jednému indexu, nie ETF z NYSE), všimol som si to ja a stránka sa vrátila k porovnaniu 4 fondov.
-6. **Build podľa schváleného plánu** ([`research/build-plan.md`](research/build-plan.md)) s testami (15 unit testov) a end-to-end kontrolou v prehliadači na 3 veľkostiach obrazovky.
+4. **Decision brief → rozhodnutia.** [`research/00-decision-brief.md`](research/00-decision-brief.md) dal ku každému rozhodnutiu 2–4 možnosti s dôkazmi. Rozhodoval som ja (často proti odporúčaniu AI), všetko je zapísané v [`research/decisions.md`](research/decisions.md) (16 kôl).
+5. **Dizajn v 13 iteráciách náhľadov** ([`design/previews/`](design/previews/)) **a 3 kolách doladenia na živej stránke** (kolá 14–16: hero vyššie, faktický pás, FAQ, kontrast, pätička): od piatich „dátových" smerov (všetky zamietnuté ako preplnené) cez minimal fintech, výber farby, loga a fotky až po responzívnu verziu. Kľúčový zásah: **AI sa odklonila od zadania** (porovnávala dve cesty k jednému indexu, nie ETF z NYSE), všimol som si to ja a stránka sa vrátila k porovnaniu 4 fondov.
+6. **Build podľa schváleného plánu** ([`research/build-plan.md`](research/build-plan.md)) s automatickými testami (dnes 16) a end-to-end kontrolou v prehliadači.
 
 **Kde sa AI mýlila (a ako sa to chytilo):**
 - **Výskumní agenti správne opisovali čísla, no zle interpretovali ich rozsah.** Pridali tickery, ktoré zdroj neuvádzal (A1); „stabilný podiel 14 %" vyložili ako 14 % populácie (A3, nesprávne); celkovú vzorku štúdie priradili jednej podskupine (C4); domysleli detail („ponuka bola príručka", C3); dobrú prax ÚOOÚ označili za povinnosť (D4). Poučenie: značka `VERIFIED` znamená „otvoril som stránku", nie „čítam ju správne".
@@ -114,6 +114,8 @@ Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výs
 - **Odklon od zadania:** pri riešení prekážky PRIIPs sa koncept posunul na „dve cesty k S&P 500" a vypadlo porovnanie ETF z NYSE. Opravené po mojej pripomienke (`decisions.md` D0b, D4b).
 - **Dizajn:** prvých 5 smerov bolo preplnených dátami. Náhľady boli zmenšené na 66 % a AI to najprv nespomenula. Nadpis „Jiná" kolidoval s riadkom nad ním. Reklamy sa najprv vykreslili v náhradnom fonte (cesta k fontu cez `file://`). Na reklame zostalo „zdarma", hoci som ho zo stránky predtým odstránil.
 - **Kód:** `form.name` vracal atribút formulára namiesto inputu (chytené pri návrhu), dialóg zameriaval tlačidlo zavrieť namiesto prvého poľa (chytené pri teste v prehliadači), skript na inline náhľadov sa raz commitol prázdny (opravené ďalším commitom). Až ostrý e-mail ukázal, že Gmail zahodí SVG logo a zúži 4 stĺpce tak, že sa texty prekrývajú; lokálny náhľad v prehliadači to neodhalil.
+- **Responzivita po builde:** sekcia „Jak počítáme“ bola na mobile bez bočného okraja (pravidlo sekcie prepísalo okraj stránky) a pätička na tablete/desktope „cik-cak“ (roztiahnuté riadky mriežky vycentrovali tlačidlo). Obe som našiel ja na screenshotoch, nie AI. Potom pribudla automatická kontrola okrajov na 10 šírkach.
+- **Meranie:** prvý Lighthouse po nasadení ukázal falošný posun rozloženia, lebo zachytil ešte starú verziu stránky; AI to najprv považovala za chybu CSS, kým filmstrip neukázal obe verzie.
 
 ## 10. Rozhodnutia tam, kde zadanie nebolo jednoznačné
 - **„ETF obchodované na NYSE" vs. realita v ČR:** americké ETF väčšina brokerov českému retailu nepredá (PRIIPs). Stránka preto porovnáva **SPY, IVV, VOO z NYSE Arca** a ako kontrolu pridáva **európske dvojča CSPX**, ktoré sa z ČR kúpiť dá. Porovnanie ETF z NYSE zostáva jadrom, realita nákupu je jeho súčasťou.
@@ -124,13 +126,13 @@ Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výs
 
 ## Čo chýba
 Ukážka je hotová a nasadená, pri ostrom spustení by ešte bolo treba:
-- **Údaje prevádzkovateľa a právna kontrola** (zásady ochrany údajov, upozornenia); otázka, či vzdelávací porovnávač neprekročí hranicu investičného odporúčania (MAR, ČNB). Hovor „Chci pomoct" musí zostať pomocou s postupom, nie radou ku konkrétnemu fondu.
+- **Údaje prevádzkovateľa a právna kontrola** (zásady ochrany údajov, upozornenia; kontakt v pätičke je fiktívny); otázka, či vzdelávací porovnávač neprekročí hranicu investičného odporúčania (MAR, ČNB). Hovor „Chci pomoct" musí zostať pomocou s postupom, nie radou ku konkrétnemu fondu.
 - **Meta:** či vyžaduje od nelicencovaného vydavateľa overenie (neoverené, D6). Google Ads je bez finančného overenia zatvorený.
 - **E-maily z vlastnej domény:** Brevo bez vlastnej domény odosiela z `…@brevosend.com` (odpovede idú na overenú adresu); doručenie prešlo, ale vlastná doména by zvýšila dôveryhodnosť aj doručiteľnosť. Odhlasovanie pre „tipy e-mailem" je len uložený súhlas, newsletter systém neexistuje.
 - **Licencia fotky:** Unsplash licencia komerčné použitie povoľuje, pred spustením ju treba potvrdiť alebo fotku kúpiť a hostovať u seba.
 - **Hosting:** Vercel Hobby je na nekomerčné použitie, reálna kampaň potrebuje Pro alebo iný hosting.
 - **Dáta:** Fio kurzová prirážka je orientačná (tabuľka bez dátumu), dáta treba pravidelne obnovovať (zatiaľ ručne v `model.js`).
-- **Meranie:** GA4/Meta Pixel sú vypnuté, takže Meta nemá konverzný signál na optimalizáciu. A/B variant sa neukladá, opakovaná návšteva môže dostať druhú variantu.
+- **Meranie:** GA4/Meta Pixel sú v ukážke zámerne vypnuté, takže Meta nemá konverzný signál na optimalizáciu. A/B variant sa neukladá, opakovaná návšteva môže dostať druhú variantu. Počítadlá funnelu bez cookies a bez IP stoja na oprávnenom záujme; ÚOOÚ sa k meraniu bez cookies nevyjadrilo a podľa časti zdrojov (Matomo) ČR vyžaduje súhlas aj pri ňom, treba to právne potvrdiť (`research/04-ads-compliance.md`).
 - **Rozsah:** iba S&P 500.
 
 ## Štruktúra repozitára a spustenie
