@@ -34,7 +34,7 @@ function openDialog(el, cls) {
   lastFocus = document.activeElement;
   B.classList.add(cls);
   openDialogs.push({ el, cls });
-  setTimeout(() => (el.querySelector('input:not([type=checkbox]):not([tabindex="-1"]), button, a') || el).focus(), 60);
+  setTimeout(() => (el.querySelector('input:not([type=checkbox]):not([tabindex="-1"])') || el.querySelector('button, a') || el).focus(), 60);
 }
 function closeDialog(cls) {
   B.classList.remove(cls);
