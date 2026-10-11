@@ -40,3 +40,14 @@ test('input whitelist and data completeness', () => {
   assert.ok(!isAllowed(3000, 21));
   for (const f of FUNDS) { assert.ok(f.source.startsWith('https://')); assert.match(f.asOf, /^\d{4}-\d{2}-\d{2}$/); }
 });
+
+test('the hero fact band shows the SPY − CSPX gap for 3 000 Kč over 20 years', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
+  const rows = compare(3000, 20);
+  const gap = roundCzk(rows[rows.length - 1].total) - roundCzk(rows[0].total);
+  const shown = html.match(/class="proof-n tab">([^<]+)</)[1];
+  const norm = t => t.replace(/&nbsp;|\s/g, ' ');  // cs-CZ groups digits with a no-break space
+  assert.equal(norm(shown), norm(gap.toLocaleString('cs-CZ') + ' Kč'));
+  assert.match(html, /class="proof-k">3 000 Kč měsíčně · 20 let/);
+});

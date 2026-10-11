@@ -128,3 +128,11 @@ Decisions made by the human together with the lead agent, based on [00-decision-
 | D25 | Edge bleed | Fixed "Jak počítáme" touching the screen edges on phones (a section rule reset the page's side padding). Checked text-to-edge distance ≥ 12 px at 320, 375, 390, 430, 552, 700, 768, 1100, 1280, 1440 px. | Human screenshot. |
 | D26 | Result animation | Bars grow over **1.6 s, staggered**, and the amounts **count up** with them; starts when the bars are on screen. Screen readers get the final amount only; reduced-motion users get no animation. | Human request: slower, with counting numbers. |
 | D27 | Contrast | Cards and chips one step lighter (`#25262b` / `#2e2f35`, border `#34353b`), footer darker (`#0e0f11`) with its own top border. Same tokens on the subpages. | Human request: footer and cards more distinct. |
+
+## Round 15 — 2026-10-11 (first screen, chips, contact)
+
+| # | Decision | Change | Why / implications |
+|---|---|---|---|
+| D28 | First screen (phone + tablet) | The calculator no longer peeks into the first screen. A **fact band** closes it: "3 000 Kč měsíčně · 20 let" + ⓘ, **"114 200 Kč"** in lime, "Rozdíl v nákladech mezi nejlevnějším a nejdražším fondem na stejný index S&P 500." The hero block is one screen tall; the calculator starts at the fold. Desktop unchanged (calculator stays next to the headline). | Human request ("a % number or a marketing line"). A CZK figure over a percentage: it matches the hero promise "Poplatky v korunách, ne v procentech". The number is SPY − CSPX from `compare(3000, 20)` (142 100 − 27 900); a test fails if HTML and model drift apart. Neutral wording: a fact, not a recommendation. |
+| D29 | Chips | Tapping the selected chip again **deselects it**. | Human request. |
+| D30 | Contact | **"Kontakt"** in the header nav and the mobile menu → contact block in the footer (`#kontakt`): +420 715 123 456, fake@nonreal.cz (fictional, showcase). Also linked from the subpages and used in the privacy policy as the controller contact. | Human request; fictional details supplied by the human. |

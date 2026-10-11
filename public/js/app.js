@@ -67,8 +67,9 @@ function pick(group, value) {
   $$(group + ' .chip').forEach(c => c.setAttribute('aria-pressed', String(Number(c.dataset.v) === value)));
 }
 function need(group, on) { const g = $(group); g.classList.toggle('need', on); $('#' + g.getAttribute('aria-labelledby')).classList.toggle('need', on); }
-$$('.js-m .chip').forEach(c => c.addEventListener('click', () => { monthly = Number(c.dataset.v); pick('.js-m', monthly); need('.js-m', false); track('calc_select'); }));
-$$('.js-y .chip').forEach(c => c.addEventListener('click', () => { years = Number(c.dataset.v); pick('.js-y', years); need('.js-y', false); track('calc_select'); }));
+// Tapping the selected chip again clears it.
+$$('.js-m .chip').forEach(c => c.addEventListener('click', () => { const v = Number(c.dataset.v); monthly = monthly === v ? null : v; pick('.js-m', monthly); need('.js-m', false); track('calc_select'); }));
+$$('.js-y .chip').forEach(c => c.addEventListener('click', () => { const v = Number(c.dataset.v); years = years === v ? null : v; pick('.js-y', years); need('.js-y', false); track('calc_select'); }));
 $$('.chips').forEach(g => g.addEventListener('animationend', () => g.classList.remove('need')));
 $('.js-start').addEventListener('click', () => track('hero_cta'));
 $('.js-mstart').addEventListener('click', () => track('hero_cta'));

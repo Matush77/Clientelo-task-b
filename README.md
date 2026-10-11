@@ -26,13 +26,14 @@ Mobilná lead-magnet stránka v češtine. Návštevník z reklamy za pár sekú
 
 ## 3. Poradie sekcií a prečo
 1. **Hero:** „Stejný index. Jiná cena." + 1 veta + 3 krátke odrážky + 1 CTA. Nadväzuje na obe reklamy (message match +39–48 % v dvoch testoch, log C10) a prejde 2-sekundovým testom: čo to je, čo z toho mám, kam kliknúť. Na desktope je kalkulačka priamo v hero vedľa nadpisu.
+   - **Faktický pás na konci prvej obrazovky (mobil, tablet):** „3 000 Kč měsíčně · 20 let → **114 200 Kč** rozdíl v nákladech mezi nejlevnějším a nejdražším fondem na stejný index S&P 500.“ Jedno reálne číslo z modelu (SPY 142 100 − CSPX 27 900), ktoré dokazuje sľub „Jiná cena“ ešte pred prvým klikom a zároveň uzatvára prvú obrazovku, takže kalkulačka príde až po scrollnutí. Test v `tests/model.test.js` stráži, aby sa číslo v HTML nerozišlo s modelom.
 2. **Kalkulačka:** len 2 voľby (mesačne, roky) na jednej karte, žiadne písanie. Podľa zadania sú interaktívne prvky cestou ku kontaktu.
 3. **Výsledok:** 4 pruhy na jednej škále, najlacnejší zvýraznený. Toto je samotné **porovnanie ETF z NYSE**, ktoré zadanie žiada, s európskym dvojčaťom ako kontrolou z pohľadu Čecha.
 4. **Formulár (bottom sheet / dialóg):** až po výsledku, 2 povinné polia, autofill.
 5. **Jak počítáme:** zdroje a predpoklady pre skeptikov, pod výsledkom, aby nebrzdili. Počíta sa z rovnakých dát ako kalkulačka.
-6. **Pätička:** upozornenie (nejde o investičné odporúčanie), ochrana údajov, nastavenie cookies.
+6. **Pätička:** kontakt (fiktívny: +420 715 123 456, fake@nonreal.cz; položka „Kontakt“ v menu sem skočí), upozornenie (nejde o investičné odporúčanie), ochrana údajov, nastavenie cookies.
 
-Cookie lišta sa ukáže pri prvej návšteve (mobil: karta, tablet: stred, desktop: lišta cez celú šírku). Kým je viditeľná, hero sa posunie, aby CTA nezakrývala.
+Cookie lišta sa ukáže pri prvej návšteve (mobil: karta, tablet: stred, desktop: lišta cez celú šírku). Hero je navrhnuté tak, aby CTA zostalo nad lištou aj na malom telefóne (375 × 667).
 
 ## 4. Reklamy (2 verzie)
 Detaily, texty a UTM odkazy: [`ads/README.md`](ads/README.md).
@@ -67,7 +68,7 @@ Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, z
 
 **Overenie kvality (11. 10. 2026, produkcia):**
 - **Lighthouse mobile** (po úpravách dizajnu z 11. 10.): Performance **98**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,4 s, CLS 0,001, TBT 0 ms. Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené. Pozor pri meraní hneď po nasadení: beh spustený pár sekúnd po `vercel deploy` zachytil ešte starú verziu stránky a ukázal falošný posun rozloženia (filmstrip mal staré aj nové rozloženie); opakovaný beh bol čistý.
-- **Testy:** 15 automatických testov (`npm test`) a end-to-end v prehliadači na 390 / 768 / 1440 px.
+- **Testy:** 16 automatických testov (`npm test`) a end-to-end v prehliadači na 390 / 768 / 1440 px.
 - **Ostrý test:** 1 testovací lead na produkcii (so súhlasom). E-mail prišiel do Gmailu (karta *Aktualizácie*, nie spam; DKIM/SPF/DMARC pass). Test odhalil 2 chyby e-mailu, obe opravené: chýbajúce logo (Gmail odstraňuje SVG `data:` obrázky, teraz je logo hostované PNG) a prekrývajúce sa stĺpce rozpisu (teraz riadky pod sebou).
 
 ## 7. Očakávaná konverzia
@@ -136,7 +137,7 @@ Ukážka je hotová a nasadená, pri ostrom spustení by ešte bolo treba:
 public/           stránka (index, návod, ochrana údajov), model.js (dáta + výpočet), app.js, fonty, og.png
 api/              lead.js (formulár → Redis + e-mail), event.js (funnel), stats.js (prehľad)
 lib/              store (Upstash / pamäť), mailer (Brevo / konzola), email-template, validate
-tests/            node:test – model, API, e-mail (15 testov)
+tests/            node:test – model, API, e-mail (16 testov)
 ads/              2 reklamy (HTML → PNG), texty a UTM
 research/         zadanie, prompty agentov, 5 reportov, verifikačný log, decision brief, rozhodnutia, build plán
 design/previews/  13 iterácií dizajnu (v13 = schválená predloha)
@@ -145,7 +146,7 @@ scripts/          dev server, export ai-logu, render reklám, kopírovanie fonto
 ```
 ```bash
 npm install
-npm test          # 15 testov
+npm test          # 16 testov
 npm run dev       # http://localhost:3000 (bez účtov: úložisko v pamäti, e-maily do mail-outbox/)
 ```
 Produkcia (Vercel): premenné `UPSTASH_REDIS_REST_URL/TOKEN` (alebo `KV_REST_API_*` z integrácie), `BREVO_API_KEY`, `MAIL_FROM`, `MAIL_FROM_NAME`, `TEAM_EMAIL`, `STATS_TOKEN`, `SITE_URL`. Pozri [`.env.example`](.env.example).

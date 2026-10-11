@@ -66,7 +66,7 @@
   html.has-banner .scrim2 { opacity: 1; }
   .hero-inner { position: relative; z-index: 2; }
   /* Content sits in the upper part of the first screen; the top padding shrinks on short phones so the CTA stays above the cookie card. */
-  .hero-text { display: flex; flex-direction: column; padding: clamp(84px, calc(100svh - 650px), 26svh) 0 30px; }
+  .hero-text { display: flex; flex-direction: column; min-height: 100svh; padding: clamp(84px, calc(100svh - 650px), 26svh) 0 30px; }
   .h { font-weight: 800; font-size: clamp(40px, 12.4vw, 54px); line-height: 1.12; letter-spacing: -0.05em; }
   .h em { font-style: normal; color: var(--accent); }
   .sub { font-size: clamp(15.5px, 4.4vw, 18px); color: var(--muted); margin-top: 14px; line-height: 1.45; max-width: 520px; }
@@ -76,7 +76,13 @@
   .cta { height: clamp(56px, 15.4vw, 62px); border-radius: 999px; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 800; font-size: clamp(16px, 4.4vw, 18px); letter-spacing: -0.01em; border: 0; width: 100%; cursor: pointer; }
   .cta .arr { width: clamp(28px, 7.8vw, 32px); height: clamp(28px, 7.8vw, 32px); border-radius: 50%; background: rgba(24,25,28,.12); display: grid; place-items: center; font-size: 14px; }
   .cta[disabled] { opacity: .35; cursor: default; }
-  .hero-cta { margin-top: 26px; }
+  .hero-cta { margin-top: 26px; margin-bottom: 40px; }
+  /* Fact band: closes the first screen on phone/tablet, so the calculator only appears after scrolling. */
+  .proof { margin-top: auto; border-top: 1px solid var(--line); padding-top: 20px; }
+  .proof-k { font-size: clamp(13px, 3.6vw, 15px); font-weight: 700; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .proof-k a { width: 18px; height: 18px; border-radius: 50%; border: 1px solid #55565b; display: grid; place-items: center; font-size: 10px; font-weight: 800; }
+  .proof-n { font-weight: 800; font-size: clamp(42px, 12.4vw, 54px); letter-spacing: -0.045em; line-height: 1.1; color: var(--accent); margin-top: 4px; white-space: nowrap; }
+  .proof-t { font-size: clamp(14px, 3.9vw, 16px); color: #c9cac4; line-height: 1.45; margin-top: 6px; max-width: 420px; }
   .t-up { display: none; }
 
   /* calculator */
@@ -133,6 +139,9 @@
   footer .fl a, footer .fl button { color: var(--fg); background: none; border: 0; text-align: left; font: inherit; cursor: pointer; }
   footer .disc { font-size: 11.5px; line-height: 1.6; color: #8a8b86; }
   footer .copy { font-size: 11.5px; color: #8a8b86; margin-top: 18px; }
+  footer .ct { margin-top: 18px; display: grid; gap: 4px; font-size: 13.5px; font-weight: 600; scroll-margin-top: 84px; }
+  footer .ct b { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+  footer .ct a:hover { color: var(--accent); }
 
   /* menu */
   .menu { position: fixed; inset: 0; z-index: 50; background: var(--bg); padding: 0 22px 24px; display: flex; flex-direction: column; transform: translateY(-100%); visibility: hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), visibility 0s .35s; }
@@ -202,6 +211,8 @@
     .hero-text { padding: clamp(110px, calc(100svh - 700px), 22svh) 0 40px; max-width: 680px; }
     .cta { height: 64px; font-size: 18px; }
     .hero-cta { width: auto; padding: 0 34px; display: inline-flex; align-self: flex-start; margin-top: 30px; }
+    .proof { padding-top: 26px; }
+    .proof-k { font-size: 15px; } .proof-n { font-size: 72px; } .proof-t { font-size: 17px; max-width: 520px; }
     .calc { max-width: 640px; margin: 0 auto; padding-top: 40px; }
     .card { padding: 34px 32px 30px; border-radius: 28px; }
     .card h2 { font-size: 32px; }
@@ -219,7 +230,7 @@
     .how .it { font-size: 16px; padding: 22px; }
     footer .grid { grid-template-columns: 1fr 1fr; }
     footer .disc { grid-column: 1 / -1; }
-    footer .tag, footer .fl { font-size: 15px; }
+    footer .tag, footer .fl, footer .ct { font-size: 15px; }
     .ck { left: 50%; right: auto; bottom: 24px; width: 520px; transform: translateX(-50%); padding: 20px 22px 16px; }
     html:not(.has-banner) .ck { transform: translate(-50%, 130%); }
     .ck p { font-size: 14px; text-align: center; }
@@ -243,7 +254,7 @@
     .hero-text { min-height: 0; padding: 0; max-width: 620px; }
     html.has-banner .scrim2 { opacity: 0; }
     .h { font-size: 82px; }
-    .hero-cta { display: none; }
+    .hero-cta, .proof { display: none; }
     .calc { margin: 0; padding: 0; max-width: none; }
     .card { background: rgba(37,38,43,.94); backdrop-filter: blur(14px); padding: 32px 30px 28px; }
     .card h2 { font-size: 30px; }
@@ -268,7 +279,7 @@
 
 <header class="top"><div class="wrap">
   <a class="logo" href="/" aria-label="Veenos, úvod"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</a>
-  <nav class="links" aria-label="Hlavní navigace"><a href="#calc">Srovnání</a><a href="#how">Jak počítáme</a><a href="/navod">Návod</a></nav>
+  <nav class="links" aria-label="Hlavní navigace"><a href="#calc">Srovnání</a><a href="#how">Jak počítáme</a><a href="/navod">Návod</a><a href="#kontakt">Kontakt</a></nav>
   <div class="right"><a class="how-link" href="#how">Jak počítáme</a><a class="top-cta js-totop" href="#calc">Spočítat</a><button class="burger js-menu" aria-label="Otevřít menu" aria-expanded="false" aria-controls="menu"><i></i></button></div>
 </div></header>
 
@@ -281,6 +292,8 @@
         <p class="sub">Zjistěte, kolik vás stojí poplatky za vaše ETF.</p>
         <ul class="checks"><li><i aria-hidden="true">✓</i>SPY, IVV a VOO z burzy NYSE</li><li><i aria-hidden="true">✓</i>Poplatky v korunách, ne v procentech</li><li><i aria-hidden="true">✓</i>Data od emitentů a ČNB</li></ul>
         <a class="cta hero-cta js-start" href="#calc"><span class="lab-a">Začít investovat</span><span class="lab-b">Spočítat poplatky</span> <span class="arr" aria-hidden="true">↓</span></a>
+        <!-- Numbers = compare(3000, 20) from js/model.js (SPY − CSPX); tests/model.test.js keeps them in sync. -->
+        <div class="proof"><p class="proof-k">3 000 Kč měsíčně · 20 let <a href="#how" aria-label="Jak počítáme">i</a></p><p class="proof-n tab">114 200 Kč</p><p class="proof-t">Rozdíl v nákladech mezi nejlevnějším a nejdražším fondem na stejný index S&amp;P 500.</p></div>
       </div>
 
       <div class="calc" id="calc">
@@ -315,14 +328,14 @@
 </main>
 
 <footer id="foot"><div class="wrap grid">
-  <div><a class="logo" href="/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</a><p class="tag">Srovnání ETF z burzy NYSE a jejich evropských verzí, v korunách.</p></div>
+  <div><a class="logo" href="/"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</a><p class="tag">Srovnání ETF z burzy NYSE a jejich evropských verzí, v korunách.</p><div class="ct" id="kontakt"><b>Kontakt</b><a href="tel:+420715123456">+420 715 123 456</a><a href="mailto:fake@nonreal.cz">fake@nonreal.cz</a></div></div>
   <div class="fl"><a href="#how">Jak počítáme</a><a href="/navod">Návod: nákup ETF</a><a href="/ochrana-udaju">Ochrana údajů</a><button type="button" class="js-ckfoot">Nastavení cookies</button></div>
   <div><p class="disc">Veenos není investiční poradce ani obchodník s cennými papíry. Obsah slouží k informaci a není investičním doporučením. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Výpočty jsou ilustrativní a vycházejí z veřejných ceníků a údajů emitentů.</p><p class="copy">© 2026 Veenos · Ukázkový projekt</p></div>
 </div></footer>
 
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="row1"><span class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</span><button type="button" class="close js-mclose" aria-label="Zavřít menu">×</button></div>
-  <nav aria-label="Menu"><a class="js-mlink" href="#calc">Srovnání</a><a class="js-mlink" href="#how">Jak počítáme</a><a class="js-mlink" href="/navod">Návod</a><a class="js-mlink" href="/ochrana-udaju">Ochrana údajů</a></nav>
+  <nav aria-label="Menu"><a class="js-mlink" href="#calc">Srovnání</a><a class="js-mlink" href="#how">Jak počítáme</a><a class="js-mlink" href="/navod">Návod</a><a class="js-mlink" href="#kontakt">Kontakt</a><a class="js-mlink" href="/ochrana-udaju">Ochrana údajů</a></nav>
   <a class="cta js-mlink js-mstart" href="#calc"><span class="lab-a">Začít investovat</span><span class="lab-b">Spočítat poplatky</span> <span class="arr" aria-hidden="true">↓</span></a>
 </div>
 
