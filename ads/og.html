@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Veenos: sdílecí obrázek</title>
+<link rel="stylesheet" href="ad.css">
+<style>
+  .frame { padding: 64px 72px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .logo { font-size: 34px; } .logo svg { width: 34px; height: 34px; }
+  .h { font-size: 86px; margin-top: 40px; }
+  .card { background: var(--card); border: 2px solid var(--line); border-radius: 32px; padding: 34px; }
+  .card .ttl { font-size: 30px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 26px; }
+  .bars { gap: 22px; }
+  .br .t b { font-size: 28px; } .br .t span { font-size: 26px; } .br .track { height: 12px; } .br .t { margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="glow"></div>
+  <div>
+    <div class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</div>
+    <h1 class="h">Stejný index.<br><em>Jiná cena.</em></h1>
+  </div>
+  <div class="card tab">
+    <p class="ttl">S&amp;P 500 v korunách</p>
+    <div class="bars">
+      <div class="br w"><div class="t"><b>CSPX</b><span>27 900 Kč</span></div><div class="track"><div class="fill" style="width:20%"></div></div></div>
+      <div class="br"><div class="t"><b>IVV</b><span>131 300 Kč</span></div><div class="track"><div class="fill" style="width:92%"></div></div></div>
+      <div class="br"><div class="t"><b>VOO</b><span>131 300 Kč</span></div><div class="track"><div class="fill" style="width:92%"></div></div></div>
+      <div class="br"><div class="t"><b>SPY</b><span>142 100 Kč</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

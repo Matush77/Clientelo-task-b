@@ -1,0 +1,30 @@
+/* self-hosted Manrope, relative paths so file:// rendering works */
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:400;src:url(../public/fonts/manrope-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:400;src:url(../public/fonts/manrope-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:600;src:url(../public/fonts/manrope-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:600;src:url(../public/fonts/manrope-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:700;src:url(../public/fonts/manrope-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:700;src:url(../public/fonts/manrope-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:800;src:url(../public/fonts/manrope-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:800;src:url(../public/fonts/manrope-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root { --bg:#18191c; --fg:#f3f3ef; --muted:#a3a49f; --line:#2c2d32; --card:#202125; --accent:#cfe68a; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: "Manrope", sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; }
+.tab { font-variant-numeric: tabular-nums; }
+.frame { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; padding: 84px 84px 72px; overflow: hidden; }
+.logo { display: flex; align-items: center; gap: 16px; font-weight: 800; font-size: 46px; letter-spacing: -0.045em; }
+.logo svg { width: 46px; height: 46px; }
+.h { font-weight: 800; letter-spacing: -0.05em; line-height: 1.12; }
+.h em { font-style: normal; color: var(--accent); }
+.fine { font-size: 24px; color: #8f908b; line-height: 1.4; }
+.cta { align-self: flex-start; background: var(--accent); color: #18191c; font-weight: 800; font-size: 40px; letter-spacing: -0.02em; border-radius: 999px; padding: 26px 46px; }
+.bars { display: grid; gap: 34px; }
+.br .t { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+.br .t b { font-size: 48px; font-weight: 800; letter-spacing: -0.03em; }
+.br .t span { font-size: 44px; font-weight: 800; }
+.br .t small { font-size: 26px; font-weight: 600; color: var(--muted); margin-left: 14px; letter-spacing: 0; }
+.br .track { height: 22px; border-radius: 99px; background: #2a2b30; overflow: hidden; }
+.br .fill { height: 100%; border-radius: 99px; background: #6e6f6a; }
+.br.w .fill { background: var(--accent); } .br.w .t span { color: var(--accent); }
+.glow { position: absolute; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, rgba(207,230,138,.16), rgba(207,230,138,0) 65%); right: -320px; top: -260px; pointer-events: none; }
