@@ -21,8 +21,10 @@ const JOBS = [
   ['ads/ad-b.html', 'f=feed', 1080, 1350, 'ads/png/ad-b-feed-1080x1350.png'],
   ['ads/ad-b.html', 'f=story', 1080, 1920, 'ads/png/ad-b-story-1080x1920.png'],
   ['ads/og.html', '', 1200, 630, 'public/og.png'],
+  ['ads/email-logo.html', '', 240, 56, 'public/email/logo.png', true],  // transparent, for the e-mail header
 ];
 mkdirSync('ads/png', { recursive: true });
+mkdirSync('public/email', { recursive: true });
 const sleep = ms => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 // Edge's launcher returns before the screenshot is written: wait until the file exists and its size is stable.
 function waitFor(file, timeoutMs = 20000) {
@@ -33,10 +35,10 @@ function waitFor(file, timeoutMs = 20000) {
   }
   return false;
 }
-for (const [file, query, w, h, out] of JOBS) {
+for (const [file, query, w, h, out, transparent] of JOBS) {
   const url = pathToFileURL(resolve(file)).href + (query ? '?' + query : '');
   rmSync(out, { force: true });
   execFileSync(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1', `--user-data-dir=${resolve('.edge-render-profile')}`,
-    `--window-size=${w},${h}`, '--virtual-time-budget=3000', `--screenshot=${resolve(out)}`, url], { stdio: 'ignore' });
+    `--window-size=${w},${h}`, ...(transparent ? ['--default-background-color=00000000'] : []), '--virtual-time-budget=3000', `--screenshot=${resolve(out)}`, url], { stdio: 'ignore' });
   console.log(waitFor(out) ? 'rendered' : 'FAILED', out);
 }
