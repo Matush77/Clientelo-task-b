@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { renderComparisonEmail, renderTeamEmail } from '../lib/email-template.js';
-import { compare, formatCzk } from '../public/js/model.js';
+import { compare, formatCzk, WORLD_FUNDS } from '../public/js/model.js';
 
 test('e-mail contains all four funds with the model numbers', () => {
   const { html, text, subject } = renderComparisonEmail({ monthly: 3000, years: 20 });
@@ -26,4 +26,15 @@ test('team notice escapes HTML in user input', () => {
   const t = renderTeamEmail({ name: '<script>x</script>', email: 'a@b.cz', phone: '+420777123456', monthly: 3000, years: 20, variant: 'a', device: 'mobile', utm_content: '' });
   assert.ok(!t.html.includes('<script>'));
   assert.ok(t.html.includes('&lt;script&gt;'));
+});
+
+test('e-mail adds the bonus world comparison (VT vs VWCE) with model numbers', () => {
+  const { html, text, preheader } = renderComparisonEmail({ monthly: 3000, years: 20 });
+  assert.match(html, /Navíc: celý svět/);
+  for (const r of compare(3000, 20, WORLD_FUNDS)) {
+    assert.ok(html.includes(formatCzk(r.total)), `${r.ticker} total`);
+    assert.ok(text.includes(`${r.ticker}: ${formatCzk(r.total)}`));
+  }
+  assert.match(html, /podobné, ne stejné indexy/);
+  assert.match(preheader, /VT vs VWCE/);
 });

@@ -32,13 +32,21 @@ export const ROUTES = {
 
 export const FUNDS = [
   { ticker: 'SPY', name: 'SPDR S&P 500 ETF Trust', issuer: 'State Street', listing: 'NYSE Arca', domicile: 'USA', ter: 0.000945, route: 'fio',
-    source: 'https://www.ssga.com/us/en/intermediary/etfs/spdr-sp-500-etf-trust-spy', asOf: '2026-10-08' },
+    source: 'https://www.ssga.com/us/en/intermediary/etfs/spdr-sp-500-etf-trust-spy', asOf: '2026-10-11' },
   { ticker: 'IVV', name: 'iShares Core S&P 500 ETF', issuer: 'BlackRock (iShares)', listing: 'NYSE Arca', domicile: 'USA', ter: 0.0003, route: 'fio',
-    source: 'https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf', asOf: '2026-10-09' },
+    source: 'https://www.ishares.com/us/products/239726/ishares-core-sp-500-etf', asOf: '2026-10-11' },
   { ticker: 'VOO', name: 'Vanguard S&P 500 ETF', issuer: 'Vanguard', listing: 'NYSE Arca', domicile: 'USA', ter: 0.0003, route: 'fio',
-    source: 'https://investor.vanguard.com/investment-products/etfs/profile/voo', asOf: '2026-04-28' },
+    source: 'https://advisors.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F0968.pdf', asOf: '2026-06-30' },
   { ticker: 'CSPX', name: 'iShares Core S&P 500 UCITS ETF (Acc)', issuer: 'BlackRock (iShares)', listing: 'Londýn / Xetra (SXR8)', domicile: 'Irsko', ter: 0.0007, route: 'xtb',
-    isin: 'IE00B5BMR087', source: 'https://www.justetf.com/en/etf-profile.html?isin=IE00B5BMR087', asOf: '2026-10-09' },
+    isin: 'IE00B5BMR087', source: 'https://www.justetf.com/en/etf-profile.html?isin=IE00B5BMR087', asOf: '2026-10-11' },
+];
+
+// Bonus pair sent only in the e-mail: the whole world. Similar, not identical indexes (VT also holds small caps).
+export const WORLD_FUNDS = [
+  { ticker: 'VT', name: 'Vanguard Total World Stock ETF', issuer: 'Vanguard', listing: 'NYSE Arca', domicile: 'USA', index: 'FTSE Global All Cap', ter: 0.0006, route: 'fio',
+    source: 'https://advisors.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F3141.pdf', asOf: '2026-06-30' },
+  { ticker: 'VWCE', name: 'Vanguard FTSE All-World UCITS ETF (USD) Acc', issuer: 'Vanguard', listing: 'Xetra (EUR)', domicile: 'Irsko', index: 'FTSE All-World', ter: 0.0014, route: 'xtb',
+    isin: 'IE00BK5BQT80', source: 'https://www.justetf.com/en/etf-profile.html?isin=IE00BK5BQT80', asOf: '2026-10-11' },
 ];
 
 export const LISTING_SOURCE = 'https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt';
@@ -65,11 +73,11 @@ function routeParams(fund) {
   return { fx: r.fx, commissionCzk: r.commissionUsd * ASSUMPTIONS.usdCzk, ordersEveryMonths: r.ordersEveryMonths };
 }
 
-// Total costs in CZK per fund, cheapest first.
+// Total costs in CZK per fund, cheapest first (the S&P 500 funds by default, or e.g. WORLD_FUNDS).
 // buyCost depends only on the route (identical for SPY/IVV/VOO); feeCost is the rest of the total.
-export function compare(monthly, years) {
+export function compare(monthly, years, funds = FUNDS) {
   const base = futureValue(monthly, years);
-  return FUNDS.map(f => {
+  return funds.map(f => {
     const route = routeParams(f);
     const total = base - futureValue(monthly, years, { ter: f.ter, ...route });
     const buyCost = base - futureValue(monthly, years, route);
@@ -81,4 +89,6 @@ export const isAllowed = (monthly, years) => ALLOWED.monthly.includes(monthly) &
 
 export const roundCzk = n => Math.round(n / 100) * 100;
 export const formatCzk = n => roundCzk(n).toLocaleString('cs-CZ') + ' Kč';
+// Rounded parts for display that always add up: total and purchase cost rounded to 100 Kč, the fund fee is the rest.
+export const roundedParts = r => { const total = roundCzk(r.total), buy = roundCzk(r.buyCost); return { total, buy, fee: total - buy }; };
 export const formatPct = x => (x * 100).toLocaleString('cs-CZ', { maximumFractionDigits: 4 }) + ' %';

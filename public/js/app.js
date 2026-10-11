@@ -1,4 +1,4 @@
-import { compare, formatCzk, formatPct, isAllowed, FUNDS, ROUTES, ASSUMPTIONS, DATA_AS_OF, LISTING_SOURCE } from './model.js';
+import { compare, formatCzk, formatPct, isAllowed, FUNDS, WORLD_FUNDS, ROUTES, ASSUMPTIONS, DATA_AS_OF, LISTING_SOURCE } from './model.js';
 import { TRACKERS } from './config.js';
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -102,6 +102,9 @@ function renderResult(animate = true) {
   $('.js-ttl').textContent = `Náklady za ${years} let`;
   // The counting number is hidden from screen readers; they get the final amount once.
   $('.js-bars').innerHTML = rows.map((r, i) => `<li class="br${i === 0 ? ' w' : ''}"><div class="t"><b>${r.ticker}</b><span><i class="num" aria-hidden="true" data-to="${r.total}">${formatCzk(0)}</i><span class="sr-only">${formatCzk(r.total)}</span></span></div><div class="track" aria-hidden="true"><div class="fill" data-w="${Math.max(5, 100 * r.total / max).toFixed(1)}"></div></div></li>`).join('');
+  // Bonus teaser: real bar lengths, amounts masked (digits shown as 8 and blurred); the real numbers are only in the e-mail.
+  const world = compare(monthly, years, WORLD_FUNDS), wmax = Math.max(...world.map(r => r.total));
+  $('.js-more').innerHTML = world.map(r => `<li><div class="t"><span>${r.ticker}</span><span class="hid">${formatCzk(r.total).replace(/\d/g, '8')}</span></div><div class="track"><div class="fill" style="width:${Math.max(8, 100 * r.total / wmax).toFixed(1)}%"></div></div></li>`).join('');
   result.hidden = false;
   calc.classList.add('has-result');
   if (animate) { result.classList.add('enter'); requestAnimationFrame(() => requestAnimationFrame(() => result.classList.remove('enter'))); }

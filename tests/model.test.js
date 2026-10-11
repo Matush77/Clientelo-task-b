@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { compare, futureValue, roundCzk, isAllowed, ALLOWED, FUNDS } from '../public/js/model.js';
+import { compare, futureValue, roundCzk, roundedParts, isAllowed, ALLOWED, FUNDS, WORLD_FUNDS } from '../public/js/model.js';
 
 const byTicker = rows => Object.fromEntries(rows.map(r => [r.ticker, r]));
 
@@ -52,4 +52,25 @@ test('the hero fact band shows the CSPX vs SPY saving for 3 000 Kč over 20 year
   assert.ok(band.includes('3 000 Kč měsíčně · 20 let'), band);
   assert.ok(band.includes(`o ${Math.round(100 * (1 - low / high))} % nižší náklady`), band);
   assert.ok(band.includes(`(${kc(low)} vs ${kc(high)})`), band);
+});
+
+test('bonus world pair (e-mail only): VT vs VWCE numbers and sources', () => {
+  const r = byTicker(compare(3000, 20, WORLD_FUNDS));
+  assert.equal(roundCzk(r.VWCE.total), 40600);
+  assert.equal(roundCzk(r.VT.total), 136300);
+  // VWCE has the higher fund fee, yet wins on the route from Czechia in every allowed scenario
+  assert.ok(r.VWCE.fund.ter > r.VT.fund.ter);
+  for (const m of ALLOWED.monthly) for (const y of ALLOWED.years) assert.equal(compare(m, y, WORLD_FUNDS)[0].ticker, 'VWCE', `${m}/${y}`);
+  for (const f of WORLD_FUNDS) { assert.ok(f.source.startsWith('https://')); assert.match(f.asOf, /^\d{4}-\d{2}-\d{2}$/); assert.ok(f.index); }
+});
+
+test('displayed parts add up: fund fee + purchase from Czechia = total, for every scenario', () => {
+  for (const funds of [FUNDS, WORLD_FUNDS]) for (const m of ALLOWED.monthly) for (const y of ALLOWED.years) {
+    for (const r of compare(m, y, funds)) {
+      const p = roundedParts(r);
+      assert.equal(p.fee + p.buy, p.total, `${r.ticker} ${m}/${y}`);
+      assert.ok(p.fee >= 0 && p.buy >= 0, `${r.ticker} ${m}/${y}`);
+      assert.ok(Math.abs(p.fee - r.feeCost) <= 100, `${r.ticker} ${m}/${y} fee within rounding`);
+    }
+  }
 });

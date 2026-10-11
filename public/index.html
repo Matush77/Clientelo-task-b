@@ -115,6 +115,18 @@
   .br .track { height: clamp(12px, 3.3vw, 14px); border-radius: 99px; background: #34353b; overflow: hidden; }
   .br .fill { height: 100%; width: 0; border-radius: 99px; background: #6e6f6a; transition: width 1.6s cubic-bezier(.22,.8,.2,1); }
   .br.w .fill { background: var(--accent); } .br.w .t span { color: var(--accent); }
+  /* Bonus teaser: the world pair is computed but its amounts stay hidden; the full numbers go to the e-mail. */
+  .more { margin: -4px 0 24px; padding: 16px 16px 6px; border-radius: 18px; background: #2c2d33; border: 1px solid #3c3d43; }
+  .more-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .more-k { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .more-h svg { width: 16px; height: 16px; flex: none; color: var(--muted); }
+  .more-t { font-size: clamp(15px, 4.2vw, 17px); font-weight: 800; letter-spacing: -0.02em; margin-top: 4px; }
+  .more-s { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .more-bars { list-style: none; display: grid; gap: 12px; margin: 14px 0 10px; }
+  .more-bars .t { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; font-weight: 800; font-size: clamp(15px, 4.2vw, 17px); }
+  .more-bars .hid { filter: blur(6px); user-select: none; color: var(--fg); }
+  .more-bars .track { height: 10px; border-radius: 99px; background: #3a3b41; overflow: hidden; }
+  .more-bars .fill { height: 100%; border-radius: 99px; background: #7d7e79; filter: blur(2px); }
   .sent { text-align: center; padding: 10px 0 4px; }
   .sent .ok { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: 22px; margin: 0 auto 12px; }
   .sent b { font-size: 21px; font-weight: 800; letter-spacing: -0.03em; display: block; }
@@ -289,6 +301,9 @@
     .card h2 { font-size: 30px; }
     .chip { height: 56px; font-size: 17px; }
     .calc.has-result .pick { display: none; }
+    /* the result card shares the first screen with the headline: keep it compact so the e-mail button stays visible */
+    .calc .bars { gap: 16px; margin: 20px 0; } .calc .br .t { margin-bottom: 6px; }
+    .more { padding: 14px 16px 4px; margin: -2px 0 18px; } .more-s { display: none; } .more-bars { gap: 8px; margin: 10px 0 8px; }
     .result { margin-top: 0; }
     .back { display: inline-block; }
     .how { padding-top: 88px; padding-bottom: 88px; }
@@ -341,7 +356,8 @@
             <p class="ctx"><span class="js-ctx"></span><a href="#how" aria-label="Jak počítáme">i</a></p>
             <h2 class="ttl js-ttl"></h2>
             <ol class="bars tab js-bars"></ol>
-            <button type="button" class="cta js-open">Poslat srovnání e-mailem</button>
+            <div class="more"><div class="more-h"><span class="more-k">V e-mailu navíc</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><p class="more-t">Celý svět: VT vs VWCE</p><p class="more-s">Podobný světový index, dva fondy. Částky pošleme e-mailem.</p><ol class="more-bars tab js-more" aria-hidden="true"></ol></div>
+            <button type="button" class="cta js-open">Poslat celé srovnání e-mailem</button>
           </div>
           <div class="sent js-post" hidden><div class="ok" aria-hidden="true">✓</div><b>Srovnání je na cestě</b><p class="js-sentp">Celé srovnání najdete v e-mailu.</p></div>
         </div>
@@ -363,7 +379,7 @@
       <div class="qa"><h3><button type="button" class="qa-q" id="qa2-b" aria-expanded="false" aria-controls="qa2"><span class="qa-t">Čím se liší SPY, IVV, VOO a CSPX?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa2" role="region" aria-labelledby="qa2-b"><div class="qa-in"><p>Všechny čtyři kopírují stejný index S&amp;P 500. SPY (State Street), IVV (iShares) a VOO (Vanguard) jsou americké fondy z burzy NYSE Arca, CSPX je irský fond iShares podle evropských pravidel UCITS. Liší se ročním poplatkem fondu a hlavně cenou nákupu z Česka: provizí a směnou korun na dolary. Čísla najdete v sekci <a href="#how">Jak počítáme</a>.</p></div></div></div>
       <div class="qa"><h3><button type="button" class="qa-q" id="qa3-b" aria-expanded="false" aria-controls="qa3"><span class="qa-t">Jak je to s daněmi?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa3" role="region" aria-labelledby="qa3-b"><div class="qa-in"><p>Prodej je v Česku osvobozený od daně, když fond držíte déle než 3 roky (časový test), nebo když příjmy ze všech prodejů cenných papírů za rok nepřesáhnou 100&nbsp;000&nbsp;Kč. Z dividend amerických fondů se s formulářem W-8BEN obvykle sráží 15&nbsp;% daně v USA, bez něj 30&nbsp;%. Přesné dopady závisí na vaší situaci, více v <a href="/navod">návodu</a>.</p></div></div></div>
       <div class="qa"><h3><button type="button" class="qa-q" id="qa4-b" aria-expanded="false" aria-controls="qa4"><span class="qa-t">Je to investiční doporučení?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa4" role="region" aria-labelledby="qa4-b"><div class="qa-in"><p>Ne. Srovnání je ilustrativní výpočet nákladů z veřejných ceníků a údajů emitentů pro částku a dobu, kterou zadáte. Nedoporučujeme konkrétní fond ani brokera. Když zapnete „Chci pomoct“, provedeme vás postupem nákupu, výběr fondu zůstává na vás.</p></div></div></div>
-      <div class="qa"><h3><button type="button" class="qa-q" id="qa5-b" aria-expanded="false" aria-controls="qa5"><span class="qa-t">Co mi pošlete a co bude s mým kontaktem?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa5" role="region" aria-labelledby="qa5-b"><div class="qa-in"><p>E-mailem dostanete celé srovnání: rozpis nákladů všech čtyř fondů, předpoklady výpočtu a odkaz na návod k nákupu. Telefon použijeme jen tehdy, když zapnete „Chci pomoct“, a to k jednomu hovoru. Tipy posíláme jen s vaším souhlasem a údaje nikomu neprodáváme. Podrobnosti jsou v <a href="/ochrana-udaju">zásadách ochrany údajů</a>.</p></div></div></div>
+      <div class="qa"><h3><button type="button" class="qa-q" id="qa5-b" aria-expanded="false" aria-controls="qa5"><span class="qa-t">Co mi pošlete a co bude s mým kontaktem?</span><span class="qa-i" aria-hidden="true"></span></button></h3><div class="qa-a" id="qa5" role="region" aria-labelledby="qa5-b"><div class="qa-in"><p>E-mailem dostanete celé srovnání: rozpis nákladů všech čtyř fondů, navíc srovnání pro celý svět (VT vs VWCE), předpoklady výpočtu a odkaz na návod k nákupu. Telefon použijeme jen tehdy, když zapnete „Chci pomoct“, a to k jednomu hovoru. Tipy posíláme jen s vaším souhlasem a údaje nikomu neprodáváme. Podrobnosti jsou v <a href="/ochrana-udaju">zásadách ochrany údajů</a>.</p></div></div></div>
     </div>
   </section>
 </main>
@@ -384,7 +400,7 @@
 <form class="sheet js-form" role="dialog" aria-modal="true" aria-labelledby="form-h" novalidate>
   <div class="grab" aria-hidden="true"></div><button type="button" class="x js-close" aria-label="Zavřít">×</button>
   <h3 id="form-h">Kam poslat srovnání?</h3>
-  <p class="s">Celé srovnání s předpoklady vám pošleme e-mailem.</p>
+  <p class="s">Pošleme vám rozpis všech 4 fondů a navíc srovnání pro celý svět (VT vs VWCE).</p>
   <label class="sr-only" for="f-name">Jméno</label>
   <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Jméno" required maxlength="80">
   <label class="sr-only" for="f-email">E-mail</label>

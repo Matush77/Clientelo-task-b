@@ -19,7 +19,7 @@ Mobilná lead-magnet stránka v češtine. Návštevník z reklamy za pár sekú
 | Kedy | Čo dostane | Čo dá |
 |---|---|---|
 | Hneď po 2 ťuknutiach | 4 fondy zoradené podľa celkových nákladov v Kč (poplatok fondu + nákup z ČR) | nič |
-| Po kliknutí „Poslat srovnání e-mailem" | e-mail: celý rozpis po fondoch, čo z toho plynie, predpoklady a zdroje, návod na nákup ETF | meno + e-mail (autofill) |
+| Po kliknutí „Poslat celé srovnání e-mailem" | e-mail: celý rozpis po fondoch, **navyše svet: VT (NYSE) vs VWCE (Európa)**, čo z toho plynie, predpoklady a zdroje, návod na nákup ETF | meno + e-mail (autofill) |
 | Voliteľne „Chci pomoct" | jeden telefonát k postupu (broker, výpočet) | telefón |
 
 **Hodnota je viditeľná ešte pred formulárom** (požiadavka zadania), formulár sa otvorí až po výsledku. Rovnaký vzor používajú Portu, Fondee aj Finax (`research/02-competitors.md`). Telefón je opt-in: kontakt je kvalitnejší a zároveň máme výslovný súhlas s hovorom (§96 zák. 127/2005 Sb., `research/decisions.md` D5b, D5c).
@@ -29,6 +29,7 @@ Mobilná lead-magnet stránka v češtine. Návštevník z reklamy za pár sekú
    - **Faktický pás na konci prvej obrazovky (mobil, tablet):** „3 000 Kč měsíčně · 20 let → **o 80 % nižší náklady** u nejlevnějšího ze 4 fondů na stejný index S&P 500 oproti nejdražšímu (27 900 Kč vs 142 100 Kč).“ Reálne číslo z modelu, ktoré dokazuje sľub „Jiná cena“ ešte pred prvým klikom a zároveň uzatvára prvú obrazovku, takže kalkulačka príde až po scrollnutí. Percento je nadpis, korunové sumy v podtexte držia sľub „v korunách“. Test v `tests/model.test.js` stráži, aby sa text v HTML nerozišiel s modelom.
 2. **Kalkulačka:** len 2 voľby (mesačne, roky) na jednej karte, žiadne písanie. Tlačidlo „Porovnat 4 fondy“ nie je nikdy sivé: ak voľba chýba, jej popis sa zvýrazní a čipy sa pohnú; opätovné ťuknutie voľbu zruší. Podľa zadania sú interaktívne prvky cestou ku kontaktu.
 3. **Výsledok:** 4 pruhy na jednej škále, najlacnejší zvýraznený; pruhy postupne rastú a sumy sa načítavajú (≈ 2 s, spustí sa až keď je výsledok na obrazovke). Toto je samotné **porovnanie ETF z NYSE**, ktoré zadanie žiada, s európskym dvojčaťom ako kontrolou z pohľadu Čecha.
+   - **Bonus len v e-maile:** pod pruhmi je zamknutá karta „V e-mailu navíc · Celý svět: VT vs VWCE“. Názvy fondov a dĺžky pruhov sú vidieť, sumy sú rozmazané (v HTML sú len zástupné číslice), celé čísla prídu e-mailom. Návštevník tak vidí, že za kontakt dostane viac než to, čo už má na stránke; tlačidlo sa zmenilo na „Poslat celé srovnání e-mailem“.
 4. **Formulár (bottom sheet / dialóg):** až po výsledku, 2 povinné polia, autofill.
 5. **Jak počítáme:** zdroje a predpoklady pre skeptikov, pod výsledkom, aby nebrzdili. Počíta sa z rovnakých dát ako kalkulačka.
 6. **Časté otázky (5):** prečo väčšinu ETF z NYSE u českého brokera nekúpite, čím sa líšia SPY/IVV/VOO/CSPX, dane, či ide o investičné odporúčanie a čo bude s kontaktom. Odpovedajú na námietky, ktoré by inak brzdili odoslanie formulára; fakty sú z overeného výskumu (`research/05-data-facts.md`). Otvorenie otázky sa meria (`faq_open`).
@@ -50,15 +51,19 @@ Jediný zdroj pravdy je [`public/js/model.js`](public/js/model.js). Pri každom 
 
 | Údaj | Hodnota | Zdroj |
 |---|---|---|
-| TER SPY / IVV / VOO | 0,0945 % / 0,03 % / 0,03 % | State Street, iShares, Vanguard (stránky fondov) |
-| TER CSPX (UCITS, IE00B5BMR087) | 0,07 % | justETF |
+| TER SPY / IVV / VOO | 0,0945 % / 0,03 % / 0,03 % | State Street, iShares (11. 10. 2026), Vanguard fact sheet (30. 6. 2026) |
+| TER CSPX (UCITS, IE00B5BMR087) | 0,07 % | justETF (11. 10. 2026) |
+| TER VT (NYSE Arca, index FTSE Global All Cap) | 0,06 % | Vanguard fact sheet (30. 6. 2026); burza: Nasdaq Trader |
+| TER VWCE (UCITS, IE00BK5BQT80, Xetra v EUR, index FTSE All-World) | 0,14 % | justETF (11. 10. 2026) |
 | Burza SPY, IVV, VOO | NYSE Arca | Nasdaq Trader `otherlisted.txt` (overené E3) |
 | Fio: americký trh | 7,95 USD za pokyn, kurzová prirážka ≈ 3 % (orientačne) | cenník Fio od 1. 7. 2026, kurzová tabuľka (E5) |
 | XTB | 0 % provízia, konverzia 0,5 % | cenník XTB z 29. 4. 2026 |
 | Kurz USD | 21,745 Kč (9. 10. 2026) | ČNB API (E4) |
 | Prečo len Fio | americké ETF nemajú KID (PRIIPs), väčšina brokerov ich retailu v EÚ nepredáva | DEGIRO, LYNX, Saxo, Fio (E2, E6) |
 
-Predpoklady: výnos 7 % p. a. pred nákladmi pre všetky fondy (rovnaký index), mesačný vklad, americké fondy nakupované raz za štvrťrok (férovejšie než mesačné pokyny po 7,95 USD), na konci predaj a spätná konverzia.
+Predpoklady: výnos 7 % p. a. pred nákladmi pre všetky fondy (rovnaký index; pri VT a VWCE podobný), mesačný vklad, americké fondy nakupované raz za štvrťrok (férovejšie než mesačné pokyny po 7,95 USD), na konci predaj a spätná konverzia.
+
+**Opätovná kontrola 11. 10. 2026:** všetky vstupy znova overené priamo u zdroja (poplatky fondov, cenník Fio „Obchod do 100 kusů $ 7,95“, kurzová tabuľka Fio 22,407 vs. ČNB 21,745 = +3,0 %, cenník XTB 0 % do 100 000 EUR a prirážka 0,5 %, kurz ČNB, burzy v Nasdaq Trader). Výpočet prepočítaný nezávislou implementáciou v Pythone: všetkých 16 kombinácií súhlasí na korunu, bez nákladov sa model zhoduje so vzorcom anuity (1 522 609 Kč z 720 000 Kč vkladov). „o 80 % nižší náklady“ = 1 − 27 900 / 142 100 = 80,4 %. Kontrola našla jednu chybu: v e-maile sa zložky (poplatok fondu, nákup z ČR) zaokrúhľovali zvlášť a nesedeli so súčtom (12 800 + 15 200 ≠ 27 900). Opravené (poplatok = zaokrúhlený súčet − zaokrúhlený nákup) a stráži to test.
 
 ## 6. Meranie celej cesty
 Funnel sa meria **bez cookies**: prehliadač posiela udalosti cez `sendBeacon`, prepojené len ID v pamäti stránky. Na server sa neukladá IP adresa, iba denné počty podľa varianty, zariadenia a reklamy (`utm_content`).
@@ -69,7 +74,7 @@ Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, z
 
 **Overenie kvality (11. 10. 2026, produkcia):**
 - **Lighthouse mobile** (finálna verzia, 11. 10.): Performance **95**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,4 s, CLS 0, TBT 80 ms (skóre výkonu medzi behmi kolíše o pár bodov, predošlý beh 98). Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené. Pozor pri meraní hneď po nasadení: beh spustený pár sekúnd po `vercel deploy` zachytil ešte starú verziu stránky a ukázal falošný posun rozloženia (filmstrip mal staré aj nové rozloženie); opakovaný beh bol čistý.
-- **Testy:** 16 automatických testov (`npm test`), end-to-end v prehliadači (A aj B, kalkulačka, formulár, cookies, FAQ, menu) a automatická kontrola, že žiadny text nie je bližšie než 12 px k okraju a stránka sa neposúva do strany, na 10 šírkach (320–1440 px).
+- **Testy:** 19 automatických testov (`npm test`), end-to-end v prehliadači (A aj B, kalkulačka, formulár, cookies, FAQ, menu) a automatická kontrola, že žiadny text nie je bližšie než 12 px k okraju a stránka sa neposúva do strany, na 10 šírkach (320–1440 px).
 - **Ostrý test:** 2 testovacie leady na produkcii (so súhlasom). E-mail prišiel do Gmailu (karta *Aktualizácie*, nie spam; DKIM/SPF/DMARC pass). Prvý odhalil 2 chyby e-mailu: chýbajúce logo (Gmail odstraňuje SVG `data:` obrázky, teraz je logo hostované PNG) a prekrývajúce sa stĺpce rozpisu (teraz riadky pod sebou). Druhý, po oprave, bol doručený rovnako.
 
 ## 7. Očakávaná konverzia
@@ -91,7 +96,7 @@ Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, z
 ## 8. Tri hypotézy na A/B test (zoradené podľa očakávaného dopadu)
 | # | Hypotéza | Metrika | Prečo tento dopad | Vzorka* |
 |---|---|---|---|---|
-| 1 | **Čiastočný výsledok + zvyšok za e-mail** (ukázať víťaza a rozdiel, plné porovnanie až po e-maile) zvýši podiel otvorení formulára oproti plnému porovnaniu na stránke. | `form_open / calc_compare`, `lead_ok / page_view` | Moment žiadosti je najsilnejšia páka na objem leadov. Riziko: dôvera a kvalita leadov. Kontrolovaná štúdia k načasovaniu brány neexistuje (`research/03`), treba ju otestovať. | ~1 000 / variant na úrovni kroku |
+| 1 | **Čiastočný výsledok + zvyšok za e-mail** (ukázať víťaza a rozdiel, plné porovnanie až po e-maile) zvýši podiel otvorení formulára oproti plnému porovnaniu na stránke. Dnešná verzia už robí mäkšiu podobu: bonus „svet: VT vs VWCE“ je len v e-maile. | `form_open / calc_compare`, `lead_ok / page_view` | Moment žiadosti je najsilnejšia páka na objem leadov. Riziko: dôvera a kvalita leadov. Kontrolovaná štúdia k načasovaniu brány neexistuje (`research/03`), treba ju otestovať. | ~1 000 / variant na úrovni kroku |
 | 2 | **Variant B (mladý muž + „Spočítat poplatky")** zvýši preklik z hero oproti A (Pražský hrad + „Začít investovat"). „Začít investovat" sľubuje otvorenie účtu, ale klik otvorí kalkulačku. | `hero_cta / page_view`, `calc_compare / page_view` | Prvá obrazovka rozhoduje o všetkom ďalšom. Pozor: B mení fotku aj CTA naraz, je to test celej „mladšej" varianty a nepovie, ktorý z dvoch prvkov zabral. | ~1 000 / variant |
 | 3 | **Len e-mail (bez mena)** zvýši dokončenie formulára oproti menu + e-mailu. | `lead_ok / form_open` | Menej polí obvykle pomáha (Baymard, Imagescape), ale pri 2 poliach s autofillom je efekt menší, preto až tretia. | ~1 300 / variant |
 
@@ -116,12 +121,13 @@ Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výs
 - **Odklon od zadania:** pri riešení prekážky PRIIPs sa koncept posunul na „dve cesty k S&P 500" a vypadlo porovnanie ETF z NYSE. Opravené po mojej pripomienke (`decisions.md` D0b, D4b).
 - **Dizajn:** prvých 5 smerov bolo preplnených dátami. Náhľady boli zmenšené na 66 % a AI to najprv nespomenula. Nadpis „Jiná" kolidoval s riadkom nad ním. Reklamy sa najprv vykreslili v náhradnom fonte (cesta k fontu cez `file://`). Na reklame zostalo „zdarma", hoci som ho zo stránky predtým odstránil.
 - **Kód:** `form.name` vracal atribút formulára namiesto inputu (chytené pri návrhu), dialóg zameriaval tlačidlo zavrieť namiesto prvého poľa (chytené pri teste v prehliadači), skript na inline náhľadov sa raz commitol prázdny (opravené ďalším commitom). Až ostrý e-mail ukázal, že Gmail zahodí SVG logo a zúži 4 stĺpce tak, že sa texty prekrývajú; lokálny náhľad v prehliadači to neodhalil.
+- **Čísla v e-maile:** zložky nákladov sa zaokrúhľovali zvlášť, takže pri CSPX a VT nesedeli so súčtom o 100 Kč. Testy kontrolovali súčty, nie zložky; chybu našla až opätovná kontrola čísel na moju žiadosť. Teraz ju stráži test pre všetky kombinácie.
 - **Responzivita po builde:** sekcia „Jak počítáme“ bola na mobile bez bočného okraja (pravidlo sekcie prepísalo okraj stránky) a pätička na tablete/desktope „cik-cak“ (roztiahnuté riadky mriežky vycentrovali tlačidlo). Obe som našiel ja na screenshotoch, nie AI. Potom pribudla automatická kontrola okrajov na 10 šírkach.
 - **Meranie:** prvý Lighthouse po nasadení ukázal falošný posun rozloženia, lebo zachytil ešte starú verziu stránky; AI to najprv považovala za chybu CSS, kým filmstrip neukázal obe verzie.
 
 ## 10. Rozhodnutia tam, kde zadanie nebolo jednoznačné
 - **„ETF obchodované na NYSE" vs. realita v ČR:** americké ETF väčšina brokerov českému retailu nepredá (PRIIPs). Stránka preto porovnáva **SPY, IVV, VOO z NYSE Arca** a ako kontrolu pridáva **európske dvojča CSPX**, ktoré sa z ČR kúpiť dá. Porovnanie ETF z NYSE zostáva jadrom, realita nákupu je jeho súčasťou.
-- **Len S&P 500:** najčistejší príbeh „rovnaký index, iná cena" a všetky údaje overené. Svet (VT) a celý trh USA (VTI) potrebujú overiť TER.
+- **S&P 500 na stránke, svet ako bonus:** S&P 500 je najčistejší príbeh „rovnaký index, iná cena". Svet (VT vs VWCE) je bonus v e-maile s výslovnou poznámkou, že indexy sú podobné, nie rovnaké (VT obsahuje aj malé firmy). VWCE je najčastejšie spomínaný ETF na českom fóre (185 zmienok, `research/01`). Celý trh USA (VTI) nemá UCITS dvojča, preto chýba.
 - **„NYSE" = NYSE Arca:** tam sú SPY, IVV aj VOO kótované; QQQ je na Nasdaqu, preto chýba (E3).
 - **Formulár:** zadanie chce čo najmenej polí. Povinné sú 2 (meno, e-mail) s autofillom; telefón je dobrovoľný a s výslovným účelom. Meno je kompromis kvôli kvalite leadu, preto je hypotézou č. 3.
 - **Jazyk:** stránka a reklamy po česky (cieľová skupina), README po slovensky (zadávateľ), oslovenie „vy" (všetky české finančné weby, C6).
@@ -135,14 +141,14 @@ Ukážka je hotová a nasadená, pri ostrom spustení by ešte bolo treba:
 - **Hosting:** Vercel Hobby je na nekomerčné použitie, reálna kampaň potrebuje Pro alebo iný hosting.
 - **Dáta:** Fio kurzová prirážka je orientačná (tabuľka bez dátumu), dáta treba pravidelne obnovovať (zatiaľ ručne v `model.js`).
 - **Meranie:** GA4/Meta Pixel sú v ukážke zámerne vypnuté, takže Meta nemá konverzný signál na optimalizáciu. A/B variant sa neukladá, opakovaná návšteva môže dostať druhú variantu. Počítadlá funnelu bez cookies a bez IP stoja na oprávnenom záujme; ÚOOÚ sa k meraniu bez cookies nevyjadrilo a podľa časti zdrojov (Matomo) ČR vyžaduje súhlas aj pri ňom, treba to právne potvrdiť (`research/04-ads-compliance.md`).
-- **Rozsah:** iba S&P 500.
+- **Rozsah:** S&P 500 na stránke, svet (VT vs VWCE) v e-maile; ďalšie indexy nie.
 
 ## Štruktúra repozitára a spustenie
 ```
 public/           stránka (index, návod, ochrana údajov), model.js (dáta + výpočet), app.js, fonty, og.png
 api/              lead.js (formulár → Redis + e-mail), event.js (funnel), stats.js (prehľad)
 lib/              store (Upstash / pamäť), mailer (Brevo / konzola), email-template, validate
-tests/            node:test – model, API, e-mail (16 testov)
+tests/            node:test – model, API, e-mail (19 testov)
 ads/              2 reklamy (HTML → PNG), texty a UTM
 research/         zadanie, prompty agentov, 5 reportov, verifikačný log, decision brief, rozhodnutia, build plán
 design/previews/  13 iterácií dizajnu (v13 = schválená predloha)
@@ -151,7 +157,7 @@ scripts/          dev server, export ai-logu, render reklám, kopírovanie fonto
 ```
 ```bash
 npm install
-npm test          # 16 testov
+npm test          # 19 testov
 npm run dev       # http://localhost:3000 (bez účtov: úložisko v pamäti, e-maily do mail-outbox/)
 ```
 Produkcia (Vercel): premenné `UPSTASH_REDIS_REST_URL/TOKEN` (alebo `KV_REST_API_*` z integrácie), `BREVO_API_KEY`, `MAIL_FROM`, `MAIL_FROM_NAME`, `TEAM_EMAIL`, `STATS_TOKEN`, `SITE_URL`. Pozri [`.env.example`](.env.example).
