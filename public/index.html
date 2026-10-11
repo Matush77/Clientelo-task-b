@@ -197,10 +197,12 @@
   .dim, .cdim { position: fixed; inset: 0; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; }
   .dim { z-index: 60; } .cdim { z-index: 71; }
   .dim, .cdim { touch-action: none; }
-  .sheet, .cs { position: fixed; left: 0; right: 0; bottom: 0; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 24px; transform: translateY(105%); visibility: hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s, visibility 0s .35s; max-height: 100svh; overflow-y: auto; overscroll-behavior: contain; }
+  /* --kb / --vvh / --vvtop come from app.js (visualViewport): the form stays above the on-screen keyboard. */
+  .sheet, .cs { position: fixed; left: 0; right: 0; bottom: var(--kb, 0px); background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 24px; transform: translateY(105%); visibility: hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s, visibility 0s .35s, bottom .2s ease-out, max-height .2s ease-out; max-height: min(100svh, var(--vvh, 100svh)); overflow-y: auto; overscroll-behavior: contain; }
+  .sheet:focus, .cs:focus, .menu:focus { outline: none; }
   .sheet { z-index: 61; } .cs { z-index: 72; }
   body.sheet-open .dim, body.cs-open .cdim { opacity: 1; pointer-events: auto; }
-  body.sheet-open .sheet, body.cs-open .cs { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; }
+  body.sheet-open .sheet, body.cs-open .cs { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s, bottom .2s ease-out, max-height .2s ease-out; }
   .grab { width: 38px; height: 4px; border-radius: 4px; background: #45464b; margin: 0 auto 14px; }
   .sheet h3 { font-weight: 800; font-size: clamp(24px, 6.8vw, 28px); letter-spacing: -0.035em; }
   .sheet .s { font-size: 13.5px; color: var(--muted); margin: 4px 0 16px; }
@@ -284,7 +286,7 @@
     html:not(.has-banner) .ck { transform: translate(-50%, 130%); }
     .ck p { font-size: 14px; text-align: center; }
     .ck .btns { max-width: 380px; margin-left: auto; margin-right: auto; }
-    .sheet, .cs { left: 50%; right: auto; top: 50%; bottom: auto; width: 520px; border-radius: 28px; padding: 34px 34px 28px; transform: translate(-50%, -46%); opacity: 0; max-height: calc(100svh - 40px); }
+    .sheet, .cs { left: 50%; right: auto; top: calc(var(--vvtop, 0px) + var(--vvh, 100svh) / 2); bottom: auto; width: 520px; border-radius: 28px; padding: 34px 34px 28px; transform: translate(-50%, -46%); opacity: 0; max-height: calc(var(--vvh, 100svh) - 40px); }
     body.sheet-open .sheet, body.cs-open .cs { transform: translate(-50%, -50%); opacity: 1; }
     .sheet h3 { font-size: 28px; }
     .sheet input[type=text], .sheet input[type=email], .sheet input[type=tel] { height: 58px; font-size: 17px; }
@@ -398,14 +400,14 @@
   <div><p class="disc">Veenos není investiční poradce ani obchodník s cennými papíry. Obsah slouží k informaci a není investičním doporučením. Investování nese riziko ztráty, minulé výnosy nejsou zárukou budoucích. Výpočty jsou ilustrativní a vycházejí z veřejných ceníků a údajů emitentů.</p><p class="copy">© 2026 Veenos · Ukázkový projekt</p></div>
 </div></footer>
 
-<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
   <div class="row1"><span class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 8.5 L9.5 19 L20.5 4.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 4 H21 V10.5" stroke="#cfe68a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>veenos</span><button type="button" class="close js-mclose" aria-label="Zavřít menu">×</button></div>
   <nav aria-label="Menu"><a class="js-mlink" href="#calc">Srovnání</a><a class="js-mlink" href="#how">Jak počítáme</a><a class="js-mlink" href="/navod">Návod</a><a class="js-mlink" href="#faq">Časté otázky</a><a class="js-mlink" href="#kontakt">Kontakt</a><a class="js-mlink" href="/ochrana-udaju">Ochrana údajů</a></nav>
   <a class="cta js-mlink js-mstart" href="#calc"><span class="lab-a">Začít investovat</span><span class="lab-b">Spočítat poplatky</span> <span class="arr" aria-hidden="true">↓</span></a>
 </div>
 
 <div class="dim js-close"></div>
-<form class="sheet js-form" role="dialog" aria-modal="true" aria-labelledby="form-h" novalidate>
+<form class="sheet js-form" role="dialog" aria-modal="true" aria-labelledby="form-h" tabindex="-1" novalidate>
   <div class="grab" aria-hidden="true"></div><button type="button" class="x js-close" aria-label="Zavřít">×</button>
   <h3 id="form-h">Kam poslat srovnání?</h3>
   <p class="s">Pošleme vám rozpis všech 4 fondů a navíc srovnání pro celý svět (VT vs VWCE).</p>
@@ -428,7 +430,7 @@
   <button type="button" class="set js-set">Nastavení</button>
 </div>
 <div class="cdim js-cclose"></div>
-<div class="cs" role="dialog" aria-modal="true" aria-labelledby="cs-h">
+<div class="cs" role="dialog" aria-modal="true" aria-labelledby="cs-h" tabindex="-1">
   <div class="grab" aria-hidden="true"></div><button type="button" class="x js-cclose" aria-label="Zavřít">×</button>
   <h3 id="cs-h">Nastavení cookies</h3>
   <p class="s">Vyberte, co smíme používat. Volbu můžete kdykoli změnit v patičce webu.</p>

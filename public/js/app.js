@@ -6,6 +6,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const B = document.body;
 const VARIANT = document.documentElement.dataset.v || 'a';
 const desktop = () => matchMedia('(min-width: 1100px)').matches;
+const touch = () => matchMedia('(pointer: coarse)').matches;
 
 /* ---------- funnel tracking: cookie-free, nothing stored on the device ---------- */
 const params = new URLSearchParams(location.search);
@@ -34,18 +35,43 @@ function openDialog(el, cls) {
   lastFocus = document.activeElement;
   B.classList.add(cls);
   openDialogs.push({ el, cls });
-  syncLock();
-  setTimeout(() => (el.querySelector('input:not([type=checkbox]):not([tabindex="-1"])') || el.querySelector('button, a') || el).focus(), 60);
+  syncLock(); fitSheet();
+  // Touch screens: focus the dialog itself, so the keyboard and autofill appear only when a field is tapped.
+  const first = touch() ? el : (el.querySelector('input:not([type=checkbox]):not([tabindex="-1"])') || el.querySelector('button, a') || el);
+  setTimeout(() => first.focus({ preventScroll: true }), 60);
 }
 function closeDialog(cls) {
   B.classList.remove(cls);
   const i = openDialogs.findIndex(d => d.cls === cls);
   if (i > -1) openDialogs.splice(i, 1);
-  syncLock();
+  syncLock(); fitSheet();
   if (lastFocus) lastFocus.focus({ preventScroll: true });
 }
 // While a dialog is open the page behind it does not scroll.
 function syncLock() { document.documentElement.classList.toggle('lock', openDialogs.length > 0); }
+
+/* ---------- on-screen keyboard: keep the open form in the visible part of the screen ----------
+   iOS Safari and Android Chrome keep fixed elements on the layout viewport, which the keyboard covers.
+   visualViewport tells us what is still visible; the CSS lifts the form by --kb and caps it at --vvh. */
+const vv = window.visualViewport;
+function fitSheet() {
+  const st = document.documentElement.style;
+  const open = openDialogs.some(d => d.cls === 'sheet-open' || d.cls === 'cs-open');
+  if (!vv || !open || vv.scale > 1.01) { ['--kb', '--vvh', '--vvtop'].forEach(p => st.removeProperty(p)); return; }  // pinch-zoom: leave as is
+  st.setProperty('--kb', Math.max(0, Math.round(innerHeight - vv.height - vv.offsetTop)) + 'px');
+  st.setProperty('--vvh', Math.round(vv.height) + 'px');
+  st.setProperty('--vvtop', Math.round(vv.offsetTop) + 'px');
+  const a = document.activeElement;
+  if (a && a.matches('input') && a.closest('.sheet')) setTimeout(() => revealInSheet(a), 220);  // after the lift transition
+}
+// Scroll the form itself (not the page) so the field being typed in is fully visible.
+function revealInSheet(el) {
+  const sheet = el.closest('.sheet'); if (!sheet) return;
+  const s = sheet.getBoundingClientRect(), r = el.getBoundingClientRect(), pad = 16;
+  if (r.bottom > s.bottom - pad) sheet.scrollTop += r.bottom - s.bottom + pad;
+  else if (r.top < s.top + pad) sheet.scrollTop -= s.top + pad - r.top;
+}
+if (vv) { vv.addEventListener('resize', fitSheet); vv.addEventListener('scroll', fitSheet); }
 document.addEventListener('keydown', e => {
   const top = openDialogs[openDialogs.length - 1];
   if (!top) return;
@@ -161,12 +187,16 @@ const form = $('.js-form'), F = form.elements, tg = $('.js-tg'), phoneWrap = $('
 let openedAt = 0;
 $('.js-open').addEventListener('click', () => { openedAt = Date.now(); track('form_open'); openDialog(form, 'sheet-open'); });
 $$('.js-close').forEach(el => el.addEventListener('click', () => closeDialog('sheet-open')));
-form.addEventListener('focusin', e => { if (e.target.matches('input[name=name], input[name=email]')) track('form_start'); });
+form.addEventListener('focusin', e => {
+  if (e.target.matches('input[name=name], input[name=email]')) track('form_start');
+  if (e.target.matches('input')) setTimeout(() => revealInSheet(e.target), 350);  // once the keyboard is up
+});
+phoneWrap.addEventListener('transitionend', e => { if (e.propertyName === 'grid-template-rows' && phoneWrap.classList.contains('on')) revealInSheet(document.activeElement === tel ? tel : phoneWrap); });
 tg.addEventListener('click', () => {
   const on = tg.getAttribute('aria-checked') !== 'true';
   tg.setAttribute('aria-checked', String(on));
   phoneWrap.classList.toggle('on', on); tel.required = on;
-  if (on) { track('help_on'); tel.focus({ preventScroll: true }); }
+  if (on) { track('help_on'); if (!touch()) tel.focus({ preventScroll: true }); }  // touch: no surprise keyboard
   else if (tel.getAttribute('aria-invalid')) { tel.removeAttribute('aria-invalid'); err.hidden = true; }
 });
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
