@@ -66,7 +66,7 @@ Funnel sa meria **bez cookies**: prehliadač posiela udalosti cez `sendBeacon`, 
 Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, zariadenia a reklamy plus počet leadov. GA4 a Meta Pixel sú pripravené v [`public/js/config.js`](public/js/config.js), načítajú sa iba po súhlase a v tejto ukážke sú vypnuté (prázdne ID). Cookie lišta je súčasťou ukážky.
 
 **Overenie kvality (11. 10. 2026, produkcia):**
-- **Lighthouse mobile:** Performance **96**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,3 s, CLS 0, TBT 60 ms. Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené.
+- **Lighthouse mobile** (po úpravách dizajnu z 11. 10.): Performance **98**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,4 s, CLS 0,001, TBT 0 ms. Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené. Pozor pri meraní hneď po nasadení: beh spustený pár sekúnd po `vercel deploy` zachytil ešte starú verziu stránky a ukázal falošný posun rozloženia (filmstrip mal staré aj nové rozloženie); opakovaný beh bol čistý.
 - **Testy:** 15 automatických testov (`npm test`) a end-to-end v prehliadači na 390 / 768 / 1440 px.
 - **Ostrý test:** 1 testovací lead na produkcii (so súhlasom). E-mail prišiel do Gmailu (karta *Aktualizácie*, nie spam; DKIM/SPF/DMARC pass). Test odhalil 2 chyby e-mailu, obe opravené: chýbajúce logo (Gmail odstraňuje SVG `data:` obrázky, teraz je logo hostované PNG) a prekrývajúce sa stĺpce rozpisu (teraz riadky pod sebou).
 
