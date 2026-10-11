@@ -65,6 +65,11 @@ Funnel sa meria **bez cookies**: prehliadač posiela udalosti cez `sendBeacon`, 
 
 Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, zariadenia a reklamy plus počet leadov. GA4 a Meta Pixel sú pripravené v [`public/js/config.js`](public/js/config.js), načítajú sa iba po súhlase a v tejto ukážke sú vypnuté (prázdne ID). Cookie lišta je súčasťou ukážky.
 
+**Overenie kvality (11. 10. 2026, produkcia):**
+- **Lighthouse mobile:** Performance **96**, Accessibility **100**, Best Practices **100**, SEO **100**; LCP 2,3 s, CLS 0, TBT 60 ms. Prvý beh odhalil CLS 0,10 (cookie lišta sa pridávala až po vykreslení) a slabý kontrast jedného riadku; oboje opravené.
+- **Testy:** 15 automatických testov (`npm test`) a end-to-end v prehliadači na 390 / 768 / 1440 px.
+- **Ostrý test:** 1 testovací lead na produkcii (so súhlasom), e-mail odoslaný cez Brevo.
+
 ## 7. Očakávaná konverzia
 **Odhad: 4–8 % návštev → lead, stred okolo 6 %.**
 
