@@ -19,6 +19,8 @@
   :root { --bg:#18191c; --bg2:#0e0f11; --fg:#f3f3ef; --muted:#a3a49f; --line:#34353b; --card:#25262b; --chip:#2e2f35; --field:#2e2f34; --accent:#cfe68a; --on-accent:#18191c; --wrap: 1200px; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
+  /* Lock the page behind dialogs on touch screens only: their scrollbars overlay, so nothing shifts sideways. */
+  @media (pointer: coarse) { html.lock { overflow: hidden; } }
   body { background: var(--bg); color: var(--fg); font: 16px/1.5 "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   button, input { font-family: inherit; }
@@ -128,6 +130,7 @@
   .more-bars .track { height: 10px; border-radius: 99px; background: #3a3b41; overflow: hidden; }
   .more-bars .fill { height: 100%; border-radius: 99px; background: #7d7e79; filter: blur(2px); }
   .sent { text-align: center; padding: 10px 0 4px; }
+  .sent:focus { outline: none; }
   .sent .ok { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: 22px; margin: 0 auto 12px; }
   .sent b { font-size: 21px; font-weight: 800; letter-spacing: -0.03em; display: block; }
   .sent p { font-size: 14px; color: var(--muted); margin-top: 4px; }
@@ -193,7 +196,8 @@
   /* form dialog */
   .dim, .cdim { position: fixed; inset: 0; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .3s; }
   .dim { z-index: 60; } .cdim { z-index: 71; }
-  .sheet, .cs { position: fixed; left: 0; right: 0; bottom: 0; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 24px; transform: translateY(105%); visibility: hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s, visibility 0s .35s; max-height: 100svh; overflow-y: auto; }
+  .dim, .cdim { touch-action: none; }
+  .sheet, .cs { position: fixed; left: 0; right: 0; bottom: 0; background: #222327; border-radius: 26px 26px 0 0; padding: 12px 22px 24px; transform: translateY(105%); visibility: hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s, visibility 0s .35s; max-height: 100svh; overflow-y: auto; overscroll-behavior: contain; }
   .sheet { z-index: 61; } .cs { z-index: 72; }
   body.sheet-open .dim, body.cs-open .cdim { opacity: 1; pointer-events: auto; }
   body.sheet-open .sheet, body.cs-open .cs { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; }
@@ -209,10 +213,14 @@
   .sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #f3f3ef; transition: transform .2s; }
   .toggle[aria-checked="true"] .sw, .sw[aria-checked="true"] { background: var(--accent); }
   .toggle[aria-checked="true"] .sw::after, .sw[aria-checked="true"]::after { transform: translateX(18px); background: var(--on-accent); }
-  .phonef[hidden] { display: none; }
-  .mk { display: flex; gap: 10px; align-items: center; font-size: 12.5px; color: var(--muted); margin: 4px 2px 14px; cursor: pointer; }
+  .phonef { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows .32s cubic-bezier(.2,.8,.2,1), opacity .2s, visibility 0s .32s; }
+  .phonef.on { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition: grid-template-rows .32s cubic-bezier(.2,.8,.2,1), opacity .25s .08s; }
+  .phonef > div { min-height: 0; overflow: hidden; }
+  @media (prefers-reduced-motion: reduce) { .phonef, .phonef.on { transition: none; } }
+  .mk { display: flex; gap: 10px; align-items: center; font-size: 12.5px; color: var(--muted); margin: 4px 2px 6px; cursor: pointer; }
   .mk input { width: 18px; height: 18px; accent-color: #cfe68a; flex: none; }
-  .err { color: #f0a37e; font-size: 13px; margin: -4px 2px 10px; }
+  .err { color: #f0a37e; font-size: 13px; line-height: 18px; min-height: 18px; margin: 0 2px 10px; }
+  .err[hidden] { display: block; visibility: hidden; }
   .priv { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.5; }
   .priv a { text-decoration: underline; text-underline-offset: 3px; }
   .x { display: none; position: absolute; right: 16px; top: 16px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: none; color: var(--fg); font-size: 18px; cursor: pointer; }
@@ -359,7 +367,7 @@
             <div class="more"><div class="more-h"><span class="more-k">V e-mailu navíc</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><p class="more-t">Celý svět: VT vs VWCE</p><p class="more-s">Podobný světový index, dva fondy. Částky pošleme e-mailem.</p><ol class="more-bars tab js-more" aria-hidden="true"></ol></div>
             <button type="button" class="cta js-open">Poslat celé srovnání e-mailem</button>
           </div>
-          <div class="sent js-post" hidden><div class="ok" aria-hidden="true">✓</div><b>Srovnání je na cestě</b><p class="js-sentp">Celé srovnání najdete v e-mailu.</p></div>
+          <div class="sent js-post" tabindex="-1" hidden><div class="ok" aria-hidden="true">✓</div><b>Srovnání je na cestě</b><p class="js-sentp">Celé srovnání najdete v e-mailu.</p></div>
         </div>
       </div>
     </div>
@@ -406,7 +414,7 @@
   <label class="sr-only" for="f-email">E-mail</label>
   <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email" placeholder="E-mail" required maxlength="120">
   <button type="button" class="toggle js-tg" role="switch" aria-checked="false" aria-controls="f-phone-wrap"><span><b>Chci pomoct</b><small>Zavolejte mi a pomozte mi s dalším krokem.</small></span><span class="sw" aria-hidden="true"></span></button>
-  <div class="phonef" id="f-phone-wrap" hidden><label class="sr-only" for="f-tel">Telefon</label><input type="tel" id="f-tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Telefon" maxlength="20"></div>
+  <div class="phonef" id="f-phone-wrap"><div><label class="sr-only" for="f-tel">Telefon</label><input type="tel" id="f-tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Telefon" maxlength="20"></div></div>
   <label class="mk"><input type="checkbox" name="tips">Občas mi pošlete tipy e-mailem</label>
   <div class="hp" aria-hidden="true"><label>Firma <input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
   <p class="err js-err" role="alert" hidden></p>

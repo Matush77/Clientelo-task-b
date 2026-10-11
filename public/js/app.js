@@ -34,20 +34,24 @@ function openDialog(el, cls) {
   lastFocus = document.activeElement;
   B.classList.add(cls);
   openDialogs.push({ el, cls });
+  syncLock();
   setTimeout(() => (el.querySelector('input:not([type=checkbox]):not([tabindex="-1"])') || el.querySelector('button, a') || el).focus(), 60);
 }
 function closeDialog(cls) {
   B.classList.remove(cls);
   const i = openDialogs.findIndex(d => d.cls === cls);
   if (i > -1) openDialogs.splice(i, 1);
+  syncLock();
   if (lastFocus) lastFocus.focus({ preventScroll: true });
 }
+// While a dialog is open the page behind it does not scroll.
+function syncLock() { document.documentElement.classList.toggle('lock', openDialogs.length > 0); }
 document.addEventListener('keydown', e => {
   const top = openDialogs[openDialogs.length - 1];
   if (!top) return;
   if (e.key === 'Escape') { closeDialog(top.cls); if (top.cls === 'menu-open') $('.js-menu').setAttribute('aria-expanded', 'false'); }
   if (e.key === 'Tab') {
-    const f = $$('a[href], button:not([disabled]), input:not([type=hidden]):not([tabindex="-1"])', top.el).filter(x => x.offsetParent !== null);
+    const f = $$('a[href], button:not([disabled]), input:not([type=hidden]):not([tabindex="-1"])', top.el).filter(x => x.offsetParent !== null && getComputedStyle(x).visibility !== 'hidden');
     if (!f.length) return;
     if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
     else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
@@ -58,7 +62,7 @@ document.addEventListener('keydown', e => {
 const menuBtn = $('.js-menu');
 menuBtn.addEventListener('click', () => { menuBtn.setAttribute('aria-expanded', 'true'); openDialog($('#menu'), 'menu-open'); });
 $('.js-mclose').addEventListener('click', () => { menuBtn.setAttribute('aria-expanded', 'false'); closeDialog('menu-open'); });
-$$('.js-mlink').forEach(a => a.addEventListener('click', () => { menuBtn.setAttribute('aria-expanded', 'false'); B.classList.remove('menu-open'); openDialogs.length = 0; }));
+$$('.js-mlink').forEach(a => a.addEventListener('click', () => { menuBtn.setAttribute('aria-expanded', 'false'); B.classList.remove('menu-open'); openDialogs.length = 0; syncLock(); }));
 
 /* ---------- calculator ---------- */
 let monthly = null, years = null;
@@ -161,8 +165,9 @@ form.addEventListener('focusin', e => { if (e.target.matches('input[name=name], 
 tg.addEventListener('click', () => {
   const on = tg.getAttribute('aria-checked') !== 'true';
   tg.setAttribute('aria-checked', String(on));
-  phoneWrap.hidden = !on; tel.required = on;
-  if (on) { track('help_on'); tel.focus(); }
+  phoneWrap.classList.toggle('on', on); tel.required = on;
+  if (on) { track('help_on'); tel.focus({ preventScroll: true }); }
+  else if (tel.getAttribute('aria-invalid')) { tel.removeAttribute('aria-invalid'); err.hidden = true; }
 });
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const PHONE_RE = /^\+?[0-9 ]{9,16}$/;
@@ -192,6 +197,7 @@ form.addEventListener('submit', async e => {
     closeDialog('sheet-open');
     $('.js-pre').hidden = true; $('.js-post').hidden = false;
     $('.js-sentp').textContent = help ? 'Celé srovnání najdete v e-mailu. Brzy se vám ozveme.' : 'Celé srovnání najdete v e-mailu.';
+    $('.js-post').focus({ preventScroll: true });  // the button that opened the form is gone; keep focus on the confirmation
     if (!desktop()) setTimeout(() => result.scrollIntoView({ behavior: 'smooth' }), 300);
   } catch (ex) {
     err.textContent = ex.message === 'rate' ? 'Příliš mnoho pokusů, zkuste to prosím za chvíli.' : 'Odeslání se nepovedlo. Zkuste to prosím znovu.';
