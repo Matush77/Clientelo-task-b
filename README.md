@@ -98,7 +98,9 @@ Prehľad je na `/api/stats?token=…&format=html`: funnel podľa A/B varianty, z
 \* Hrubý odhad pre 80 % silu a α = 0,05 (n ≈ 16·p(1−p)/δ²). Celková konverzia 6 % → +20 % relatívne by vyžadovala ~6 300 návštev na variant, preto sa testy vyhodnocujú na úrovni konkrétneho kroku funnelu. Varianta stránky sa dá vynútiť cez `?v=a|b` (napr. z reklamy), inak 50/50 pri každom načítaní.
 
 ## 9. Ako som pracoval s AI
-Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výskum robilo **5 paralelných subagentov Claude Sonnet 5.5**. Kompletný priebeh je v [`ai-log/`](ai-log/): hlavná konverzácia + prepis každého subagenta (automatický export cez hook `scripts/export_ai_log.py` a `/export`).
+Celý projekt vznikol v Claude Code. Hlavný agent bol **Claude Opus 5.5**, výskum robilo **5 paralelných subagentov Claude Sonnet 5.5**. Priebeh je v [`ai-log/`](ai-log/):
+- `2026-10-10_session-66014a9f.md` + `_agents/`: **celá** hlavná konverzácia od začiatku a prepis každého subagenta. Generuje ju hook `scripts/export_ai_log.py` z toho istého súboru relácie (JSONL) ako `/export`; osobné údaje (e-mail) sú nahradené.
+- `2026-10-11_claude-export.txt`: oficiálny výstup príkazu `/export`. V desktopovej aplikácii nebol pre túto reláciu dostupný, preto bol spustený cez CLI (`claude --resume`). `/export` obsahuje len časť od posledného `/compact` (11. 10., doladenie dizajnu po builde), staršia časť je v prvom súbore.
 
 **Postup:**
 1. **Plán bez rozhodnutí.** Najprv plán výskumu; rozhodnutia o segmente, magnete a dizajne mali prísť až z dát a spolu so mnou.
