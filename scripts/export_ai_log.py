@@ -20,12 +20,18 @@ OUT = ROOT / "ai-log"
 TOOL_INPUT_LIMIT = 4000
 TOOL_RESULT_LIMIT = 1200
 EMAIL_RE = re.compile(r"[\w.+-]+@gmail\.com")
+# Optional extra redactions from an untracked file (one term per line), e.g. account usernames.
+_REDACT_FILE = ROOT / ".ai-log-redact"
+EXTRA = [t.strip() for t in _REDACT_FILE.read_text(encoding="utf-8").splitlines() if t.strip()] if _REDACT_FILE.exists() else []
 SYSTEM_REMINDER_RE = re.compile(r"<system-reminder>.*?</system-reminder>", re.S)
 
 
 def clean(text):
     text = SYSTEM_REMINDER_RE.sub("", text)
-    return EMAIL_RE.sub("[email]", text).strip()
+    text = EMAIL_RE.sub("[email]", text)
+    for term in EXTRA:
+        text = re.sub(re.escape(term), "[redacted]", text, flags=re.I)
+    return text.strip()
 
 
 def cut(text, limit):
@@ -121,10 +127,22 @@ def render(jsonl_path, title):
     return "\n".join(lines)
 
 
+def session_start(path):
+    """Date of the first timestamped entry, so a session keeps one file name across days."""
+    for raw in Path(path).read_text(encoding="utf-8").splitlines():
+        try:
+            ts = json.loads(raw).get("timestamp")
+        except json.JSONDecodeError:
+            continue
+        if ts:
+            return ts[:10]
+    return None
+
+
 def export(transcript):
     transcript = Path(transcript)
     session = transcript.stem
-    date = datetime.fromtimestamp(transcript.stat().st_mtime).strftime("%Y-%m-%d")
+    date = session_start(transcript) or datetime.fromtimestamp(transcript.stat().st_mtime).strftime("%Y-%m-%d")
     base = f"{date}_session-{session[:8]}"
     OUT.mkdir(exist_ok=True)
     (OUT / f"{base}.md").write_text(

@@ -6,3 +6,4 @@ node_modules/
 .vercel/
 mail-outbox/
 .edge-render-profile/
+.ai-log-redact
