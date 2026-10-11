@@ -160,7 +160,7 @@ function readConsent() {
   try {
     const c = JSON.parse(localStorage.getItem(CK) || 'null');
     if (!c) return null;
-    const ttl = (c.a || c.m) ? 12 * MONTH : 6 * MONTH;  // ask again after 12 months, or 6 months after a refusal
+    const ttl = (c.a || c.m) ? 12 * MONTH : 6 * MONTH;  // must match public/js/variant.js  // ask again after 12 months, or 6 months after a refusal
     return Date.now() - c.t < ttl ? c : null;
   } catch { return null; }
 }
@@ -173,13 +173,13 @@ function loadTrackers(c) {
 function saveConsent(a, m) {
   const c = { a, m, t: Date.now() };
   try { localStorage.setItem(CK, JSON.stringify(c)); } catch { /* private mode: the banner may show again */ }
-  B.classList.remove('has-banner'); closeDialog('cs-open');
+  document.documentElement.classList.remove('has-banner'); closeDialog('cs-open');
   track(a || m ? 'consent_accept' : 'consent_reject');
   loadTrackers(c);
 }
 const consent = readConsent();
 if (consent) { setSwitch(an, consent.a); setSwitch(mk, consent.m); loadTrackers(consent); }
-else B.classList.add('has-banner');
+else document.documentElement.classList.add('has-banner');
 $$('.js-acc').forEach(b => b.addEventListener('click', () => { setSwitch(an, true); setSwitch(mk, true); saveConsent(true, true); }));
 $$('.js-rej').forEach(b => b.addEventListener('click', () => { setSwitch(an, false); setSwitch(mk, false); saveConsent(false, false); }));
 $('.js-save').addEventListener('click', () => saveConsent(an.getAttribute('aria-checked') === 'true', mk.getAttribute('aria-checked') === 'true'));
